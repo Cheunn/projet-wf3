@@ -29,3 +29,32 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
+
+
+
+//*******FRONT handicap***************
+
+$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+        ->bind('handicap');
+
+
+// crée un groupe de route
+$admin = $app['controllers_factory'];
+
+
+
+
+
+$app->mount('/admin', $admin);
+
+// localhost/projet-wf3/web/index_dev.php/admin/handicap
+$admin->get('/handicap', 'admin.handicap.controller:listAction')
+            ->bind('admin_handicap');
+
+//$admin->match('/handicap/edition/{id}', 'admin.handicap.controller:editAction')
+//            ->value('id', null) // id est optionnel est vaut null par défaut
+//            ->bind('admin_handicap_edit');
+//
+//$admin->get('/handicap/supression/{id}', 'admin.handicap.controller:deleteAction')
+//            ->assert('id', '\d+')
+//            ->bind('admin_handicap_delete');

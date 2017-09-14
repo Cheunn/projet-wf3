@@ -17,4 +17,29 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     return $twig;
 });
 
+$app->register(
+        new Silex\Provider\DoctrineServiceProvider(),
+        [
+            'db.options' => [
+                'driver' => 'pdo_mysql',
+                'host' => 'localhost',
+                'dbname' => 'projet',
+                'user' => 'root',
+                'password' => '',
+                'charset' => 'utf8'
+            ]
+        ]
+);
+
+// gestionnaire de sessions de Symfony ($app['session'])
+$app->register(new Silex\Provider\SessionServiceProvider());
+
+$app['admin.handicap.controller'] = function () use ($app) {
+    return new Controller\Admin\HandicapController($app);
+};
+
+$app['handicap.repository'] = function () use ($app) {
+    return new Repository\HandicapRepository($app['db']);
+};
+
 return $app;

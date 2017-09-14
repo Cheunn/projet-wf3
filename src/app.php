@@ -17,4 +17,30 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     return $twig;
 });
 
+$app->register(
+   new Silex\Provider\DoctrineServiceProvider(),
+   [
+       'db.options' => [
+           'driver' => 'pdo_mysql',
+           'host' => 'localhost',
+           'dbname' => 'projet',
+           'user' => 'root',
+           'password' => '',
+           'charset' => 'utf8'
+       ]
+   ]
+);
+
+
+$app['admin.annonce.controller'] = function () use ($app) {
+    return new Controller\Admin\AnnonceController($app);
+};
+
+
+$app['annonce.repository'] = function () use ($app) {
+    return new Repository\AnnonceRepository($app['db']);
+};
+
+
+
 return $app;

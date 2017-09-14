@@ -14,6 +14,27 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$admin = $app['controllers_factory']
+;
+$app->mount('/admin', $admin);
+
+$admin
+    ->get('/annonces', 'admin.annonce.controller:listAction')
+    ->bind('admin_annonces')
+;
+
+$admin
+    ->match('/annonce/edition/{id}', 'admin.annonce.controller:editAction')
+    ->value('id', null) // id est optionnel et vaut null par défaut
+    ->bind('admin_annonce_edit')
+;
+
+$admin
+    ->get('/annonce/suppression/{id}', 'admin.annonce.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_annonce_delete')
+;
+
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;
@@ -29,3 +50,5 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
+
+

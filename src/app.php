@@ -1,10 +1,13 @@
 <?php
 
+use Controller\Admin\CategoryController;
+use Repository\CategoryRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
-use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
+use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\TwigServiceProvider;
 
 $app = new Application();
 $app->register(new ServiceControllerServiceProvider());
@@ -16,5 +19,42 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 
     return $twig;
 });
+
+/*
+ * Ajout de Doctrine DBAL ($app['db'])
+ * nécessite d'avoir exécuté :
+ * composer require "doctrine/dbal:~2.2"
+ * en ligne de commande dans le projet
+ */
+$app->register(
+    new DoctrineServiceProvider(),
+    [
+        'db.options' => [
+            'driver' => 'pdo_mysql',
+            'host' => 'localhost',
+            'dbname' => 'projet',
+            'user' => 'root',
+            'password' => '',
+            'charset' => 'utf8'
+        ]
+    ]
+);
+
+// CONTROLLERS
+
+/* FRONT */
+
+
+/* ADMIN */
+
+$app['admin.category.controller'] = function () use ($app) {
+    return new CategoryController($app);
+};
+
+//Repositories
+
+$app['category.repository'] = function () use ($app) {
+    return new CategoryRepository($app['db']);
+};
 
 return $app;

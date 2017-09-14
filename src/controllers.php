@@ -13,6 +13,48 @@ $app->get('/', function () use ($app) {
 })
 ->bind('homepage')
 ;
+/* FRONT */
+
+
+
+/* ADMIN */
+
+// crée un groupe de routes
+$admin = $app['controllers_factory'];
+
+// toutes les url des routes créées par $admin sont préfixées par /admin
+$app->mount('/admin', $admin);
+
+$admin
+    ->get('/category', 'admin.category.controller:listAction')
+    ->bind('admin_categories')
+;
+
+$admin
+        ->get('/category/{type}', 'admin.category.controller:listByType')
+        ->assert('type','[annonce]|[chronique]')
+        ->bind('admin_categories_by_type')
+;
+
+$admin
+        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_categories_edit')
+;
+
+$admin
+    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_category_delete')
+;
+
+/*
+$admin
+    ->get('/posts/{type}', 'admin.category.controller:listAction')
+    ->value('type','chronique')
+    ->bind('admin_chroniques')
+;
+*/
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

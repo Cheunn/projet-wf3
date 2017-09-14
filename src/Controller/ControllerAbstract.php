@@ -36,7 +36,7 @@ abstract class ControllerAbstract
     {
         $this->app = $app;
         $this->twig = $app['twig'];
-        $this->session = $app['session'];
+        
     }
 
     /**

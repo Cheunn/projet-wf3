@@ -34,6 +34,7 @@ $app->register(
 // gestionnaire de sessions de Symfony ($app['session'])
 $app->register(new Silex\Provider\SessionServiceProvider());
 
+//**************ADMIN HANDICAP*****************
 $app['admin.handicap.controller'] = function () use ($app) {
     return new Controller\Admin\HandicapController($app);
 };
@@ -42,4 +43,15 @@ $app['handicap.repository'] = function () use ($app) {
     return new Repository\HandicapRepository($app['db']);
 };
 
+
+//**********************ADMIN TAG*************************
+$app['admin.tag.controller'] = function () use ($app) {
+    return new Controller\Admin\TagController($app);
+};
+
+$app['tag.repository'] = function () use ($app) {
+    return new Repository\TagRepository($app['db']);
+};
+
 return $app;
+

@@ -11,15 +11,42 @@ class UserController extends ControllerAbstract
         $user = new User();
         $errors = [];
         
+   
         if (!empty($_POST)) {
             $this->sanitizePost();
             
             $user
-                ->setLastname($_POST['lastname'])
-                ->setFirstname($_POST['firstname'])
+                //->setRole($_POST['role'])   
+                //->setLastname($_POST['lastname'])
+                //->setFirstname($_POST['firstname'])
+                ->setPseudo($_POST['pseudo'])
                 ->setEmail($_POST['email'])
+                ->setPassword($_POST['password'])
+                /*
+                ->setPhone($_POST['phone'])
+                ->setCivility($_POST['civility'])                                    
+                ->setUrl_img($_POST['url_img'])                  
+                ->setIs_active($_POST['is_active'])                  
+                ->setDescription($_POST['description'])                  
+                ->setDate_createate_create($_POST['date_create'])                  
+                ->setAdress($_POST['adress'])                  
+                ->setPostal_code($_POST['postal_code'])                  
+                ->setCountry($_POST['country'])                    
+                ->setTown($_POST['town'])                    
+                ->setUrl_web_orga($_POST['url_web_orga'])                    
+                ->setUrl_fb($_POST['url_fb'])
+                 
+                 */  
             ;
+
+                    
             
+             if (empty($_POST['pseudo'])) {
+                $errors['pseudo'] = 'Le pseudo est obligatoire';
+            } elseif (strlen($_POST['pseudo']) > 100) {
+                $errors['pseudo'] = 'Le pseudo ne doit pas dépasser 100 caractères';
+            }
+            /*  Champs a mettre ensuite 
             if (empty($_POST['lastname'])) {
                 $errors['lastname'] = 'Le nom est obligatoire';
             } elseif (strlen($_POST['lastname']) > 100) {
@@ -31,7 +58,7 @@ class UserController extends ControllerAbstract
             } elseif (strlen($_POST['firstname']) > 100) {
                 $errors['firstname'] = 'Le prénom ne doit pas dépasser 100 caractères';
             }
-            
+            */
             if (empty($_POST['email'])) {
                 $errors['email'] = "L'email est obligatoire";
             } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -57,9 +84,9 @@ class UserController extends ControllerAbstract
             if (empty($errors)) {
                 $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
                 $this->app['user.repository']->save($user);
-                
+                $this->addFlashMessage('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');
-            } else {
+            } else { 
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
                 $this->addFlashMessage($message, 'error');
@@ -84,6 +111,11 @@ class UserController extends ControllerAbstract
             $email = $_POST['email'];
             $user = $this->app['user.repository']->findByEmail($email);
             
+            /*
+            print_r($_POST); echo '<br><br><br>'; print_r($user); echo '<br><br><br>';echo 'password en base :'. $user->getPassword();
+            echo '<br><br><br>';echo 'password codé :'.password_hash($_POST['password'], PASSWORD_BCRYPT );// a supprimer
+            echo '<br><br><br>';echo 'password poste :'.$_POST['password']; die('fin');
+            */
             if (!is_null($user)) {
                 if ($this->app['user.manager']->verifyPassword($_POST['password'], $user->getPassword())) {
                     $this->app['user.manager']->login($user);
@@ -93,6 +125,7 @@ class UserController extends ControllerAbstract
             }
             
             $this->addFlashMessage('Identification incorrecte', 'error');
+            die(' FIN NON OK');
         }
         
         return $this->render(

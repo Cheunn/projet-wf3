@@ -8,11 +8,23 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-$app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
-})
-->bind('homepage')
-;
+/* FRONT  */
+
+$app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
+$app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
+$app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
+$app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+
+
+   /* ADMIN  */
+
+$admin=$app['controllers_factory'];  // crée un groupe de routes
+
+$admin->before (function() use ($app){
+    if (! $app['user.manager']->isAdmin()) $app->abort(403, 'Acces refuse') ; 
+}) ;
+$app->mount('/admin', $admin);      // toutes les routes créées par $admin sont prefixées par admin
+
 
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')

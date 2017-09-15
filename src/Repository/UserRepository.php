@@ -13,7 +13,7 @@ class UserRepository extends RepositoryAbstract
     public function findByEmail($email)
     {
         $dbUser = $this->db->fetchAssoc(
-            'SELECT * FROM user WHERE email = :email',
+            'SELECT * FROM member WHERE email = :email',
             [
                 ':email' => $email
             ]
@@ -31,27 +31,30 @@ class UserRepository extends RepositoryAbstract
     public function save(User $user) 
     {
         $data = [
-            'lastname' => $user->getLastname(),
-            'firstname' => $user->getFirstname(),
+            //'lastname' => $user->getLastname(),
+            //'firstname' => $user->getFirstname(),
+            'pseudo' => $user->getPseudo(),
             'email' => $user->getEmail(),
-            'password' => $user->getPassword(),
-            'role' => $user->getRole()
+            'password' => $user->getPassword()
+            //'role' => $user->getRole()
         ];
         
-        if ($user->getId()) {
+        if ($user->getId_member()) {
             $this->db->update(
                 'user',
                 $data,
                 [
-                    'id' => $user->getId()
+                    'id' => $user->getId_member()
                 ]
             );
         } else {
             $this->db->insert(
-                'user', 
+                'member', 
                 $data
             );
-            $user->setId($this->db->lastInsertId());
+            $user->setId_member($this->db->lastInsertId());
+            
+       
         }
     }
     
@@ -65,7 +68,7 @@ class UserRepository extends RepositoryAbstract
         $user = new User();
         
         $user
-            ->setId($data['id'])
+            ->setId_member($data['id_member'])
             ->setLastname($data['lastname'])
             ->setFirstname($data['firstname'])
             ->setEmail($data['email'])

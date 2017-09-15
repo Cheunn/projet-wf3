@@ -1,22 +1,23 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+    <div class="container">
+
     <h1>Annonces</h1>
     
     <p><a href="{{ path('admin_annonce_edit') }}">Ajouter un annonce</a></p>
     
-    
     <table class="table">
         <tr>
-            <th>Id</th>
-            <th>Titre</th>
-            <th>Texte 1</th>
-            <th>Texte 2</th>
-            <th>Img 1</th>
-            <th>Img 2</th>
-            <th>Img 3</th>
-          {#<th>Auteur</th>#}
-            <th width="200px"></th>
+            <th>Id </th>
+            <th>Titre </th>
+            <th>Texte 1 </th>
+            <th>Texte 2 </th>
+            <th>Img 1 </th>
+            <th>Img 2 </th>
+            <th>Img 3 </th>
+            {#<th>Auteur</th>#}
+            <th width="120px"></th>
         </tr>
         {% for annonce in annonces %}
             <tr>
@@ -29,10 +30,11 @@
                 <td>{{ annonce.url_img_3}}</td>
              {# <td>{{ article.categoryName }}</td> #}
              {# <td>{{ article.authorName }}</td> #}
-                <td>
+                <td>                    
                     <a href="{{ path('admin_annonce_edit', {id: annonce.id_post}) }}" class="btn btn-primary">
                         Modifier
                     </a>
+                       <hr>
                     <a href="{{ path('admin_annonce_delete', {id: annonce.id_post}) }}" class="btn btn-danger">
                         Supprimer
                     </a>
@@ -42,4 +44,5 @@
             <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
         {% endfor %}
     </table>
+    </div>
 {% endblock %}

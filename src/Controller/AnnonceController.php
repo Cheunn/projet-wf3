@@ -1,5 +1,5 @@
 <?php
-namespace Controller\Admin;
+namespace Controller;
 
 use Controller\ControllerAbstract;
 use Entity\Annonce;
@@ -9,9 +9,9 @@ class AnnonceController extends ControllerAbstract
 {
     public function listAction()
     {
-        $annonces = $this->app['annonce.repository']->findAll();
+        $annonces = $this->app['annonce.repository']->findAll(); ///A CHANGER ByMember
         return $this->render(
-            'admin/annonce/list.html.twig',
+            'annonce/edit.html.twig',
             [
                 'annonces' => $annonces
             ]
@@ -21,16 +21,16 @@ class AnnonceController extends ControllerAbstract
     public function editAction($id = null)
     {
         // pour construire la liste déroulante des rubriques
-        $categories = $this->app['category.repository']->findAll();
+        $categories = $this->app['category.repository']->findAll(); ///-> A changer ByMember
         
         if (is_null($id)) {
             $annonce = new Annonce();
-           // $annonce
+            $annonce
                 //->setCategory(new Category())
                 //->setAuthor($this->app['user.manager']->getUser()) //IMPORTANT POUR POLUS TARD
-           // ;
+            ;
         } else {
-            $annonce = $this->app['annonce.repository']->find($id);
+            $annonce = $this->app['annonce.repository']->find($id); ///-> A changer ByMember
             
             if (is_null($annonce)) {
                 $this->app->abort(404);
@@ -43,19 +43,18 @@ class AnnonceController extends ControllerAbstract
             $this->sanitizePost();
             
             $annonce
-                ->setPost_title($_POST['post_title'])
+                //->setPost_title($_POST['post_title'])
                 //->setId_post($_POST['id_post'])
                 ->setParagraphe_1($_POST['paragraphe_1'])
                 ->setParagraphe_2($_POST['paragraphe_2'])
                 ->setUrl_img_1($_POST['url_img_1'])
                 ->setUrl_img_2($_POST['url_img_2'])
                 ->setUrl_img_3($_POST['url_img_3'])
-                ->setMember_id_member(1)
-                ->setType_id_type(1)
+                //->setMember_id_member($_POST['member_id_member'])
+                //->setType_id_type($_POST['type_id_type']) // A FAIRE DIMANCHE
                 ->setCategory_id_category($_POST['category_id_category'])
                 ;
-               
-
+            
             //$annonce->getCategory_id_category()->setId_post($_POST['category']);
             
             // contrôle des champs de formulaire
@@ -82,7 +81,7 @@ class AnnonceController extends ControllerAbstract
         }
         
         return $this->render(
-            'admin/annonce/edit.html.twig',
+            'annonce/edit.html.twig',
             [
                 'annonce' => $annonce,
                 'categories' => $categories
@@ -101,6 +100,6 @@ class AnnonceController extends ControllerAbstract
         $this->app['annonce.repository']->delete($annonce);
         //$this->addFlashMessage("L'annonce est supprimé");
         
-        return $this->redirectRoute('admin_annonces');
+        return $this->redirectRoute('annonce'); ///(s)
     }
 }

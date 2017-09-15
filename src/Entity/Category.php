@@ -7,7 +7,7 @@ class Category
      *
      * @var int
      */
-    private $id;
+    private $id_category;
     
     /**
      *
@@ -15,27 +15,39 @@ class Category
      */
     private $name;
     
-    public function getId()
-    {
-        return $this->id;
+    /**
+     *
+     * @var string
+     */
+    private $type_post;
+    
+
+    public function getId_category() {
+        return $this->id_category;
     }
 
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
-    public function setId($id)
-    {
-        $this->id = $id;
-        
+    public function getType_post() {
+        return $this->type_post;
+    }
+
+    public function setId_category($id_category) {
+        $this->id_category = $id_category;
         return $this;
     }
 
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
-        
         return $this;
     }
+
+    public function setType_post($type_post) {
+        $this->type_post = $type_post;
+        return $this;
+    }
+
+
 }

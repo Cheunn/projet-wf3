@@ -60,7 +60,7 @@ SELECT
     a.*, c.name 
 FROM annonce a
 JOIN category c ON a.category_id_category = c.id_category
-WHERE a.category_id_category = :category_id_category
+WHERE a.id_post = :category_id_category
 SQL;
         
         $dbAnnonce = $this->db->fetchAssoc(
@@ -79,7 +79,7 @@ SQL;
     public function save(Annonce $annonce)  
     {
         $data = [
-            'post_date' => $annonce->getPost_date(),        
+            //'post_date' => $annonce->getPost_date(),        
             'paragraphe_1' => $annonce->getParagraphe_1(),
             'paragraphe_2' => $annonce->getParagraphe_2(),
             'post_title' => $annonce->getPost_title(),
@@ -87,31 +87,33 @@ SQL;
             'url_img_2' => $annonce->getUrl_img_2(),
             'url_img_3' => $annonce->getUrl_img_3(),
             'member_id_member' => $annonce->getMember_id_member(),
-            'type_id_type' => $annonce->getType_id_type()
-                        
-//            'category_id' => $annonce->getCategoryId(),
-//            'author_id' => $annonce->getAuthorId()
-        ];
-        
+            'type_id_type' => $annonce->getType_id_type(),
+            'category_id_category' => $annonce->getCategory_id_category()
+            //'author_id' => $annonce->getAuthorId()
+            ];
+                       
+
       
         if ($annonce->getId_post()) { // update
             $this->db->update(
                 'annonce',
                 $data,
                 [
-                    'id' => $annonce->getId_post()
+                    'id_post' => $annonce->getId_post()
                 ]
             );
+            
         } else { //insert
             $this->db->insert('annonce', $data);
             $annonce->setId_post($this->db->lastInsertId());
+          
         }
     }
     
 
     public function delete(Annonce $annonce) 
     {
-        $this->db->delete('annonce', ['id' => $annonce->getId_post()]);
+        $this->db->delete('annonce', ['id_post' => $annonce->getId_post()]); 
     }
     
 
@@ -119,9 +121,9 @@ SQL;
     {
 //        $category = new Category();
         
-//        $category//khgvbghvgiug
-//            ->setId($data['category_id'])
-//            ->setName($data['category_name'])
+//        $category// A FINIR
+//            ->setId_category($data['id_category'])
+//            ->setName($data['name'])
 //            ->setType_post('annonce')    
 //                ;
 //        

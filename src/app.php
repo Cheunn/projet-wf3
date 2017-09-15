@@ -1,10 +1,15 @@
 <?php
 
+
+use Controller\CategoryController;
+use Repository\AnnonceRepository;
+use Repository\CategoryRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
-use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
+use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\TwigServiceProvider;
 
 $app = new Application();
 $app->register(new ServiceControllerServiceProvider());
@@ -18,7 +23,7 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 });
 
 $app->register(
-   new Silex\Provider\DoctrineServiceProvider(),
+   new DoctrineServiceProvider(),
    [
        'db.options' => [
            'driver' => 'pdo_mysql',
@@ -31,16 +36,50 @@ $app->register(
    ]
 );
 
+$app->register(new \Silex\Provider\SessionServiceProvider());
+
+// CONTROLLERS
+
+/* FRONT */
+
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+$app['annonce.controller'] = function () use ($app) {
+    return new Controller\AnnonceController($app);
+};
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+//FRIDAY
+
+
+/* ADMIN */
 
 $app['admin.annonce.controller'] = function () use ($app) {
-    return new Controller\Admin\AnnonceController($app);
+    return new \Controller\Admin\AnnonceController($app);
 };
 
+
+$app['admin.category.controller'] = function () use ($app) {
+    return new CategoryController($app);
+};
+
+// REPOSITORIES
 
 $app['annonce.repository'] = function () use ($app) {
-    return new Repository\AnnonceRepository($app['db']);
+    return new AnnonceRepository($app['db']);
 };
 
-
+$app['category.repository'] = function () use ($app) {
+    return new CategoryRepository($app['db']);
+};
 
 return $app;
+
+

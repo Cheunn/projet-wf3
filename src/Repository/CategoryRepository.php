@@ -1,8 +1,8 @@
 <?php
+
 namespace Repository;
 
 use Entity\Category;
-
 
 class CategoryRepository extends RepositoryAbstract
 {
@@ -12,7 +12,7 @@ class CategoryRepository extends RepositoryAbstract
      */
     public function findAll()
     {
-        $dbCategories = $this->db->fetchAll('SELECT * FROM category ORDER BY name');
+        $dbCategories = $this->db->fetchAll('SELECT * FROM category');
         $categories = [];
         
         foreach ($dbCategories as $dbCategory) {
@@ -20,6 +20,23 @@ class CategoryRepository extends RepositoryAbstract
         }
         
         return $categories;
+    }
+    
+    
+    /**
+     * 
+     * @param string $type
+     * @return array 
+     */
+    public function findByType($type){
+        $dbCategoriesTypes = $this->db->fetchAll("SELECT * FROM category WHERE type_post = $type ");
+        $categoriesByType = [];
+        
+        foreach($dbCategoriesTypes as $dbTypes){
+            $categoriesByType[] = $this->buildEntity($dbTypes);
+        }
+        
+        return $categoriesByType;
     }
     
     /**
@@ -30,7 +47,7 @@ class CategoryRepository extends RepositoryAbstract
     public function find($id)
     {
         $dbCategory = $this->db->fetchAssoc(
-            'SELECT * FROM category WHERE id = :id',
+            'SELECT * FROM category WHERE id_category = :id',
             [
                 ':id' => $id
             ]
@@ -48,20 +65,21 @@ class CategoryRepository extends RepositoryAbstract
     public function save(Category $category)
     {
         $data = [
-            'name' => $category->getName()
+            'name' => $category->getName(),
+            'type_post' => $category->getType_post()
         ];
         
-        if ($category->getId()) {
+        if ($category->getId_category()) {
             $this->db->update(
                 'category',
                 $data,
                 [
-                    'id' => $category->getId()
+                    'id_category' => $category->getId_category()
                 ]
             );
         } else {
             $this->db->insert('category', $data);
-            $category->setId($this->db->lastInsertId());
+            $category->setId_category($this->db->lastInsertId());
         }
     }
     
@@ -71,7 +89,7 @@ class CategoryRepository extends RepositoryAbstract
      */
     public function delete(Category $category) 
     {
-        $this->db->delete('category', ['id' => $category->getId()]);
+        $this->db->delete('category', ['id_category' => $category->getId_category()]);
     }
     
     /**
@@ -84,8 +102,9 @@ class CategoryRepository extends RepositoryAbstract
         $category = new Category();
         
         $category
-            ->setId($data['id'])
+            ->setId_category($data['id_category'])
             ->setName($data['name'])
+            ->setType_post($data['type_post'])
         ;
         
         return $category;

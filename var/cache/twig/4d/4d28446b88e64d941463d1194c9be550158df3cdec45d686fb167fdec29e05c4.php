@@ -15,11 +15,11 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_90390300f093d8d087f8ba9c11e518e5a54d83e5042125fb6497a77d90434d0f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_90390300f093d8d087f8ba9c11e518e5a54d83e5042125fb6497a77d90434d0f->enter($__internal_90390300f093d8d087f8ba9c11e518e5a54d83e5042125fb6497a77d90434d0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_1b7b1b84a9f3a6e61d3d3bfac1a0c5a35142e0c18ad59e8638fdc8869e136a26 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1b7b1b84a9f3a6e61d3d3bfac1a0c5a35142e0c18ad59e8638fdc8869e136a26->enter($__internal_1b7b1b84a9f3a6e61d3d3bfac1a0c5a35142e0c18ad59e8638fdc8869e136a26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
-        $__internal_dbf5f142f823b4e6c1e49a00e141d22ff092e56ad6da3079c9a1ad03a3fbfc7f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dbf5f142f823b4e6c1e49a00e141d22ff092e56ad6da3079c9a1ad03a3fbfc7f->enter($__internal_dbf5f142f823b4e6c1e49a00e141d22ff092e56ad6da3079c9a1ad03a3fbfc7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_943b443b08e3faa205143ae43dbc8d34d2a4ff9451c0cf36fefc22b142857f31 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_943b443b08e3faa205143ae43dbc8d34d2a4ff9451c0cf36fefc22b142857f31->enter($__internal_943b443b08e3faa205143ae43dbc8d34d2a4ff9451c0cf36fefc22b142857f31_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
         // line 2
         echo "
@@ -155,54 +155,12 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
 <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-angle-up\"></i></a>
 
-     <!-- Bootstrap core JavaScript
-        ================================================== --> 
-    <!-- Placed at the end of the document so the pages load faster --> 
-    <script src=\"";
-        // line 114
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery-1.11.2.min.js"), "html", null, true);
-        echo "\"></script>
-    <!-- bootstrap -->\t
-    <script src=\"";
-        // line 116
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/bootstrap-3.3.4/js/bootstrap.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 117
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/modernizr.js"), "html", null, true);
-        echo "\"></script>
-    <!-- owl-carousel -->
-\t<script src=\"";
-        // line 119
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/owl-carousel/owl.carousel.js"), "html", null, true);
-        echo "\"></script>
-
-    <!-- masonry -->
-\t<script src=\"";
-        // line 122
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/masonry/masonry.min.js"), "html", null, true);
-        echo "\"></script>
-  
-    <!-- Form Validation -->
-    <script src=\"";
-        // line 125
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/jquery-validate/jquery.validate.min.js"), "html", null, true);
-        echo "\"></script>
-    
-    <!-- custom -->
-    <script src=\"";
-        // line 128
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/app.js"), "html", null, true);
-        echo "\"></script>
-
-</body>
-
-</html>";
+";
         
-        $__internal_90390300f093d8d087f8ba9c11e518e5a54d83e5042125fb6497a77d90434d0f->leave($__internal_90390300f093d8d087f8ba9c11e518e5a54d83e5042125fb6497a77d90434d0f_prof);
+        $__internal_1b7b1b84a9f3a6e61d3d3bfac1a0c5a35142e0c18ad59e8638fdc8869e136a26->leave($__internal_1b7b1b84a9f3a6e61d3d3bfac1a0c5a35142e0c18ad59e8638fdc8869e136a26_prof);
 
         
-        $__internal_dbf5f142f823b4e6c1e49a00e141d22ff092e56ad6da3079c9a1ad03a3fbfc7f->leave($__internal_dbf5f142f823b4e6c1e49a00e141d22ff092e56ad6da3079c9a1ad03a3fbfc7f_prof);
+        $__internal_943b443b08e3faa205143ae43dbc8d34d2a4ff9451c0cf36fefc22b142857f31->leave($__internal_943b443b08e3faa205143ae43dbc8d34d2a4ff9451c0cf36fefc22b142857f31_prof);
 
     }
 
@@ -218,7 +176,7 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
     public function getDebugInfo()
     {
-        return array (  195 => 128,  189 => 125,  183 => 122,  177 => 119,  172 => 117,  168 => 116,  163 => 114,  95 => 49,  90 => 47,  85 => 45,  80 => 43,  75 => 41,  70 => 39,  65 => 37,  60 => 35,  25 => 2,);
+        return array (  95 => 49,  90 => 47,  85 => 45,  80 => 43,  75 => 41,  70 => 39,  65 => 37,  60 => 35,  25 => 2,);
     }
 
     public function getSourceContext()
@@ -333,27 +291,6 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
 <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-angle-up\"></i></a>
 
-     <!-- Bootstrap core JavaScript
-        ================================================== --> 
-    <!-- Placed at the end of the document so the pages load faster --> 
-    <script src=\"{{ asset('assets/js/jquery-1.11.2.min.js') }}\"></script>
-    <!-- bootstrap -->\t
-    <script src=\"{{ asset('assets/plugins/bootstrap-3.3.4/js/bootstrap.min.js') }}\"></script>
-\t<script src=\"{{ asset('assets/js/modernizr.js') }}\"></script>
-    <!-- owl-carousel -->
-\t<script src=\"{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}\"></script>
-
-    <!-- masonry -->
-\t<script src=\"{{ asset('assets/plugins/masonry/masonry.min.js') }}\"></script>
-  
-    <!-- Form Validation -->
-    <script src=\"{{ asset('assets/plugins/jquery-validate/jquery.validate.min.js') }}\"></script>
-    
-    <!-- custom -->
-    <script src=\"{{ asset('assets/js/app.js') }}\"></script>
-
-</body>
-
-</html>", "footer.html.twig", "C:\\xampp\\htdocs\\projet-wf3\\templates\\footer.html.twig");
+", "footer.html.twig", "C:\\xampp\\htdocs\\projet-wf3\\templates\\footer.html.twig");
     }
 }

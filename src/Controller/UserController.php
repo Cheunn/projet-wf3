@@ -110,9 +110,12 @@ class UserController extends ControllerAbstract
             
             $email = $_POST['email'];
             $user = $this->app['user.repository']->findByEmail($email);
+            
+            /*
             print_r($_POST); echo '<br><br><br>'; print_r($user); echo '<br><br><br>';echo 'password en base :'. $user->getPassword();
             echo '<br><br><br>';echo 'password codé :'.password_hash($_POST['password'], PASSWORD_BCRYPT );// a supprimer
             echo '<br><br><br>';echo 'password poste :'.$_POST['password']; die('fin');
+            */
             if (!is_null($user)) {
                 if ($this->app['user.manager']->verifyPassword($_POST['password'], $user->getPassword())) {
                     $this->app['user.manager']->login($user);

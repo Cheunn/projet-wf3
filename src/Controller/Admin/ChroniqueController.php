@@ -2,19 +2,19 @@
 namespace Controller\Admin;
 
 use Controller\ControllerAbstract;
-use Entity\Article;
+use Entity\Chronique;
 use Entity\Category;
 
-class ArticleController extends ControllerAbstract
+class ChroniqueController extends ControllerAbstract
 {
     public function listAction()
     {
-        $articles = $this->app['article.repository']->findAll();
+        $chroniques = $this->app['chronique.repository']->findAll();
         
         return $this->render(
-            'admin/article/list.html.twig',
+            'admin/chronique/list.html.twig',
             [
-                'articles' => $articles
+                'chroniques' => $chroniques
             ]
         );
     }
@@ -25,15 +25,15 @@ class ArticleController extends ControllerAbstract
         $categories = $this->app['category.repository']->findAll();
         
         if (is_null($id)) {
-            $article = new Article();
-            $article
-                ->setCategory(new Category())
-                ->setAuthor($this->app['user.manager']->getUser())
-            ;
+            $chronique = new Chronique();
+            //$chronique
+                //->setCategory(new Category())
+                //->setAuthor($this->app['user.manager']->getUser())
+            //;
         } else {
-            $article = $this->app['article.repository']->find($id);
+            $chronique = $this->app['chronique.repository']->find($id);
             
-            if (is_null($article)) {
+            if (is_null($chronique)) {
                 $this->app->abort(404);
             }
         }
@@ -43,23 +43,30 @@ class ArticleController extends ControllerAbstract
         if (!empty($_POST)) {
             $this->sanitizePost();
             
-            $article
-                ->setTitle($_POST['title'])
-                ->setContent($_POST['content'])
-                ->setHeader($_POST['header'])
+            $chronique
+                ->setPost_title($_POST['post_title'])
+                ->setPost_type($_POST['post_type'])
+                ->setPost_date($_POST['post_date'])
+                ->setType($_POST['type'])
+                ->setUrl_img_1($_POST['url_img_1'])
+                ->setUrl_img_2($_POST['url_img_2'])
+                ->setParagraph_1($_POST['paragraph_1'])
+                ->setParagraph_2($_POST['paragraph_2'])
+                ->setMember_id_member($_POST['member_id_member'])
+                ->setCategory_id_category($category)
             ;
             
             $article->getCategory()->setId($_POST['category']);
             
             // contrôle des champs de formulaire
-            if (empty($_POST['title'])) {
-                $errors['title'] = 'Le titre est obligatoire';
-            } elseif (strlen($_POST['title']) > 100) {
+            if (empty($_POST['post_title'])) {
+                $errors['post_title'] = 'Le titre est obligatoire';
+            } elseif (strlen($_POST['post_title']) > 100) {
                 $errors['title'] = 'Le titre ne doit pas dépasser 100 caractères';
             }
             
-            if (empty($_POST['content'])) {
-                $errors['content'] = 'Le contenu est obligatoire';
+            if (empty($_POST['paragraph_1'])) {
+                $errors['paragraph_1'] = '';
             }
             
             if (empty($_POST['header'])) {
@@ -74,7 +81,7 @@ class ArticleController extends ControllerAbstract
                 $this->app['article.repository']->save($article);
                 $this->addFlashMessage("L'article est enregistré");
                 
-                return $this->redirectRoute('admin_articles');
+                return $this->redirectRoute('admin_chroniques');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -83,9 +90,9 @@ class ArticleController extends ControllerAbstract
         }
         
         return $this->render(
-            'admin/article/edit.html.twig',
+            'admin/chroniques/edit.html.twig',
             [
-                'article' => $article,
+                'chronique' => $chronique,
                 'categories' => $categories
             ]
         );
@@ -93,15 +100,15 @@ class ArticleController extends ControllerAbstract
     
     public function deleteAction($id)
     {
-        $article = $this->app['article.repository']->find($id);
+        $chronique = $this->app['chronique.repository']->find($id);
         
-        if (is_null($article)) {
+        if (is_null($chronique)) {
             $this->app->abort(404);
         }
         
-        $this->app['article.repository']->delete($article);
-        $this->addFlashMessage("L'article est supprimé");
+        $this->app['chronique.repository']->delete($chronique);
+        $this->addFlashMessage("La chronique est supprimé");
         
-        return $this->redirectRoute('admin_articles');
+        return $this->redirectRoute('admin_chroniques');
     }
 }

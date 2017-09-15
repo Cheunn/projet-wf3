@@ -27,11 +27,11 @@ class HandicapRepository extends RepositoryAbstract {
      * @param int $name
      * @return Handicap|null
      */
-    public function find($name) {
+    public function find($id) {
         $dbHandicap = $this->db->fetchAssoc(
-                'SELECT * FROM handicap WHERE name = :name',
+                'SELECT * FROM handicap WHERE id = :id',
                 [
-                    ':id' => $name
+                    ':id' => $id
                 ]
         );
         
@@ -50,7 +50,7 @@ class HandicapRepository extends RepositoryAbstract {
     public function save(Handicap $handicap) {
         
         $data = [
-            'name' => $handicap->getHandicap()
+            'name' => $handicap->getName()
         ];
         
         if ($handicap->getId()) {
@@ -58,12 +58,12 @@ class HandicapRepository extends RepositoryAbstract {
                     'handicap',
                     $data,
                     [
-                        'handicap' => $handicap->getHandicap()
+                        'id' => $handicap->getId()
                     ]
             );
         } else {
             $this->db->insert('handicap', $data);
-            $handicap->setHandicap($this->db->lastInsertHandicap());
+            $handicap->setId($this->db->lastInsertId());
         }
         
     }
@@ -73,8 +73,14 @@ class HandicapRepository extends RepositoryAbstract {
      * 
      * @param Handicap $handicap
      */
-    public function delete(Handicap $handicap) {
-        $this->db->delete('handicap', ['handicap' => $handicap->getHandicap()]);
+//    public function delete(Handicap $handicap) {
+//        $this->db->delete('handicap', ['handicap' => $handicap->getHandicap()]);
+    
+        
+           public function delete(Handicap $handicap) {
+        $this->db->delete('handicap', ['id' => $handicap->getId()]);
+    
+  
     }
     
     /**

@@ -1,0 +1,29 @@
+<ul class="nav navbar-nav">
+    {% for handicap in handicap %}
+        <li><a href="{{ path('handicap', {id: handicap.id}) }}">{{ handicap.name }}</a></li>
+    {% endfor %}
+</ul>
+
+ <p><a href="{{ path('admin_handicap_edit') }}">Ajouter un handicap</a></p>
+ 
+ 
+ 
+ <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        {% for handicap in handicap %}
+            <tr>
+                <td>{{ handicap.id }}</td>
+                <td>{{ handicap.name }}</td>
+               
+                <td><a href="{{ path('admin_handicap_edit', {id: handicap.id}) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ path('admin_handicap_delete', {id: handicap.id}) }}" class="btn btn-danger">Supprimer</a></td>
+             </tr>
+             
+                 {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </tables>

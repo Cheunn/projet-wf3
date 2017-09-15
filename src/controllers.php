@@ -51,10 +51,10 @@ $app->mount('/admin', $admin);
 $admin->get('/handicap', 'admin.handicap.controller:listAction')
             ->bind('admin_handicap');
 
-//$admin->match('/handicap/edition/{id}', 'admin.handicap.controller:editAction')
-//            ->value('id', null) // id est optionnel est vaut null par défaut
-//            ->bind('admin_handicap_edit');
+$admin->match('/handicap/edition/{id}', 'admin.handicap.controller:editAction')
+            ->value('id', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_handicap_edit');
 //
-//$admin->get('/handicap/supression/{id}', 'admin.handicap.controller:deleteAction')
-//            ->assert('id', '\d+')
-//            ->bind('admin_handicap_delete');
+$admin->get('/handicap/supression/{id}', 'admin.handicap.controller:deleteAction')
+            ->assert('id', '\d+')
+            ->bind('admin_handicap_delete');

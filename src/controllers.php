@@ -10,10 +10,20 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /* FRONT  */
 
-$app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
-$app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
-$app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
-$app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+$app
+    ->get('/', 'index.controller:indexAction')                  ->bind('homepage');
+$app
+    ->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
+$app
+    ->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
+$app
+    ->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+/* SINGLE ANNONCE REDIRECTION */
+$app
+    ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
+        ->assert('id', '\d+')
+        ->bind('single_annonce');
+/* SINGLE ANNONCE REDIRECTION */
 
 
    /* ADMIN  */
@@ -29,6 +39,22 @@ $app->mount('/admin', $admin);      // toutes les routes créées par $admin son
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
     ->bind('annonce_edit')
+;
+/* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
+$app
+    ->match('/', 'category.controller:listActionChronique')
+    ->bind('category_list')
+;
+/* BOUCLE CATEGORIE */
+$app
+    ->match('/', 'annonce.controller:lastThree')
+    ->bind('annonce_loop')
+;
+
+$app
+    ->match('/annonce/{id}', 'category.controller:listActionChronique')
+    ->assert('id', '\d+')
+    ->bind('category_list')
 ;
 
 // OUTILS 

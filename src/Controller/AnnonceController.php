@@ -1,5 +1,5 @@
 <?php
-namespace Controller;
+namespace Controller;  
 
 use Controller\ControllerAbstract;
 use Entity\Annonce;
@@ -15,6 +15,31 @@ class AnnonceController extends ControllerAbstract
             [
                 'annonces' => $annonces
             ]
+        );
+    }
+    public function singleAnnonce($id = null)
+    {
+        $categories = $this->app['category.repository']->findAllChronique();
+        $annonce = $this->app['annonce.repository']->findByIdAnnonce($id); ///A CHANGER ByMember
+        return $this->render(
+            'single_annonce.html.twig',
+            [
+                'annonce' => $annonce,
+                'categories' => $categories
+               
+            ]
+        );
+    }
+    
+    public function lastThree()
+    {
+        $annonces = $this->app['annonce.repository']->findLastThree(); ///A CHANGER ByMember
+        return $this->render(
+            'index.html.twig',
+            [               
+                'annonces' => $annonces
+            ]
+               
         );
     }
     

@@ -3,7 +3,10 @@
 use Controller\CategoryController;
 use Repository\AnnonceRepository;
 use Repository\CategoryRepository;
-use Service\UserManager;
+use Controller\Admin\CategoryController;
+use Controller\Admin\ChroniqueController;
+use Repository\CategoryRepository;
+use Repository\ChroniqueRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
@@ -27,58 +30,47 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 });
 
 
-  //A VOIR LIGNE CI DESSOUS
-$app['user.manager'] = function() use ($app)            {   return new UserManager ($app['session']);  };
- 
+$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
+
 /*
  * Ajout de Doctrine DBAL ($app['db'])
- * NB a faire dans cmd : C:\xampp\htdocs\silex-blog>composer require "doctrine/dbal:~2.2"
+ * nécessite d'avoir exécuté :
+ * composer require "doctrine/dbal:~2.2"
+ * en ligne de commande dans le projet
  */
-
-$app->register(new DoctrineServiceProvider, 
-        [
-            'db.options' => [
-                                'driver'=> 'pdo_mysql',
-                                'host'=> 'localhost',
-                                'dbname'=> 'projet', 
-                                'user'=> 'root', 
-                                'password'=> '', 
-                                'charset'=> 'utf8'
-                            ]
+$app->register(
+    new DoctrineServiceProvider(),
+    [
+        'db.options' => [
+            'driver' => 'pdo_mysql',
+            'host' => 'localhost',
+            'dbname' => 'projet',
+            'user' => 'root',
+            'password' => '',
+            'charset' => 'utf8'
         ]
- );
+    ]
+);
 
-// gestionnaire de sessions symfony
-$app->register(new SessionServiceProvider());
+// gestionnaire de sessions de Symfony ($app['session'])
+$app->register(new Silex\Provider\SessionServiceProvider());
 
 // CONTROLLERS
 
 /* FRONT */
- $app['index.controller'] = function() use ($app) {
-     return new Controller\IndexController ($app);  
-};
+$app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
+$app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
 
-$app['user.controller'] = function() use ($app) {   
-    return new Controller\UserController ($app);  
-    
-};
-//FRIDAY
-//FRIDAY
-//FRIDAY
-//FRIDAY
-//FRIDAY
-//FRIDAY
+$app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
+
 $app['annonce.controller'] = function () use ($app) {
     return new Controller\AnnonceController($app);
 };
-//MONDAY
-//MONDAY
-//MONDAY
-//MONDAY
-//MONDAY
+
 $app['category.controller'] = function () use ($app) {
     return new Controller\CategoryController($app);
 };
+
 
 /* ADMIN */
 
@@ -86,16 +78,27 @@ $app['admin.annonce.controller'] = function () use ($app) {
     return new \Controller\Admin\AnnonceController($app);
 };
 
-
 $app['admin.category.controller'] = function () use ($app) {
     return new CategoryController($app);
 };
 
-// REPOSITORIES
-$app['user.repository'] = function() use ($app) {   
-    return new Repository\UserRepository( $app['db']  ); 
-    
+$app['admin.chronique.controller'] = function () use ($app){
+    return new ChroniqueController($app);
 };
+
+$app['admin.handicap.controller'] = function () use ($app) {
+    return new Controller\Admin\HandicapController($app);
+};
+
+$app['admin.tag.controller'] = function () use ($app) {
+    return new Controller\Admin\TagController($app);
+};
+
+// REPOSITORIES
+
+$app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+$app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
+
 
 $app['annonce.repository'] = function () use ($app) {
     return new AnnonceRepository($app['db']);
@@ -105,7 +108,16 @@ $app['category.repository'] = function () use ($app) {
     return new CategoryRepository($app['db']);
 };
 
+$app['chronique.repository'] = function () use ($app){
+    return new ChroniqueRepository($app['db']);
+  
+$app['handicap.repository'] = function () use ($app) {
+    return new Repository\HandicapRepository($app['db']);
+};
+  
+$app['tag.repository'] = function () use ($app) {
+    return new Repository\TagRepository($app['db']);
+};
 
 return $app;
-
 

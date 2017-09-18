@@ -15,11 +15,11 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4->enter($__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->enter($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee->enter($__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->enter($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -59,8 +59,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
             </button>
 
-      <a class=\"navbar-brand\" href=\"index.html\" title=\"logo\"><img src=\"";
+      <a class=\"navbar-brand\" href=\"";
         // line 38
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
+        echo "\" title=\"logo\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/logo.png"), "html", null, true);
         echo "\" alt=\"logo\" /></a> </div>
 
@@ -111,7 +113,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -127,7 +132,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 103
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -143,7 +151,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 119
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -159,7 +170,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 135
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -179,7 +193,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post5.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 155
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post5.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -195,7 +212,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post2.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 171
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post2.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -211,7 +231,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post7.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 187
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post7.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -227,7 +250,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 203
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -247,7 +273,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 223
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -263,7 +292,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 239
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -279,7 +311,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 255
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -295,7 +330,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 271
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -315,7 +353,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 291
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -331,7 +372,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 307
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -347,7 +391,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 323
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -363,7 +410,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 339
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -597,17 +647,33 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         
 
-        <li><a href=\"contact.html\">Contact</a></li>
+\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t";
+        // line 574
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 574, $this->getSourceContext()); })()), "user", array())) {
+            echo " 
+\t\t\t<li><a href=\"";
+            // line 575
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\" class=\"inscription\">Deconnexion</a></li>
 
-        <li><a href=\"";
-        // line 575
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
-        echo "\" class=\"connexion\">Connexion</a></li>
+\t\t ";
+        } else {
+            // line 577
+            echo " 
+\t\t\t<li><a href=\"";
+            // line 578
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
+            echo "\" class=\"connexion\">Connexion</a></li>
+\t\t\t<li><a href=\"";
+            // line 579
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
+            echo "\" class=\"connexion\">Inscription</a></li>
+\t\t";
+        }
+        // line 580
+        echo "  
 
-       <li><a href=\"";
-        // line 577
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
-        echo "\" class=\"inscription\">Inscription</a></li>
         
         
         
@@ -654,10 +720,64 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         </li>
         
-        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-        <li><a href=\"signin.html\"><i class=\"fa fa-user\"></i></a></li>
+       
+\t\t";
+        // line 629
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 629, $this->getSourceContext()); })()), "user", array())) {
+            echo " 
+\t\t\t";
+            // line 633
+            echo "\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">";
+            // line 635
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 635, $this->getSourceContext()); })()), "username", array()), "html", null, true);
+            echo " <span class=\"caret\"></span></a>
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"";
+            // line 643
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\">Deconnexion</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t\t\t  <li><a href=\"";
+            // line 646
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\"><i class=\"fa fa-times\"></i></a></li>
+\t\t\t\t  
+\t\t";
+        } else {
+            // line 648
+            echo " 
+\t\t\t";
+            // line 651
+            echo "\t\t\t<li><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
+            echo "\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t
+\t
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les annonces</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les chroniques</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"signin.html\">Connexion</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"signup.html\">Inscription</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t";
+        }
+        // line 665
+        echo " 
+       
 
       </ul>
 
@@ -670,13 +790,13 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 </header>
  
 ";
-        // line 654
+        // line 693
         echo "  ";
         
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4->leave($__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4_prof);
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->leave($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof);
 
         
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee->leave($__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee_prof);
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->leave($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof);
 
     }
 
@@ -692,7 +812,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     public function getDebugInfo()
     {
-        return array (  674 => 654,  609 => 577,  604 => 575,  64 => 38,  25 => 1,);
+        return array (  794 => 693,  779 => 665,  760 => 651,  757 => 648,  751 => 646,  745 => 643,  734 => 635,  730 => 633,  726 => 629,  675 => 580,  670 => 579,  666 => 578,  663 => 577,  657 => 575,  653 => 574,  415 => 339,  396 => 323,  377 => 307,  358 => 291,  335 => 271,  316 => 255,  297 => 239,  278 => 223,  255 => 203,  236 => 187,  217 => 171,  198 => 155,  175 => 135,  156 => 119,  137 => 103,  118 => 87,  64 => 38,  25 => 1,);
     }
 
     public function getSourceContext()
@@ -734,7 +854,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
             </button>
 
-      <a class=\"navbar-brand\" href=\"index.html\" title=\"logo\"><img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" /></a> </div>
+      <a class=\"navbar-brand\" href=\"{{ path('homepage') }}\" title=\"logo\"><img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" /></a> </div>
 
     <div class=\"navbar-collapse collapse pull-left\">
 
@@ -783,7 +903,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -799,7 +919,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -815,7 +935,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -831,7 +951,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -851,7 +971,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post5.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post5.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -867,7 +987,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post2.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post2.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -883,7 +1003,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post7.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post7.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -899,7 +1019,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -919,7 +1039,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -935,7 +1055,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -951,7 +1071,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -967,7 +1087,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -987,7 +1107,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1003,7 +1123,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1019,7 +1139,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1035,7 +1155,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1269,11 +1389,15 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         
 
-        <li><a href=\"contact.html\">Contact</a></li>
+\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t{% if user_manager.user %} 
+\t\t\t<li><a href=\"{{ path('deconnexion') }}\" class=\"inscription\">Deconnexion</a></li>
 
-        <li><a href=\"{{ path('connexion') }}\" class=\"connexion\">Connexion</a></li>
+\t\t {% else %} 
+\t\t\t<li><a href=\"{{ path('connexion') }}\" class=\"connexion\">Connexion</a></li>
+\t\t\t<li><a href=\"{{ path('inscription') }}\" class=\"connexion\">Inscription</a></li>
+\t\t{% endif %}  
 
-       <li><a href=\"{{ path('inscription') }}\" class=\"inscription\">Inscription</a></li>
         
         
         
@@ -1320,10 +1444,45 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         </li>
         
-        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-        <li><a href=\"signin.html\"><i class=\"fa fa-user\"></i></a></li>
+       
+\t\t{% if user_manager.user %} 
+\t\t\t{#
+\t\t\t<li><a href=\"#\"><i>{{user_manager.username}}</i></a></li>
+\t\t\t<li><a href=\"{{ path('deconnexion') }}\"><i class=\"fa fa-times\"></i></a></li> #}
+\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">{{user_manager.username}} <span class=\"caret\"></span></a>
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"{{ path('deconnexion') }}\">Deconnexion</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t\t\t  <li><a href=\"{{ path('deconnexion') }}\"><i class=\"fa fa-times\"></i></a></li>
+\t\t\t\t  
+\t\t{% else %} 
+\t\t\t{# <li><a href=\"{{ path('connexion') }}\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t#}
+\t\t\t<li><a href=\"{{ path('connexion') }}\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t
+\t
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les annonces</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les chroniques</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"signin.html\">Connexion</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"signup.html\">Inscription</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t{% endif %} 
+       
 
       </ul>
 

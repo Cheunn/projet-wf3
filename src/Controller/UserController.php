@@ -17,52 +17,51 @@ class UserController extends ControllerAbstract
             $this->sanitizePost();
             
             $user
-                ->setRole($_POST['role'])   
-                //->setLastname($_POST['lastname'])
-                //->setFirstname($_POST['firstname'])
-                ->setPseudo($_POST['pseudo'])
+                ->setRole($_POST['role']) 
                 ->setEmail($_POST['email'])
                 ->setPassword($_POST['password'])
-                /*
-                ->setCivility($_POST['civility'])                                    
-                ->setUrl_img($_POST['url_img'])                  
-                ->setIs_active($_POST['is_active'])                  
-                ->setDescription($_POST['description'])                               
-                ->setAdress($_POST['adress'])                  
-                ->setPostal_code($_POST['postal_code'])                                    
-                ->setTown($_POST['town'])                    
-                ->setUrl_web_orga($_POST['url_web_orga'])                    
-                ->setUrl_fb($_POST['url_fb'])
-                 
-                 */  
+			;				
+			
+			if (isset ($_POST['name']))         $user->setLastname($_POST['name']);
+			if (isset ($_POST['lastname']))       $user->setLastname($_POST['lastname']);
+			if (isset ($_POST['firstname']))      $user->setFirstname($_POST['firstname']);
+			if (isset ($_POST['civility']))       $user->setCivility($_POST['civility'])  ;                                  
+			if (isset ($_POST['url_img']))        $user->setUrl_img($_POST['url_img'])   ;                             
+			if (isset ($_POST['description']))    $user->setDescription($_POST['description'])  ;                            
+			if (isset ($_POST['adress']))         $user->setAdress($_POST['adress'])   ;               
+			if (isset ($_POST['postal_code']))   $user->setPostal_code($_POST['postal_code'])  ;                                  
+			if (isset ($_POST['town']))           $user->setTown($_POST['town'])       ;             
+			if (isset ($_POST['url_web_orga']))   $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
+			if (isset ($_POST['url_fb']))        $user->setUrl_fb($_POST['url_fb']);
             ;
 
                     
             
-             if (empty($_POST['pseudo'])) {
-                $errors['pseudo'] = 'Le pseudo est obligatoire';
-            } elseif (strlen($_POST['pseudo']) > 100) {
-                $errors['pseudo'] = 'Le pseudo ne doit pas dépasser 100 caractères';
-            }
+             // if (empty($_POST['name'])) {
+                // $errors['name'] = 'Le pseudo est obligatoire';
+            // } elseif (strlen($_POST['pseudo']) > 100) {
+                // $errors['name'] = 'Le pseudo ne doit pas dépasser 100 caractères';
+            // }
 			
-			 $user->setPhone($_POST['phone1'].$_POST['phone1'].$_POST['phone1'].$_POST['phone1']);
+			 //$user->setPhone($_POST['phone1'].$_POST['phone2'].$_POST['phone3'].$_POST['phone4'].$_POST['phone5']);
           
 			  if ( ! empty($user->getPhone() ))         
 			  {
 				  if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
+				  if ( strlen($user->getPhone) != 10 )        {$errors['Phone'] = "Le telephone doit contenir 10 chiffres";}
 			  }
            
-            if (empty($_POST['lastname'])) {
-                $errors['lastname'] = 'Le nom est obligatoire';
-            } elseif (strlen($_POST['lastname']) > 100) {
-                $errors['lastname'] = 'Le nom ne doit pas dépasser 100 caractères';
-            }
-            //* Champs a mettre ensuite 
-            if (empty($_POST['firstname'])) {
-                $errors['firstname'] = 'Le prénom est obligatoire';
-            } elseif (strlen($_POST['firstname']) > 100) {
-                $errors['firstname'] = 'Le prénom ne doit pas dépasser 100 caractères';
-            }
+            // if (empty($_POST['lastname'])) {
+                // $errors['lastname'] = 'Le nom est obligatoire';
+            // } elseif (strlen($_POST['lastname']) > 100) {
+                // $errors['lastname'] = 'Le nom ne doit pas dépasser 100 caractères';
+            // }
+           
+            // if (empty($_POST['firstname'])) {
+                // $errors['firstname'] = 'Le prénom est obligatoire';
+            // } elseif (strlen($_POST['firstname']) > 100) {
+                // $errors['firstname'] = 'Le prénom ne doit pas dépasser 100 caractères';
+            // }
             
             if (empty($_POST['email'])) {
                 $errors['email'] = "L'email est obligatoire";
@@ -147,4 +146,6 @@ class UserController extends ControllerAbstract
         
         return $this->redirectRoute('homepage');
     }
+    
+
 }

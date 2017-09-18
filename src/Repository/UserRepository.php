@@ -5,6 +5,26 @@ use Entity\User;
 
 class UserRepository extends RepositoryAbstract
 {
+    
+     /**
+     * 
+     * @param string $email
+     * @return User|null
+     */
+    public function findLogin($email)
+    {
+        $dbUser = $this->db->fetchAssoc(
+            'SELECT name FROM member WHERE email = :email',
+            [
+                ':email' => $email
+            ]
+        );
+        
+        if (!empty($dbUser)) {
+            return $this->buildEntity($dbUser);
+        }
+    }
+    
     /**
      * 
      * @param string $email
@@ -70,6 +90,7 @@ class UserRepository extends RepositoryAbstract
         $user
             ->setId_member($data['id_member'])
             ->setLastname($data['lastname'])
+            ->setName($data['name'])
             ->setFirstname($data['firstname'])
             ->setEmail($data['email'])
             ->setPassword($data['password'])

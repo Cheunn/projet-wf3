@@ -69,11 +69,12 @@ class UserController extends ControllerAbstract
             
         // les verifs communues 
         
-          $user->setPhone($_POST['phone1'].$_POST['phone1'].$_POST['phone1'].$_POST['phone1']);
+          $user->setPhone($_POST['phone1'].$_POST['phone2'].$_POST['phone3'].$_POST['phone4'].$_POST['phone5']);
           
           if ( ! empty($user->getPhone() ))         
           {
               if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
+			  elseif ( $user->getPhone() != 10 )          {$errors['Phone'] = "Le telephone doit etre numerique";}
           }
         
                   

@@ -78,6 +78,8 @@ class UserManager
         return '';
     }
     
+  
+    
     /**
      * 
      * @return bool

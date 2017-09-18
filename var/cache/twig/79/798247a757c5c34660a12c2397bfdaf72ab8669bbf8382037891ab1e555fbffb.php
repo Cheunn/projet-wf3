@@ -15,11 +15,11 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883->enter($__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->enter($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a->enter($__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->enter($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -59,8 +59,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
             </button>
 
-      <a class=\"navbar-brand\" href=\"index.html\" title=\"logo\"><img src=\"";
+      <a class=\"navbar-brand\" href=\"";
         // line 38
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
+        echo "\" title=\"logo\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/logo.png"), "html", null, true);
         echo "\" alt=\"logo\" /></a> </div>
 
@@ -645,17 +647,33 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         
 
-        <li><a href=\"contact.html\">Contact</a></li>
+\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t";
+        // line 574
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 574, $this->getSourceContext()); })()), "user", array())) {
+            echo " 
+\t\t\t<li><a href=\"";
+            // line 575
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\" class=\"inscription\">Deconnexion</a></li>
 
-        <li><a href=\"";
-        // line 575
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
-        echo "\" class=\"connexion\">Connexion</a></li>
+\t\t ";
+        } else {
+            // line 577
+            echo " 
+\t\t\t<li><a href=\"";
+            // line 578
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
+            echo "\" class=\"connexion\">Connexion</a></li>
+\t\t\t<li><a href=\"";
+            // line 579
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
+            echo "\" class=\"connexion\">Inscription</a></li>
+\t\t";
+        }
+        // line 580
+        echo "  
 
-       <li><a href=\"";
-        // line 577
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
-        echo "\" class=\"inscription\">Inscription</a></li>
         
         
         
@@ -702,10 +720,64 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         </li>
         
-        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-        <li><a href=\"signin.html\"><i class=\"fa fa-user\"></i></a></li>
+       
+\t\t";
+        // line 629
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 629, $this->getSourceContext()); })()), "user", array())) {
+            echo " 
+\t\t\t";
+            // line 633
+            echo "\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">";
+            // line 635
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 635, $this->getSourceContext()); })()), "username", array()), "html", null, true);
+            echo " <span class=\"caret\"></span></a>
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"";
+            // line 643
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\">Deconnexion</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t\t\t  <li><a href=\"";
+            // line 646
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
+            echo "\"><i class=\"fa fa-times\"></i></a></li>
+\t\t\t\t  
+\t\t";
+        } else {
+            // line 648
+            echo " 
+\t\t\t";
+            // line 651
+            echo "\t\t\t<li><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
+            echo "\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t
+\t
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les annonces</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les chroniques</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"signin.html\">Connexion</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"signup.html\">Inscription</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t";
+        }
+        // line 665
+        echo " 
+       
 
       </ul>
 
@@ -718,13 +790,13 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 </header>
  
 ";
-        // line 654
+        // line 693
         echo "  ";
         
-        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883->leave($__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883_prof);
+        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->leave($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof);
 
         
-        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a->leave($__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a_prof);
+        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->leave($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof);
 
     }
 
@@ -740,7 +812,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     public function getDebugInfo()
     {
-        return array (  722 => 654,  657 => 577,  652 => 575,  413 => 339,  394 => 323,  375 => 307,  356 => 291,  333 => 271,  314 => 255,  295 => 239,  276 => 223,  253 => 203,  234 => 187,  215 => 171,  196 => 155,  173 => 135,  154 => 119,  135 => 103,  116 => 87,  64 => 38,  25 => 1,);
+        return array (  794 => 693,  779 => 665,  760 => 651,  757 => 648,  751 => 646,  745 => 643,  734 => 635,  730 => 633,  726 => 629,  675 => 580,  670 => 579,  666 => 578,  663 => 577,  657 => 575,  653 => 574,  415 => 339,  396 => 323,  377 => 307,  358 => 291,  335 => 271,  316 => 255,  297 => 239,  278 => 223,  255 => 203,  236 => 187,  217 => 171,  198 => 155,  175 => 135,  156 => 119,  137 => 103,  118 => 87,  64 => 38,  25 => 1,);
     }
 
     public function getSourceContext()
@@ -782,7 +854,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
             </button>
 
-      <a class=\"navbar-brand\" href=\"index.html\" title=\"logo\"><img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" /></a> </div>
+      <a class=\"navbar-brand\" href=\"{{ path('homepage') }}\" title=\"logo\"><img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" /></a> </div>
 
     <div class=\"navbar-collapse collapse pull-left\">
 
@@ -1317,11 +1389,15 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         
 
-        <li><a href=\"contact.html\">Contact</a></li>
+\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t{% if user_manager.user %} 
+\t\t\t<li><a href=\"{{ path('deconnexion') }}\" class=\"inscription\">Deconnexion</a></li>
 
-        <li><a href=\"{{ path('connexion') }}\" class=\"connexion\">Connexion</a></li>
+\t\t {% else %} 
+\t\t\t<li><a href=\"{{ path('connexion') }}\" class=\"connexion\">Connexion</a></li>
+\t\t\t<li><a href=\"{{ path('inscription') }}\" class=\"connexion\">Inscription</a></li>
+\t\t{% endif %}  
 
-       <li><a href=\"{{ path('inscription') }}\" class=\"inscription\">Inscription</a></li>
         
         
         
@@ -1368,10 +1444,45 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
         </li>
         
-        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>
-        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-        <li><a href=\"signin.html\"><i class=\"fa fa-user\"></i></a></li>
+       
+\t\t{% if user_manager.user %} 
+\t\t\t{#
+\t\t\t<li><a href=\"#\"><i>{{user_manager.username}}</i></a></li>
+\t\t\t<li><a href=\"{{ path('deconnexion') }}\"><i class=\"fa fa-times\"></i></a></li> #}
+\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">{{user_manager.username}} <span class=\"caret\"></span></a>
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"{{ path('deconnexion') }}\">Deconnexion</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t\t\t  <li><a href=\"{{ path('deconnexion') }}\"><i class=\"fa fa-times\"></i></a></li>
+\t\t\t\t  
+\t\t{% else %} 
+\t\t\t{# <li><a href=\"{{ path('connexion') }}\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t#}
+\t\t\t<li><a href=\"{{ path('connexion') }}\"><i class=\"fa fa-user\"></i></a></li>
+\t\t\t
+\t
+\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les annonces</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les news</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"single.html\">lire les chroniques</a></li>
+\t\t\t\t\t\t\t  <li class=\"divider\"></li>
+\t\t\t\t\t\t\t  <li><a href=\"signin.html\">Connexion</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"signup.html\">Inscription</a></li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t  </li>
+\t\t{% endif %} 
+       
 
       </ul>
 

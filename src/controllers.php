@@ -69,6 +69,69 @@ $admin
     ->get('/annonces', 'admin.annonce.controller:listAction')
     ->bind('admin_annonces')
 ;
+/* FRONT */
+
+
+
+/* ADMIN */
+
+// crée un groupe de routes
+$admin = $app['controllers_factory'];
+
+// toutes les url des routes créées par $admin sont préfixées par /admin
+$app->mount('/admin', $admin);
+
+// Category
+
+$admin
+    ->get('/category', 'admin.category.controller:listAction')
+    ->bind('admin_categories')
+;
+
+$admin
+        ->get('/category/{type}', 'admin.category.controller:listByType')
+        ->assert('type','[annonce]|[chronique]')
+        ->bind('admin_categories_by_type')
+;
+
+$admin
+        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_categories_edit')
+;
+
+$admin
+    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_category_delete')
+;
+
+// Chhronique
+
+$admin
+        ->get("/chroniques", "admin.chronique.controller:listAction")
+        ->bind("admin_chroniques")
+;
+
+$admin
+        ->match('/chronique/edition/{id}', 'admin.chronique.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_chronique_edit')
+;
+
+$admin
+    ->get('/chronique/suppression/{id}', 'admin.chronique.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_chronique_delete')
+;
+
+/*
+$admin
+    ->get('/posts/{type}', 'admin.category.controller:listAction')
+    ->value('type','chronique')
+    ->bind('admin_chroniques')
+;
+*/
 
 $admin
     ->match('/annonce/edition/{id}', 'admin.annonce.controller:editAction')
@@ -102,3 +165,45 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 });
 
 
+//*******FRONT handicap***************
+
+$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+        ->bind('handicap');
+
+
+// crée un groupe de route
+$admin = $app['controllers_factory'];
+
+
+
+
+
+$app->mount('/admin', $admin);
+
+//******************ROUTE POUR ADMIN HANDICAP*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/handicap
+$admin->get('/handicap', 'admin.handicap.controller:listAction')
+            ->bind('admin_handicap');
+
+$admin->match('/handicap/edition/{id}', 'admin.handicap.controller:editAction')
+            ->value('id', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_handicap_edit');
+//
+$admin->get('/handicap/supression/{id}', 'admin.handicap.controller:deleteAction')
+            ->assert('id', '\d+')
+            ->bind('admin_handicap_delete');
+
+//******************ROUTE POUR ADMIN Tag*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/tag
+$admin->get('/tag', 'admin.tag.controller:listAction')
+            ->bind('admin_tag');
+
+$admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
+            ->value('idtag', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_tag_edit');
+//
+$admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
+            ->assert('idtag', '\d+')
+            ->bind('admin_tag_delete');

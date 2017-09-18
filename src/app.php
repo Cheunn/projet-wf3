@@ -1,5 +1,8 @@
 <?php
 
+use Controller\CategoryController;
+use Repository\AnnonceRepository;
+use Repository\CategoryRepository;
 use Controller\Admin\CategoryController;
 use Controller\Admin\ChroniqueController;
 use Repository\CategoryRepository;
@@ -15,13 +18,20 @@ $app = new Application();
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new AssetServiceProvider());
 $app->register(new TwigServiceProvider());
-$app->register(new HttpFragmentServiceProvider());
+$app->register(new HttpFragmentServiceProvider() );
+
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
 
+    // le User est declaré accessible dans twig dans la globale user_manager
+    $twig->addGlobal('user_manager', $app['user.manager'] ); 
     return $twig;
 });
 
+
+
+  //A VOIR LIGNE CI DESSOUS
+$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
 
 /*
  * Ajout de Doctrine DBAL ($app['db'])
@@ -46,12 +56,26 @@ $app->register(
 // gestionnaire de sessions de Symfony ($app['session'])
 $app->register(new Silex\Provider\SessionServiceProvider());
 
+
 // CONTROLLERS
 
 /* FRONT */
 
+$app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
+$app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
+
+$app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
+
+//FRIDAY
+$app['annonce.controller'] = function () use ($app) {
+    return new Controller\AnnonceController($app);
+};
 
 /* ADMIN */
+
+$app['admin.annonce.controller'] = function () use ($app) {
+    return new \Controller\Admin\AnnonceController($app);
+};
 
 $app['admin.category.controller'] = function () use ($app) {
     return new CategoryController($app);
@@ -68,8 +92,14 @@ $app['admin.handicap.controller'] = function () use ($app) {
 $app['admin.tag.controller'] = function () use ($app) {
     return new Controller\Admin\TagController($app);
 };
-  
-//Repositories
+
+// REPOSITORIES
+$app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+$app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
+
+$app['annonce.repository'] = function () use ($app) {
+    return new AnnonceRepository($app['db']);
+};
 
 $app['category.repository'] = function () use ($app) {
     return new CategoryRepository($app['db']);

@@ -5,7 +5,7 @@ use Entity\Chronique;
 use Entity\Category;
 use Entity\User;
 
-class ArticleRepository extends RepositoryAbstract
+class ChroniqueRepository extends RepositoryAbstract
 {
     /**
      * 
@@ -16,7 +16,7 @@ class ArticleRepository extends RepositoryAbstract
         $query = <<<SQL
 SELECT 
     ch.*, 
-    c.name AS category_name,
+    c.name AS category_name
 FROM chronique ch
 JOIN category c ON ch.category_id_category = c.id_category
 SQL;
@@ -40,16 +40,16 @@ SQL;
         $query = <<<SQL
 SELECT 
     ch.*,  
-    c.name AS category_name,
+    c.name AS category_name
 FROM chronique ch
 JOIN category c ON ch.category_id_category  = c.id
-WHERE ch.category_id_category = :category_id
+WHERE ch.category_id_category = :id_category
 SQL;
         
         $dbChroniques = $this->db->fetchAll(
             $query,
             [
-                ':category_id' => $category->getId_category()
+                ':id_category' => $category->getId_category()
             ]
         );
         $chroniques = [];
@@ -64,16 +64,16 @@ SQL;
     /**
      * 
      * @param int $id
-     * @return Article|null
+     * @return Chronique|null
      */
     public function find($id)
     {
         $query = <<<SQL
 SELECT
     ch.*, 
-    c.name AS category_name,
+    c.name AS category_name
 FROM chronique ch
-JOIN category c ON a.category_id_category = c.id
+JOIN category c ON ch.category_id_category = c.id_category
 WHERE ch.id_post = :id
 SQL;
         
@@ -98,9 +98,9 @@ SQL;
         $data = [
             'post_title' => $chronique->getPost_title(),
             'post_type' => $chronique->getPost_type(),
-            'type' => $chronique->getPost(),
+            'type' => $chronique->getType(),
             'post_date' => $chronique->getPost_date(),
-            'url_img_1' => $chronique->getUrl_img_1,            
+            'url_img_1' => $chronique->getUrl_img_1(),            
             'url_img_2' => $chronique->getUrl_img_2(),            
             'paragraph_1' => $chronique->getParagraph_1(),            
             'paragraph_2' => $chronique->getParagraph_2(),
@@ -111,7 +111,7 @@ SQL;
 
         ];
         
-        if ($chronique->getId()) { // update
+        if ($chronique->getId_post()) { // update
             $this->db->update(
                 'chronique',
                 $data,
@@ -127,7 +127,7 @@ SQL;
     
     /**
      * 
-     * @param Article $article
+     * @param Chronique $chronique
      */
     public function delete(Chronique $chronique) 
     {
@@ -137,10 +137,11 @@ SQL;
     /**
      * 
      * @param array $data
-     * @return Article
+     * @return Chronique
      */
     private function buildEntity(array $data)
     {
+        /*
         $category = new Category();
         
         $category
@@ -148,7 +149,7 @@ SQL;
             ->setName($data['name'])
             ->setType_post($data['type_post'])
         ;
-        
+        */
         //$author = new User();
         
         /*$author
@@ -170,7 +171,7 @@ SQL;
             ->setParagraph_1($data['paragraph_1'])
             ->setParagraph_2($data['paragraph_2'])
             ->setMember_id_member($data['member_id_member'])
-            ->setCategory_id_category($category)
+            ->setCategory_id_category($data['category_id_category'])
             //->setAuthor($author)
         ;
         

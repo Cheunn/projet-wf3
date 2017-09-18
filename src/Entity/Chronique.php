@@ -107,28 +107,18 @@ class Chronique
         return $this;
     }
 
-    public function setType(Category $type) {
+    public function setType($type) {
         $this->type = $type;
         return $this;
     }
 
-    public function setUrl_img_1(User $url_img_1) {
+    public function setUrl_img_1($url_img_1) {
         $this->url_img_1 = $url_img_1;
         return $this;
     }
 
     public function setUrl_img_2($url_img_2) {
         $this->url_img_2 = $url_img_2;
-        return $this;
-    }
-
-    public function setUrl_paragraph_1($url_paragraph_1) {
-        $this->url_paragraph_1 = $url_paragraph_1;
-        return $this;
-    }
-
-    public function setUrl_paragraph_2($url_paragraph_2) {
-        $this->url_paragraph_2 = $url_paragraph_2;
         return $this;
     }
 

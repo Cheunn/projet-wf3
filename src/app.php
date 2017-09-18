@@ -1,7 +1,9 @@
 <?php
 
 use Controller\Admin\CategoryController;
+use Controller\Admin\ChroniqueController;
 use Repository\CategoryRepository;
+use Repository\ChroniqueRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
@@ -51,10 +53,20 @@ $app['admin.category.controller'] = function () use ($app) {
     return new CategoryController($app);
 };
 
+$app['admin.chronique.controller'] = function () use ($app){
+    return new ChroniqueController($app);
+};
+
+
+
 //Repositories
 
 $app['category.repository'] = function () use ($app) {
     return new CategoryRepository($app['db']);
+};
+
+$app['chronique.repository'] = function () use ($app){
+    return new ChroniqueRepository($app['db']);
 };
 
 return $app;

@@ -52,11 +52,11 @@ class ChroniqueController extends ControllerAbstract
                 ->setUrl_img_2($_POST['url_img_2'])
                 ->setParagraph_1($_POST['paragraph_1'])
                 ->setParagraph_2($_POST['paragraph_2'])
-                ->setMember_id_member($_POST['member_id_member'])
-                ->setCategory_id_category($category)
+                ->setMember_id_member(7)
+                ->setCategory_id_category($_POST['category'])
             ;
             
-            $article->getCategory()->setId($_POST['category']);
+            //$chronique->getCategory()->setId($_POST['category']);
             
             // contrôle des champs de formulaire
             if (empty($_POST['post_title'])) {
@@ -66,31 +66,27 @@ class ChroniqueController extends ControllerAbstract
             }
             
             if (empty($_POST['paragraph_1'])) {
-                $errors['paragraph_1'] = '';
-            }
-            
-            if (empty($_POST['header'])) {
-                $errors['header'] = "L'entête est obligatoire";
+                $errors['paragraph_1'] = 'Il faut du contenu au moins dans le premier paragraphe';
             }
             
             if (empty($_POST['category'])) {
-                $errors['category'] = 'La rubrique est obligatoire';
+                $errors['category'] = 'La category est obligatoire';
             }
             
             if (empty($errors)) {
-                $this->app['article.repository']->save($article);
-                $this->addFlashMessage("L'article est enregistré");
+                $this->app['chronique.repository']->save($chronique);
+                //$this->addFlashMessage("La chronique est enregistré");
                 
                 return $this->redirectRoute('admin_chroniques');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
-                $this->addFlashMessage($message, 'error');
+                //$this->addFlashMessage($message, 'error');
             }
         }
         
         return $this->render(
-            'admin/chroniques/edit.html.twig',
+            'admin/chronique/edit.html.twig',
             [
                 'chronique' => $chronique,
                 'categories' => $categories
@@ -107,7 +103,7 @@ class ChroniqueController extends ControllerAbstract
         }
         
         $this->app['chronique.repository']->delete($chronique);
-        $this->addFlashMessage("La chronique est supprimé");
+        $this->addFlashMessage("La chronique est supprimée");
         
         return $this->redirectRoute('admin_chroniques');
     }

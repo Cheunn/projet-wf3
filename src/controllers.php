@@ -25,6 +25,8 @@ $admin = $app['controllers_factory'];
 // toutes les url des routes créées par $admin sont préfixées par /admin
 $app->mount('/admin', $admin);
 
+// Category
+
 $admin
     ->get('/category', 'admin.category.controller:listAction')
     ->bind('admin_categories')
@@ -46,6 +48,25 @@ $admin
     ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
     ->assert('id', '\d+') // force id a être un nombre
     ->bind('admin_category_delete')
+;
+
+// Chhronique
+
+$admin
+        ->get("/chroniques", "admin.chronique.controller:listAction")
+        ->bind("admin_chroniques")
+;
+
+$admin
+        ->match('/chronique/edition/{id}', 'admin.chronique.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_chronique_edit')
+;
+
+$admin
+    ->get('/chronique/suppression/{id}', 'admin.chronique.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_chronique_delete')
 ;
 
 /*

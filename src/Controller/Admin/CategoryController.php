@@ -16,10 +16,21 @@ class CategoryController extends ControllerAbstract
         $categories = $this->app['category.repository']->findAll();
         
         return $this->render(
-            'admin/category/list.html.twig',
+            'admin/category/index.html.twig',
             [
                 'categories' => $categories
             ]
+        );
+    }
+    
+    public function listByType($type){
+        $categories = $this->app['category.repository']->findByType($type);
+        
+        return $this->render(
+                'admin/category/list.html.twig',
+                [
+                    'categories' => $categories
+                ]
         );
     }
     

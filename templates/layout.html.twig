@@ -3,8 +3,6 @@
 
     <head>
        
-
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,24 +42,24 @@
            
         {% include 'footer.html.twig'%}
         {% block javascripts %}
-         <!-- Bootstrap core JavaScript
-            ================================================== --> 
-        <!-- Placed at the end of the document so the pages load faster --> 
-        <script src="{{ asset('assets/js/jquery-1.11.2.min.js') }}"></script>
-        <!-- bootstrap -->	
-        <script src="{{ asset('assets/plugins/bootstrap-3.3.4/js/bootstrap.min.js') }}"></script>
-            <script src="{{ asset('assets/js/modernizr.js') }}"></script>
-        <!-- owl-carousel -->
-            <script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script>
 
-        <!-- masonry -->
-            <script src="{{ asset('assets/plugins/masonry/masonry.min.js') }}"></script>
+                 <!-- Bootstrap core JavaScript
+        ================================================== --> 
+    <!-- Placed at the end of the document so the pages load faster --> 
+    <script src="{{ asset('assets/js/jquery-1.11.2.min.js') }}"></script>
+    <!-- bootstrap -->	
+    <script src="{{ asset('assets/plugins/bootstrap-3.3.4/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/js/modernizr.js') }}"></script>
+    <!-- owl-carousel -->
+	<script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script>
+    <!-- masonry -->
+	<script src="{{ asset('assets/plugins/masonry/masonry.min.js') }}"></script>
+    <!-- Form Validation -->
+    <script src="{{ asset('assets/plugins/jquery-validate/jquery.validate.min.js') }}"></script>
+    <!-- custom -->
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+        {% endblock %}
+        
 
-        <!-- Form Validation -->
-        <script src="{{ asset('assets/plugins/jquery-validate/jquery.validate.min.js') }}"></script>
-
-        <!-- custom -->
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-    {% endblock %}
     </body>
 </html>

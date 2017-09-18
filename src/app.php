@@ -1,10 +1,15 @@
 <?php
 
+
+use Controller\CategoryController;
+use Repository\AnnonceRepository;
+use Repository\CategoryRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
-use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
+use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\TwigServiceProvider;
 
 $app = new Application();
 $app->register(new ServiceControllerServiceProvider());
@@ -20,10 +25,15 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     return $twig;
 });
 
+
+  //A VOIR LIGNE CI DESSOUS
+$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
+ 
 /*
  * Ajout de Doctrine DBAL ($app['db'])
  * NB a faire dans cmd : C:\xampp\htdocs\silex-blog>composer require "doctrine/dbal:~2.2"
  */
+
 $app->register(new Silex\Provider\DoctrineServiceProvider, 
         [
             'db.options' => [
@@ -36,24 +46,49 @@ $app->register(new Silex\Provider\DoctrineServiceProvider,
                             ]
         ]
  );
+
 // gestionnaire de sessions symfony
-$app->register(new Silex\Provider\SessionServiceProvider());
-$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
+$app->register(new \Silex\Provider\SessionServiceProvider());
 
+// CONTROLLERS
 
-/* Controllers */
-
-/* Front */
+/* FRONT */
 $app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
 $app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
+
 $app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
 
-/* Back 
+//FRIDAY
+$app['annonce.controller'] = function () use ($app) {
+    return new Controller\AnnonceController($app);
+};
 
-*/
 
-/* Repositories */
+/* ADMIN */
+
+
+$app['admin.annonce.controller'] = function () use ($app) {
+    return new \Controller\Admin\AnnonceController($app);
+};
+
+
+$app['admin.category.controller'] = function () use ($app) {
+    return new CategoryController($app);
+};
+
+// REPOSITORIES
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
 $app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
 
+$app['annonce.repository'] = function () use ($app) {
+    return new AnnonceRepository($app['db']);
+};
+
+$app['category.repository'] = function () use ($app) {
+    return new CategoryRepository($app['db']);
+};
+
+
 return $app;
+
+

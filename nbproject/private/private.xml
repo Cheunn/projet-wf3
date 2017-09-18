@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/projet-wf3/src/Repository/HandicapRepository.php</file>
-            <file>file:/C:/xampp/htdocs/projet-wf3/src/Controller/Admin/HandicapController.php</file>
-            <file>file:/C:/xampp/htdocs/projet-wf3/src/Entity/Handicap.php</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/templates/admin/tag/edit.html.twig</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/src/Repository/TagRepository.php</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/templates/admin/tag/tag.html.twig</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/src/Controller/Admin/TagController.php</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/src/Controller/TagController.php</file>
+            <file>file:/C:/xampp/htdocs/projet-wf3/src/Entity/Tag.php</file>
             <file>file:/C:/xampp/htdocs/projet-wf3/src/app.php</file>
-            <file>file:/C:/xampp/htdocs/projet-wf3/templates/Handicap/Handicap.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet-wf3/src/controllers.php</file>
         </group>
     </open-files>

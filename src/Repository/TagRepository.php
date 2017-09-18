@@ -100,4 +100,76 @@ class TagRepository extends RepositoryAbstract {
     }
       
     
+    //**********Function save Tag front ***************
+    
+       public function saveFront (Tag $tag) {
+        
+        $data = [
+            'name' => $tag->geName()
+            ];
+          
+           
+        
+        if ($tag->getIdTag()) {
+            $this->db->insert(
+                    'tag_has_post',
+                    $data,
+                    [
+                        'tag_idtag' => $tag->getIdTag()
+                    ]
+            );
+        } 
+        
+        else {
+            $this->db->insert(
+                    'tag',
+                    $data
+            );
+            $tag->setIdTag($this->db->lastInsertId());
+            
+            $this->db->insert(
+                        'tag_has_post',
+                        $data,
+                    [
+                        'tag_idtag'=>$tag->getIdTag()
+                    ]
+            );
+            $tag->setIdTag($this->db->lastInsertId());
+             
+        }
+    }
+    
+    //*****Methode de Tri: find chronique by TAG *******
+    
+    public function findChroniqueByTag(Tag $tag) {
+        
+        $query = <<<SQL
+SELECT
+     c.name, 
+     a.chronique_id_post AS id_chronique
+FROM tag c
+JOIN tag_has_post a ON a.tag_idtag = c.idtag
+WHERE a.tag_idtag = :idtag
+;
+
+SQL;
+        
+        $dbChroniques = $this->db->fetchAll(
+                $query,
+                [
+                    ':idtag' => $tag->getIdTag()
+                ]
+        );
+        
+        $chroniques = [];
+
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+
+        return $chroniques;
+    }
+    
+    
+    
 }

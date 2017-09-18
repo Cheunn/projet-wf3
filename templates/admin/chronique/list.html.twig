@@ -1,0 +1,41 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>Chroniques</h1>
+    
+    <p><a href="{{ path('admin_chronique_edit') }}">Ajouter une chronique</a></p>
+    
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>paragraphe 1</th>            
+            <th>paragraphe 2</th>
+            <th>url img 1</th>            
+            <th>ulr img 2</th>
+            <th width="200px"></th>
+        </tr>
+        {% for chronique in chroniques %}
+            <tr>
+                <td>{{ chronique.id_post }}</td>{# en php : $article->getId() #}
+                <td>{{ chronique.post_title }}</td>
+                <td>{{ chronique.category_id_category }}</td>
+                <td>{{ chronique.paragraph_1 }}</td>
+                <td>{{ chronique.paragraph_2 }}</td>
+                <td>{{ chronique.url_img_1 }}</td>
+                <td>{{ chronique.url_img_2 }}</td>
+                <td>
+                    <a href="{{ path('admin_chronique_edit', {id: chronique.id_post}) }}" class="btn btn-primary">
+                        Modifier
+                    </a>
+                    <a href="{{ path('admin_chronique_delete', {id: chronique.id_post}) }}" class="btn btn-danger">
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>{% if chronique.id_post %}Modification{% else %}Création{% endif %} chronique</h1>
+    <form method="post">
+        <div class="form-group">
+            <label>Titre</label>
+            <input type="text" name="post_title" class="form-control" value="{{ chronique.post_title }}">
+        </div>
+        <div class="form-group">
+            <label>paragraphe 1</label>
+            <textarea name="paragraph_1" class="form-control">{{ chronique.paragraph_1 }}</textarea>
+            <label>paragraphe 2</label>
+            <textarea name="paragraph_2" class="form-control">{{ chronique.paragraph_2 }}</textarea>
+        </div>
+        <div class="form-group">
+            <label>Image 1</label>
+            <input type="text" name="url_img_1" class="form-control" value="{{ chronique.url_img_1 }}">
+            <label>Image 2</label>
+            <input type="text" name="url_img_2" class="form-control" value="{{ chronique.url_img_2 }}">
+        </div>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="text" name="post_date" class="form-control" value="{{ chronique.post_date }}">
+        </div>
+        <div class="form-group">
+            <label>Catégorie</label>
+            <select name="category" class="form-control">
+                <option value="">Choisissez une catégorie</option>
+                {% for category in categories %}
+                    <option 
+                        value="{{ category.id_category }}"
+                        {% if category.id_category == chronique.category_id_category %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <select name="post_type" class="form-control">
+                <option value="chronique">Chronique</option>
+                <option value="news">News</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select name="type" class="form-control">
+                <option value="user_chronique">Chronique membre</option>
+                <option value="asso_chronique">Chronique association</option>
+                <option value="news">News</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{{ path('admin_chroniques') }}" class="btn btn-default">Annuler</a>
+        <br><br>
+    </form>
+{% endblock %}

@@ -756,3 +756,16 @@ a.blogger { color: #f39d38; }
   left: -79px;
 }
 }
+
+/* Custom CSS */
+option .disabled {
+   color: #999;
+}
+.connexion {
+    background: #fea000;
+	border-right: 1px solid #ffa500;
+}
+.inscription {
+background: #fea000;
+
+}

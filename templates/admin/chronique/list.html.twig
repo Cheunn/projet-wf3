@@ -1,29 +1,35 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    <h1>Articles</h1>
+    <h1>Chroniques</h1>
     
-    <p><a href="{{ path('admin_article_edit') }}">Ajouter un article</a></p>
+    <p><a href="{{ path('admin_chronique_edit') }}">Ajouter une chronique</a></p>
     
     <table class="table">
         <tr>
             <th>Id</th>
             <th>Titre</th>
-            <th>Rubrique</th>
-            <th>Auteur</th>
+            <th>Catégorie</th>
+            <th>paragraphe 1</th>            
+            <th>paragraphe 2</th>
+            <th>url img 1</th>            
+            <th>ulr img 2</th>
             <th width="200px"></th>
         </tr>
-        {% for article in articles %}
+        {% for chronique in chroniques %}
             <tr>
-                <td>{{ article.id }}</td>{# en php : $article->getId() #}
-                <td>{{ article.title }}</td>
-                <td>{{ article.categoryName }}</td>
-                <td>{{ article.authorName }}</td>
+                <td>{{ chronique.id_post }}</td>{# en php : $article->getId() #}
+                <td>{{ chronique.post_title }}</td>
+                <td>{{ chronique.category_id_category }}</td>
+                <td>{{ chronique.paragraph_1 }}</td>
+                <td>{{ chronique.paragraph_2 }}</td>
+                <td>{{ chronique.url_img_1 }}</td>
+                <td>{{ chronique.url_img_2 }}</td>
                 <td>
-                    <a href="{{ path('admin_article_edit', {id: article.id}) }}" class="btn btn-primary">
+                    <a href="{{ path('admin_chronique_edit', {id: chronique.id_post}) }}" class="btn btn-primary">
                         Modifier
                     </a>
-                    <a href="{{ path('admin_article_delete', {id: article.id}) }}" class="btn btn-danger">
+                    <a href="{{ path('admin_chronique_delete', {id: chronique.id_post}) }}" class="btn btn-danger">
                         Supprimer
                     </a>
                 </td>

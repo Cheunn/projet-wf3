@@ -290,9 +290,9 @@ class User
 
     public function setRole($role)
     {
-        if (!in_array($role, [self::ROLE_USER, self::ROLE_ADMIN, self::ROLE_ASSO])) {
+        /*   if (!in_array($role, [self::ROLE_USER, self::ROLE_ADMIN, self::ROLE_ASSO])) {  
             throw new \UnexpectedValueException('Unrecognized role value');
-        }
+        }   */
         
         $this->role = $role;
         

@@ -12,6 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 $app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
+$app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bind('APIautoCompletion');
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
 

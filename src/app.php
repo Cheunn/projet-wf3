@@ -46,6 +46,7 @@ $app['user.manager'] = function() use ($app)            {   return new Service\U
 /* Front */
 $app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
 $app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
+$app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
 
 /* Back 
 
@@ -53,5 +54,6 @@ $app['user.controller'] = function() use ($app)            {   return new Contro
 
 /* Repositories */
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+$app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
 
 return $app;

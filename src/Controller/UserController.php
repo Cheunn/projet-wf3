@@ -13,25 +13,23 @@ class UserController extends ControllerAbstract
         
    
         if (!empty($_POST)) {
+			
             $this->sanitizePost();
             
             $user
-                //->setRole($_POST['role'])   
+                ->setRole($_POST['role'])   
                 //->setLastname($_POST['lastname'])
                 //->setFirstname($_POST['firstname'])
                 ->setPseudo($_POST['pseudo'])
                 ->setEmail($_POST['email'])
                 ->setPassword($_POST['password'])
                 /*
-                ->setPhone($_POST['phone'])
                 ->setCivility($_POST['civility'])                                    
                 ->setUrl_img($_POST['url_img'])                  
                 ->setIs_active($_POST['is_active'])                  
-                ->setDescription($_POST['description'])                  
-                ->setDate_createate_create($_POST['date_create'])                  
+                ->setDescription($_POST['description'])                               
                 ->setAdress($_POST['adress'])                  
-                ->setPostal_code($_POST['postal_code'])                  
-                ->setCountry($_POST['country'])                    
+                ->setPostal_code($_POST['postal_code'])                                    
                 ->setTown($_POST['town'])                    
                 ->setUrl_web_orga($_POST['url_web_orga'])                    
                 ->setUrl_fb($_POST['url_fb'])
@@ -46,19 +44,26 @@ class UserController extends ControllerAbstract
             } elseif (strlen($_POST['pseudo']) > 100) {
                 $errors['pseudo'] = 'Le pseudo ne doit pas dépasser 100 caractères';
             }
-            /*  Champs a mettre ensuite 
+			
+			 $user->setPhone($_POST['phone1'].$_POST['phone1'].$_POST['phone1'].$_POST['phone1']);
+          
+			  if ( ! empty($user->getPhone() ))         
+			  {
+				  if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
+			  }
+           
             if (empty($_POST['lastname'])) {
                 $errors['lastname'] = 'Le nom est obligatoire';
             } elseif (strlen($_POST['lastname']) > 100) {
                 $errors['lastname'] = 'Le nom ne doit pas dépasser 100 caractères';
             }
-            
+            //* Champs a mettre ensuite 
             if (empty($_POST['firstname'])) {
                 $errors['firstname'] = 'Le prénom est obligatoire';
             } elseif (strlen($_POST['firstname']) > 100) {
                 $errors['firstname'] = 'Le prénom ne doit pas dépasser 100 caractères';
             }
-            */
+            
             if (empty($_POST['email'])) {
                 $errors['email'] = "L'email est obligatoire";
             } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -125,7 +130,7 @@ class UserController extends ControllerAbstract
             }
             
             $this->addFlashMessage('Identification incorrecte', 'error');
-            die(' FIN NON OK');
+           
         }
         
         return $this->render(

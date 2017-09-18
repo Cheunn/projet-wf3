@@ -15,11 +15,11 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4->enter($__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883->enter($__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee->enter($__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a->enter($__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -111,7 +111,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -127,7 +130,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 103
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -143,7 +149,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 119
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -159,7 +168,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 135
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -179,7 +191,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post5.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 155
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post5.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -195,7 +210,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post2.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 171
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post2.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -211,7 +229,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post7.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 187
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post7.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -227,7 +248,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 203
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -247,7 +271,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 223
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -263,7 +290,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 239
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -279,7 +309,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 255
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -295,7 +328,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 271
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -315,7 +351,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 291
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -331,7 +370,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 307
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -347,7 +389,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 323
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -363,7 +408,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"";
+        // line 339
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
+        echo "\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -673,10 +721,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
         // line 654
         echo "  ";
         
-        $__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4->leave($__internal_46e77834731473a79ec59f797ceca68e0ae2f15a73685f2367514b433213f0e4_prof);
+        $__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883->leave($__internal_9e5ea7506af86ac07c144c8367e83feb567d549a03421804cc01dd6dced3e883_prof);
 
         
-        $__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee->leave($__internal_1f383773a356a65f918b85e536049cbc7b07a906f475010c6c3732075e956bee_prof);
+        $__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a->leave($__internal_870cd8448b279bc2e6e0225e6a3695c5da571cca15edae9e06c5774afd2c640a_prof);
 
     }
 
@@ -692,7 +740,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     public function getDebugInfo()
     {
-        return array (  674 => 654,  609 => 577,  604 => 575,  64 => 38,  25 => 1,);
+        return array (  722 => 654,  657 => 577,  652 => 575,  413 => 339,  394 => 323,  375 => 307,  356 => 291,  333 => 271,  314 => 255,  295 => 239,  276 => 223,  253 => 203,  234 => 187,  215 => 171,  196 => 155,  173 => 135,  154 => 119,  135 => 103,  116 => 87,  64 => 38,  25 => 1,);
     }
 
     public function getSourceContext()
@@ -783,7 +831,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -799,7 +847,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -815,7 +863,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -831,7 +879,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -851,7 +899,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post5.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post5.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -867,7 +915,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post2.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post2.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -883,7 +931,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post7.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post7.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -899,7 +947,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post4.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -919,7 +967,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -935,7 +983,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -951,7 +999,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -967,7 +1015,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -987,7 +1035,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post1.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1003,7 +1051,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post6.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1019,7 +1067,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post8.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 
@@ -1035,7 +1083,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
                                             <div class=\"thumbnail\">
 
-                                                <a href=\"single.html\"><img src=\"assets/images/feature-posts/feature-post3.png\" alt=\"Generic placeholder thumbnail\"></a>
+                                                <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
 
                                                 <div class=\"caption\">
 

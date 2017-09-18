@@ -92,3 +92,48 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
+
+
+
+//*******FRONT handicap***************
+
+$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+        ->bind('handicap');
+
+
+// crée un groupe de route
+$admin = $app['controllers_factory'];
+
+
+
+
+
+$app->mount('/admin', $admin);
+
+//******************ROUTE POUR ADMIN HANDICAP*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/handicap
+$admin->get('/handicap', 'admin.handicap.controller:listAction')
+            ->bind('admin_handicap');
+
+$admin->match('/handicap/edition/{id}', 'admin.handicap.controller:editAction')
+            ->value('id', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_handicap_edit');
+//
+$admin->get('/handicap/supression/{id}', 'admin.handicap.controller:deleteAction')
+            ->assert('id', '\d+')
+            ->bind('admin_handicap_delete');
+
+//******************ROUTE POUR ADMIN Tag*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/tag
+$admin->get('/tag', 'admin.tag.controller:listAction')
+            ->bind('admin_tag');
+
+$admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
+            ->value('idtag', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_tag_edit');
+//
+$admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
+            ->assert('idtag', '\d+')
+            ->bind('admin_tag_delete');

@@ -22,6 +22,7 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     return $twig;
 });
 
+
 /*
  * Ajout de Doctrine DBAL ($app['db'])
  * nécessite d'avoir exécuté :
@@ -42,6 +43,9 @@ $app->register(
     ]
 );
 
+// gestionnaire de sessions de Symfony ($app['session'])
+$app->register(new Silex\Provider\SessionServiceProvider());
+
 // CONTROLLERS
 
 /* FRONT */
@@ -57,8 +61,14 @@ $app['admin.chronique.controller'] = function () use ($app){
     return new ChroniqueController($app);
 };
 
+$app['admin.handicap.controller'] = function () use ($app) {
+    return new Controller\Admin\HandicapController($app);
+};
 
-
+$app['admin.tag.controller'] = function () use ($app) {
+    return new Controller\Admin\TagController($app);
+};
+  
 //Repositories
 
 $app['category.repository'] = function () use ($app) {
@@ -67,6 +77,14 @@ $app['category.repository'] = function () use ($app) {
 
 $app['chronique.repository'] = function () use ($app){
     return new ChroniqueRepository($app['db']);
+  
+$app['handicap.repository'] = function () use ($app) {
+    return new Repository\HandicapRepository($app['db']);
+};
+  
+$app['tag.repository'] = function () use ($app) {
+    return new Repository\TagRepository($app['db']);
 };
 
 return $app;
+

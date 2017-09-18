@@ -177,4 +177,18 @@ SQL;
         
         return $chronique;
     }
+    
+    /* FONCTION POUR LE FRONT */
+    
+    public function listByUser($id_member){
+        $dbChroniques = $this->db->fetchAll("SELECT * FROM chronique WHERE member_id_member = $id_member");
+        $chroniques = [];
+        
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        
+        return $chroniques;
+   }
+   
 }

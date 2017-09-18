@@ -23,6 +23,18 @@ class CategoryRepository extends RepositoryAbstract
     }
     
     
+    public function findAllChronique()
+    {
+        $dbCategoriesByChronique = $this->db->fetchAll('SELECT * FROM category WHERE type_post = "chronique"');
+        $categoriesByChronique = [];
+        
+        foreach ($dbCategoriesByChronique as $dbCategoryByChronique) {
+            $categoriesByChronique[] = $this->buildEntity($dbCategoryByChronique);
+        }
+        
+        return $categoriesByChronique;
+    }
+    
     /**
      * 
      * @param string $type

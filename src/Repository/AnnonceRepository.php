@@ -24,6 +24,7 @@ SQL;
         foreach ($dbAnnonces as $dbAnnonce) {
             $annonces[] = $this->buildEntity($dbAnnonce);
         }
+       
         return $annonces;
     }
     
@@ -34,7 +35,7 @@ SELECT
     a.*, c.name 
 FROM annonce a
 JOIN category c ON a.category_id_category = c.id_category
-WHERE a.category_id_category = :id_category;
+WHERE a.category_id_category = :id_category
 SQL;
         
         $dbAnnonces = $this->db->fetchAll(
@@ -67,6 +68,26 @@ SQL;
             $query,
             [
                 ':category_id_category' => $id
+            ]
+        );
+        
+        if (!empty($dbAnnonce)) {
+            return $this->buildEntity($dbAnnonce);
+        }
+    }
+    
+        public function findByIdAnnonce($id)
+    {
+        $query = <<<SQL
+SELECT * 
+FROM annonce 
+WHERE id_post = :id_post
+SQL;
+        
+        $dbAnnonce = $this->db->fetchAssoc(
+            $query,
+            [
+                ':id_post' => $id
             ]
         );
         
@@ -110,11 +131,24 @@ SQL;
         }
     }
     
-
-    public function delete(Annonce $annonce) 
+    public function findLastThree()
     {
-        $this->db->delete('annonce', ['id_post' => $annonce->getId_post()]); 
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY post_date
+LIMIT 3
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);
+        $annonces = [];
+        
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+        return $annonces;
     }
+    
     
 
     private function buildEntity(array $data)
@@ -149,7 +183,7 @@ SQL;
             ->setMember_id_member($data['member_id_member'])
             ->setType_id_type($data['type_id_type'])
             ->setCategory_id_category($data['category_id_category'])
-                
+          
             //->setCategory($category)
             //->setAuthor($author)
         ;

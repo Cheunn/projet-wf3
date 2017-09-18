@@ -12,6 +12,7 @@ use Silex\Provider\AssetServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
+use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 
 $app = new Application();
@@ -29,8 +30,6 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 });
 
 
-
-  //A VOIR LIGNE CI DESSOUS
 $app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
 
 /*
@@ -56,20 +55,22 @@ $app->register(
 // gestionnaire de sessions de Symfony ($app['session'])
 $app->register(new Silex\Provider\SessionServiceProvider());
 
-
 // CONTROLLERS
 
 /* FRONT */
-
 $app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
 $app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
 
 $app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
 
-//FRIDAY
 $app['annonce.controller'] = function () use ($app) {
     return new Controller\AnnonceController($app);
 };
+
+$app['category.controller'] = function () use ($app) {
+    return new Controller\CategoryController($app);
+};
+
 
 /* ADMIN */
 
@@ -94,8 +95,10 @@ $app['admin.tag.controller'] = function () use ($app) {
 };
 
 // REPOSITORIES
+
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
 $app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
+
 
 $app['annonce.repository'] = function () use ($app) {
     return new AnnonceRepository($app['db']);

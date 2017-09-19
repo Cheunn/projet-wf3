@@ -36,6 +36,7 @@ abstract class ControllerAbstract
     {
         $this->app = $app;
         $this->twig = $app['twig'];
+        $this->session = $app['session'];
         
     }
 
@@ -65,16 +66,16 @@ abstract class ControllerAbstract
         );
     }
     
-    /**
+    /*
      * 
      * @param string $message
      * @param string $type
-     
+     */
     public function addFlashMessage($message, $type = 'success')
     {
         $this->session->getFlashBag()->add($type, $message);
     }
-    */
+    
     /**
      * 
      * @param string $value
@@ -97,4 +98,5 @@ abstract class ControllerAbstract
     {
         $this->sanitizeArray($_POST);
     }
+
 }

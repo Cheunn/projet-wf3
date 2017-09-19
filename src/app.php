@@ -1,11 +1,8 @@
 <?php
-
-use Controller\CategoryController;
 use Repository\AnnonceRepository;
 use Repository\CategoryRepository;
 use Controller\Admin\CategoryController;
 use Controller\Admin\ChroniqueController;
-use Repository\CategoryRepository;
 use Repository\ChroniqueRepository;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
@@ -110,7 +107,7 @@ $app['category.repository'] = function () use ($app) {
 
 $app['chronique.repository'] = function () use ($app){
     return new ChroniqueRepository($app['db']);
-  
+}; 
 $app['handicap.repository'] = function () use ($app) {
     return new Repository\HandicapRepository($app['db']);
 };

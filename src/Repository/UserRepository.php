@@ -53,15 +53,16 @@ class UserRepository extends RepositoryAbstract
         $data = [
             //'lastname' => $user->getLastname(),
             //'firstname' => $user->getFirstname(),
-            'pseudo' => $user->getPseudo(),
+            'name' => $user->getName(),
             'email' => $user->getEmail(),
             'password' => $user->getPassword()
             //'role' => $user->getRole()
         ];
+        //dump($data); die;
         
         if ($user->getId_member()) {
             $this->db->update(
-                'user',
+                'member',
                 $data,
                 [
                     'id' => $user->getId_member()
@@ -90,13 +91,14 @@ class UserRepository extends RepositoryAbstract
         $user
             ->setId_member($data['id_member'])
             ->setLastname($data['lastname'])
-            ->setName($data['name'])
+  
             ->setFirstname($data['firstname'])
+            ->setName($data['name'])
             ->setEmail($data['email'])
             ->setPassword($data['password'])
             ->setRole($data['role'])
         ;
-        
+        //dump($user);die;
         return $user;
     }
 }

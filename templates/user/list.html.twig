@@ -1,0 +1,44 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="container">
+
+    <h1>Annonces</h1>
+    
+    <p><a href="{{ path('user_chronique_edit') }}">Ajouter un annonce</a></p>
+    
+    <table class="table">
+        <tr>
+            <th>Titre</th>
+            <th>Paragraphe 1</th>
+            <th>Paragraphe 2</th>
+            <th>Catégorie</th>
+            <th>Img 1</th>
+            <th>Img 2</th>
+            <th width="120px"></th>
+        </tr>
+        {% for chronique in chroniques %}
+            <tr>
+                <td>{{ chronique.post_title }}</td>
+                <td>{{ chronique.paragraphe_1}}</td>
+                <td>{{ chronique.paragraphe_2}}</td>
+                <td>{{ chronique.category_name}}</td>
+                <td>{{ chronique.url_img_1}}</td>
+                <td>{{ chronique.url_img_2}}</td>
+                <td>                    
+                    <a href="{{ path('user_chronique_edit', {id: chronique.id_post}) }}" class="btn btn-primary">
+                        Modifier
+                    </a>
+                       <hr>
+                    <a href="{{ path('user_chronique_delete', {id: chronique.id_post}) }}" class="btn btn-danger">
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
+

@@ -16,22 +16,17 @@ $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bi
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
 
+/* Cheunn */
+
+
+/* Julien */
+
 /* SINGLE ANNONCE REDIRECTION */
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
         ->assert('id', '\d+')
-        ->bind('single_annonce');
-/* SINGLE ANNONCE REDIRECTION */
-
-/* ADMIN  */
-
-$admin=$app['controllers_factory'];  // crée un groupe de routes
-
-$admin->before (function() use ($app){
-    if (! $app['user.manager']->isAdmin()) $app->abort(403, 'Acces refuse') ; 
-}) ;
-$app->mount('/admin', $admin);      // toutes les routes créées par $admin sont prefixées par admin
-
+        ->bind('single_annonce')
+;
 
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
@@ -54,56 +49,29 @@ $app
     ->bind('category_list')
 ;
 
-// OUTILS 
-$admin = $app['controllers_factory']
-;
-$app->mount('/admin', $admin);
+/* Jaoued */
+
+
+/* Anis */
+
+//Handicap
+
+$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+        ->bind('handicap');
+
+/* ADMIN  */
+
+$admin=$app['controllers_factory'];  // crée un groupe de routes
+
+$app->mount('/admin', $admin);      // VERIFIER ORDRE
+
+$admin->before (function() use ($app){
+    if (! $app['user.manager']->isAdmin()) $app->abort(403, 'Acces refuse') ; 
+}) ;
+
+/* Cheunn */
 
 // CATEGORY
-
-$admin
-    ->get('/category', 'admin.category.controller:listAction')
-    ->bind('admin_categories')
-;
-
-$admin
-        ->get('/category/{type}', 'admin.category.controller:listByType')
-        ->assert('type','[annonce]|[chronique]')
-        ->bind('admin_categories_by_type')
-;
-
-$admin
-        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
-        ->value('id', null)
-        ->bind('admin_categories_edit')
-;
-
-$admin
-    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
-    ->assert('id', '\d+') // force id a être un nombre
-    ->bind('admin_category_delete')
-;
-
-// ANNONCES
-
-
-$admin
-    ->get('/annonces', 'admin.annonce.controller:listAction')
-    ->bind('admin_annonces')
-;
-/* FRONT */
-
-
-
-/* ADMIN */
-
-// crée un groupe de routes
-$admin = $app['controllers_factory'];
-
-// toutes les url des routes créées par $admin sont préfixées par /admin
-$app->mount('/admin', $admin);
-
-// Category
 
 $admin
     ->get('/category', 'admin.category.controller:listAction')
@@ -147,13 +115,14 @@ $admin
     ->bind('admin_chronique_delete')
 ;
 
-/*
+/* Julien */
+
+//ANNONCE
+
 $admin
-    ->get('/posts/{type}', 'admin.category.controller:listAction')
-    ->value('type','chronique')
-    ->bind('admin_chroniques')
+    ->get('/annonces', 'admin.annonce.controller:listAction')
+    ->bind('admin_annonces')
 ;
-*/
 
 $admin
     ->match('/annonce/edition/{id}', 'admin.annonce.controller:editAction')
@@ -167,40 +136,11 @@ $admin
     ->bind('admin_annonce_delete')
 ;
 
-// COMMON FILES
-
-$app->error(function (\Exception $e, Request $request, $code) use ($app) {
-    if ($app['debug']) {
-        return;
-    }
-
-
-// 404.html, or 40x.html, or 4xx.html, or error.html
-    $templates = array(
-        'errors/'.$code.'.html.twig',
-        'errors/'.substr($code, 0, 2).'x.html.twig',
-        'errors/'.substr($code, 0, 1).'xx.html.twig',
-        'errors/default.html.twig',
-    );
-
-    return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
-});
-
-
-//*******FRONT handicap***************
-
-$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
-        ->bind('handicap');
-
-
-// crée un groupe de route
-$admin = $app['controllers_factory'];
+/* Jaoued */
 
 
 
-
-
-$app->mount('/admin', $admin);
+/* Anis */
 
 //******************ROUTE POUR ADMIN HANDICAP*******************
 
@@ -225,7 +165,52 @@ $admin->get('/tag', 'admin.tag.controller:listAction')
 $admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
             ->value('idtag', null) // id est optionnel est vaut null par défaut
             ->bind('admin_tag_edit');
-//
+
 $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
+
+/* USER */
+
+$user=$app['controllers_factory'];  // crée un groupe de routes
+
+$app->mount('/user', $user);      
+
+$user->before (function() use ($app){
+    if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
+});
+
+/* Cheunn */
+
+$user->get('/chronique','chronique.controller:listUserChronique')
+        ->assert('id_user','\d+')
+        ->bind('user_chronique_list')        
+;
+
+/* Julien */
+
+
+/* Jaoued */
+
+
+/* Anis */
+
+
+// COMMON FILES
+
+$app->error(function (\Exception $e, Request $request, $code) use ($app) {
+    if ($app['debug']) {
+        return;
+    }
+
+
+// 404.html, or 40x.html, or 4xx.html, or error.html
+    $templates = array(
+        'errors/'.$code.'.html.twig',
+        'errors/'.substr($code, 0, 2).'x.html.twig',
+        'errors/'.substr($code, 0, 1).'xx.html.twig',
+        'errors/default.html.twig',
+    );
+
+    return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+});

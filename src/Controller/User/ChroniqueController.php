@@ -88,7 +88,7 @@ class ChroniqueController extends ControllerAbstract {
         }
         
         return $this->render(
-            'admin/chronique/edit.html.twig',
+            'chronique/edit.html.twig',
             [
                 'chronique' => $chronique,
                 'categories' => $categories
@@ -108,10 +108,19 @@ class ChroniqueController extends ControllerAbstract {
         $this->app['chronique.repository']->delete($chronique);
         $this->addFlashMessage("La chronique est supprimée");
         
-        return $this->redirectRoute('admin_chroniques');
+        return $this->redirectRoute('user_chroniques');
     }
     
-    
+    public function listUserChronique(){
+        $user = $this->app['user.manager']->getUser();
+        $chroniques = $this->app['chronique.repository']->listByUser($user->getId_member());
+        
+        return $this->render('user/chronique/list.html.twig',
+                [
+                    'chroniques' => $chroniques
+                ]
+        );
+    }
 }
 
 ?>

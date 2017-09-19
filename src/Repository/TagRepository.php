@@ -139,7 +139,7 @@ class TagRepository extends RepositoryAbstract {
         }
     }
     
-    //*****Methode de Tri: find chronique by TAG *******
+    //*****Methode de Tri: par Tag*******
     
     public function findChroniqueByTag(Tag $tag) {
         
@@ -162,6 +162,74 @@ SQL;
         );
         
         $chroniques = [];
+
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+
+        return $chroniques;
+    }
+    
+    
+    
+        //*****Methode de Tri: Par id de chronique *******
+    
+    public function findTagByChronique (Chronique $chronique_id_post) {
+        
+        $query = <<<SQL
+SELECT
+     c.chronique_id_post, 
+     a.name
+FROM tag_has_post c
+JOIN tag a ON a.idtag = c.tag_idtag
+WHERE c.chronique_id_post = :chronique
+;
+
+SQL;
+        
+        $dbTags = $this->db->fetchAll(
+                $query,
+                [
+                    ':chronique' => $chronique_id_post->getId_post()
+                ]
+        );
+        
+        $tags = [];
+
+        foreach ($dbTags as $dbTag) {
+            $tags[] = $this->buildEntity($dbTag);
+        }
+
+        return $tags;
+    }
+    
+    
+    
+       //*****Methode de Tri: Par type de chronique *******
+    
+    public function findTagByChroniqueType($type) {
+        
+        $query = <<<SQL
+SELECT
+     c.post_type, 
+     a.chronique_id_post,
+     t.name
+FROM chronique c
+JOIN tag_has_post a ON a.chronique_id_post  = c.id_post
+JOIN tag t  ON t.idtag = a.tag_idtag              
+WHERE c.post_type = "chronique"
+;
+
+SQL;
+        
+//        $dbChroniques = $this->db->fetchAll(
+//                $query,
+//                [
+//                    ':idtag' => $tag->getIdTag()
+//                ]
+//        );
+//        
+//        $chroniques = [];
 
         foreach ($dbChroniques as $dbChronique) {
             $chroniques[] = $this->buildEntity($dbChronique);

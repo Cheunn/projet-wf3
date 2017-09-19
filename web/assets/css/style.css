@@ -768,4 +768,10 @@ option .disabled {
 .inscription {
     background: #fea000;
 }
+
+
+.administration, .administration hover  {
+    background: black;
+	color:red;
+}
 /* END Custom CSS */

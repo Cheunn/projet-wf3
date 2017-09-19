@@ -22,29 +22,29 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c4d9b0018b12a37ae33bd871447a3766af2b0934135b8b7284a82af49cc4ce6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c4d9b0018b12a37ae33bd871447a3766af2b0934135b8b7284a82af49cc4ce6c->enter($__internal_c4d9b0018b12a37ae33bd871447a3766af2b0934135b8b7284a82af49cc4ce6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3->enter($__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
-        $__internal_420738d0d98fb9fce0ee92b70ef3e7650ebb9981d0f0c64bd87d588521962990 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_420738d0d98fb9fce0ee92b70ef3e7650ebb9981d0f0c64bd87d588521962990->enter($__internal_420738d0d98fb9fce0ee92b70ef3e7650ebb9981d0f0c64bd87d588521962990_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee->enter($__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c4d9b0018b12a37ae33bd871447a3766af2b0934135b8b7284a82af49cc4ce6c->leave($__internal_c4d9b0018b12a37ae33bd871447a3766af2b0934135b8b7284a82af49cc4ce6c_prof);
+        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3->leave($__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3_prof);
 
         
-        $__internal_420738d0d98fb9fce0ee92b70ef3e7650ebb9981d0f0c64bd87d588521962990->leave($__internal_420738d0d98fb9fce0ee92b70ef3e7650ebb9981d0f0c64bd87d588521962990_prof);
+        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee->leave($__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_5ec1c1051e5db4bb88016666ce62bbac311129056c3077cebc77fcc6940a77db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5ec1c1051e5db4bb88016666ce62bbac311129056c3077cebc77fcc6940a77db->enter($__internal_5ec1c1051e5db4bb88016666ce62bbac311129056c3077cebc77fcc6940a77db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d->enter($__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_6504d52f2d10aa75787958983997b447c52fe0ea33eb965784ed0d39da704626 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6504d52f2d10aa75787958983997b447c52fe0ea33eb965784ed0d39da704626->enter($__internal_6504d52f2d10aa75787958983997b447c52fe0ea33eb965784ed0d39da704626_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306->enter($__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -93,13 +93,13 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         // line 40
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 40, $this->getSourceContext()); })()), "lastname", array()), "html", null, true);
         echo "\"></div>
-        <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"name\" value=\"";
+        <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Nom de l'association\" value=\"";
         // line 41
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 41, $this->getSourceContext()); })()), "name", array()), "html", null, true);
         echo "\"></div>
-        <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"pseudo\" id=\"pseudo\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"";
+        <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"";
         // line 42
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 42, $this->getSourceContext()); })()), "pseudo", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 42, $this->getSourceContext()); })()), "name", array()), "html", null, true);
         echo "\"></div>
         <div class=\"form-group form-element commun-element\" style=\"display:none;\"><input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control user\" placeholder=\"Email Address (champ obligatoire)\" value=\"";
         // line 43
@@ -201,21 +201,21 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
 ";
         
-        $__internal_6504d52f2d10aa75787958983997b447c52fe0ea33eb965784ed0d39da704626->leave($__internal_6504d52f2d10aa75787958983997b447c52fe0ea33eb965784ed0d39da704626_prof);
+        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306->leave($__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306_prof);
 
         
-        $__internal_5ec1c1051e5db4bb88016666ce62bbac311129056c3077cebc77fcc6940a77db->leave($__internal_5ec1c1051e5db4bb88016666ce62bbac311129056c3077cebc77fcc6940a77db_prof);
+        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d->leave($__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d_prof);
 
     }
 
     // line 110
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_92393969106213aa9435a69eba72fb9e845e4f19acb2bb97e63302dc4d987aa4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_92393969106213aa9435a69eba72fb9e845e4f19acb2bb97e63302dc4d987aa4->enter($__internal_92393969106213aa9435a69eba72fb9e845e4f19acb2bb97e63302dc4d987aa4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680->enter($__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_1ad25ea7ffe1cb0040e0918a5e8d3f093ab7a8af44f804562501243cb31cf246 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1ad25ea7ffe1cb0040e0918a5e8d3f093ab7a8af44f804562501243cb31cf246->enter($__internal_1ad25ea7ffe1cb0040e0918a5e8d3f093ab7a8af44f804562501243cb31cf246_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356->enter($__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 111
         echo "    ";
@@ -285,10 +285,10 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 \t</script>
 ";
         
-        $__internal_1ad25ea7ffe1cb0040e0918a5e8d3f093ab7a8af44f804562501243cb31cf246->leave($__internal_1ad25ea7ffe1cb0040e0918a5e8d3f093ab7a8af44f804562501243cb31cf246_prof);
+        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356->leave($__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356_prof);
 
         
-        $__internal_92393969106213aa9435a69eba72fb9e845e4f19acb2bb97e63302dc4d987aa4->leave($__internal_92393969106213aa9435a69eba72fb9e845e4f19acb2bb97e63302dc4d987aa4_prof);
+        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680->leave($__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680_prof);
 
     }
 
@@ -349,8 +349,8 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         
         <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"firstname\" id=\"firstname\" tabindex=\"1\" class=\"form-control\" placeholder=\"firstname\" value=\"{{ user.firstname }}\"></div>
         <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"lastname\" id=\"lastname\" tabindex=\"1\" class=\"form-control\" placeholder=\"lastname\" value=\"{{ user.lastname }}\"></div>
-        <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"name\" value=\"{{ user.name }}\"></div>
-        <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"pseudo\" id=\"pseudo\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"{{ user.pseudo }}\"></div>
+        <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Nom de l'association\" value=\"{{ user.name }}\"></div>
+        <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"{{ user.name }}\"></div>
         <div class=\"form-group form-element commun-element\" style=\"display:none;\"><input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control user\" placeholder=\"Email Address (champ obligatoire)\" value=\"{{ user.email }}\"></div>
         <div class=\"form-group form-element commun-element\" style=\"display:none;\" ><input type=\"password\" name=\"password\" id=\"password\" tabindex=\"2\" class=\"form-control user\" placeholder=\"Password (champ obligatoire)\"></div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"password\" name=\"password_confirm\" id=\"password_confirm\" tabindex=\"2\" class=\"form-control user\" placeholder=\"Confirm Password(champ obligatoire) \"></div>

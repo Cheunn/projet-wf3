@@ -22,7 +22,7 @@ class UserController extends ControllerAbstract
                 ->setPassword($_POST['password'])
 			;				
 			
-			if (isset ($_POST['name']))         $user->setLastname($_POST['name']);
+			if (isset ($_POST['name']))         $user->setName($_POST['name']);
 			if (isset ($_POST['lastname']))       $user->setLastname($_POST['lastname']);
 			if (isset ($_POST['firstname']))      $user->setFirstname($_POST['firstname']);
 			if (isset ($_POST['civility']))       $user->setCivility($_POST['civility'])  ;                                  
@@ -87,6 +87,7 @@ class UserController extends ControllerAbstract
             
             if (empty($errors)) {
                 $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
+                //dump($user);die;
                 $this->app['user.repository']->save($user);
                 $this->addFlashMessage('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');
@@ -146,6 +147,37 @@ class UserController extends ControllerAbstract
         
         return $this->redirectRoute('homepage');
     }
+    
+    
+    
+     public function profilUser()
+    {
+        $user = $this->app['user.manager']->getUser();
+        
+        return $this->render(
+            'user/profilUser.html.twig',
+            [
+                'user' => $user
+            ]
+        );
+     
+    }
+    
+        public function messProfilToUs()
+    {
+        /*$this->app['user.manager']->logout();
+        
+        return $this->render(
+            'user/profilUser.html.twig',
+            [
+                'email' => $email
+            ]
+        );
+        
+         */
+          return $this->render('Contact.html.twig' );
+    }
+    
     
 
 }

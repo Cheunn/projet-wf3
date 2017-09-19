@@ -53,15 +53,16 @@ class UserRepository extends RepositoryAbstract
         $data = [
             //'lastname' => $user->getLastname(),
             //'firstname' => $user->getFirstname(),
-            'pseudo' => $user->getPseudo(),
+            'name' => $user->getName(),
             'email' => $user->getEmail(),
             'password' => $user->getPassword()
             //'role' => $user->getRole()
         ];
+        //dump($data); die;
         
         if ($user->getId_member()) {
             $this->db->update(
-                'user',
+                'member',
                 $data,
                 [
                     'id' => $user->getId_member()
@@ -90,13 +91,26 @@ class UserRepository extends RepositoryAbstract
         $user
             ->setId_member($data['id_member'])
             ->setLastname($data['lastname'])
-            ->setName($data['name'])
             ->setFirstname($data['firstname'])
+            ->setName($data['name'])
             ->setEmail($data['email'])
             ->setPassword($data['password'])
             ->setRole($data['role'])
+                ->setPhone($data['phone'])
+                ->setCivility($data['civility'])
+                ->setUrl_img($data['url_img'])
+                ->setIs_active($data['is_active'])
+                ->setDescription($data['description'])
+                ->setDate_create($data['date_create'])
+                ->setAdress($data['adress'])
+                ->setCountry($data['country'])
+                ->setTown($data['town'])
+                ->setUrl_web_orga($data['url_web_orga'])
+                ->setUrl_fb($data['url_fb'])
+
+                
         ;
-        
+        //dump($user);die;
         return $user;
     }
 }

@@ -696,6 +696,7 @@ a.blogger { color: #f39d38; }
 .comment-list .media .nested-first:before{left: -50px;top: 50px;}
 }
 @media (max-width: 480px) {
+    
   .masonry-container .masonry-item {
   width: 100%;
   padding: 0px 15px;
@@ -756,16 +757,15 @@ a.blogger { color: #f39d38; }
   left: -79px;
 }
 }
-
-/* Custom CSS */
+/* START Custom CSS */
 option .disabled {
    color: #999;
 }
 .connexion {
     background: #fea000;
-	border-right: 1px solid #ffa500;
+    border-right: 1px solid #ffa500;
 }
 .inscription {
-background: #fea000;
-
+    background: #fea000;
 }
+/* END Custom CSS */

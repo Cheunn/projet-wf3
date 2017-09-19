@@ -137,8 +137,8 @@ SQL;
 SELECT 
     a.*
 FROM annonce a
-ORDER BY post_date
-LIMIT 3
+ORDER BY id_post DESC
+LIMIT 3 
 SQL;
         $dbAnnonces = $this->db->fetchAll($query);
         $annonces = [];
@@ -189,5 +189,24 @@ SQL;
         ;
         
         return $annonce;
+    }
+    
+     public function show($annonce)  
+    {
+        $data = [
+            //'post_date' => $annonce->getPost_date(),        
+            'paragraphe_1' => $annonce->getParagraphe_1(),
+            'paragraphe_2' => $annonce->getParagraphe_2(),
+            'post_title' => $annonce->getPost_title(),
+            'url_img_1' => $annonce->getUrl_img_1(),
+            'url_img_2' => $annonce->getUrl_img_2(),
+            'url_img_3' => $annonce->getUrl_img_3(),
+            //'member_id_member' => $annonce->getMember_id_member(),
+            //'type_id_type' => $annonce->getType_id_type(),
+            //'category_id_category' => $annonce->getCategory_id_category()
+            //'author_id' => $annonce->getAuthorId()
+            ];
+                       
+            return $annonce;
     }
 }

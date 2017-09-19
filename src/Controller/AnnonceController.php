@@ -17,6 +17,21 @@ class AnnonceController extends ControllerAbstract
             ]
         );
     }
+    public function listActionMain()
+    {
+        $annonces = $this->app['annonce.repository']->findAll(); ///
+        //
+        // ICI ON NE GERE PAS ENCORE LA LIMITATION DU NOMBRES D'ANNONCES 6 PAR PAGES
+        // 
+        //
+        return $this->render(
+            'annonces.html.twig',
+            [
+                'annonces' => $annonces
+            ]
+        );
+    }
+    
     public function singleAnnonce($id = null)
     {
         $categories = $this->app['category.repository']->findAllChronique();
@@ -26,20 +41,42 @@ class AnnonceController extends ControllerAbstract
             [
                 'annonce' => $annonce,
                 'categories' => $categories
-               
             ]
         );
     }
-    
+    public function getAnnonceId($id)
+    {
+        $annonce = $this->app['annonce.repository']->find($id);
+        $annonces = $this->app['annonce.repository']->findLastThree(); 
+        
+        return $this->render(
+            'single_annonce.html.twig',
+            [
+                'annonce' => $annonce,
+                'annonces' => $annonces
+                // 'categories' => $categories
+            ]
+        );
+    }
     public function lastThree()
     {
-        $annonces = $this->app['annonce.repository']->findLastThree(); ///A CHANGER ByMember
+        $annonces = $this->app['annonce.repository']->findLastThree(); 
         return $this->render(
             'index.html.twig',
             [               
                 'annonces' => $annonces
             ]
                
+        );
+    }
+    public function lastThreeSingle()
+    {
+        $annonces = $this->app['annonce.repository']->findLastThree(); 
+        return $this->render(
+            'single_annonce.html.twig',
+            [               
+                'annonces' => $annonces
+            ]
         );
     }
     
@@ -127,4 +164,17 @@ class AnnonceController extends ControllerAbstract
         
         return $this->redirectRoute('annonce'); ///(s)
     }
+    
+//    public function show($id)
+//    {
+//        $annonce = $this->app['annonce.repository']->findByAnnonce($id);
+//        
+//        if (is_null($annonce)) {
+//            $this->app->abort(404);
+//        }
+//        
+//        $this->app['annonce.repository']->show($annonce);
+//                
+//        return $annonce; 
+//    }
 }

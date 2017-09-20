@@ -44,6 +44,25 @@ class UserRepository extends RepositoryAbstract
         }
     }
     
+        /**
+     * 
+     * @param string $email
+     * @return User|null
+     */
+    public function findById($id)
+    {
+        $dbUser = $this->db->fetchAssoc(
+            'SELECT * FROM member WHERE id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+        if (!empty($dbUser)) {
+            return $this->buildEntity($dbUser);
+        }
+    }
+    
     /**
      * 
      * @param User $user
@@ -58,6 +77,7 @@ class UserRepository extends RepositoryAbstract
             'password' => $user->getPassword()
             //'role' => $user->getRole()
         ];
+     
         //dump($data); die;
         
         if ($user->getId_member()) {

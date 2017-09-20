@@ -18,20 +18,27 @@ $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnex
 
 
 
+
+$profil=$app['controllers_factory'];  // crée un groupe de routes
+$app->mount('/profil', $profil);      
+
+
+$profil->match('/listeProfil/{id}', 'user.controller:listeProfil') 
+        ->assert('id', '\d+')
+        ->bind('listeProfil');
+$profil->match('/envoyerPost/{id}', 'user.controller:envoyerPostInterne')      ->bind('envoyerPost');
+
+/* FRONT ADMIN  USER */
+
 $user=$app['controllers_factory'];  // crée un groupe de routes
-
 $app->mount('/user', $user);      
-
-
 
 $user->before (function() use ($app){
     if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
 }) ;
-$user->match('/profil', 'user.controller:profilUser')  
-        ->bind('profilUser');
-
-$user->match('/messProfilToUs', 'user.controller:messProfilToUs')  
-        ->bind('messProfilToUs');
+$user->match('/profil', 'user.controller:profilUser')               ->bind('profilUser');
+$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+$user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
 
 /* Cheunn */
 

@@ -6,12 +6,9 @@
 
     <div class="container">
 
-    	 {% if user_manager.admin %}
-                    <h2 class="heading">MON TABLEAU DE BORD </h2>
-         {% else %}
-                     <h2 class="heading">CONSULTATION PROFIL  </h2>
-         {% endif %}
-       
+    	
+                   
+
    
 
         <div class="row">
@@ -32,7 +29,7 @@
 
                             <div class="info">
 
-                            <p>user:</p>
+                            
 
                            <a href="author.html">{{user.name}} </a>
 
@@ -42,14 +39,12 @@
 
                         <li>
 
-                            <div class="icon-box"><i class="fa fa-calendar"></i></div>
+                           
 
                             <div class="info">
 
-                            <p>Date d'inscription :</p>
-
+                            <p>Inscrit le :</p>
                                 <strong>{{user.date_create}} </strong></div>
-
                         </li>
 
                         
@@ -60,63 +55,52 @@
 
                              <div class="info">
 
-                             <p>Comments:</p>
-
-                                 <strong>127</strong></div>
-
+                             <p>Note</p>
+                                 <strong>4.5</strong></div>
                          </li>
 
                          <li>
-
-                            <div class="icon-box"><i class="fa fa-eye"></i></div>
-
                             <div class="info">
-
-                            <p>Total View:</p>
-
+                            <p>Annonces </p>
                                 <strong>4289</strong></div>
-
+                        </li>
+                        
+                        <li>
+                            <div class="info">
+                            <p>Chroniques </p>
+                                <strong>4289</strong></div>
+                        </li>
+                        
+                         <li>
+                            <div class="info">
+                            <p>News </p>
+                                <strong>4289</strong></div>
                         </li>
 
                        </ul>
 
                     </div>
+                        
+             <div class="caption"><div class="line-block">
+                    <ul class="list-inline tags">                                      
+                       <!-- <li onclick="afficher_div('IdModifierProfil');"><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li> -->
+                       <li><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li>
+                        <li onclick="afficher_div('IdGererAnnonces');"><a href="#">Gerer mes Annonces</a></li>
+                        <li onclick="afficher_div('IdGererChronique');"><a href="#">Gerer mes chroniques</a></li>                   
+                                  
+                  
+                    </ul>
+                </div></div>
+                        
+                        
 
-             {% if user_manager.admin %}
-          
-                    <div class="caption">
-
-            
-                    <div class="line-block">
-
-                    
-
-              <ul class="list-inline tags administration">
-
-                 <li><a href="#">Photography</a></li>
-
-                  <li><a href="#">Products</a></li>
-
-                  <li><a href="#">Marketing</a></li>
-
-                  <li><a href="#">Business</a></li>
-
-                  <li><a href="#">Photoshop</a></li>
-
-                  <li><a href="#">LifeStyle</a></li>
-
-              </ul>
-
-                    </div>
-
-                 
-             {% endif %}
+           
              
-                    <div class="related-post">
+                    <div id="IdGererAnnonces" class="related-post" >
 
                         <div class="row">
 
-                            <div class="col-md-12"><h4>Related Topics</h4></div>
+                            <div class="col-md-12"><h4></h4></div>
 
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 
@@ -169,16 +153,63 @@
                         </div>
 
                     </div>
+                    
+                                    
+                    <div id="IdProfilBlockAvis" class="comment-list ">
+                        
+			<div class="comment-count ">
 
-                    <div class="comment-count">
+				<h4>32 Avis</h4>
+
+				<p><a href="#">Sign in</a> to comment or comment as a guest.</p>
+
+			</div>
+			
+
+			<div class="media">
+
+				<div class="media-left">
+
+					<a href="#">
+
+						<img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image">
+
+					</a>
+
+				</div>
+
+				<div class="media-body">
+
+					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
+
+					  <ul class="list-inline">
+
+						  <li><a class="media-heading" href="#">Anonymous</a></li>
+
+						  <li>3 hours ago</li>
+
+						  <li><a class="reply-btn" href="#">Post Reply</a></li>
+
+						</ul>
+
+				  
+
+				</div>
+
+			</div>
+
+
+                    </div>
+                                    
+                    <div id="IdProfilBlockComments" class="comment-list ">
+                        
+                        <div class="comment-count ">
 
                         <h4>32 Comments</h4>
 
                         <p><a href="#">Sign in</a> to comment or comment as a guest.</p>
 
-                    </div>
-
-                    <div class="comment-list">
+                        </div>
 
                         <div class="media">
 
@@ -304,63 +335,57 @@
 
                     </div>
 
-                    <div class="comment-form">
+                    <div id="IdModifierProfil" class="comment-form">
 
-                        <h4>Post A Reply</h4>
+                        <h4>Enntrez votre Message</h4>
+                         <form  class="entry-form" action="" method="post" role="form" >   
+      
+		
+         <div  id="role" class="hidden"  style="display:none;"><input type="text" name="role"   value="{{ user.role }}"></div>
+        <div class="form-group form-element user-element"  style="display:none;"><input type="text" name="firstname" id="firstname" tabindex="1" class="form-control" placeholder="firstname" value="{{ user.firstname }}"></div>
+        <div class="form-group form-element user-element"  style="display:none;"><input type="text" name="lastname" id="lastname" tabindex="1" class="form-control" placeholder="lastname" value="{{ user.lastname }}"></div>
+        <div class="form-group form-element asso-element"  style="display:none;"><input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Nom de l'association" value="{{ user.name }}"></div>
+        <div class="form-group form-element user-element"  style="display:none;"><input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Pseudo" value="{{ user.name }}"></div>
+        <div class="form-group form-element commun-element" style="display:none;"><input type="email" name="email" id="email" tabindex="1" class="form-control user" placeholder="Email Address (champ obligatoire)" value="{{ user.email }}"></div>
+        <div class="form-group form-element commun-element" style="display:none;" ><input type="password" name="password" id="password" tabindex="2" class="form-control user" placeholder="Password (champ obligatoire)"></div>
+        <div class="form-group form-element commun-element"  style="display:none;"><input type="password" name="password_confirm" id="password_confirm" tabindex="2" class="form-control user" placeholder="Confirm Password(champ obligatoire) "></div>
 
-                        <form role="form" action="#" method="post" novalidate id="comment-form">
+        <div class="form-group form-element commun-element"  style="display:none; text-align: center">
+        
+                 <input type="tel" name="phone" id="phone" tabindex="1" class="form-control" placeholder="phone " value="{{ user.phone }}"> 
+       
+        </div>
+        <div class="form-group form-element commun-element"  style="display:none;">
+            <select id="civility" class="form-control " name="civility" value="{{ user.civility }}"> 
+                    <option  value="" class="disabled selected hidden" name="text">Civilité?</option> 
+                    <option  class="form-control " value="Mr" >Homme</option>
+                    <option  class="form-control " value="Mme">Femme</option>
 
-                            <div class="row">
+            </select>
+        </div>
+        
+        <div class="form-group form-element commun-element"  style="display:none;">
+            <!--<input type="file" name="url_img" id="url_img" tabindex="1" class="form-control" placeholder="Avatar (JPG, PNG ou GIF | max. 15 Ko)" value="{{ user.firstname }}"> -->
+            
+                <small class="">Avatar(JPG, PNG ou GIF | max. 15 Ko) : </small> 
+                <input class="btn-file btn-default btn-block" type="file"  name="url_img" id="url_img" tabindex="1"  value="">
+                {# {{ user.url_img }}" #}
+         
+        </div>
+		
+        <div class="form-group form-element commun-element"  style="display:none;"><input type="text" name="adress" id="adress" tabindex="1" class="form-control" placeholder="adress" value="{{ user.adress }}"></div>
+        <div class="form-group form-element commun-element"  style="display:none;"><input type="text" onBlur="envoyerCP()" name="postal_code" id="postal_code" tabindex="1" class="form-control" placeholder="postal code" value="{{ user.postal_code }}">
+            
+        </div>
+        <div class="form-group form-element commun-element"  style="display:none;"><input type="text" name="town" id="town" tabindex="1" class="form-control" placeholder="city" value="{{ user.town }}">
+        </div>
+        <div class="form-group form-element asso-element"  style="display:none;"><input type="text" name="url_web_orga" id="url_web_orga" tabindex="1" class="form-control" placeholder="url_web_orga" value="{{ user.url_web_orga }}"></div>
+        <div class="form-group form-element asso-element"  style="display:none;"><input type="text" name="url_fb" id="url_fb" tabindex="1" class="form-control" placeholder="url_fb" value="{{ user.url_fb }}"></div>
+        <div class="form-group form-element commun-element"  style="display:none;"><textarea name="description" id="description" tabindex="1" class="form-control"  value="{{ user.description }}">description</textarea></div>
+		
+        <div class="form-group"><input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-default btn-lg" value="Register Now"></div>
 
-                                <div class="col-md-6 col-lg-5">
-
-                           <div class="form-group">
-
-                             <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Full Name:">
-
-                           </div>
-
-                                    </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-md-6 col-lg-5">
-
-                          <div class="form-group">
-
-                            <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Enter Address:">
-
-                          </div>
-
-                                    </div>
-
-                                    </div>
-
-                            <div class="row">
-
-                                <div class="col-md-6 col-lg-5">
-
-                            <div class="form-group">
-
-                            <input type="text" class="form-control" placeholder="Phone Number:">
-
-                          </div>
-
-                            </div>
-
-                                    </div>
-
-                            <div class="form-group">
-
-                                <textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea>
-
-                          </div>
-
-                          <button type="submit" class="btn btn-default">Post Reply</button>
-
-                        </form>
+    </form>
 
                     </div>
 
@@ -372,220 +397,7 @@
 
             </div>
 
-            <aside class="col-md-4 col-lg-4">
-
-            	
-
-                <div class="row">
-
-                <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
-                  <div class="panel-heading">Subscribe us</div>
-
-                    <div class="panel-body">
-
-                      <form action="#" method="post">
-
-                      <div class="form-group">
-
-                          <input type="text" class="form-control" placeholder="@ Email">
-
-                        </div>
-
-                        <div class="form-group">
-
-                        	<button class="btn btn-default btn-lg pull-right" type="button">Subscribe</button>
-
-                        </div>
-
-                        </form>
-
-                    </div>
-
-                </div>
-
-               </div>
-
-                       <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
-                  <div class="panel-heading">Recent Articles</div>
-
-                    <div class="panel-body nopadding">
-
-                      <div class="media">
-
-      <div class="media-left">
-
-        <a href="#">
-
-          <img src="{{ asset('assets/images/post/rp1.jpg') }}" alt="author" />
-
-        </a>
-
-      </div>
-
-      <div class="media-body">
-
-        <h4 class="media-heading"><a href="#">this is long Blog Heading Text Size for recent articles</a></h4>
-
-        <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
-
-      </div>
-
-    </div>
-
-    <div class="media">
-
-      <div class="media-left">
-
-        <a href="#">
-
-          <img src="{{ asset('assets/images/post/rp2.jpg ') }}" alt="author" />
-
-        </a>
-
-      </div>
-
-      <div class="media-body">
-
-        <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
-
-        <p><a href="#">Photography</a> &bull; 3 hours ago</p>
-
-      </div>
-
-    </div>
-
-                        <div class="media">
-
-      <div class="media-left">
-
-        <a href="#">
-
-          <img src="{{ asset('assets/images/post/rp3.jpg ') }}" alt="author" />
-
-        </a>
-
-      </div>
-
-      <div class="media-body">
-
-        <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
-
-        <p><a href="#">Products</a> &bull; 2 hours ago</p>
-
-      </div>
-
-    </div>
-
-                    </div>
-
-                </div>
-
-                           </div>
-
-                       <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
-                  <div class="panel-heading">Chroniques</div>
-
-                     {# {% include 'aside.html.twig'%} #}
-
-                    </div>
-
-                </div>
-
-               </div>
-
-                       
-
-                       <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
-                  <div class="panel-heading">Tags</div>
-
-                    <div class="panel-body">
-
-                      <ul class="list-inline tags">
-
-                        <li><a href="#">LifeStyle</a></li>
-
-                        <li class="big"><a href="#">Music</a></li>
-
-                        <li><a href="#">SmartPhones</a></li>
-
-                        <li><a href="#">Business</a></li>
-
-                        
-
-                        <li><a href="#">Travel</a></li>
-
-                        
-
-                        <li class="big"><a href="#">Business</a></li>
-
-                        <li class="small"><a href="#">LifeStyle</a></li>
-
-                        <li><a href="#">SmartPhones</a></li>
-
-                        
-
-                        <li><a href="#">Fireworks</a></li>
-
-                        <li class="big"><a href="#">Travel</a></li>
-
-                        <li><a href="#">Fireworks</a></li>
-
-                        <li class="small"><a href="#">Music</a></li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-               </div>
-
-                       <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
-                  <div class="panel-heading">Archives</div>
-
-                    <div class="panel-body nopadding">
-
-                      <div class="list-group">
-
-  <a href="#" class="list-group-item">January 2014</a>
-
-  <a href="#" class="list-group-item">February 2014</a>
-
-  <a href="#" class="list-group-item">March 2014</a>
-
-  <a href="#" class="list-group-item">April 2014</a>
-
-                       <a href="#" class="list-group-item">May 2014</a>
-
-</div>
-
-                    </div>
-
-                </div>
-
-               </div>
-
-               </div>
-
-               
-
-            </aside>
-
+      
            </div>
 
        
@@ -595,4 +407,90 @@
     </section>
 
     
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.ui/1.8.10/jquery-ui.js"></script>
+        <link rel="Stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" />
+	 
+        <script type="text/javascript">
+                
+            
+        
+               
+                 
+            function afficher_div(id)
+            {
+                 console.log(id);
+                 // #IdProfilBlockComments, #IdGererAnnonces, #IdModifierProfil, #IdProfilBlockAvis,  #IdGererChronique     
+                 id1 = 'IdProfilBlockComments';id2 = 'IdModifierProfil';id3 = 'IdProfilBlockAvis';id4 = 'IdGererChronique';;
+                       $('#IdGererAnnonces').hide(); $('#id1').hide(); $('#id2').hide(); $('#id3').hide(); $('#id4').hide();
+                       
+                
+                       
+                        
+                if (id === 'IdGererAnnonces') 
+                    {   
+                        id1 = 'IdProfilBlockComments';id2 = 'IdModifierProfil';id3 = 'IdProfilBlockAvis';id4 = 'IdGererChronique'; id='IdGererAnnonces'; }
+                    
+                if (id == 'IdProfilBlockComments') 
+                    {   
+                        id1 = 'IdGererAnnonces';id2 = 'IdModifierProfil';id3 = 'IdProfilBlockAvis';id4 = 'IdGererChronique';id='IdProfilBlockComments'; }
+                    
+                if (id == 'IdModifierProfil') 
+                {
+             
+                      id1 = 'IdProfilBlockComments';id2 = 'IdGererAnnonces';id3 = 'IdProfilBlockAvis';id4 = 'IdGererChronique';id='IdModifierProfil';
+
+                     if ($('#role').val() == 'user') 
+                        {	
+                                    $('.user-element').show();
+                                    $('.commun-element').show();
+                        } else 
+                        {
+                                    $('.commun-element').show();
+                                    $('.asso-element').show();
+                        }
+                }
+                    
+                if (id == 'IdProfilBlockAvis') 
+                {    
+                        id1 = 'IdProfilBlockComments';id2 = 'IdGererAnnonces';id3 = 'IdModifierProfil';id4 = 'IdGererChronique';id='IdProfilBlockAvis'; }
+                    
+                if (id == 'IdGererChronique') 
+                    {    
+                        id1 = 'IdProfilBlockComments';id2 = 'IdGererAnnonces';id3 = 'IdModifierProfil';id4 = 'IdProfilBlockAvis';id='IdGererChronique'; }
+                    
+                    
+                    
+                      document.getElementById(id).style.display = 'block';
+                      document.getElementById(id1).style.display = 'none';
+                       document.getElementById(id2).style.display = 'none';
+                        document.getElementById(id3).style.display = 'none';
+                         document.getElementById(id4).style.display = 'none';
+                         
+              
+                      
+                       console.log('fin');
+           
+           
+            }
+                  /*
+                   * 
+                   * 
+                   if (document.getElementById(id).style.display == 'none')
+                  {
+                       document.getElementById(id).style.display = 'block';
+                  }
+                  else
+                  {
+                       document.getElementById(id).style.display = 'none';
+                  }
+                }
+                 */
+           
+	</script>
 {% endblock %}

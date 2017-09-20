@@ -22,29 +22,29 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3->enter($__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_cab1527e601d122e674abdf5f1fc9e31da382e7e21f06eb67a69b6bc814d9555 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cab1527e601d122e674abdf5f1fc9e31da382e7e21f06eb67a69b6bc814d9555->enter($__internal_cab1527e601d122e674abdf5f1fc9e31da382e7e21f06eb67a69b6bc814d9555_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
-        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee->enter($__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_8125e7126225fee85c631dddde7d32460931a6a547f88289cbfbb18dfe5f5e2b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8125e7126225fee85c631dddde7d32460931a6a547f88289cbfbb18dfe5f5e2b->enter($__internal_8125e7126225fee85c631dddde7d32460931a6a547f88289cbfbb18dfe5f5e2b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3->leave($__internal_d09e2cf14cf0267755f8a5cce3a3c8956dbf4912dbcac9af8b02e9730c0622f3_prof);
+        $__internal_cab1527e601d122e674abdf5f1fc9e31da382e7e21f06eb67a69b6bc814d9555->leave($__internal_cab1527e601d122e674abdf5f1fc9e31da382e7e21f06eb67a69b6bc814d9555_prof);
 
         
-        $__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee->leave($__internal_bd160600cf6f6d379679a2659cc8480aa8733d0d618e42a8b419cacea41f0fee_prof);
+        $__internal_8125e7126225fee85c631dddde7d32460931a6a547f88289cbfbb18dfe5f5e2b->leave($__internal_8125e7126225fee85c631dddde7d32460931a6a547f88289cbfbb18dfe5f5e2b_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d->enter($__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_c797bd8790513ad5ab18c1653ab352483c7bcfd406ff498a83622fb366f7d148 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c797bd8790513ad5ab18c1653ab352483c7bcfd406ff498a83622fb366f7d148->enter($__internal_c797bd8790513ad5ab18c1653ab352483c7bcfd406ff498a83622fb366f7d148_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306->enter($__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_562724dcbba4e789c63a72c0566a56352b225941d081331a73dc2a8b3060faf5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_562724dcbba4e789c63a72c0566a56352b225941d081331a73dc2a8b3060faf5->enter($__internal_562724dcbba4e789c63a72c0566a56352b225941d081331a73dc2a8b3060faf5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -114,18 +114,13 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         // line 49
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 49, $this->getSourceContext()); })()), "phone", array()), "html", null, true);
         echo "\"> 
-                <!--<span style=\"text-align: left;\"> Phone </span>
-                <input type=tel size=2  maxlength=\"2\" placeholder=\"--\" name=\"phone1\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone2\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone3\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone4\" style=\"text-align: center;\"> - 
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone5\" style=\"text-align: center;\"> -->
+         
            
         </div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\">
             <select id=\"civility\" class=\"form-control \" name=\"civility\" value=\"";
-        // line 59
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 59, $this->getSourceContext()); })()), "civility", array()), "html", null, true);
+        // line 54
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 54, $this->getSourceContext()); })()), "civility", array()), "html", null, true);
         echo "\"> 
                     <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Civilité?</option> 
                     <option  class=\"form-control \" value=\"Mr\" >Homme</option>
@@ -136,43 +131,43 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\">
             <!--<input type=\"file\" name=\"url_img\" id=\"url_img\" tabindex=\"1\" class=\"form-control\" placeholder=\"Avatar (JPG, PNG ou GIF | max. 15 Ko)\" value=\"";
-        // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 68, $this->getSourceContext()); })()), "firstname", array()), "html", null, true);
+        // line 63
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 63, $this->getSourceContext()); })()), "firstname", array()), "html", null, true);
         echo "\"> -->
-            <div class=\"form-control\">
-               Avatar(JPG, PNG ou GIF | max. 15 Ko) :<input type=\"file\"   name=\"url_img\" id=\"url_img\" tabindex=\"1\"  value=\"";
-        // line 70
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 70, $this->getSourceContext()); })()), "url_img", array()), "html", null, true);
-        echo "\">
-            </div>
+            
+                <small class=\"\">Avatar(JPG, PNG ou GIF | max. 15 Ko) : </small> 
+                <input class=\"btn-file btn-default btn-block\" type=\"file\"  name=\"url_img\" id=\"url_img\" tabindex=\"1\"  value=\"\">
+                ";
+        // line 68
+        echo "         
         </div>
 \t\t
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"text\" name=\"adress\" id=\"adress\" tabindex=\"1\" class=\"form-control\" placeholder=\"adress\" value=\"";
-        // line 74
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 74, $this->getSourceContext()); })()), "adress", array()), "html", null, true);
+        // line 71
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 71, $this->getSourceContext()); })()), "adress", array()), "html", null, true);
         echo "\"></div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"text\" onBlur=\"envoyerCP()\" name=\"postal_code\" id=\"postal_code\" tabindex=\"1\" class=\"form-control\" placeholder=\"postal code\" value=\"";
-        // line 75
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 75, $this->getSourceContext()); })()), "postal_code", array()), "html", null, true);
+        // line 72
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 72, $this->getSourceContext()); })()), "postal_code", array()), "html", null, true);
         echo "\">
             
         </div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"text\" name=\"town\" id=\"town\" tabindex=\"1\" class=\"form-control\" placeholder=\"city\" value=\"";
-        // line 78
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 78, $this->getSourceContext()); })()), "town", array()), "html", null, true);
+        // line 75
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 75, $this->getSourceContext()); })()), "town", array()), "html", null, true);
         echo "\">
         </div>
         <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"url_web_orga\" id=\"url_web_orga\" tabindex=\"1\" class=\"form-control\" placeholder=\"url_web_orga\" value=\"";
-        // line 80
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 80, $this->getSourceContext()); })()), "url_web_orga", array()), "html", null, true);
+        // line 77
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 77, $this->getSourceContext()); })()), "url_web_orga", array()), "html", null, true);
         echo "\"></div>
         <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"url_fb\" id=\"url_fb\" tabindex=\"1\" class=\"form-control\" placeholder=\"url_fb\" value=\"";
-        // line 81
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 81, $this->getSourceContext()); })()), "url_fb", array()), "html", null, true);
+        // line 78
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 78, $this->getSourceContext()); })()), "url_fb", array()), "html", null, true);
         echo "\"></div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><textarea name=\"description\" id=\"description\" tabindex=\"1\" class=\"form-control\"  value=\"";
-        // line 82
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 82, $this->getSourceContext()); })()), "description", array()), "html", null, true);
+        // line 79
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 79, $this->getSourceContext()); })()), "description", array()), "html", null, true);
         echo "\">description</textarea></div>
 \t\t
         <div class=\"form-group\"><input type=\"submit\" name=\"register-submit\" id=\"register-submit\" tabindex=\"4\" class=\"btn btn-default btn-lg\" value=\"Register Now\"></div>
@@ -201,23 +196,23 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
 ";
         
-        $__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306->leave($__internal_845b6f5c4dd83cd7c2193fc3037affd42831aa2b1ae4775b0b8a5a7104fd1306_prof);
+        $__internal_562724dcbba4e789c63a72c0566a56352b225941d081331a73dc2a8b3060faf5->leave($__internal_562724dcbba4e789c63a72c0566a56352b225941d081331a73dc2a8b3060faf5_prof);
 
         
-        $__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d->leave($__internal_bf17e455fbec9417eea4db393566bed821e7c547187ef94cff95e232ab028e9d_prof);
+        $__internal_c797bd8790513ad5ab18c1653ab352483c7bcfd406ff498a83622fb366f7d148->leave($__internal_c797bd8790513ad5ab18c1653ab352483c7bcfd406ff498a83622fb366f7d148_prof);
 
     }
 
-    // line 110
+    // line 107
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680->enter($__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8b134b8a3d230f923c77d9ec6ecc6661da1d54cd753d384f10b5b8418725d76c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8b134b8a3d230f923c77d9ec6ecc6661da1d54cd753d384f10b5b8418725d76c->enter($__internal_8b134b8a3d230f923c77d9ec6ecc6661da1d54cd753d384f10b5b8418725d76c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356->enter($__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_da38fd93d6c369ec6d26710706fc878854851885fd6599660bca18c91fe9d964 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_da38fd93d6c369ec6d26710706fc878854851885fd6599660bca18c91fe9d964->enter($__internal_da38fd93d6c369ec6d26710706fc878854851885fd6599660bca18c91fe9d964_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 111
+        // line 108
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -250,7 +245,7 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
                         ({
                                 //url: \"APIautoCompletion.php\",  
                                 url : '";
-        // line 140
+        // line 137
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("APIautoCompletion");
         echo "', 
                                 method  : \"POST\", 
@@ -262,7 +257,7 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
                         .done(function(data)
                         {
 ";
-        // line 150
+        // line 147
         echo "                                console.log(data);
                                 console.log(data.reponse);
                                 //Init contenu ville
@@ -285,10 +280,10 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 \t</script>
 ";
         
-        $__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356->leave($__internal_8317c5392a814238bb7d975492737bbaad4a3eb1fb3f94f06ced822411af2356_prof);
+        $__internal_da38fd93d6c369ec6d26710706fc878854851885fd6599660bca18c91fe9d964->leave($__internal_da38fd93d6c369ec6d26710706fc878854851885fd6599660bca18c91fe9d964_prof);
 
         
-        $__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680->leave($__internal_addf4e4342365252a7759a8d274938d4c97d99ac1edd7b4743682b4dc43bf680_prof);
+        $__internal_8b134b8a3d230f923c77d9ec6ecc6661da1d54cd753d384f10b5b8418725d76c->leave($__internal_8b134b8a3d230f923c77d9ec6ecc6661da1d54cd753d384f10b5b8418725d76c_prof);
 
     }
 
@@ -304,7 +299,7 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
     public function getDebugInfo()
     {
-        return array (  266 => 150,  254 => 140,  221 => 111,  212 => 110,  175 => 82,  171 => 81,  167 => 80,  162 => 78,  156 => 75,  152 => 74,  145 => 70,  140 => 68,  128 => 59,  115 => 49,  106 => 43,  102 => 42,  98 => 41,  94 => 40,  90 => 39,  80 => 32,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  261 => 147,  249 => 137,  216 => 108,  207 => 107,  170 => 79,  166 => 78,  162 => 77,  157 => 75,  151 => 72,  147 => 71,  142 => 68,  135 => 63,  123 => 54,  115 => 49,  106 => 43,  102 => 42,  98 => 41,  94 => 40,  90 => 39,  80 => 32,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -358,12 +353,7 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         <div class=\"form-group form-element commun-element\"  style=\"display:none; text-align: center\">
                 
                  <input type=\"tel\" name=\"phone\" id=\"phone\" tabindex=\"1\" class=\"form-control\" placeholder=\"phone \" value=\"{{ user.phone }}\"> 
-                <!--<span style=\"text-align: left;\"> Phone </span>
-                <input type=tel size=2  maxlength=\"2\" placeholder=\"--\" name=\"phone1\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone2\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone3\" style=\"text-align: center;\"> -  
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone4\" style=\"text-align: center;\"> - 
-                <input type=tel size=2 maxlength=\"2\" placeholder=\"--\" name=\"phone5\" style=\"text-align: center;\"> -->
+         
            
         </div>
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\">
@@ -377,9 +367,11 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
         
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\">
             <!--<input type=\"file\" name=\"url_img\" id=\"url_img\" tabindex=\"1\" class=\"form-control\" placeholder=\"Avatar (JPG, PNG ou GIF | max. 15 Ko)\" value=\"{{ user.firstname }}\"> -->
-            <div class=\"form-control\">
-               Avatar(JPG, PNG ou GIF | max. 15 Ko) :<input type=\"file\"   name=\"url_img\" id=\"url_img\" tabindex=\"1\"  value=\"{{ user.url_img }}\">
-            </div>
+            
+                <small class=\"\">Avatar(JPG, PNG ou GIF | max. 15 Ko) : </small> 
+                <input class=\"btn-file btn-default btn-block\" type=\"file\"  name=\"url_img\" id=\"url_img\" tabindex=\"1\"  value=\"\">
+                {# {{ user.url_img }}\" #}
+         
         </div>
 \t\t
         <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"text\" name=\"adress\" id=\"adress\" tabindex=\"1\" class=\"form-control\" placeholder=\"adress\" value=\"{{ user.adress }}\"></div>

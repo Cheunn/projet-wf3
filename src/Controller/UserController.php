@@ -6,50 +6,48 @@ use Entity\User;
 
 class UserController extends ControllerAbstract
 {
-    public function registerAction()
-    {
-        $user = new User();
-        $errors = [];
-        
-   
-        if (!empty($_POST)) {
+    
+    public function controle_Saisie(User $user) 
+    {            
+         $errors = [];
+
+        if (!empty($_POST)) 
+       {
 			
             $this->sanitizePost();
             
             $user
                 ->setRole($_POST['role']) 
                 ->setEmail($_POST['email'])
-                ->setPassword($_POST['password'])
-			;				
-			
-			if (isset ($_POST['name']))         $user->setName($_POST['name']);
-			if (isset ($_POST['lastname']))       $user->setLastname($_POST['lastname']);
-			if (isset ($_POST['firstname']))      $user->setFirstname($_POST['firstname']);
-			if (isset ($_POST['civility']))       $user->setCivility($_POST['civility'])  ;                                  
-			if (isset ($_POST['url_img']))        $user->setUrl_img($_POST['url_img'])   ;                             
-			if (isset ($_POST['description']))    $user->setDescription($_POST['description'])  ;                            
-			if (isset ($_POST['adress']))         $user->setAdress($_POST['adress'])   ;               
-			if (isset ($_POST['postal_code']))   $user->setPostal_code($_POST['postal_code'])  ;                                  
-			if (isset ($_POST['town']))           $user->setTown($_POST['town'])       ;             
-			if (isset ($_POST['url_web_orga']))   $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
-			if (isset ($_POST['url_fb']))        $user->setUrl_fb($_POST['url_fb']);
+                ->setPassword($_POST['password'])	
+                ->setName($_POST['name'])
             ;
+            if (isset ($_POST['lastname']))       $user->setLastname($_POST['lastname']);
+            if (isset ($_POST['firstname']))      $user->setFirstname($_POST['firstname']);
+            if (isset ($_POST['civility']))       $user->setCivility($_POST['civility'])  ;                                  
+            if (isset ($_POST['url_img']))        $user->setUrl_img($_POST['url_img'])   ;                             
+            if (isset ($_POST['description']))    $user->setDescription($_POST['description'])  ;                            
+            if (isset ($_POST['adress']))         $user->setAdress($_POST['adress'])   ;               
+            if (isset ($_POST['postal_code']))   $user->setPostal_code($_POST['postal_code'])  ;                                  
+            if (isset ($_POST['town']))           $user->setTown($_POST['town'])       ;             
+            if (isset ($_POST['url_web_orga']))   $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
+            if (isset ($_POST['url_fb']))        $user->setUrl_fb($_POST['url_fb']);
+ 
 
-                    
-            
-             // if (empty($_POST['name'])) {
-                // $errors['name'] = 'Le pseudo est obligatoire';
-            // } elseif (strlen($_POST['pseudo']) > 100) {
-                // $errors['name'] = 'Le pseudo ne doit pas dépasser 100 caractères';
-            // }
+            if (empty($_POST['name'])) 
+            {
+                 $errors['name'] = 'Le pseudo est obligatoire';
+            } elseif (strlen($_POST['pseudo']) > 100) {
+                 $errors['name'] = 'Le pseudo ne doit pas dépasser 100 caractères';
+            }
 			
-			 //$user->setPhone($_POST['phone1'].$_POST['phone2'].$_POST['phone3'].$_POST['phone4'].$_POST['phone5']);
+		
           
-			  if ( ! empty($user->getPhone() ))         
-			  {
-				  if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
-				  if ( strlen($user->getPhone) != 10 )        {$errors['Phone'] = "Le telephone doit contenir 10 chiffres";}
-			  }
+            if ( ! empty($user->getPhone() ))         
+            {
+                    if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
+                    if ( strlen($user->getPhone) != 10 )        {$errors['Phone'] = "Le telephone doit contenir 10 chiffres";}
+            }
            
             // if (empty($_POST['lastname'])) {
                 // $errors['lastname'] = 'Le nom est obligatoire';
@@ -84,10 +82,11 @@ class UserController extends ControllerAbstract
             } elseif ($_POST['password_confirm'] != $_POST['password']) {
                 $errors['password_confirm'] = "La confirmation n'est pas identique au mot de passe";
             }
-            
-            if (empty($errors)) {
+           
+                   if (empty($errors)) {
                 $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
-                //dump($user);die;
+                dump($user);die;
+               
                 $this->app['user.repository']->save($user);
                 $this->addFlashMessage('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');
@@ -97,14 +96,23 @@ class UserController extends ControllerAbstract
                 $this->addFlashMessage($message, 'error');
             }
         }
-        
-        return $this->render(
-            'user/register.html.twig',
-            [
-                'user' => $user
-            ]
-        );
+            
     }
+    
+    public function registerAction()
+    {
+        $user = new User(); 
+        $this->app['user.controller']->controle_Saisie($user);
+        return $this->render('user/register.html.twig',['user' => $user]);
+    }
+    
+    public function registerAction2()
+    {
+        $user = new User();  
+        $this->app['user.controller']->controle_Saisie($user);
+        return $this->render('user/register2.html.twig',['user' => $user]);
+    }
+    
     
     public function loginAction()
     {
@@ -149,21 +157,40 @@ class UserController extends ControllerAbstract
     }
     
     
-    
-     public function profilUser()
+    public function listeProfil($id)
     {
-        $user = $this->app['user.manager']->getUser();
+         $user = $this->app['user.repository']->findById($id);
         
         return $this->render(
-            'user/profilUser.html.twig',
+            'user/consultProfil.html.twig',
             [
                 'user' => $user
             ]
         );
-     
     }
     
-        public function messProfilToUs()
+    
+    public function profilUser()
+    {
+        $userSession = $this->app['user.manager']->getUser();
+
+                    return $this->render(
+                        'user/profilUser.html.twig',
+                        [
+                            'user' => $userSession
+
+                        ]
+                    );     
+    }
+    
+    public function messProfilToUs()
+    {
+        return $this->render('Contact.html.twig' );
+    }
+    
+ 
+    
+        public function envoyerPostInterne()
     {
         /*$this->app['user.manager']->logout();
         

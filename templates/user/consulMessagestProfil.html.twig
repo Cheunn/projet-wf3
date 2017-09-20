@@ -1,0 +1,596 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+                   
+
+<section class="innercontent">
+
+    <div class="container">
+
+    	
+                   <h2 class="heading">CONSULTATION PROFIL  </h2>
+      
+       
+   
+
+        <div class="row">
+
+            <div class="col-md-8 col-lg-8">
+
+                <article class="post">
+
+             
+
+                    <div class="author-info">
+
+                       <ul class="list-inline">  
+
+                        <li>
+
+                            <div class="icon-box"><img src="{{ asset('assets/images/post/author_1.png ') }}" class="img-responsive" alt="image post" /></div>
+
+                            <div class="info">
+
+                            <p>user:</p>
+
+                           <a href="author.html">{{user.name}} </a>
+
+                            </div>    
+
+                        </li>
+
+                        <li>
+
+                            <div class="icon-box"><i class="fa fa-calendar"></i></div>
+
+                            <div class="info">
+
+                            <p>Date d'inscription :</p>
+
+                                <strong>{{user.date_create}} </strong></div>
+
+                        </li>
+
+                        
+
+                         <li>
+
+                             <div class="icon-box"><i class="fa fa-comments-o"></i></div>
+
+                             <div class="info">
+
+                             <p>Note</p>
+
+                                 <strong>4.5</strong></div>
+
+                         </li>
+
+                         <li>
+
+                            <div class="icon-box"><i class="fa fa-eye"></i></div>
+
+                            <div class="info">
+
+                            <p>Total View:</p>
+
+                                <strong>4289</strong></div>
+
+                        </li>
+
+                       </ul>
+
+                    </div>
+                        
+             <div class="caption">
+                <div class="line-block">
+
+                    <ul class="list-inline tags">
+
+                       <li><a href="#">Envoyer un message Interne</a></li>
+
+                        <li><a href="#">Ses annonces</a></li>
+
+                        <li><a href="#">Ses chroniques</a></li>
+                        
+                        <li><a href="#">Ses commentaires</a></li>
+
+                  
+
+                    </ul>
+
+                </div></div>
+
+           
+             
+                    <div class="related-post">
+
+                        <div class="row">
+
+                            <div class="col-md-12"><h4></h4></div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                <div class="thumbnail">
+
+                                  <a href="#"><img src="{{ asset('assets/images/post/related-post1.png ') }}" alt="related post"></a>
+
+                                  <div class="caption">
+
+                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                <div class="thumbnail">
+
+                                    <a href="#"><img src="{{ asset('assets/images/post/related-post2.png ') }}" alt="related post"></a>
+
+                                  <div class="caption">
+
+                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                <div class="thumbnail">
+
+                                    <a href="#"><img src="{{ asset('assets/images/post/related-post3.png ') }}" alt="related post"></a>
+
+                                  <div class="caption">
+
+                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="comment-count">
+
+                        <h4>32 Comments</h4>
+
+                        <p><a href="#">Sign in</a> to comment or comment as a guest.</p>
+
+                    </div>
+
+                    <div class="comment-list">
+
+                        <div class="media">
+
+                          <div class="media-left">
+
+                            <a href="#">
+
+                              <img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image">
+
+                            </a>
+
+                          </div>
+
+                          <div class="media-body">
+
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
+
+                              <ul class="list-inline">
+
+                                  <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                  <li>3 hours ago</li>
+
+                                  <li><a class="reply-btn" href="#">Post Reply</a></li>
+
+                                </ul>
+
+                              
+
+                          </div>
+
+                        </div>
+
+                        <div class="media">
+
+                          <div class="media-left">
+
+                            <a href="#">
+
+                              <img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image">
+
+                            </a>
+
+</div>
+
+                          <div class="media-body">
+
+                            
+
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
+
+                              <ul class="list-inline">
+
+                                  <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                  <li>3 hours ago</li>
+
+                                  <li><a class="reply-btn" href="#">Post Reply</a></li>
+
+                                </ul>
+
+                            <div class="media nested-first">
+
+                              <div class="media-left">
+
+                                <a href="#">
+
+                                  <img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image">
+
+                                </a>
+
+                              </div>
+
+                              <div class="media-body">
+
+                                
+
+                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+
+                                  <ul class="list-inline">
+
+                                  <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                  <li>3 hours ago</li>
+
+                                </ul>
+
+                              </div>
+
+</div>
+
+                            <div class="media">
+
+                              <div class="media-left">
+
+                                <a href="#">
+
+                                  <img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image">
+
+                                </a>
+
+                              </div>
+
+                              <div class="media-body">
+
+                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+
+                                  <ul class="list-inline">
+
+                                  <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                  <li>3 hours ago</li>
+
+                                </ul>
+
+                              </div>
+
+</div>
+
+</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="comment-form">
+
+                        <h4>Post A Reply</h4>
+
+                        <form role="form" action="#" method="post" novalidate id="comment-form">
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-lg-5">
+
+                           <div class="form-group">
+
+                             <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Full Name:">
+
+                           </div>
+
+                                    </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-lg-5">
+
+                          <div class="form-group">
+
+                            <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Enter Address:">
+
+                          </div>
+
+                                    </div>
+
+                                    </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-lg-5">
+
+                            <div class="form-group">
+
+                            <input type="text" class="form-control" placeholder="Phone Number:">
+
+                          </div>
+
+                            </div>
+
+                                    </div>
+
+                            <div class="form-group">
+
+                                <textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea>
+
+                          </div>
+
+                          <button type="submit" class="btn btn-default">Post Reply</button>
+
+                        </form>
+
+                    </div>
+
+                   
+
+                </article>
+
+            <div class="clearfix"></div>
+
+            </div>
+
+            <aside class="col-md-4 col-lg-4">
+
+            	
+
+                <div class="row">
+
+                <div class="col-sm-6 col-md-12 col-lg-12">
+
+                <div class="panel panel-default theme-panel">
+
+                  <div class="panel-heading">Donner une note</div>
+
+                    <div class="panel-body">
+
+                      <form action="#" method="post">
+
+                      <div class="form-group">
+
+                          <select id="role" class="form-control " name="note"> 
+                                <option  value="" class="disabled selected hidden" name="text">Choisir la note?</option> 
+                                <option  class="form-control " value="1" >1</option>
+                                <option  class="form-control " value="2" >2</option>
+                                <option  class="form-control " value="3" >3</option>
+                                <option  class="form-control " value="4" >4</option>
+                                <option  class="form-control " value="5" >5</option>
+                                
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                        	<button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
+
+                        </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+               </div>
+
+                       <div class="col-sm-6 col-md-12 col-lg-12">
+
+                <div class="panel panel-default theme-panel">
+
+                  <div class="panel-heading">Recent Articles</div>
+
+                    <div class="panel-body nopadding">
+
+                      <div class="media">
+
+      <div class="media-left">
+
+        <a href="#">
+
+          <img src="{{ asset('assets/images/post/rp1.jpg') }}" alt="author" />
+
+        </a>
+
+      </div>
+
+      <div class="media-body">
+
+        <h4 class="media-heading"><a href="#">this is long Blog Heading Text Size for recent articles</a></h4>
+
+        <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
+
+      </div>
+
+    </div>
+
+    <div class="media">
+
+      <div class="media-left">
+
+        <a href="#">
+
+          <img src="{{ asset('assets/images/post/rp2.jpg ') }}" alt="author" />
+
+        </a>
+
+      </div>
+
+      <div class="media-body">
+
+        <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
+
+        <p><a href="#">Photography</a> &bull; 3 hours ago</p>
+
+      </div>
+
+    </div>
+
+                        <div class="media">
+
+      <div class="media-left">
+
+        <a href="#">
+
+          <img src="{{ asset('assets/images/post/rp3.jpg ') }}" alt="author" />
+
+        </a>
+
+      </div>
+
+      <div class="media-body">
+
+        <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
+
+        <p><a href="#">Products</a> &bull; 2 hours ago</p>
+
+      </div>
+
+    </div>
+
+                    </div>
+
+                </div>
+
+                           </div>
+
+                       <div class="col-sm-6 col-md-12 col-lg-12">
+
+                <div class="panel panel-default theme-panel">
+
+                  <div class="panel-heading">Chroniques</div>
+
+                     {# {% include 'aside.html.twig'%} #}
+
+                    </div>
+
+                </div>
+
+               </div>
+
+                       
+
+                       <div class="col-sm-6 col-md-12 col-lg-12">
+
+                <div class="panel panel-default theme-panel">
+
+                  <div class="panel-heading">Tags</div>
+
+                    <div class="panel-body">
+
+                      <ul class="list-inline tags">
+
+                        <li><a href="#">LifeStyle</a></li>
+
+                        <li class="big"><a href="#">Music</a></li>
+
+                        <li><a href="#">SmartPhones</a></li>
+
+                        <li><a href="#">Business</a></li>
+
+                        
+
+                        <li><a href="#">Travel</a></li>
+
+                        
+
+                        <li class="big"><a href="#">Business</a></li>
+
+                        <li class="small"><a href="#">LifeStyle</a></li>
+
+                        <li><a href="#">SmartPhones</a></li>
+
+                        
+
+                        <li><a href="#">Fireworks</a></li>
+
+                        <li class="big"><a href="#">Travel</a></li>
+
+                        <li><a href="#">Fireworks</a></li>
+
+                        <li class="small"><a href="#">Music</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+               </div>
+
+                       <div class="col-sm-6 col-md-12 col-lg-12">
+
+                <div class="panel panel-default theme-panel">
+
+                  <div class="panel-heading">Archives</div>
+
+                    <div class="panel-body nopadding">
+
+                      <div class="list-group">
+
+  <a href="#" class="list-group-item">January 2014</a>
+
+  <a href="#" class="list-group-item">February 2014</a>
+
+  <a href="#" class="list-group-item">March 2014</a>
+
+  <a href="#" class="list-group-item">April 2014</a>
+
+                       <a href="#" class="list-group-item">May 2014</a>
+
+</div>
+
+                    </div>
+
+                </div>
+
+               </div>
+
+               </div>
+
+               
+
+            </aside>
+
+           </div>
+
+       
+
+      </div>
+
+    </section>
+
+    
+{% endblock %}

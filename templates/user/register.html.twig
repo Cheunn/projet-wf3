@@ -47,12 +47,7 @@
         <div class="form-group form-element commun-element"  style="display:none; text-align: center">
                 
                  <input type="tel" name="phone" id="phone" tabindex="1" class="form-control" placeholder="phone " value="{{ user.phone }}"> 
-                <!--<span style="text-align: left;"> Phone </span>
-                <input type=tel size=2  maxlength="2" placeholder="--" name="phone1" style="text-align: center;"> -  
-                <input type=tel size=2 maxlength="2" placeholder="--" name="phone2" style="text-align: center;"> -  
-                <input type=tel size=2 maxlength="2" placeholder="--" name="phone3" style="text-align: center;"> -  
-                <input type=tel size=2 maxlength="2" placeholder="--" name="phone4" style="text-align: center;"> - 
-                <input type=tel size=2 maxlength="2" placeholder="--" name="phone5" style="text-align: center;"> -->
+         
            
         </div>
         <div class="form-group form-element commun-element"  style="display:none;">
@@ -66,9 +61,11 @@
         
         <div class="form-group form-element commun-element"  style="display:none;">
             <!--<input type="file" name="url_img" id="url_img" tabindex="1" class="form-control" placeholder="Avatar (JPG, PNG ou GIF | max. 15 Ko)" value="{{ user.firstname }}"> -->
-            <div class="form-control">
-               Avatar(JPG, PNG ou GIF | max. 15 Ko) :<input type="file"   name="url_img" id="url_img" tabindex="1"  value="{{ user.url_img }}">
-            </div>
+            
+                <small class="">Avatar(JPG, PNG ou GIF | max. 15 Ko) : </small> 
+                <input class="btn-file btn-default btn-block" type="file"  name="url_img" id="url_img" tabindex="1"  value="">
+                {# {{ user.url_img }}" #}
+         
         </div>
 		
         <div class="form-group form-element commun-element"  style="display:none;"><input type="text" name="adress" id="adress" tabindex="1" class="form-control" placeholder="adress" value="{{ user.adress }}"></div>

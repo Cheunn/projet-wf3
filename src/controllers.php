@@ -62,6 +62,18 @@ $app
 ;
 
 /* Jaoued */
+$profil=$app['controllers_factory'];  // crée un groupe de routes
+$app->mount('/profil', $profil);      
+
+
+$profil->match('/listeProfil/{id}', 'user.controller:listeProfil')
+       ->assert('id', '\d+')
+       ->bind('listeProfil');
+$profil->match('/envoyerPost/{id}', 'user.controller:envoyerPostInterne')      ->bind('envoyerPost');
+
+/* FRONT ADMIN USER */
+
+
 
 /* Anis */
 
@@ -187,6 +199,12 @@ $user=$app['controllers_factory'];  // crée un groupe de routes
 
 $app->mount('/user', $user);      
 
+$user->match('/profil', 'user.controller:profilUser')  
+       ->bind('profilUser');
+
+$user->match('/messProfilToUs', 'user.controller:messProfilToUs')  
+       ->bind('messProfilToUs');
+
 $user->before (function() use ($app){
     if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
 }) ;
@@ -198,7 +216,6 @@ $user->before (function() use ($app){
 
 
 /* Jaoued */
-
 
 /* Anis */
 

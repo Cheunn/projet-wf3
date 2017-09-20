@@ -138,7 +138,7 @@ SELECT
     a.*
 FROM annonce a
 ORDER BY id_post DESC
-LIMIT 3 
+LIMIT 7
 SQL;
         $dbAnnonces = $this->db->fetchAll($query);
         $annonces = [];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Controller\User;
 
 use Controller\ControllerAbstract;
 use Entity\Chronique;
@@ -43,18 +43,28 @@ class ChroniqueController extends ControllerAbstract {
         $errors = [];
         
         if (!empty($_POST)) {
+            
             $this->sanitizePost();
+            
+            $user = $this->app['user.manager']->getUser();
+            
+            $type="";
+            
+            if($user->getRole() == "user"){
+                $type = "user_chronique";
+            }else{
+                $type = "asso_chronique";
+            }
             
             $chronique
                 ->setPost_title($_POST['post_title'])
-                ->setPost_type($_POST['post_type'])
+                ->setPost_type('chronique')
                 ->setPost_date($_POST['post_date'])
                 ->setType($_POST['type'])
                 ->setUrl_img_1($_POST['url_img_1'])
-                ->setUrl_img_2($_POST['url_img_2'])
                 ->setParagraph_1($_POST['paragraph_1'])
                 ->setParagraph_2($_POST['paragraph_2'])
-                ->setMember_id_member(7)
+                ->setMember_id_member($user->getId_member())
                 ->setCategory_id_category($_POST['category'])
             ;
             
@@ -79,7 +89,7 @@ class ChroniqueController extends ControllerAbstract {
                 $this->app['chronique.repository']->save($chronique);
                 //$this->addFlashMessage("La chronique est enregistré");
                 
-                return $this->redirectRoute('admin_chroniques');
+                return $this->redirectRoute('user_chronique_list');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -88,7 +98,7 @@ class ChroniqueController extends ControllerAbstract {
         }
         
         return $this->render(
-            'chronique/edit.html.twig',
+            'user/chronique/edit.html.twig',
             [
                 'chronique' => $chronique,
                 'categories' => $categories
@@ -108,12 +118,13 @@ class ChroniqueController extends ControllerAbstract {
         $this->app['chronique.repository']->delete($chronique);
         $this->addFlashMessage("La chronique est supprimée");
         
-        return $this->redirectRoute('user_chroniques');
+        return $this->redirectRoute('user_chronique_list');
     }
     
     public function listUserChronique(){
         $user = $this->app['user.manager']->getUser();
-        $chroniques = $this->app['chronique.repository']->listByUser($user->getId_member());
+        
+        $chroniques = $this->app['chronique.repository']->listByUserId($user->getId_member());
         
         return $this->render('user/chronique/list.html.twig',
                 [

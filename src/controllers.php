@@ -182,11 +182,17 @@ $user->before (function() use ($app){
 
 /* Cheunn */
 
-$user->get('/chronique','chronique.controller:listUserChronique')
-        ->assert('id_user','\d+')
+$user->get('/chronique','user.chronique.controller:listUserChronique')
         ->bind('user_chronique_list')        
 ;
 
+$user->match('/chronique/edit','user.chronique.controller:editAction')
+        ->bind('user_chronique_edit')        
+;
+
+$user->match('/chronique/supression','user.chronique:deleteAction')
+        ->bind('user_chronique_delete')
+;
 /* Julien */
 
 

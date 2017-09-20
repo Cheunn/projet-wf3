@@ -173,7 +173,8 @@ SQL;
             ->setParagraph_2($data['paragraph_2'])
             ->setMember_id_member($data['member_id_member'])
             ->setCategory_id_category($data['category_id_category'])
-            //->setAuthor($author)
+            ->setCategory_name($data['category_name'])
+            
         ;
         
         return $chronique;

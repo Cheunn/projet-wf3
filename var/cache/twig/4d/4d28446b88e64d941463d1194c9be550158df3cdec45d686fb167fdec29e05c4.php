@@ -15,11 +15,11 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0c1420ae2499578c642eedc050db3ecb5d8f264af816fd9a9408da8f965d89bf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c1420ae2499578c642eedc050db3ecb5d8f264af816fd9a9408da8f965d89bf->enter($__internal_0c1420ae2499578c642eedc050db3ecb5d8f264af816fd9a9408da8f965d89bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_4eab9e969b242cce030da1f1c8d210d2049bc71a5ad3a2168588fa78d68defa8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4eab9e969b242cce030da1f1c8d210d2049bc71a5ad3a2168588fa78d68defa8->enter($__internal_4eab9e969b242cce030da1f1c8d210d2049bc71a5ad3a2168588fa78d68defa8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
-        $__internal_93e3b57f3a616faad085951188eb1152d7c118a242bd50f5ed91af39aa4fcb09 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_93e3b57f3a616faad085951188eb1152d7c118a242bd50f5ed91af39aa4fcb09->enter($__internal_93e3b57f3a616faad085951188eb1152d7c118a242bd50f5ed91af39aa4fcb09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_73e4391987eee5ed2fbea197d4ca3a1edf61f7b29b0495aa0815d3f6ea216a16 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_73e4391987eee5ed2fbea197d4ca3a1edf61f7b29b0495aa0815d3f6ea216a16->enter($__internal_73e4391987eee5ed2fbea197d4ca3a1edf61f7b29b0495aa0815d3f6ea216a16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
         // line 2
         echo "
@@ -65,34 +65,33 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp1.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
-
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 40
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp2.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 42
+        // line 41
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp3.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 44
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp1.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 46
+        // line 45
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp2.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 48
+        // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp3.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"";
-        // line 50
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp4.jpg"), "html", null, true);
         echo "\" alt=\" Flickr\"/></a>
 
@@ -155,13 +154,12 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
         </footer>
 
 <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-angle-up\"></i></a>
-
 ";
         
-        $__internal_0c1420ae2499578c642eedc050db3ecb5d8f264af816fd9a9408da8f965d89bf->leave($__internal_0c1420ae2499578c642eedc050db3ecb5d8f264af816fd9a9408da8f965d89bf_prof);
+        $__internal_4eab9e969b242cce030da1f1c8d210d2049bc71a5ad3a2168588fa78d68defa8->leave($__internal_4eab9e969b242cce030da1f1c8d210d2049bc71a5ad3a2168588fa78d68defa8_prof);
 
         
-        $__internal_93e3b57f3a616faad085951188eb1152d7c118a242bd50f5ed91af39aa4fcb09->leave($__internal_93e3b57f3a616faad085951188eb1152d7c118a242bd50f5ed91af39aa4fcb09_prof);
+        $__internal_73e4391987eee5ed2fbea197d4ca3a1edf61f7b29b0495aa0815d3f6ea216a16->leave($__internal_73e4391987eee5ed2fbea197d4ca3a1edf61f7b29b0495aa0815d3f6ea216a16_prof);
 
     }
 
@@ -177,7 +175,7 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
 
     public function getDebugInfo()
     {
-        return array (  96 => 50,  91 => 48,  86 => 46,  81 => 44,  76 => 42,  71 => 40,  65 => 37,  60 => 35,  25 => 2,);
+        return array (  95 => 49,  90 => 47,  85 => 45,  80 => 43,  75 => 41,  70 => 39,  65 => 37,  60 => 35,  25 => 2,);
     }
 
     public function getSourceContext()
@@ -219,7 +217,6 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
                         \t<a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"{{ asset('assets/images/post/rp4.jpg') }}\" alt=\" Flickr\"/></a>
 
                         \t<a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"{{ asset('assets/images/post/rp1.jpg') }}\" alt=\" Flickr\"/></a>
-
 
                             <a href=\"#\" target=\"_blank\" rel=\"nofollow\"><img src=\"{{ asset('assets/images/post/rp2.jpg') }}\" alt=\" Flickr\"/></a>
 
@@ -292,7 +289,6 @@ class __TwigTemplate_806154e26f92f61e8d61e6dea40ab9001c73233ce68012c7b34350b4599
         </footer>
 
 <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-angle-up\"></i></a>
-
 ", "footer.html.twig", "C:\\xampp\\htdocs\\projet-wf3\\templates\\footer.html.twig");
     }
 }

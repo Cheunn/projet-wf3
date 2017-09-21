@@ -32,10 +32,7 @@ class User
      */
     private $name = '';
     
-    /**
-     * @var string
-     */
-    private $pseudo;
+ 
     
     
     /**
@@ -127,9 +124,6 @@ class User
         return $this->name;
     }
 
-    public function getPseudo() {
-        return $this->pseudo;
-    }
 
     public function getEmail() {
         return $this->email;
@@ -211,10 +205,7 @@ class User
         return $this;
     }
 
-    public function setPseudo($pseudo) {
-        $this->pseudo = $pseudo;
-        return $this;
-    }
+ 
 
     public function setEmail($email) {
         $this->email = $email;

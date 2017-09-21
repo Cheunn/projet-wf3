@@ -39,7 +39,7 @@ $user->before (function() use ($app){
 $user->match('/profil/{id}', 'user.controller:profilUser')  
              ->assert('id', '\d+')
             ->bind('profilUser');
-$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+$user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
 $user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
 
 /* Cheunn */

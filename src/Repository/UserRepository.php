@@ -69,23 +69,38 @@ class UserRepository extends RepositoryAbstract
      */
     public function save(User $user) 
     {
-        $data = [
-            //'lastname' => $user->getLastname(),
-            //'firstname' => $user->getFirstname(),
-            'name' => $user->getName(),
-            'email' => $user->getEmail(),
-            'password' => $user->getPassword()
-            //'role' => $user->getRole()
-        ];
-     
-        //dump($data); die;
+        
+               $data = [
+                'role' => $user->getRole(),
+                 'firstname' => $user->getFirstname(),
+                'lastname' => $user->getLastname(),
+                'name' => $user->getName(),
+                'email' => $user->getEmail(),
+                'password' => $user->getPassword(),
+                'phone' => $user->getPhone(),
+                'civility' => $user->getcivility(),
+                'url_img' => $user->geturl_img(),
+                'is_active' => 'yes',
+                'description' => $user->getdescription(),
+                'date_create' => 'NOW()',
+                'adress' => $user->getadress(),  
+                'postal_code' => $user->getPostal_code(), 
+                'country' => 'FRANCE', 
+                'town' => $user->getTown (), 
+                'url_web_orga' => $user->geturl_web_orga(),
+                'url_fb' => $user->geturl_fb(),
+            ];
+             //dump($user);
+        //dump($data); 
+   
+    
         
         if ($user->getId_member()) {
             $this->db->update(
                 'member',
                 $data,
                 [
-                    'id' => $user->getId_member()
+                    'id_member' => $user->getId_member()
                 ]
             );
         } else {
@@ -99,6 +114,7 @@ class UserRepository extends RepositoryAbstract
         }
     }
     
+
     /**
      * 
      * @param array $data
@@ -116,21 +132,21 @@ class UserRepository extends RepositoryAbstract
             ->setEmail($data['email'])
             ->setPassword($data['password'])
             ->setRole($data['role'])
-                ->setPhone($data['phone'])
-                ->setCivility($data['civility'])
-                ->setUrl_img($data['url_img'])
-                ->setIs_active($data['is_active'])
-                ->setDescription($data['description'])
-                ->setDate_create($data['date_create'])
-                ->setAdress($data['adress'])
-                ->setCountry($data['country'])
-                ->setTown($data['town'])
-                ->setUrl_web_orga($data['url_web_orga'])
-                ->setUrl_fb($data['url_fb'])
-
-                
+            ->setPhone($data['phone'])
+            ->setCivility($data['civility'])
+            ->setUrl_img($data['url_img'])
+            ->setDescription($data['description'])
+            ->setDate_create($data['date_create'])
+            ->setAdress($data['adress'])
+            ->setTown($data['town'])
+                ->setTown($data['postal_code'])
+            ->setUrl_web_orga($data['url_web_orga'])
+            ->setUrl_fb($data['url_fb'])
+    
         ;
         //dump($user);die;
         return $user;
     }
 }
+
+

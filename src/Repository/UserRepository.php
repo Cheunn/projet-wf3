@@ -77,7 +77,6 @@ class UserRepository extends RepositoryAbstract
             'password' => $user->getPassword()
             //'role' => $user->getRole()
         ];
-     
         //dump($data); die;
         
         if ($user->getId_member()) {

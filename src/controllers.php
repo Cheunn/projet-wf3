@@ -16,6 +16,7 @@ $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bi
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
 
+
 /* USER */
 
 $user=$app['controllers_factory'];  // crée un groupe de routes
@@ -40,10 +41,18 @@ $user->match('/profil/{id}', 'user.controller:profilUser')
             ->bind('profilUser');
 
 $user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+
 /* Cheunn */
 
 
 /* Julien */
+
+/* SINGLE ANNONCE REDIRECTION */
+$app
+    ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
+        ->assert('id', '\d+')
+        ->bind('single_annonce')
+;
 
 
 
@@ -112,8 +121,7 @@ $app
 //Handicap
 
 $bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
-            ->bind('handicap');
-
+        ->bind('handicap');
 
 /* ADMIN  */
 
@@ -225,6 +233,27 @@ $admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
 $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
+
+/* USER */
+
+$user=$app['controllers_factory'];  // crée un groupe de routes
+
+$app->mount('/user', $user);      
+
+$user->before (function() use ($app){
+    if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
+}) ;
+
+/* Cheunn */
+
+
+/* Julien */
+
+
+/* Jaoued */
+
+
+/* Anis */
 
 
 // COMMON FILES

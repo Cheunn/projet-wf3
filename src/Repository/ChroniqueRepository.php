@@ -4,6 +4,7 @@ namespace Repository;
 use Entity\Chronique;
 use Entity\Category;
 use Entity\User;
+use Service\UserManager;
 
 class ChroniqueRepository extends RepositoryAbstract
 {
@@ -172,7 +173,8 @@ SQL;
             ->setParagraph_2($data['paragraph_2'])
             ->setMember_id_member($data['member_id_member'])
             ->setCategory_id_category($data['category_id_category'])
-            //->setAuthor($author)
+            ->setCategory_name($data['category_name'])
+            
         ;
         
         return $chronique;
@@ -180,8 +182,10 @@ SQL;
     
     /* FONCTION POUR LE FRONT */
     
-    public function listByUser($id_member){
-        $dbChroniques = $this->db->fetchAll("SELECT * FROM chronique WHERE member_id_member = $id_member");
+    public function listByUserId($id){
+       
+        $dbChroniques = $this->db->fetchAll("SELECT ch.*,c.name AS category_name FROM chronique ch JOIN category c ON ch.category_id_category = c.id_category WHERE member_id_member = $id");
+        
         $chroniques = [];
         
         foreach ($dbChroniques as $dbChronique) {

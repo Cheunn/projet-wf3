@@ -7,8 +7,8 @@ class IndexController extends ControllerAbstract
     public function indexAction()
     {  
         $categories = $this->app['category.repository']->findAllChronique();
-        $annonces = $this->app['annonce.repository']->findAll();
-        
+        $annonces = $this->app['annonce.repository']->findLastThree();
+     
        return $this->render('index.html.twig', [
            
            'categories' => $categories,

@@ -69,6 +69,7 @@ class UserRepository extends RepositoryAbstract
      */
     public function save(User $user) 
     {
+
         
                $data = [
                 'role' => $user->getRole(),
@@ -94,6 +95,7 @@ class UserRepository extends RepositoryAbstract
         //dump($data); 
    
     
+
         
         if ($user->getId_member()) {
             $this->db->update(

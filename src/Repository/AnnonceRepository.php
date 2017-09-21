@@ -130,22 +130,41 @@ SQL;
           
         }
     }
-    
-    public function findLastThree()
+
+public function findAllSingle($limit)
     {
         $query = <<<SQL
 SELECT 
     a.*
 FROM annonce a
-ORDER BY post_date
-LIMIT 3
+ORDER BY id_post DESC
 SQL;
-        $dbAnnonces = $this->db->fetchAll($query);
+        $dbAnnonces = $this->db->fetchAll($query);    
         $annonces = [];
         
-        foreach ($dbAnnonces as $dbAnnonce) {
-            $annonces[] = $this->buildEntity($dbAnnonce);
+        for ($i=0 ; $i < $limit; $i++) {
+            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
         }
+        return $annonces;
+    }
+    
+
+public function findLastThree()
+    {
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);    
+        $annonces = [];
+
+        
+        /*for ($i=0 ; $i < $limit; $i++) {
+            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+        }*/
         return $annonces;
     }
     
@@ -190,4 +209,7 @@ SQL;
         
         return $annonce;
     }
+    
+
+    
 }

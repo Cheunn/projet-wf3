@@ -81,7 +81,7 @@ class UserController extends ControllerAbstract
                     } elseif ($_POST['password_confirm'] != $_POST['password']) {
                         $errors['password_confirm'] = "La confirmation n'est pas identique au mot de passe";
                     }
-            }
+            }          
             
             if (empty($errors)) {
                 $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));      

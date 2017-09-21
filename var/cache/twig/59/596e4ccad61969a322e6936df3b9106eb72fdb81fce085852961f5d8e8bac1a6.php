@@ -15,19 +15,11 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-<<<<<<< HEAD
-        $__internal_e93949209a5440552a12434ead0664eb2c33c792d951d31ea7812980ef831eb2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e93949209a5440552a12434ead0664eb2c33c792d951d31ea7812980ef831eb2->enter($__internal_e93949209a5440552a12434ead0664eb2c33c792d951d31ea7812980ef831eb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc->enter($__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_758bb6a7a27afe8d70a5884d09a2b0b5e5194a7b04d757026336280dd7c585ae = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_758bb6a7a27afe8d70a5884d09a2b0b5e5194a7b04d757026336280dd7c585ae->enter($__internal_758bb6a7a27afe8d70a5884d09a2b0b5e5194a7b04d757026336280dd7c585ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
-=======
-        $__internal_f34886d1f7e7ced9e7654e6a486331daceb6bdddfa2303855ebe402ce875b9b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f34886d1f7e7ced9e7654e6a486331daceb6bdddfa2303855ebe402ce875b9b2->enter($__internal_f34886d1f7e7ced9e7654e6a486331daceb6bdddfa2303855ebe402ce875b9b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
-
-        $__internal_8eaa8e7269d0a8256efc16c92dad59f87cd99f34395ded55d1586a9d16f95213 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8eaa8e7269d0a8256efc16c92dad59f87cd99f34395ded55d1586a9d16f95213->enter($__internal_8eaa8e7269d0a8256efc16c92dad59f87cd99f34395ded55d1586a9d16f95213_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
->>>>>>> 3db2386a41bdd3a47b14fdf5a469b32e904befc4
+        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871->enter($__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -288,11 +280,7 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                             <ul class=\"list-unstyled\">
                                ";
         // line 204
-<<<<<<< HEAD
-        echo "       
-=======
         echo "     
->>>>>>> 3db2386a41bdd3a47b14fdf5a469b32e904befc4
                                 <li><a href=\"single.html\">TEST</a></li>
                                 <li><a href=\"single.html\"></a></li>
                                 <li><a href=\"single.html\"></a></li>
@@ -493,17 +481,10 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
         // line 366
         echo "  ";
         
-<<<<<<< HEAD
-        $__internal_e93949209a5440552a12434ead0664eb2c33c792d951d31ea7812980ef831eb2->leave($__internal_e93949209a5440552a12434ead0664eb2c33c792d951d31ea7812980ef831eb2_prof);
+        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc->leave($__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc_prof);
 
         
-        $__internal_758bb6a7a27afe8d70a5884d09a2b0b5e5194a7b04d757026336280dd7c585ae->leave($__internal_758bb6a7a27afe8d70a5884d09a2b0b5e5194a7b04d757026336280dd7c585ae_prof);
-=======
-        $__internal_f34886d1f7e7ced9e7654e6a486331daceb6bdddfa2303855ebe402ce875b9b2->leave($__internal_f34886d1f7e7ced9e7654e6a486331daceb6bdddfa2303855ebe402ce875b9b2_prof);
-
-        
-        $__internal_8eaa8e7269d0a8256efc16c92dad59f87cd99f34395ded55d1586a9d16f95213->leave($__internal_8eaa8e7269d0a8256efc16c92dad59f87cd99f34395ded55d1586a9d16f95213_prof);
->>>>>>> 3db2386a41bdd3a47b14fdf5a469b32e904befc4
+        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871->leave($__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871_prof);
 
     }
 
@@ -733,15 +714,9 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
                             <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-<<<<<<< HEAD
-                               {#{% for annonce in annonces %} 
-                                <li><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></li>
-                               {% endfor %} #}       
-=======
                                {# {% for annonce in annonces %} 
                                 <li><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></li>
                                {% endfor %}   #}     
->>>>>>> 3db2386a41bdd3a47b14fdf5a469b32e904befc4
                                 <li><a href=\"single.html\">TEST</a></li>
                                 <li><a href=\"single.html\"></a></li>
                                 <li><a href=\"single.html\"></a></li>

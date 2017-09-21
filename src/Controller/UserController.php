@@ -6,12 +6,12 @@ use Entity\User;
 
 class UserController extends ControllerAbstract
 {
+
     
-    public function controle_Saisie(User $user) 
+    public function controle_Saisie(User $user, $param) 
     {            
          $errors = [];
-
-        if (!empty($_POST)) 
+       if (!empty($_POST)) 
        {
 			
             $this->sanitizePost();
@@ -22,23 +22,24 @@ class UserController extends ControllerAbstract
                 ->setPassword($_POST['password'])	
                 ->setName($_POST['name'])
             ;
-            if (isset ($_POST['lastname']))       $user->setLastname($_POST['lastname']);
-            if (isset ($_POST['firstname']))      $user->setFirstname($_POST['firstname']);
-            if (isset ($_POST['civility']))       $user->setCivility($_POST['civility'])  ;                                  
-            if (isset ($_POST['url_img']))        $user->setUrl_img($_POST['url_img'])   ;                             
-            if (isset ($_POST['description']))    $user->setDescription($_POST['description'])  ;                            
-            if (isset ($_POST['adress']))         $user->setAdress($_POST['adress'])   ;               
-            if (isset ($_POST['postal_code']))   $user->setPostal_code($_POST['postal_code'])  ;                                  
-            if (isset ($_POST['town']))           $user->setTown($_POST['town'])       ;             
-            if (isset ($_POST['url_web_orga']))   $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
-            if (isset ($_POST['url_fb']))        $user->setUrl_fb($_POST['url_fb']);
+            if (isset ($_POST['lastname']))    $user->setLastname($_POST['lastname'])  ;
+            if (isset ($_POST['firstname']))   $user->setFirstname($_POST['firstname']);
+            if (isset ($_POST['civility']))    $user->setCivility($_POST['civility'])  ;                                  
+            if (isset ($_POST['url_img']))     $user->setUrl_img($_POST['url_img'])   ;                             
+            if (isset ($_POST['description'])) $user->setDescription($_POST['description'])  ;                            
+            if (isset ($_POST['adress']))      $user->setAdress($_POST['adress'])   ;               
+            if (isset ($_POST['postal_code'])) $user->setPostal_code($_POST['postal_code'])  ;                                  
+            if (isset ($_POST['town']))        $user->setTown($_POST['town']) ;
+           if (isset ($_POST['phone']))        $user->setTown($_POST['phone']);             
+            if (isset ($_POST['url_web_orga']))     $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
+            if (isset ($_POST['url_fb']))           $user->setUrl_fb($_POST['url_fb']);
  
 
             if (empty($_POST['name'])) 
             {
                  $errors['name'] = 'Le pseudo est obligatoire';
-            } elseif (strlen($_POST['pseudo']) > 100) {
-                 $errors['name'] = 'Le pseudo ne doit pas dépasser 100 caractères';
+            } elseif (strlen($_POST['name']) > 30) {
+                 $errors['name'] = 'Le pseudo ne doit pas dépasser 30 caractères';
             }
 			
 		
@@ -61,31 +62,29 @@ class UserController extends ControllerAbstract
                 // $errors['firstname'] = 'Le prénom ne doit pas dépasser 100 caractères';
             // }
             
-            if (empty($_POST['email'])) {
-                $errors['email'] = "L'email est obligatoire";
-            } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $errors['email'] = "L'email n'est pas valide";
-            } elseif (!is_null($this->app['user.repository']->findByEmail($_POST['email']))) {
-                $errors['email'] = "L'email est déjà utilisé";
-            }
             
-            if (empty($_POST['password'])) {
-                $errors['password'] = 'Le mot de passe est obligatoire';
-            } elseif (!preg_match('/^[a-zA-Z0-9_-]{6,20}$/', $_POST['password'])) {
-                $errors['password'] = 'Le mot de passe doit faire entre 6 et 20 caractères'
-                    . ' et ne doit contenir que des lettres, des chiffres ou les caractères _ et -'
-                ;
-            }
+            if ($param == 'insert')
+            {
+                   
+          
             
-            if (empty($_POST['password_confirm'])) {
-                $errors['password_confirm'] = 'La confirmation du mot de passe est obligatoire';
-            } elseif ($_POST['password_confirm'] != $_POST['password']) {
-                $errors['password_confirm'] = "La confirmation n'est pas identique au mot de passe";
-            }
-           
-                   if (empty($errors)) {
-                $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
-                //dump($user);die;
+                    if (empty($_POST['password'])) {
+                        $errors['password'] = 'Le mot de passe est obligatoire';
+                    } elseif (!preg_match('/^[a-zA-Z0-9_-]{6,20}$/', $_POST['password'])) {
+                        $errors['password'] = 'Le mot de passe doit faire entre 6 et 20 caractères'
+                            . ' et ne doit contenir que des lettres, des chiffres ou les caractères _ et -'
+                        ;
+                    }
+
+                    if (empty($_POST['password_confirm'])) {
+                        $errors['password_confirm'] = 'La confirmation du mot de passe est obligatoire';
+                    } elseif ($_POST['password_confirm'] != $_POST['password']) {
+                        $errors['password_confirm'] = "La confirmation n'est pas identique au mot de passe";
+                    }
+            }          
+            
+            if (empty($errors)) {
+                $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));      
                 $this->app['user.repository']->save($user);
                 $this->addFlashMessage('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');
@@ -98,18 +97,25 @@ class UserController extends ControllerAbstract
             
     }
     
+    
+    
     public function registerAction()
     {
         $user = new User(); 
-        $this->app['user.controller']->controle_Saisie($user);
-        return $this->render('user/register.html.twig',['user' => $user]);
-    }
+        $this->app['user.controller']->controle_Saisie($user, 'insert');
     
-    public function registerAction2()
+        return $this->render('user/register.html.twig',['user' => $user, 'createprofil' => 'yes']);
+    }
+
+    
+    public function updateProfil()
     {
-        $user = new User();  
-        $this->app['user.controller']->controle_Saisie($user);
-        return $this->render('user/register.html.twig',['user' => $user, 'editprofil' => 'yes']);
+        $user = $this->app['user.manager']->getUser(); 
+        $this->app['user.controller']->controle_Saisie($user, 'update');
+        $civility = $this->app['user.manager']->getUser()->getCivility(); 
+        //dump($user);
+        if ($user->getRole() == 'user') return $this->render('user/register.html.twig',['user' => $user, 'roleuser' => 'yes', 'civility'=>$civility]);
+        elseif ($user->getRole() == 'asso') return $this->render('user/register.html.twig',['user' => $user, 'roleasso' => 'yes']);
     }
     
     
@@ -186,9 +192,8 @@ class UserController extends ControllerAbstract
                 $mode = 'adminuser';
                 return $this->render('user/consultProfil.html.twig',
                     [
-                        'user' => $user, 
-                        'userSession' => $userSession,
-                        'modeadmin'        =>  $mode
+                        'user'          => $user, 
+                        'modeadmin'     =>  $mode
                     ]
                 ); 
         }
@@ -197,7 +202,6 @@ class UserController extends ControllerAbstract
              return $this->render('user/consultProfil.html.twig',
                     [
                         'user' => $user
-                
                     ]
                 );    
         }

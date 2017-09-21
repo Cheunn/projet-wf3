@@ -160,8 +160,9 @@ LIMIT 6
 SQL;
         $dbAnnonces = $this->db->fetchAll($query);    
         $annonces = [];
-        /*
-        for ($i=0 ; $i < $limit; $i++) {
+
+        
+        /*for ($i=0 ; $i < $limit; $i++) {
             $annonces[] = $this->buildEntity($dbAnnonces[$i]);
         }*/
         return $annonces;
@@ -201,7 +202,7 @@ SQL;
             ->setMember_id_member($data['member_id_member'])
             ->setType_id_type($data['type_id_type'])
             ->setCategory_id_category($data['category_id_category'])
-            ->setCategory_name($data['category_name'])
+          
             //->setCategory($category)
             //->setAuthor($author)
         ;
@@ -209,19 +210,6 @@ SQL;
         return $annonce;
     }
     
-    /* FONCTION POUR USER */
-    
-    public function listByUserId($id){
-       
-        $dbAnnonces = $this->db->fetchAll("SELECT a.*,c.name AS category_name FROM annonce a JOIN category c ON a.category_id_category = c.id_category WHERE member_id_member = $id");
-        
-        $annonces = [];
-        
-        foreach ($dbAnnonces as $dbAnnonce) {
-            $annonces[] = $this->buildEntity($dbAnnonce);
-        }
-        
-        return $annonces;
-   }
 
+    
 }

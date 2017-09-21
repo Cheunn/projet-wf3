@@ -79,16 +79,39 @@
                         </li>
 
                        </ul>
+                        
+           
 
                     </div>
+               
                         
-             <div class="caption">
+            {% if modeadmin is defined %}
+
+
+               <div class="caption">
                 <div class="line-block">
 
                     <ul class="list-inline tags">
 
-                       <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>
+                     <li><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li>
+                        <li onclick="afficher_div('IdGererAnnonces');"><a href="#">Gerer mes Annonces</a></li>
+                        <li onclick="afficher_div('IdGererChronique');"><a href="#">Gerer mes chroniques</a></li>   
 
+
+                    </ul>
+
+                </div></div>
+            {% endif %}
+
+            
+             <div class="caption">
+                <div class="line-block">
+
+                    <ul class="list-inline tags">
+                     
+                       {% if modeadmin is defined %}     
+                       <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>
+                        {% endif %}
                         <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Ses annonces</a></li>
 
                         <li onclick="afficher_div('IdProfilBlockChronique');"><a href="#">Ses chroniques</a></li>
@@ -409,7 +432,8 @@
 
                 <div class="panel panel-default theme-panel">
 
-                  <div class="panel-heading">Donner une note</div>
+                 {% if modeadmin is defined %}
+                  <div class="panel-heading">Consulter mes messages</div>
 
                     <div class="panel-body">
 
@@ -437,14 +461,49 @@
                         </div>
 
                         </form>
-
+                       
                     </div>
 
                 </div>
 
                </div>
+               {% else %} 
+                   
+                   <div class="panel-heading">Donner une note</div>
 
-                 
+                    <div class="panel-body">
+
+                      <form action="#" method="post">
+
+                      <div class="form-group">
+
+                          <select id="role" class="form-control " name="note"> 
+                                <option  value="" class="disabled selected hidden" name="text">Donner une note</option> 
+                                <option  class="form-control " value="1" >1</option>
+                                <option  class="form-control " value="2" >2</option>
+                                <option  class="form-control " value="3" >3</option>
+                                <option  class="form-control " value="4" >4</option>
+                                <option  class="form-control " value="5" >5</option>
+                                
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                        	<button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
+
+                        </div>
+
+                        </form>
+                       
+                    </div>
+
+                </div>
+
+               </div>
+               {% endif %}    
             </aside>
 
            </div>

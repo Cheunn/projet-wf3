@@ -110,7 +110,7 @@ class UserController extends ControllerAbstract
     {
         $user = new User();  
         $this->app['user.controller']->controle_Saisie($user);
-        return $this->render('user/register2.html.twig',['user' => $user]);
+        return $this->render('user/register.html.twig',['user' => $user, 'editprofil' => 'yes']);
     }
     
     
@@ -159,7 +159,11 @@ class UserController extends ControllerAbstract
     
     public function listeProfil($id)
     {
-         $user = $this->app['user.repository']->findById($id);
+        $userConsult = $this->app['user.repository']->findById($id);
+        $userSession = $this->app['user.manager']->getUser();
+        dump($userConsult->getId_member() );
+        dump($userSession->getId_member() );
+        die;
         
         return $this->render(
             'user/consultProfil.html.twig',
@@ -170,17 +174,34 @@ class UserController extends ControllerAbstract
     }
     
     
-    public function profilUser()
+    public function profilUser($id)
     {
+       
+        $user = $this->app['user.repository']->findById($id);
         $userSession = $this->app['user.manager']->getUser();
-
-                    return $this->render(
-                        'user/profilUser.html.twig',
-                        [
-                            'user' => $userSession
-
-                        ]
-                    );     
+        //dump($userConsult->getId_member() );
+        //dump($userSession->getId_member() );
+       
+        if ($userSession->getId_member() == $user->getId_member())
+        { 
+                $mode = 'adminuser';
+                return $this->render('user/consultProfil.html.twig',
+                    [
+                        'user' => $user, 
+                        'userSession' => $userSession,
+                        'modeadmin'        =>  $mode
+                    ]
+                ); 
+        }
+        else 
+        {
+             return $this->render('user/consultProfil.html.twig',
+                    [
+                        'user' => $user
+                
+                    ]
+                );    
+        }
     }
     
     public function messProfilToUs()

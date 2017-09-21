@@ -22,29 +22,29 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6b70c92ce75aecac654fd15ab07dcd189c9256b3065e4a821c1280460a235826 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6b70c92ce75aecac654fd15ab07dcd189c9256b3065e4a821c1280460a235826->enter($__internal_6b70c92ce75aecac654fd15ab07dcd189c9256b3065e4a821c1280460a235826_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->enter($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
-        $__internal_ceeffa435f0163caf086ac247efe8277992a66023410b069f41858218bdeb3b2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ceeffa435f0163caf086ac247efe8277992a66023410b069f41858218bdeb3b2->enter($__internal_ceeffa435f0163caf086ac247efe8277992a66023410b069f41858218bdeb3b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->enter($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6b70c92ce75aecac654fd15ab07dcd189c9256b3065e4a821c1280460a235826->leave($__internal_6b70c92ce75aecac654fd15ab07dcd189c9256b3065e4a821c1280460a235826_prof);
+        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->leave($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof);
 
         
-        $__internal_ceeffa435f0163caf086ac247efe8277992a66023410b069f41858218bdeb3b2->leave($__internal_ceeffa435f0163caf086ac247efe8277992a66023410b069f41858218bdeb3b2_prof);
+        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->leave($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0068fd4c72196e356a3cd3e2335ef03d038313e0e230605f7421436a2390be83 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0068fd4c72196e356a3cd3e2335ef03d038313e0e230605f7421436a2390be83->enter($__internal_0068fd4c72196e356a3cd3e2335ef03d038313e0e230605f7421436a2390be83_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->enter($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_2b29e42ee1246804ec3918facb39666ef628809f5eae6ac6afc0a01fedcfa493 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2b29e42ee1246804ec3918facb39666ef628809f5eae6ac6afc0a01fedcfa493->enter($__internal_2b29e42ee1246804ec3918facb39666ef628809f5eae6ac6afc0a01fedcfa493_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->enter($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "                   
@@ -135,17 +135,53 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                         </li>
 
                        </ul>
+                        
+           
 
                     </div>
+               
                         
-             <div class=\"caption\">
+            ";
+        // line 88
+        if (array_key_exists("modeadmin", $context)) {
+            // line 89
+            echo "
+
+               <div class=\"caption\">
                 <div class=\"line-block\">
 
                     <ul class=\"list-inline tags\">
 
-                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
+                     <li><a  href=\"";
+            // line 96
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("updateProfil");
+            echo "\">Modifier Profil </a></li>
+                        <li onclick=\"afficher_div('IdGererAnnonces');\"><a href=\"#\">Gerer mes Annonces</a></li>
+                        <li onclick=\"afficher_div('IdGererChronique');\"><a href=\"#\">Gerer mes chroniques</a></li>   
 
-                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Ses annonces</a></li>
+
+                    </ul>
+
+                </div></div>
+            ";
+        }
+        // line 105
+        echo "
+            
+             <div class=\"caption\">
+                <div class=\"line-block\">
+
+                    <ul class=\"list-inline tags\">
+                     
+                       ";
+        // line 112
+        if (array_key_exists("modeadmin", $context)) {
+            echo "     
+                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
+                        ";
+        }
+        // line 115
+        echo "                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Ses annonces</a></li>
 
                         <li onclick=\"afficher_div('IdProfilBlockChronique');\"><a href=\"#\">Ses chroniques</a></li>
                         
@@ -172,7 +208,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <div class=\"thumbnail\">
 
                                   <a href=\"#\"><img src=\"";
-        // line 118
+        // line 141
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post1.png "), "html", null, true);
         echo "\" alt=\"related post\"></a>
 
@@ -191,7 +227,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <div class=\"thumbnail\">
 
                                     <a href=\"#\"><img src=\"";
-        // line 134
+        // line 157
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post2.png "), "html", null, true);
         echo "\" alt=\"related post\"></a>
 
@@ -210,7 +246,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <div class=\"thumbnail\">
 
                                     <a href=\"#\"><img src=\"";
-        // line 150
+        // line 173
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post3.png "), "html", null, true);
         echo "\" alt=\"related post\"></a>
 
@@ -247,7 +283,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 \t\t\t\t\t<a href=\"#\">
 
 \t\t\t\t\t\t<img class=\"media-object\" src=\"";
-        // line 184
+        // line 207
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -295,7 +331,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                             <a href=\"#\">
 
                               <img class=\"media-object\" src=\"";
-        // line 229
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -330,7 +366,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                             <a href=\"#\">
 
                               <img class=\"media-object\" src=\"";
-        // line 261
+        // line 284
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -361,7 +397,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <a href=\"#\">
 
                                   <img class=\"media-object\" src=\"";
-        // line 289
+        // line 312
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -394,7 +430,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <a href=\"#\">
 
                                   <img class=\"media-object\" src=\"";
-        // line 319
+        // line 342
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -489,7 +525,11 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
                 <div class=\"panel panel-default theme-panel\">
 
-                  <div class=\"panel-heading\">Donner une note</div>
+                 ";
+        // line 435
+        if (array_key_exists("modeadmin", $context)) {
+            // line 436
+            echo "                  <div class=\"panel-heading\">Consulter mes messages</div>
 
                     <div class=\"panel-body\">
 
@@ -517,14 +557,55 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                         </div>
 
                         </form>
-
+                       
                     </div>
 
                 </div>
 
                </div>
+               ";
+        } else {
+            // line 470
+            echo " 
+                   
+                   <div class=\"panel-heading\">Donner une note</div>
 
-                 
+                    <div class=\"panel-body\">
+
+                      <form action=\"#\" method=\"post\">
+
+                      <div class=\"form-group\">
+
+                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                <option  class=\"form-control \" value=\"1\" >1</option>
+                                <option  class=\"form-control \" value=\"2\" >2</option>
+                                <option  class=\"form-control \" value=\"3\" >3</option>
+                                <option  class=\"form-control \" value=\"4\" >4</option>
+                                <option  class=\"form-control \" value=\"5\" >5</option>
+                                
+
+                            </select>
+
+                        </div>
+
+                        <div class=\"form-group\">
+
+                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+
+                        </div>
+
+                        </form>
+                       
+                    </div>
+
+                </div>
+
+               </div>
+               ";
+        }
+        // line 506
+        echo "    
             </aside>
 
            </div>
@@ -538,23 +619,23 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
     
 ";
         
-        $__internal_2b29e42ee1246804ec3918facb39666ef628809f5eae6ac6afc0a01fedcfa493->leave($__internal_2b29e42ee1246804ec3918facb39666ef628809f5eae6ac6afc0a01fedcfa493_prof);
+        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->leave($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof);
 
         
-        $__internal_0068fd4c72196e356a3cd3e2335ef03d038313e0e230605f7421436a2390be83->leave($__internal_0068fd4c72196e356a3cd3e2335ef03d038313e0e230605f7421436a2390be83_prof);
+        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->leave($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof);
 
     }
 
-    // line 461
+    // line 520
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_90cc96bbe70548f7ccfb101e4260db874ce92c3be349e42ad31235448eeca03f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_90cc96bbe70548f7ccfb101e4260db874ce92c3be349e42ad31235448eeca03f->enter($__internal_90cc96bbe70548f7ccfb101e4260db874ce92c3be349e42ad31235448eeca03f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->enter($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_d50acc266865f96f584f792d0a2fc0aecdaa5b887d16cbe07a4041a0d6f1ff14 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d50acc266865f96f584f792d0a2fc0aecdaa5b887d16cbe07a4041a0d6f1ff14->enter($__internal_d50acc266865f96f584f792d0a2fc0aecdaa5b887d16cbe07a4041a0d6f1ff14_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->enter($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 462
+        // line 521
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -623,10 +704,10 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 \t</script>
 ";
         
-        $__internal_d50acc266865f96f584f792d0a2fc0aecdaa5b887d16cbe07a4041a0d6f1ff14->leave($__internal_d50acc266865f96f584f792d0a2fc0aecdaa5b887d16cbe07a4041a0d6f1ff14_prof);
+        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->leave($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof);
 
         
-        $__internal_90cc96bbe70548f7ccfb101e4260db874ce92c3be349e42ad31235448eeca03f->leave($__internal_90cc96bbe70548f7ccfb101e4260db874ce92c3be349e42ad31235448eeca03f_prof);
+        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->leave($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof);
 
     }
 
@@ -642,7 +723,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     public function getDebugInfo()
     {
-        return array (  558 => 462,  549 => 461,  398 => 319,  365 => 289,  334 => 261,  299 => 229,  251 => 184,  214 => 150,  195 => 134,  176 => 118,  103 => 48,  87 => 35,  78 => 29,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  639 => 521,  630 => 520,  608 => 506,  569 => 470,  532 => 436,  530 => 435,  434 => 342,  401 => 312,  370 => 284,  335 => 252,  287 => 207,  250 => 173,  231 => 157,  212 => 141,  184 => 115,  178 => 112,  169 => 105,  157 => 96,  148 => 89,  146 => 88,  103 => 48,  87 => 35,  78 => 29,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -728,16 +809,39 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                         </li>
 
                        </ul>
+                        
+           
 
                     </div>
+               
                         
-             <div class=\"caption\">
+            {% if modeadmin is defined %}
+
+
+               <div class=\"caption\">
                 <div class=\"line-block\">
 
                     <ul class=\"list-inline tags\">
 
-                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
+                     <li><a  href=\"{{ path('updateProfil') }}\">Modifier Profil </a></li>
+                        <li onclick=\"afficher_div('IdGererAnnonces');\"><a href=\"#\">Gerer mes Annonces</a></li>
+                        <li onclick=\"afficher_div('IdGererChronique');\"><a href=\"#\">Gerer mes chroniques</a></li>   
 
+
+                    </ul>
+
+                </div></div>
+            {% endif %}
+
+            
+             <div class=\"caption\">
+                <div class=\"line-block\">
+
+                    <ul class=\"list-inline tags\">
+                     
+                       {% if modeadmin is defined %}     
+                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
+                        {% endif %}
                         <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Ses annonces</a></li>
 
                         <li onclick=\"afficher_div('IdProfilBlockChronique');\"><a href=\"#\">Ses chroniques</a></li>
@@ -1058,7 +1162,8 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
                 <div class=\"panel panel-default theme-panel\">
 
-                  <div class=\"panel-heading\">Donner une note</div>
+                 {% if modeadmin is defined %}
+                  <div class=\"panel-heading\">Consulter mes messages</div>
 
                     <div class=\"panel-body\">
 
@@ -1086,14 +1191,49 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                         </div>
 
                         </form>
-
+                       
                     </div>
 
                 </div>
 
                </div>
+               {% else %} 
+                   
+                   <div class=\"panel-heading\">Donner une note</div>
 
-                 
+                    <div class=\"panel-body\">
+
+                      <form action=\"#\" method=\"post\">
+
+                      <div class=\"form-group\">
+
+                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                <option  class=\"form-control \" value=\"1\" >1</option>
+                                <option  class=\"form-control \" value=\"2\" >2</option>
+                                <option  class=\"form-control \" value=\"3\" >3</option>
+                                <option  class=\"form-control \" value=\"4\" >4</option>
+                                <option  class=\"form-control \" value=\"5\" >5</option>
+                                
+
+                            </select>
+
+                        </div>
+
+                        <div class=\"form-group\">
+
+                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+
+                        </div>
+
+                        </form>
+                       
+                    </div>
+
+                </div>
+
+               </div>
+               {% endif %}    
             </aside>
 
            </div>

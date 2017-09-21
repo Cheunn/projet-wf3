@@ -56,6 +56,7 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 
 /* FRONT */
 $app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
+
 $app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
 $app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
 
@@ -66,7 +67,6 @@ $app['annonce.controller'] = function () use ($app) {
 $app['category.controller'] = function () use ($app) {
     return new Controller\CategoryController($app);
 };
-
 
 /* ADMIN */
 
@@ -93,6 +93,7 @@ $app['admin.tag.controller'] = function () use ($app) {
 // REPOSITORIES
 
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+
 $app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
 
 
@@ -113,6 +114,12 @@ $app['handicap.repository'] = function () use ($app) {
   
 $app['tag.repository'] = function () use ($app) {
     return new Repository\TagRepository($app['db']);
+};
+
+// USER
+
+$app['user.chronique.controller'] = function () use ($app){
+    return new Controller\User\ChroniqueController($app);
 };
 
 return $app;

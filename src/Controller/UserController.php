@@ -85,6 +85,7 @@ class UserController extends ControllerAbstract
            
                    if (empty($errors)) {
                 $user->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
+                //dump($user);die;
                 $this->app['user.repository']->save($user);
                 $this->addFlashMessage('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');

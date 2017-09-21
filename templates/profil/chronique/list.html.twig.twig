@@ -1,0 +1,29 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+     <div class="container">
+
+    <h1>Chroniques</h1>
+    
+    <table class="table">
+        <tr>
+            <th>Titre</th>
+            <th>Paragraphe 1</th>
+            <th>Paragraphe 2</th>
+            <th>Catégorie</th>
+            <th>Img 1</th>
+        </tr>
+        {% for chronique in chroniques %}
+            <tr>
+                <td>{{ chronique.post_title }}</td>
+                <td>{{ chronique.paragraph_1}}</td>
+                <td>{{ chronique.paragraph_2}}</td>
+                <td>{{ chronique.category_name}}</td>
+                <td>{{ chronique.url_img_1}}</td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

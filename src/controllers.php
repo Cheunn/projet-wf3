@@ -44,6 +44,17 @@ $user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('upd
 
 /* Cheunn */
 
+$user->get('/chronique','user.chronique.controller:listUserChronique')
+        ->bind('user_chronique_list')        
+;
+
+$user->match('/chronique/edit','user.chronique.controller:editAction')
+        ->bind('user_chronique_edit')        
+;
+
+$user->match('/chronique/supression','user.chronique:deleteAction')
+        ->bind('user_chronique_delete')
+;
 
 /* Julien */
 
@@ -54,11 +65,7 @@ $app
         ->bind('single_annonce')
 ;
 
-
-
 /* Anis */
-
-
 
 /* FRONT */  
   
@@ -115,13 +122,13 @@ $app
 
 /* Jaoued */
 
-
 /* Anis */
 
 //Handicap
 
 $bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
+
 
 /* ADMIN  */
 
@@ -229,32 +236,10 @@ $admin->get('/tag', 'admin.tag.controller:listAction')
 $admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
             ->value('idtag', null) // id est optionnel est vaut null par défaut
             ->bind('admin_tag_edit');
-//
+
 $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
-
-/* USER */
-
-$user=$app['controllers_factory'];  // crée un groupe de routes
-
-$app->mount('/user', $user);      
-
-$user->before (function() use ($app){
-    if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
-}) ;
-
-/* Cheunn */
-
-
-/* Julien */
-
-
-/* Jaoued */
-
-
-/* Anis */
-
 
 // COMMON FILES
 

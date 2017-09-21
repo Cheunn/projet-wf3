@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-/* FRONT   USER */
+/
 
 $app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
@@ -16,42 +16,66 @@ $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bi
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
 
-
-
-
-$profil=$app['controllers_factory'];  // crée un groupe de routes
-$app->mount('/profil', $profil);      
-
-
-$profil->match('/listeProfil/{id}', 'user.controller:listeProfil') 
-        ->assert('id', '\d+')
-        ->bind('listeProfil');
-$profil->match('/envoyerPost/{id}', 'user.controller:envoyerPostInterne')      ->bind('envoyerPost');
-
-/* FRONT ADMIN  USER */
+/* USER */
 
 $user=$app['controllers_factory'];  // crée un groupe de routes
+
 $app->mount('/user', $user);      
+
 
 $user->before (function() use ($app){
     if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
 }) ;
+
+/* Jaoued */
+
+$user->match('/profil', 'user.controller:profilUser')  
+       ->bind('profilUser');
+
+$user->match('/messProfilToUs', 'user.controller:messProfilToUs')  
+       ->bind('messProfilToUs');
+
 $user->match('/profil/{id}', 'user.controller:profilUser')  
              ->assert('id', '\d+')
             ->bind('profilUser');
-$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
-$user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
 
+$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
 /* Cheunn */
 
 
 /* Julien */
 
-/* SINGLE ANNONCE REDIRECTION */
+
+
+/* Anis */
+
+
+
+/* FRONT */  
+  
+/* Cheunn */
+
+/* Julien */
+
+$app/* SINGLE ANNONCE REDIRECTION */
+    ->match('/annonces', 'annonce.controller:listActionMain')  
+    ->bind('annonces')
+;
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
-        ->assert('id', '\d+')
-        ->bind('single_annonce')
+    ->assert('id', '\d+')
+    ->bind('single_annonce')
+;
+$app
+    ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
+    ->assert('id', '\d+')
+    ->bind('single_annonce')
+;
+$app
+    ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
+    ->assert('id', '\d+')
+    ->bind('single_annonce')
+
 ;
 
 $app
@@ -68,7 +92,12 @@ $app
     ->match('/', 'annonce.controller:lastThree')
     ->bind('annonce_loop')
 ;
-
+/*
+$app
+    ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
+        ->assert('id', '\d+')
+        ->bind('single_annonce');
+*/
 $app
     ->match('/annonce/{id}', 'category.controller:listActionChronique')
     ->assert('id', '\d+')
@@ -83,7 +112,8 @@ $app
 //Handicap
 
 $bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
-        ->bind('handicap');
+            ->bind('handicap');
+
 
 /* ADMIN  */
 
@@ -196,17 +226,6 @@ $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
 
-
-/* Cheunn */
-
-
-/* Julien */
-
-
-/* Jaoued */
-
-
-/* Anis */
 
 // COMMON FILES
 

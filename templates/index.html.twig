@@ -1,63 +1,57 @@
 {% extends "layout.html.twig" %}
-
 {% block content %}
-
-    
+{# Ajout de div julien #}
+</div> 
 
   <div class="feature-posts-grid" id="feature-posts-grid">
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post1.png') }}" alt="Canan Digital Photography"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/association.jpg') }}" alt="Canan Digital Photography"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Canan Digital Photography">Canan Digital Photography</a></h3>
-        <p>Photography</p>
+        <h3><a href="{{ path('annonces')}}" title="Canan Digital Photography">Associations</a></h3>
+       {# <p>Photography</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post5.png') }}" alt="Travel The World"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/news.jpg') }}" alt="Travel The World"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Travel The World">Travel The World</a></h3>
-        <p>Travel</p>
+        <h3><a href="single.html" title="Travel The World">News</a></h3>
+       {# <p>Travel</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post6.png') }}" alt="Google Play Music"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/petites-annonces.jpg') }}" alt="Google Play Music"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Google play Music">Google Play Music</a></h3>
-        <p>Music</p>
+        <h3><a href="{{ path('annonces')}}" title="Google play Music">Petites annonces</a></h3>
+      {#  <p>Music</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post8.png') }}" alt="Best Mobile Apps"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/chronique.png') }}" alt="Best Mobile Apps"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Best Mobile Apps">Best Mobile Apps</a></h3>
-        <p>apps</p>
+        <h3><a href="single.html" title="Best Mobile Apps">Chroniques</a></h3>
+       {# <p>apps</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post3.png') }}" alt="gallery"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/partenaire.jpg') }}" alt="gallery"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Canan Digital Photography">Digital LifeStyle</a></h3>
-        <p>LifeStyle</p>
-      </div>
-    </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post4.png') }}" alt="Free Business Plan"> </a>
-      <div class="feature-text">
-        <h3><a href="single.html" title="Free Business Plan">Free Business Plan </a></h3>
-        <p>Business</p>
+        <h3><a href="single.html" title="Canan Digital Photography">Partenaires</a></h3>
+       {# <p>LifeStyle</p>#}
       </div>
     </article>
     <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post7.png') }}" alt="Best Feature Products"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Best Feature Products">Best Feature Products</a></h3>
-        <p>Products</p>
+        <h3><a href="single.html" title="Best Feature Products">Contact</a></h3>
+      {#  <p>Products</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/feature-post2.png') }}" alt="Tablet Vs SmartPhones"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/about-us.jpg') }}" alt="Tablet Vs SmartPhones"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Tablet Vs SmartPhones">Tablet Vs SmartPhones</a></h3>
-        <p>SmartPhones</p>
+        <h3><a href="single.html" title="Tablet Vs SmartPhones">Qui sommes-nous ?</a></h3>
+       {# <p>SmartPhones</p>#}
       </div>
     </article>
   </div>
 </section>
+      
 <section class="content">
   <div class="container">
-    <h2 class="heading">Annonce à la une</h2>
+    <h2 class="heading">News</h2>
     <div class="row">
       <div class="col-md-8 col-lg-8">
         <article class="post">
@@ -92,77 +86,136 @@
           </div>
           <div class="caption">
             {# POUR LE MOMENT ID 1 EN TESTE #}
-            <h3><a href="">Test text annonce Size Should Match With the Size Of The Image</a></h3>
-            <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-            <div class="post-category"> <a href="#"><span>&nbsp;</span> Market Research</a> </div>
-            <ul class="list-inline tags">
-                               
-      
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Photoshop</a></li>
-              <li><a href="#">LifeStyle</a></li>
+            <h3><a href="">Jeux Paralympiques Paris 2024</a></h3>
+            <p>
+                Les Mouvements Olympiques et Paralympiques Français ne font qu’un pour la candidature de Paris aux Jeux de 2024. 
+                Le Comité Paralympique et Sportif Français (CPSF) et le CNOSF sont présents au Conseil d’Administration de Paris 2024. 
+                Marie-Amélie Le Fur, championne Paralympique du 100 m, co-préside la commission des athlètes de Paris 2024 avec un autre champion Olympique, le judoka Teddy Riner. 
+                Ils siègent au Conseil d’administration de Paris 2024, tout comme deux autres anciens champions, Marie-José Pérec (athlétisme) représentant le CNOSF et Cyril Moré (escrime en fauteuil) représentant le CPSF.
+                <br>(src)  http://paris2024.org/fr/article/lhistoire-des-jeux-paralympiques
+            </p>
+         
+            <ul class="list-inline tags">            
+              <li><a href="#">Sport</a></li>
+              <li><a href="#">Lifestyle</a></li>
+              <li><a href="#">Paris</a></li>
+              <li><a href="#">2024</a></li>
+              <li><a href="#">Jeux</a></li>
             </ul>
             <a class="btn btn-default btn-lg" href="#" role="button">Read More</a> </div>
         </article>
-        <div class="clearfix"></div>
+            
+        {#      #}
+        
+           
+     <div class="clearfix"></div>
       </div>
+     
       <aside class="col-md-4 col-lg-4">
+                 
         <div class="row">
           <div class="col-sm-6 col-md-12 col-lg-12">
             <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Recent Articles</div>
-              <div class="panel-body nopadding">
+              <div class="panel-heading">Annonces récentes </div>
+              
+              
+               <div class="panel-body">
+                <form action="#" method="post">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    </span> </div>
+                </form>
+              </div>
+              
+              
+              {% for annonce in annonces %} 
+               <div class="panel-body nopadding">
                 <div class="media">
-                  <div class="media-left"> <a href="#"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /> </a> </div>
+                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
                   <div class="media-body">
-                    <h4 class="media-heading"><a href="#">this is long Blog Heading Text Size for recent articles</a></h4>
+                    <h4 class="media-heading"><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></h4>
                     <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
                   </div>
                 </div>
-                <div class="media">
-                  <div class="media-left"> <a href="#"> <img src="{{ asset ('assets/images/post/rp2.jpg') }}" alt="author" /> </a> </div>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
-                    <p><a href="#">Photography</a> &bull; 3 hours ago</p>
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left"> <a href="#"> <img src="{{ asset ('assets/images/post/rp3.jpg') }}" alt="author" /> </a> </div>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
-                    <p><a href="#">Products</a> &bull; 2 hours ago</p>
-                  </div>
-                </div>
-              </div>
+               </div>
+              {% endfor %}                     
             </div>
-          </div>
-          <div class="col-sm-6 col-md-12 col-lg-12">
-            <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Chroniques</div>
-              <div class="panel-body nopadding">
-               
-                  
-                   {% include 'aside.html.twig'%}  
-                   
-               
-              </div>
-            </div>
-          </div>
-        </div>
+          </div>  
       </aside>
     </div>
+              
     <div class="row">
       <div class="col-md-12">
-        <div id="parallax-1" class="bgParallax" data-speed="15">
-          <div class="color-overlay black">
-            <h3><span>Hot News:</span> The Heading Text Size Should Match With the Size Of The Image</h3>
+        <article class="post vt-post">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/m1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
+              <div class="author-info author-info-2">
+                <ul class="list-inline">
+                  <li>
+                    <div class="info">
+                      <p>Posted on:</p>
+                      <strong>Mar 21, 2015</strong></div>
+                  </li>
+                  <li>
+                <div class="icon-box"><img src="{{ asset ('assets/images/post/author.png') }}" class="img-responsive" alt="image post" /></div>
+                <div class="info">
+                  <p>Posted by:</p>
+                  <a href="author.html">Waqas Hussain</a> </div>
+              </li>
+                </ul>
+              </div>
+            </div>
+              
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+              <div class="caption">
+                <h3 class="md-heading"><a href="{{ path('single_annonce', {id: 1}) }}">Évaluateurs Tourisme et Handicap : Pourquoi pas vous ?</a></h3>
+                <p> Le Comité Régional du Tourisme et la DIRECCTE Auvergne-Rhône-Alpes recherchent des évaluateurs tourisme et handicap.
+                    Vous cherchez à agir en faveur des personnes en situation de handicap ? Devenez évaluateur de la marque nationale.
+                    Qu’est ce que la marque Tourisme et Handicap ? 
+                    <br> (src) https://www.handirect.fr/evaluateurs-tourisme-et-handicap/
+                </p>
+                <a class="btn btn-default btn-lg" href="#" role="button">Read More</a> </div>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
-    <h2 class="heading">Travel</h2>
+      <div class="col-md-12">
+        <article class="post vt-post">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/m2.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
+              <div class="author-info author-info-2">
+                <ul class="list-inline">
+                  <li>
+                    <div class="info">
+                      <p>Posted on:</p>
+                      <strong>Mar 21, 2015</strong></div>
+                  </li>
+                  <li>
+                  <div class="icon-box"><img src="{{ asset ('assets/images/post/author.png') }}" class="img-responsive" alt="image post" /></div>
+                  <div class="info">
+                  <p>Posted by:</p>
+                  <a href="author.html">Waqas Hussain</a> </div>
+              </li>
+                </ul>
+              </div>
+            </div>
+              
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+              <div class="caption">
+                <h3 class="md-heading"><a href="{{ path('single_annonce', {id: 1}) }}">The Heading Text Size Should Match</a></h3>
+                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                <a class="btn btn-default btn-lg" href="#" role="button">Read More</a> </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>            
+                         
+    <h2 class="heading">Chroniques </h2>
     <div class="row">
       <div class="col-md-8 col-lg-8">
         <div class="row">
@@ -192,18 +245,17 @@
           </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <article class="post">
-              <div class="post-type post-img"> <a href="#"><img src="assets/images/post/post-1.jpg" class="img-responsive" alt="image post" /></a> </div>
+              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/post-2.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
               <div class="author-info author-info-2">
                 <ul class="list-inline">
                   <li>
                     <div class="info">
-                      <p>Posted by:</p>
-                      <a href="author.html">Waqas Hussain</a> </div>
+                      
                   </li>
                   <li>
                     <div class="info">
-                      <p>Posted on:</p>
-                      <strong>Mar 21, 2015</strong></div>
+                      <p>Posted by:</p>
+                      <a href="author.html">Waqas Hussain</a> </div>
                   </li>
                 </ul>
               </div>
@@ -219,9 +271,12 @@
       </div>
       <aside class="col-md-4 col-lg-4">
         <div class="row">
-          <div class="col-sm-6 col-md-12 col-lg-12">
+                    
+            {#            #}
+            <div class="col-sm-6 col-md-12 col-lg-12">
             <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Search Post</div>
+              <div class="panel-heading">Chroniques</div>
+              
               <div class="panel-body">
                 <form action="#" method="post">
                   <div class="input-group">
@@ -231,26 +286,28 @@
                     </span> </div>
                 </form>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-12 col-lg-12">
-            <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Archives</div>
+              
               <div class="panel-body nopadding">
-                <div class="list-group"> <a href="#" class="list-group-item">January 2014</a> <a href="#" class="list-group-item">February 2014</a> <a href="#" class="list-group-item">March 2014</a> <a href="#" class="list-group-item">April 2014</a> <a href="#" class="list-group-item">May 2014</a> </div>
+                                                   
+                   {% include 'aside.html.twig'%}  
+                   {# cf. indexController #}
+               
               </div>
             </div>
           </div>
+        {#            #}
         </div>
       </aside>
     </div>
-    <h2 class="heading">Music</h2>
+    <h2 class="heading">Annonces </h2>
+   
     <div class="row">
       <div class="col-md-8 col-lg-8">
-        <article class="post vt-post">
+        
+       <article class="post vt-post">
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
-              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/m1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
+              <div class="post-type post-img"><a href="#"><img src="{{ asset ('assets/images/post/m1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
               <div class="author-info author-info-2">
                 <ul class="list-inline">
                   <li>
@@ -266,20 +323,20 @@
                 </ul>
               </div>
             </div>
+              
             <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
               <div class="caption">
                 <h3 class="md-heading"><a href="{{ path('single_annonce', {id: 1}) }}">The Heading Text Size Should Match</a></h3>
-                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla.</p>
                 <a class="btn btn-default" href="#" role="button">Read More</a> </div>
             </div>
           </div>
         </article>
-        <article class="post vt-post">
+                
+       <article class="post vt-post">
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
-
-              <div class="post-type post-img"> <a href="{{ path('single_annonce', {id: 1}) }}"><img src="assets/images/post/m2.jpg" class="img-responsive" alt="image post" /></a> </div>
-              
+              <div class="post-type post-img"><a href="#"><img src="{{ asset ('assets/images/post/m1.jpg') }}" class="img-responsive" alt="image post" /></a></div>
               <div class="author-info author-info-2">
                 <ul class="list-inline">
                   <li>
@@ -295,14 +352,17 @@
                 </ul>
               </div>
             </div>
+            
             <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
               <div class="caption">
-                <h3 class="md-heading"><a href="{{ path('single_annonce', {id: 8} ) }}">The Heading Text Size Should Match</a></h3>
-                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <h3 class="md-heading"><a href="{{ path('single_annonce', {id: 1}) }}">The Heading Text Size Should Match</a></h3>
+                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla. </p>
                 <a class="btn btn-default" href="#" role="button">Read More</a> </div>
             </div>
           </div>
         </article>
+                
+                
         <div class="pagination-wrap">
           <ul class="pagination">
             <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">Previous</span> </a> </li>

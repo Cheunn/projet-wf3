@@ -21,29 +21,29 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4e814edb7ca653c6251902efbb64aa1289ff9c3953cb21a75e6f0052d6110a68 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4e814edb7ca653c6251902efbb64aa1289ff9c3953cb21a75e6f0052d6110a68->enter($__internal_4e814edb7ca653c6251902efbb64aa1289ff9c3953cb21a75e6f0052d6110a68_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_annonce.html.twig"));
+        $__internal_7a7c78645c0c5f0cc49ca679f38b28f07c61bbc3e7d98e733d9aebe6b92798e6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7a7c78645c0c5f0cc49ca679f38b28f07c61bbc3e7d98e733d9aebe6b92798e6->enter($__internal_7a7c78645c0c5f0cc49ca679f38b28f07c61bbc3e7d98e733d9aebe6b92798e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_annonce.html.twig"));
 
-        $__internal_ca2dff27812a971b96c9d3b08e3c28e33fff5d1db57c3d5ec7b3d770b181752b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ca2dff27812a971b96c9d3b08e3c28e33fff5d1db57c3d5ec7b3d770b181752b->enter($__internal_ca2dff27812a971b96c9d3b08e3c28e33fff5d1db57c3d5ec7b3d770b181752b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_annonce.html.twig"));
+        $__internal_ee48dcf323bb40967ff0bfaebd32ec8b7612e3cf71f236492a652a920e389aa1 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ee48dcf323bb40967ff0bfaebd32ec8b7612e3cf71f236492a652a920e389aa1->enter($__internal_ee48dcf323bb40967ff0bfaebd32ec8b7612e3cf71f236492a652a920e389aa1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_annonce.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4e814edb7ca653c6251902efbb64aa1289ff9c3953cb21a75e6f0052d6110a68->leave($__internal_4e814edb7ca653c6251902efbb64aa1289ff9c3953cb21a75e6f0052d6110a68_prof);
+        $__internal_7a7c78645c0c5f0cc49ca679f38b28f07c61bbc3e7d98e733d9aebe6b92798e6->leave($__internal_7a7c78645c0c5f0cc49ca679f38b28f07c61bbc3e7d98e733d9aebe6b92798e6_prof);
 
         
-        $__internal_ca2dff27812a971b96c9d3b08e3c28e33fff5d1db57c3d5ec7b3d770b181752b->leave($__internal_ca2dff27812a971b96c9d3b08e3c28e33fff5d1db57c3d5ec7b3d770b181752b_prof);
+        $__internal_ee48dcf323bb40967ff0bfaebd32ec8b7612e3cf71f236492a652a920e389aa1->leave($__internal_ee48dcf323bb40967ff0bfaebd32ec8b7612e3cf71f236492a652a920e389aa1_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_d1c422e2c541b68d6c138990df3d58f113e483c82d543fa576568b273d0e79d3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d1c422e2c541b68d6c138990df3d58f113e483c82d543fa576568b273d0e79d3->enter($__internal_d1c422e2c541b68d6c138990df3d58f113e483c82d543fa576568b273d0e79d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_865bad622823abf7c2375c97907012ea0eb0a46b3668f3770ae3ffc35a12e282 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_865bad622823abf7c2375c97907012ea0eb0a46b3668f3770ae3ffc35a12e282->enter($__internal_865bad622823abf7c2375c97907012ea0eb0a46b3668f3770ae3ffc35a12e282_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_a1c86fae3f914bffe9ce1c3c22b8b370cab436da9ec9e1013542c731280e7452 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a1c86fae3f914bffe9ce1c3c22b8b370cab436da9ec9e1013542c731280e7452->enter($__internal_a1c86fae3f914bffe9ce1c3c22b8b370cab436da9ec9e1013542c731280e7452_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_19a25ae32719b638e45475814a5ac25d27217285ca3ec594e778ef530cf56f2f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_19a25ae32719b638e45475814a5ac25d27217285ca3ec594e778ef530cf56f2f->enter($__internal_19a25ae32719b638e45475814a5ac25d27217285ca3ec594e778ef530cf56f2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "                 
@@ -210,64 +210,35 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
                             <div class=\"row\">
 
                                 <div class=\"col-md-6 col-lg-5\">
-
-                        
-
+                       
                                     </div>
-
                                     </div>
-
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-
                             <div class=\"form-group\">
-
                             <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number:\">
-
                           </div>
-
                             </div>
-
                                     </div>
-
                             <div class=\"form-group\">
-
                                 <textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea>
-
                           </div>
-
                           <button type=\"submit\" class=\"btn btn-default\">Post Reply</button>
-
                         </form>
-
                     </div>
-
-                   
-
+                  
                 </article>
-
             <div class=\"clearfix\"></div>
-
             </div>
-
             <aside class=\"col-md-4 col-lg-4\">
-
-            \t
-
+           \t
                 <div class=\"row\">
-
-
                 <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
                 <div class=\"panel panel-default theme-panel\">
-
                   <div class=\"panel-heading\">Annonces récentes</div>
-
                     <div class=\"panel-body nopadding\">
-
               ";
-        // line 214
+        // line 185
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["annonces"] ?? $this->getContext($context, "annonces")));
         foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
@@ -275,14 +246,14 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
                <div class=\"panel-body nopadding\">
                 <div class=\"media\">
                   <div class=\"media-left\"> <a href=\"";
-            // line 217
+            // line 188
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\"> <img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp1.jpg"), "html", null, true);
             echo "\" alt=\"author\" /></a> </div>
                   <div class=\"media-body\">
                     <h4 class=\"media-heading\"><a href=\"";
-            // line 219
+            // line 190
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "post_title", array()), "html", null, true);
@@ -296,113 +267,67 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 225
-        echo "
-
-                </div>
-
+        // line 196
+        echo "                </div>
                            </div>
 ";
-        // line 245
+        // line 213
         echo "                       
 </div>
-                       <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
+               <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
-
                   <div class=\"panel-heading\">Tags</div>
-
                     <div class=\"panel-body\">
-
                       <ul class=\"list-inline tags\">
-
                         <li><a href=\"#\">LifeStyle</a></li>
-
                         <li class=\"big\"><a href=\"#\">Music</a></li>
-
                         <li><a href=\"#\">SmartPhones</a></li>
-
                         <li><a href=\"#\">Business</a></li>
-
-                        
-
+                      
                         <li><a href=\"#\">Travel</a></li>
-
-                        
-
+                       
                         <li class=\"big\"><a href=\"#\">Business</a></li>
-
                         <li class=\"small\"><a href=\"#\">LifeStyle</a></li>
-
                         <li><a href=\"#\">SmartPhones</a></li>
-
                         
 
                         <li><a href=\"#\">Fireworks</a></li>
-
                         <li class=\"big\"><a href=\"#\">Travel</a></li>
-
                         <li><a href=\"#\">Fireworks</a></li>
-
                         <li class=\"small\"><a href=\"#\">Music</a></li>
-
                         </ul>
-
                     </div>
-
                 </div>
-
                </div>
-
-                       <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                
+                <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                 <div class=\"panel panel-default theme-panel\">
                   <div class=\"panel-heading\">Archives</div>
-
                     <div class=\"panel-body nopadding\">
-
                       <div class=\"list-group\">
-
-  <a href=\"#\" class=\"list-group-item\">January 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">February 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">March 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">April 2014</a>
-
-                       <a href=\"#\" class=\"list-group-item\">May 2014</a>
-
-</div>
-
-                    </div>
-
+                    <a href=\"#\" class=\"list-group-item\">January 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">February 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">March 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">April 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">May 2014</a>
+                  </div>
+                 </div>
                 </div>
-
                </div>
-
-               </div>
-
-               
-
+              </div>           
             </aside>
-
            </div>
-
-       
-
+      
       </div>
-
     </section>
 
     
 ";
         
-        $__internal_a1c86fae3f914bffe9ce1c3c22b8b370cab436da9ec9e1013542c731280e7452->leave($__internal_a1c86fae3f914bffe9ce1c3c22b8b370cab436da9ec9e1013542c731280e7452_prof);
+        $__internal_19a25ae32719b638e45475814a5ac25d27217285ca3ec594e778ef530cf56f2f->leave($__internal_19a25ae32719b638e45475814a5ac25d27217285ca3ec594e778ef530cf56f2f_prof);
 
         
-        $__internal_d1c422e2c541b68d6c138990df3d58f113e483c82d543fa576568b273d0e79d3->leave($__internal_d1c422e2c541b68d6c138990df3d58f113e483c82d543fa576568b273d0e79d3_prof);
+        $__internal_865bad622823abf7c2375c97907012ea0eb0a46b3668f3770ae3ffc35a12e282->leave($__internal_865bad622823abf7c2375c97907012ea0eb0a46b3668f3770ae3ffc35a12e282_prof);
 
     }
 
@@ -418,7 +343,7 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
 
     public function getDebugInfo()
     {
-        return array (  307 => 245,  300 => 225,  286 => 219,  279 => 217,  271 => 214,  105 => 51,  98 => 47,  94 => 46,  49 => 3,  40 => 2,  11 => 1,);
+        return array (  275 => 213,  271 => 196,  257 => 190,  250 => 188,  242 => 185,  105 => 51,  98 => 47,  94 => 46,  49 => 3,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -588,62 +513,33 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
                             <div class=\"row\">
 
                                 <div class=\"col-md-6 col-lg-5\">
-
-                        
-
+                       
                                     </div>
-
                                     </div>
-
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-
                             <div class=\"form-group\">
-
                             <input type=\"text\" class=\"form-control\" placeholder=\"Phone Number:\">
-
                           </div>
-
                             </div>
-
                                     </div>
-
                             <div class=\"form-group\">
-
                                 <textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea>
-
                           </div>
-
                           <button type=\"submit\" class=\"btn btn-default\">Post Reply</button>
-
                         </form>
-
                     </div>
-
-                   
-
+                  
                 </article>
-
             <div class=\"clearfix\"></div>
-
             </div>
-
             <aside class=\"col-md-4 col-lg-4\">
-
-            \t
-
+           \t
                 <div class=\"row\">
-
-
                 <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
                 <div class=\"panel panel-default theme-panel\">
-
                   <div class=\"panel-heading\">Annonces récentes</div>
-
                     <div class=\"panel-body nopadding\">
-
               {% for annonce in annonces %} 
                <div class=\"panel-body nopadding\">
                 <div class=\"media\">
@@ -655,10 +551,7 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
                 </div>
                </div>
               {% endfor %}
-
-
                 </div>
-
                            </div>
 {#
                        <div class=\"col-sm-6 col-md-12 col-lg-12\">
@@ -677,94 +570,51 @@ class __TwigTemplate_11a60b595798266b89ab0f14bbaf062aca1bf8c761dd713f6f9b9e72510
 #}
                        
 </div>
-                       <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
+               <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
-
                   <div class=\"panel-heading\">Tags</div>
-
                     <div class=\"panel-body\">
-
                       <ul class=\"list-inline tags\">
-
                         <li><a href=\"#\">LifeStyle</a></li>
-
                         <li class=\"big\"><a href=\"#\">Music</a></li>
-
                         <li><a href=\"#\">SmartPhones</a></li>
-
                         <li><a href=\"#\">Business</a></li>
-
-                        
-
+                      
                         <li><a href=\"#\">Travel</a></li>
-
-                        
-
+                       
                         <li class=\"big\"><a href=\"#\">Business</a></li>
-
                         <li class=\"small\"><a href=\"#\">LifeStyle</a></li>
-
                         <li><a href=\"#\">SmartPhones</a></li>
-
                         
 
                         <li><a href=\"#\">Fireworks</a></li>
-
                         <li class=\"big\"><a href=\"#\">Travel</a></li>
-
                         <li><a href=\"#\">Fireworks</a></li>
-
                         <li class=\"small\"><a href=\"#\">Music</a></li>
-
                         </ul>
-
                     </div>
-
                 </div>
-
                </div>
-
-                       <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                
+                <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                 <div class=\"panel panel-default theme-panel\">
                   <div class=\"panel-heading\">Archives</div>
-
                     <div class=\"panel-body nopadding\">
-
                       <div class=\"list-group\">
-
-  <a href=\"#\" class=\"list-group-item\">January 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">February 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">March 2014</a>
-
-  <a href=\"#\" class=\"list-group-item\">April 2014</a>
-
-                       <a href=\"#\" class=\"list-group-item\">May 2014</a>
-
-</div>
-
-                    </div>
-
+                    <a href=\"#\" class=\"list-group-item\">January 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">February 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">March 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">April 2014</a>
+                    <a href=\"#\" class=\"list-group-item\">May 2014</a>
+                  </div>
+                 </div>
                 </div>
-
                </div>
-
-               </div>
-
-               
-
+              </div>           
             </aside>
-
            </div>
-
-       
-
+      
       </div>
-
     </section>
 
     

@@ -15,11 +15,11 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5639b83e6723196574d978657483df69017e49cd67c506fa8b7ce5d225f5b9df = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5639b83e6723196574d978657483df69017e49cd67c506fa8b7ce5d225f5b9df->enter($__internal_5639b83e6723196574d978657483df69017e49cd67c506fa8b7ce5d225f5b9df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_8e8f191b84e8862f58e2ca821c87f414f0f0703c3d4797227e543cfcd80b372d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8e8f191b84e8862f58e2ca821c87f414f0f0703c3d4797227e543cfcd80b372d->enter($__internal_8e8f191b84e8862f58e2ca821c87f414f0f0703c3d4797227e543cfcd80b372d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_c526a2d8ee428e3e6e0724b544d433b1d13368d3cbeecd9a2852e0116ad314ab = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c526a2d8ee428e3e6e0724b544d433b1d13368d3cbeecd9a2852e0116ad314ab->enter($__internal_c526a2d8ee428e3e6e0724b544d433b1d13368d3cbeecd9a2852e0116ad314ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_170250bf39df62189821a610d66c5eab9a70a314e5dd7e03a88de4bd8a72811c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_170250bf39df62189821a610d66c5eab9a70a314e5dd7e03a88de4bd8a72811c->enter($__internal_170250bf39df62189821a610d66c5eab9a70a314e5dd7e03a88de4bd8a72811c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -273,25 +273,40 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
                         <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
                             <h3>Rubriques </h3>
                             <ul class=\"list-unstyled\">
-                                <li><a href=\"#\">Msqdq</a></li>
-                                <li><a href=\"#\">Travel </a></li>
-                                <li><a href=\"#\">Music </a></li>
-                                <li><a href=\"#\">LifeStyle </a></li>
-                                <li><a href=\"#\">Apps </a></li>
-                                <li><a href=\"#\">Business </a></li>
+                                <li><a href=\"#\">Matériels </a></li>
+                                <li><a href=\"#\">Véhicule </a></li>
+                                <li><a href=\"#\">Informatique </a></li>
+                                <li><a href=\"#\">Service </a></li>
+                                <li><a href=\"#\">Vétements </a></li>
+                                <li><a href=\"#\">Autres </a></li>
                             </ul>
                         </div>
-                   
+                        
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
-                            <h3>Recent Post Menu</h3>
+                            <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
-                            </ul>
+                               ";
+        // line 209
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["annonces"] ?? $this->getContext($context, "annonces")));
+        foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
+            echo " 
+                                <li><a href=\"";
+            // line 210
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "post_title", array()), "html", null, true);
+            echo "</a></li>
+                               ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 211
+        echo "        
+                                ";
+        // line 217
+        echo "                            </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
                             <h3>Suivez-nous</h3>
@@ -312,7 +327,7 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
                     <div class=\"container\">
                     <div class=\"mega-dropdown-menu\">
                         <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
-                            <h3>Categories</h3>
+                            <h3>Rubriques</h3>
                             <ul class=\"list-unstyled\">
                               <li><a href=\"#\">Actualité</a></li>
                                 <li><a href=\"#\">Sport  </a></li>
@@ -349,33 +364,33 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
        
            
 \t\t<li><a href=\"";
-        // line 272
+        // line 274
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
         echo "\">Contact</a></li>
 \t\t";
-        // line 273
+        // line 275
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "user", array())) {
             echo " 
 \t\t\t<li><a href=\"";
-            // line 274
+            // line 276
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\" class=\"inscription\">Deconnexion</a></li>
 
 \t\t ";
         } else {
-            // line 276
+            // line 278
             echo " 
 \t\t\t<li><a href=\"";
-            // line 277
+            // line 279
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\" class=\"connexion\">Connexion</a></li>
 \t\t\t<li><a href=\"";
-            // line 278
+            // line 280
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
             echo "\" class=\"connexion\">Inscription</a></li>
 \t\t";
         }
-        // line 279
+        // line 281
         echo "  
           
       </ul>
@@ -410,20 +425,20 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
         </li>
              
 \t\t";
-        // line 312
+        // line 314
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "user", array())) {
             echo " 
 \t\t\t";
-            // line 316
+            // line 318
             echo "\t\t
 \t\t\t\t\t\t
 \t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">";
-            // line 318
+            // line 320
             echo twig_escape_filter($this->env, $this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "username", array()), "html", null, true);
             echo " <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
 \t\t\t\t\t\t\t <li class=\"active\"><a href=\"";
-            // line 320
+            // line 322
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => $this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "id", array()))), "html", null, true);
             echo "\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
@@ -432,22 +447,22 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"";
-            // line 326
+            // line 328
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\">Deconnexion</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t  </li>
 \t\t\t\t  <li><a href=\"";
-            // line 329
+            // line 331
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\"><i class=\"fa fa-times\"></i></a></li>
 \t\t\t\t  
 \t\t";
         } else {
-            // line 331
+            // line 333
             echo " 
 \t\t\t";
-            // line 334
+            // line 336
             echo "\t\t\t<li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\"><i class=\"fa fa-user\"></i></a></li>
@@ -466,19 +481,19 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
 \t\t\t\t  </li>
 \t\t";
         }
-        // line 348
+        // line 350
         echo " 
 \t\t
 \t\t ";
-        // line 350
+        // line 352
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "admin", array())) {
-            // line 351
+            // line 353
             echo "                    ";
-            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 351)->display($context);
+            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 353)->display($context);
             echo " 
                  ";
         }
-        // line 353
+        // line 355
         echo "         </ul>
     <!--/.nav-collapse --> 
   </div>
@@ -486,13 +501,13 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
 </header>
  
 ";
-        // line 374
+        // line 376
         echo "  ";
         
-        $__internal_5639b83e6723196574d978657483df69017e49cd67c506fa8b7ce5d225f5b9df->leave($__internal_5639b83e6723196574d978657483df69017e49cd67c506fa8b7ce5d225f5b9df_prof);
+        $__internal_8e8f191b84e8862f58e2ca821c87f414f0f0703c3d4797227e543cfcd80b372d->leave($__internal_8e8f191b84e8862f58e2ca821c87f414f0f0703c3d4797227e543cfcd80b372d_prof);
 
         
-        $__internal_c526a2d8ee428e3e6e0724b544d433b1d13368d3cbeecd9a2852e0116ad314ab->leave($__internal_c526a2d8ee428e3e6e0724b544d433b1d13368d3cbeecd9a2852e0116ad314ab_prof);
+        $__internal_170250bf39df62189821a610d66c5eab9a70a314e5dd7e03a88de4bd8a72811c->leave($__internal_170250bf39df62189821a610d66c5eab9a70a314e5dd7e03a88de4bd8a72811c_prof);
 
     }
 
@@ -508,7 +523,7 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
 
     public function getDebugInfo()
     {
-        return array (  490 => 374,  482 => 353,  476 => 351,  474 => 350,  470 => 348,  451 => 334,  448 => 331,  442 => 329,  436 => 326,  427 => 320,  422 => 318,  418 => 316,  414 => 312,  379 => 279,  374 => 278,  370 => 277,  367 => 276,  361 => 274,  357 => 273,  353 => 272,  253 => 175,  242 => 167,  231 => 159,  220 => 151,  207 => 141,  196 => 133,  185 => 125,  174 => 117,  161 => 107,  150 => 99,  139 => 91,  128 => 83,  115 => 73,  104 => 65,  93 => 57,  82 => 49,  58 => 27,  54 => 25,  50 => 24,  25 => 1,);
+        return array (  505 => 376,  497 => 355,  491 => 353,  489 => 352,  485 => 350,  466 => 336,  463 => 333,  457 => 331,  451 => 328,  442 => 322,  437 => 320,  433 => 318,  429 => 314,  394 => 281,  389 => 280,  385 => 279,  382 => 278,  376 => 276,  372 => 275,  368 => 274,  309 => 217,  306 => 211,  296 => 210,  290 => 209,  253 => 175,  242 => 167,  231 => 159,  220 => 151,  207 => 141,  196 => 133,  185 => 125,  174 => 117,  161 => 107,  150 => 99,  139 => 91,  128 => 83,  115 => 73,  104 => 65,  93 => 57,  82 => 49,  58 => 27,  54 => 25,  50 => 24,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -717,24 +732,26 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
                         <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
                             <h3>Rubriques </h3>
                             <ul class=\"list-unstyled\">
-                                <li><a href=\"#\">Msqdq</a></li>
-                                <li><a href=\"#\">Travel </a></li>
-                                <li><a href=\"#\">Music </a></li>
-                                <li><a href=\"#\">LifeStyle </a></li>
-                                <li><a href=\"#\">Apps </a></li>
-                                <li><a href=\"#\">Business </a></li>
+                                <li><a href=\"#\">Matériels </a></li>
+                                <li><a href=\"#\">Véhicule </a></li>
+                                <li><a href=\"#\">Informatique </a></li>
+                                <li><a href=\"#\">Service </a></li>
+                                <li><a href=\"#\">Vétements </a></li>
+                                <li><a href=\"#\">Autres </a></li>
                             </ul>
                         </div>
-                   
+                        
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
-                            <h3>Recent Post Menu</h3>
+                            <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
+                               {% for annonce in annonces %} 
+                                <li><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></li>
+                               {% endfor %}        
+                                {#<li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>#}
                             </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
@@ -756,7 +773,7 @@ class __TwigTemplate_4b6f6789bc804928b9c980f95691ddc80e793e3557e1704f66a0aa0f2ec
                     <div class=\"container\">
                     <div class=\"mega-dropdown-menu\">
                         <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
-                            <h3>Categories</h3>
+                            <h3>Rubriques</h3>
                             <ul class=\"list-unstyled\">
                               <li><a href=\"#\">Actualité</a></li>
                                 <li><a href=\"#\">Sport  </a></li>

@@ -194,24 +194,26 @@
                         <div class="col-md-4 col-xs-12 col-sm-6 sub-menu">
                             <h3>Rubriques </h3>
                             <ul class="list-unstyled">
-                                <li><a href="#">Msqdq</a></li>
-                                <li><a href="#">Travel </a></li>
-                                <li><a href="#">Music </a></li>
-                                <li><a href="#">LifeStyle </a></li>
-                                <li><a href="#">Apps </a></li>
-                                <li><a href="#">Business </a></li>
+                                <li><a href="#">Matériels </a></li>
+                                <li><a href="#">Véhicule </a></li>
+                                <li><a href="#">Informatique </a></li>
+                                <li><a href="#">Service </a></li>
+                                <li><a href="#">Vétements </a></li>
+                                <li><a href="#">Autres </a></li>
                             </ul>
                         </div>
-                   
+                        
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
-                            <h3>Recent Post Menu</h3>
+                            <h3>Dernières annonces</h3>
                             <ul class="list-unstyled">
-                              <li><a href="single.html">Should Be A Large Heading </a></li>
-                                <li><a href="single.html">Match With the Size  </a></li>
-                                <li><a href="single.html">The Heading Text Size</a></li>
-                                <li><a href="single.html">Lorem ipsum dolor sit </a></li>
-                                <li><a href="single.html">Should Be A Large Heading </a></li>
-                                <li><a href="single.html">Match With the Image  </a></li>
+                               {% for annonce in annonces %} 
+                                <li><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></li>
+                               {% endfor %}        
+                                {#<li><a href="single.html"></a></li>
+                                <li><a href="single.html"></a></li>
+                                <li><a href="single.html"></a></li>
+                                <li><a href="single.html"></a></li>
+                                <li><a href="single.html"></a></li>#}
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">
@@ -233,7 +235,7 @@
                     <div class="container">
                     <div class="mega-dropdown-menu">
                         <div class="col-md-4 col-xs-12 col-sm-6 sub-menu">
-                            <h3>Categories</h3>
+                            <h3>Rubriques</h3>
                             <ul class="list-unstyled">
                               <li><a href="#">Actualité</a></li>
                                 <li><a href="#">Sport  </a></li>

@@ -30,6 +30,11 @@ $app
     ->bind('single_annonce')
 ;
 $app
+    ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
+    ->assert('id', '\d+')
+    ->bind('single_annonce')
+;
+$app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
@@ -80,7 +85,7 @@ $profil->match('/envoyerPost/{id}', 'user.controller:envoyerPostInterne')      -
 //Handicap
 
 $bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
-        ->bind('handicap');
+            ->bind('handicap');
 
 /* ADMIN  */
 

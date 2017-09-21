@@ -47,7 +47,7 @@ class AnnonceController extends ControllerAbstract
     public function getAnnonceId($id)
     {
         $annonce = $this->app['annonce.repository']->find($id);
-        $annonces = $this->app['annonce.repository']->findLastThree(); 
+        $annonces = $this->app['annonce.repository']->findLastThree(6); 
         
         return $this->render(
             'single_annonce.html.twig',
@@ -60,7 +60,7 @@ class AnnonceController extends ControllerAbstract
     }
     public function lastThree()
     {
-        $annonces = $this->app['annonce.repository']->findLastThree(); 
+        $annonces = $this->app['annonce.repository']->findLastThree(7); 
         return $this->render(
             'index.html.twig',
             [               
@@ -69,9 +69,21 @@ class AnnonceController extends ControllerAbstract
                
         );
     }
+    public function lastThreeHeader()
+    {
+        $annonces = $this->app['annonce.repository']->findLastThree(6); // $limit
+        return $this->render(
+            'header.html.twig',
+            [               
+                'annonces' => $annonces
+            ]
+               
+        );
+    }
     public function lastThreeSingle()
     {
-        $annonces = $this->app['annonce.repository']->findLastThree(); 
+        $annonces = $this->app['annonce.repository']->findAllSingle(10); 
+        die('pas ok');
         return $this->render(
             'single_annonce.html.twig',
             [               

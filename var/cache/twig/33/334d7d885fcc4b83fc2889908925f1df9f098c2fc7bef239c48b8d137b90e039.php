@@ -15,11 +15,11 @@ class __TwigTemplate_67df26770f2ba80856a33cdbf3bcaea903998c5c34a2d8e805a511778e9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e04bb7ba0ebf96452c84cc371290d72a88a4a30c1a63a94a504d1dfb18b7128f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e04bb7ba0ebf96452c84cc371290d72a88a4a30c1a63a94a504d1dfb18b7128f->enter($__internal_e04bb7ba0ebf96452c84cc371290d72a88a4a30c1a63a94a504d1dfb18b7128f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_01f1f775603c54b42ada8e6b9a8a115b2b46bbaa726ccc9bff80da69f7ab25a9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_01f1f775603c54b42ada8e6b9a8a115b2b46bbaa726ccc9bff80da69f7ab25a9->enter($__internal_01f1f775603c54b42ada8e6b9a8a115b2b46bbaa726ccc9bff80da69f7ab25a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
-        $__internal_0ef0dfab08bb5595489851ff3f5d62f648ad6d3bf6b4f313c8c905168186f69c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0ef0dfab08bb5595489851ff3f5d62f648ad6d3bf6b4f313c8c905168186f69c->enter($__internal_0ef0dfab08bb5595489851ff3f5d62f648ad6d3bf6b4f313c8c905168186f69c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_74e4812acb1bb2a58b0d097949d6154d6b1d12477b1f17da92b6c2cb98f5f395 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_74e4812acb1bb2a58b0d097949d6154d6b1d12477b1f17da92b6c2cb98f5f395->enter($__internal_74e4812acb1bb2a58b0d097949d6154d6b1d12477b1f17da92b6c2cb98f5f395_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
         // line 2
         echo "
@@ -30,7 +30,7 @@ class __TwigTemplate_67df26770f2ba80856a33cdbf3bcaea903998c5c34a2d8e805a511778e9
                     \t<h4>Qui sommes-nous?</h4>
                     \t<div class=\"footer-box-text\">
                     \t\t<p>
-                    \t\tCréée pour répondre à la situation spécifique, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    \t\tCréée pour répondre à une demande spécifique, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
                     \t\tUt wisi enim ad minim veniam, quis nostrud exerci tation ullam corper suscipit lobortis nisl ut.
                     \t\t</p>
                    \t\t<p><a href=\"about.html\">Read more...</a></p>
@@ -103,10 +103,10 @@ class __TwigTemplate_67df26770f2ba80856a33cdbf3bcaea903998c5c34a2d8e805a511778e9
 <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-angle-up\"></i></a>
 ";
         
-        $__internal_e04bb7ba0ebf96452c84cc371290d72a88a4a30c1a63a94a504d1dfb18b7128f->leave($__internal_e04bb7ba0ebf96452c84cc371290d72a88a4a30c1a63a94a504d1dfb18b7128f_prof);
+        $__internal_01f1f775603c54b42ada8e6b9a8a115b2b46bbaa726ccc9bff80da69f7ab25a9->leave($__internal_01f1f775603c54b42ada8e6b9a8a115b2b46bbaa726ccc9bff80da69f7ab25a9_prof);
 
         
-        $__internal_0ef0dfab08bb5595489851ff3f5d62f648ad6d3bf6b4f313c8c905168186f69c->leave($__internal_0ef0dfab08bb5595489851ff3f5d62f648ad6d3bf6b4f313c8c905168186f69c_prof);
+        $__internal_74e4812acb1bb2a58b0d097949d6154d6b1d12477b1f17da92b6c2cb98f5f395->leave($__internal_74e4812acb1bb2a58b0d097949d6154d6b1d12477b1f17da92b6c2cb98f5f395_prof);
 
     }
 
@@ -144,7 +144,7 @@ class __TwigTemplate_67df26770f2ba80856a33cdbf3bcaea903998c5c34a2d8e805a511778e9
                     \t<h4>Qui sommes-nous?</h4>
                     \t<div class=\"footer-box-text\">
                     \t\t<p>
-                    \t\tCréée pour répondre à la situation spécifique, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    \t\tCréée pour répondre à une demande spécifique, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
                     \t\tUt wisi enim ad minim veniam, quis nostrud exerci tation ullam corper suscipit lobortis nisl ut.
                     \t\t</p>
                    \t\t<p><a href=\"about.html\">Read more...</a></p>

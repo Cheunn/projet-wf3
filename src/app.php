@@ -57,7 +57,6 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 /* FRONT */
 $app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
 $app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
-
 $app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
 
 $app['annonce.controller'] = function () use ($app) {

@@ -761,11 +761,28 @@ a.blogger { color: #f39d38; }
 option .disabled {
    color: #999;
 }
+
+/* apparait dans le header */
 .connexion {
     background: #fea000;
     border-right: 1px solid #ffa500;
 }
 .inscription {
     background: #fea000;
+}
+
+.administration, .administration hover  {
+    background: black;
+	color:red;
+}
+
+/* apparait dans le fichier consultProfilTwig */
+#IdProfilBlockComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockAvis,  #IdProfilBlockChronique{
+    display: none;
+}
+
+/* apparait dans le fichier profilUserTwig */
+#IdProfilBlockComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockAvis,  #IdProfilBlockChronique{
+    display: none;
 }
 /* END Custom CSS */

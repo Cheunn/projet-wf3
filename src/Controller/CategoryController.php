@@ -16,6 +16,7 @@ class CategoryController extends ControllerAbstract
         );
     }
     /* BOUCLE */ /* BOUCLE */ /* BOUCLE */ /* BOUCLE */
+    /* Julien */ /* Julien */ /* Julien */ /* Julien */
     public function listActionChronique()
     {
         $categories = $this->app['category.repository']->findAllChronique();
@@ -27,6 +28,19 @@ class CategoryController extends ControllerAbstract
             ]
         );
     }
+    /* BOUCLE */ /* BOUCLE */ /* BOUCLE */ /* BOUCLE */
+    /* Julien */ /* Julien */ /* Julien */ /* Julien */
+//    public function listLastChroniques()
+//    {
+//        $categories = $this->app['category.repository']->findLastChronique();
+//        
+//        return $this->render(
+//            'header.html.twig',
+//            [
+//                'categories' => $categories
+//            ]
+//        );
+//    }
     
     
     public function indexAction($id)

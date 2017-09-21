@@ -15,11 +15,11 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->enter($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0->enter($__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->enter($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948->enter($__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -646,8 +646,11 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
           <li class=\"dropdown\">
 
         
-
-\t\t<li><a href=\"contact.html\">Contact</a></li>
+                
+\t\t<li><a href=\"";
+        // line 573
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
+        echo "\">Contact</a></li>
 \t\t";
         // line 574
         if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 574, $this->getSourceContext()); })()), "user", array())) {
@@ -734,7 +737,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 635, $this->getSourceContext()); })()), "username", array()), "html", null, true);
             echo " <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
-\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"";
+            // line 637
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 637, $this->getSourceContext()); })()), "id", array()))), "html", null, true);
+            echo "\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
@@ -777,7 +783,18 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
         }
         // line 665
         echo " 
-       
+\t\t
+\t\t ";
+        // line 667
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 667, $this->getSourceContext()); })()), "admin", array())) {
+            // line 668
+            echo "                    ";
+            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 668)->display($context);
+            echo " 
+                 ";
+        }
+        // line 670
+        echo "       
 
       </ul>
 
@@ -790,13 +807,13 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 </header>
  
 ";
-        // line 693
+        // line 697
         echo "  ";
         
-        $__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7->leave($__internal_e8e9bf071b7048d059f196ba5876316dcde294639120d9397ba5490394ea45c7_prof);
+        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0->leave($__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0_prof);
 
         
-        $__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a->leave($__internal_b4ffe40a754ceb625fd98787576cf3ff1d1e90b09d068f6e5b180f17f7345e3a_prof);
+        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948->leave($__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948_prof);
 
     }
 
@@ -812,7 +829,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     public function getDebugInfo()
     {
-        return array (  794 => 693,  779 => 665,  760 => 651,  757 => 648,  751 => 646,  745 => 643,  734 => 635,  730 => 633,  726 => 629,  675 => 580,  670 => 579,  666 => 578,  663 => 577,  657 => 575,  653 => 574,  415 => 339,  396 => 323,  377 => 307,  358 => 291,  335 => 271,  316 => 255,  297 => 239,  278 => 223,  255 => 203,  236 => 187,  217 => 171,  198 => 155,  175 => 135,  156 => 119,  137 => 103,  118 => 87,  64 => 38,  25 => 1,);
+        return array (  811 => 697,  797 => 670,  791 => 668,  789 => 667,  785 => 665,  766 => 651,  763 => 648,  757 => 646,  751 => 643,  742 => 637,  737 => 635,  733 => 633,  729 => 629,  678 => 580,  673 => 579,  669 => 578,  666 => 577,  660 => 575,  656 => 574,  652 => 573,  415 => 339,  396 => 323,  377 => 307,  358 => 291,  335 => 271,  316 => 255,  297 => 239,  278 => 223,  255 => 203,  236 => 187,  217 => 171,  198 => 155,  175 => 135,  156 => 119,  137 => 103,  118 => 87,  64 => 38,  25 => 1,);
     }
 
     public function getSourceContext()
@@ -1388,8 +1405,8 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
           <li class=\"dropdown\">
 
         
-
-\t\t<li><a href=\"contact.html\">Contact</a></li>
+                
+\t\t<li><a href=\"{{ path('messProfilToUs') }}\">Contact</a></li>
 \t\t{% if user_manager.user %} 
 \t\t\t<li><a href=\"{{ path('deconnexion') }}\" class=\"inscription\">Deconnexion</a></li>
 
@@ -1453,7 +1470,7 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t\t\t\t\t\t
 \t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">{{user_manager.username}} <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
-\t\t\t\t\t\t\t <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Mon tableau de bord<i class=\"arrow_carrot-right\"></i></a></li>
+\t\t\t\t\t\t\t <li class=\"active\"><a href=\"{{ path('profilUser', {id: user_manager.id}) }}\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
@@ -1482,6 +1499,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t\t\t\t\t</ul>
 \t\t\t\t  </li>
 \t\t{% endif %} 
+\t\t
+\t\t {% if user_manager.admin %}
+                    {% include 'admin/headerAdmin.html.twig'%} 
+                 {% endif %}
        
 
       </ul>

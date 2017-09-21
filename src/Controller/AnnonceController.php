@@ -46,8 +46,8 @@ class AnnonceController extends ControllerAbstract
     }
     public function getAnnonceId($id)
     {
-        $annonce = $this->app['annonce.repository']->find($id);
-        $annonces = $this->app['annonce.repository']->findLastThree(6); 
+        $annonce = $this->app['annonce.repository']->find($id); 
+        $annonces = $this->app['annonce.repository']->findLastThree();
         
         return $this->render(
             'single_annonce.html.twig',

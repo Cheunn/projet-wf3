@@ -199,14 +199,14 @@
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
                             <h3>Dernières annonces</h3>
                             <ul class="list-unstyled">
-                               {% for annonce in annonces %} 
+                               {#{% for annonce in annonces %} 
                                 <li><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></li>
-                               {% endfor %}        
-                                {#<li><a href="single.html"></a></li>
+                               {% endfor %} #}       
+                                <li><a href="single.html">TEST</a></li>
                                 <li><a href="single.html"></a></li>
                                 <li><a href="single.html"></a></li>
                                 <li><a href="single.html"></a></li>
-                                <li><a href="single.html"></a></li>#}
+                                <li><a href="single.html"></a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">

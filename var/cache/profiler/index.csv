@@ -931,3 +931,6 @@ ae4721,::1,GET,http://localhost/projet_v2/web/index_dev.php/user/chronique,15059
 7cb9b0,::1,GET,http://localhost/projet_v2/web/index_dev.php/user/chronique,1505915613,,200
 2afe2f,::1,GET,http://localhost/projet_v2/web/index_dev.php/user/chronique,1505924379,,200
 888d2b,::1,GET,http://localhost/projet_v2/web/index_dev.php/user/chronique,1505924405,,200
+ffcd81,::1,GET,http://localhost/projet_v3/web/index_dev.php/,1505999874,,500
+47dca4,::1,GET,http://localhost/projet_v3/web/index_dev.php/,1505999909,,500
+f5a46c,::1,GET,http://localhost/projet_v3/web/index_dev.php/,1506000048,,200

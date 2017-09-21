@@ -149,20 +149,21 @@ SQL;
     }
     
 
-public function findLastThree($limit)
+public function findLastThree()
     {
         $query = <<<SQL
 SELECT 
     a.*
 FROM annonce a
 ORDER BY id_post DESC
+LIMIT 6
 SQL;
         $dbAnnonces = $this->db->fetchAll($query);    
         $annonces = [];
-        
+        /*
         for ($i=0 ; $i < $limit; $i++) {
             $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-        }
+        }*/
         return $annonces;
     }
     

@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-/
+
 
 $app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');

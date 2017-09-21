@@ -9,17 +9,6 @@ use Entity\Category;
 
 class ChroniqueController extends ControllerAbstract {
     
-    public function listAction()
-    {
-        $chroniques = $this->app['chronique.repository']->findAll();
-        
-        return $this->render(
-            'admin/chronique/list.html.twig',
-            [
-                'chroniques' => $chroniques
-            ]
-        );
-    }
     
     public function editAction($id = null)
     {

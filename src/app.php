@@ -94,6 +94,7 @@ $app['admin.tag.controller'] = function () use ($app) {
 // REPOSITORIES
 
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+
 $app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
 
 

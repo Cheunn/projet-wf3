@@ -1,11 +1,9 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    <div class="container">
+     <div class="container">
 
-    <h1>Mes Chroniques</h1>
-    
-    <p><a href="{{ path('user_chronique_edit') }}">Ajouter une chronique</a></p>
+    <h1>Chroniques</h1>
     
     <table class="table">
         <tr>
@@ -14,7 +12,6 @@
             <th>Paragraphe 2</th>
             <th>Catégorie</th>
             <th>Img 1</th>
-            <th width="120px"></th>
         </tr>
         {% for chronique in chroniques %}
             <tr>
@@ -23,15 +20,6 @@
                 <td>{{ chronique.paragraph_2}}</td>
                 <td>{{ chronique.category_name}}</td>
                 <td>{{ chronique.url_img_1}}</td>
-                <td>                    
-                    <a href="{{ path('user_chronique_edit', {id: chronique.id_post}) }}" class="btn btn-primary">
-                        Modifier
-                    </a>
-                       <hr>
-                    <a href="{{ path('user_chronique_delete', {id: chronique.id_post}) }}" class="btn btn-danger">
-                        Supprimer
-                    </a>
-                </td>
             </tr>
         {% else %}
             <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
@@ -39,4 +27,3 @@
     </table>
     </div>
 {% endblock %}
-

@@ -59,6 +59,26 @@ $app
 $bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
 
+/* PROFIL */
+
+$profil=$app['controllers_factory'];  // crée un groupe de routes
+
+$app->mount('/profil', $profil);      $profil->match('/listeProfil/{id}', 'user.controller:listeProfil')
+       ->assert('id', '\d+')
+       ->bind('listeProfil');
+// Jaoued
+
+$profil->match('/envoyerPost/{id}', 'user.controller:envoyerPostInterne')      ->bind('envoyerPost');/* FRONT ADMIN  USER */$user=$app['controllers_factory'];  // crée un groupe de routes
+
+
+$user->match('/profil/', 'user.controller:profilUser')
+       ->bind('profilUser')
+;
+
+
+
+
+
 /* ADMIN  */
 
 $admin=$app['controllers_factory'];  // crée un groupe de routes
@@ -177,7 +197,7 @@ $user=$app['controllers_factory'];  // crée un groupe de routes
 $app->mount('/user', $user);      
 
 $user->before (function() use ($app){
-    if (! $app['user.manager']->getUser()) $app->abort(403, 'Acces refuse') ; 
+    if (! $app['user.manager']->getUser()) $app->abort(403, 'Nikoumouk le mois de juillet') ; 
 });
 
 /* Cheunn */

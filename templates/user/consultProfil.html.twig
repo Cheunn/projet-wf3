@@ -57,25 +57,25 @@
                              <div class="info">
 
                              <p>Note</p>
-                                 <strong>4.5</strong></div>
+                                 <strong>{{ myNote }} </strong></div>
                          </li>
 
                          <li>
                             <div class="info">
                             <p>Annonces </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbAnnoncesByUser.id_post }}        </strong></div>
                         </li>
                         
                         <li>
                             <div class="info">
                             <p>Chroniques </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbChroniquesByUser }}   </strong></div>
                         </li>
                         
                          <li>
                             <div class="info">
                             <p>News </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbNewByUser }}</strong></div>
                         </li>
 
                        </ul>
@@ -131,57 +131,47 @@
                     <div id="IdProfilBlockAnnonces" class="related-post" >
 
                         <div class="row">
+                            
+                        
+                                    
 
-                            <div class="col-md-12"><h4></h4></div>
+                        <div class="col-md-12"><h4></h4></div>
+                            {% for message in messages %} 
+                                          {# <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     #} 
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 
-                                <div class="thumbnail">
+                                    <div class="thumbnail">
 
-                                  <a href="#"><img src="{{ asset('assets/images/post/related-post1.png ') }}" alt="related post"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/post/related-post1.png ') }}" alt="related post"></a>
 
-                                  <div class="caption">
+                                        <div class="caption">
 
-                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+                                            <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
 
-                                  </div>
+                                        </div>
 
+                                    </div>
                                 </div>
+                            {% endfor %}
+                                        
+                                         
 
-                            </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="thumbnail">
 
-                                <div class="thumbnail">
+                                            <a href="#"><img src="{{ asset('assets/images/post/related-post1.png ') }}" alt="related post"></a>
 
-                                    <a href="#"><img src="{{ asset('assets/images/post/related-post2.png ') }}" alt="related post"></a>
+                                            <div class="caption">
 
-                                  <div class="caption">
+                                                <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
 
-                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+                                            </div>
 
-                                  </div>
+                                        </div>
 
-                                </div>
-
-                            </div>
-
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-
-                                <div class="thumbnail">
-
-                                    <a href="#"><img src="{{ asset('assets/images/post/related-post3.png ') }}" alt="related post"></a>
-
-                                  <div class="caption">
-
-                                    <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
+                                    </div>
                         </div>
 
                     </div>
@@ -427,82 +417,55 @@
             	
 
                 <div class="row">
-
-                <div class="col-sm-6 col-md-12 col-lg-12">
-
-                <div class="panel panel-default theme-panel">
-
+                    
+                 
                  {% if modeadmin is defined %}
-                  <div class="panel-heading">Consulter mes messages</div>
+                    <div class="col-sm-6 col-md-12 col-lg-12">
+                        <div class="panel panel-default theme-panel">  
+                             <div class="panel-heading">Consulter mes messages</div>
+                                 <div class="panel-body">
+                                    {% for message in messages %} 
+                                           <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                     {% endfor %}  
 
-                    <div class="panel-body">
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                {% else %} 
+                    
+                    <div class="col-sm-6 col-md-12 col-lg-12">
+                        <div class="panel panel-default theme-panel">  
+                             <div class="panel-heading">Donner une note</div>
+                                 <div class="panel-body">
+                                         {#<form action="{{ path('EnvoyerNote', {id: {{user.id_member}} }}" method="post"> #}
+                                                 <form action="#" method="post">
+                                           
+                                            <div class="form-group">
+                                                    <select id="role" class="form-control " name="note"> 
+                                                          <option  value="" class="disabled selected hidden" name="text">Donner une note</option> 
+                                                          <option  class="form-control " value="1" >1</option>
+                                                          <option  class="form-control " value="2" >2</option>
+                                                          <option  class="form-control " value="3" >3</option>
+                                                          <option  class="form-control " value="4" >4</option>
+                                                          <option  class="form-control " value="5" >5</option>
 
-                      <form action="#" method="post">
-
-                      <div class="form-group">
-
-                          <select id="role" class="form-control " name="note"> 
-                                <option  value="" class="disabled selected hidden" name="text">Donner une note</option> 
-                                <option  class="form-control " value="1" >1</option>
-                                <option  class="form-control " value="2" >2</option>
-                                <option  class="form-control " value="3" >3</option>
-                                <option  class="form-control " value="4" >4</option>
-                                <option  class="form-control " value="5" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class="form-group">
-
-                        	<button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
-               {% else %} 
+                                                      </select>
+                                             </div>
+                                             <div class="form-group">
+                                                 <button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
                    
-                   <div class="panel-heading">Donner une note</div>
 
-                    <div class="panel-body">
 
-                      <form action="#" method="post">
-
-                      <div class="form-group">
-
-                          <select id="role" class="form-control " name="note"> 
-                                <option  value="" class="disabled selected hidden" name="text">Donner une note</option> 
-                                <option  class="form-control " value="1" >1</option>
-                                <option  class="form-control " value="2" >2</option>
-                                <option  class="form-control " value="3" >3</option>
-                                <option  class="form-control " value="4" >4</option>
-                                <option  class="form-control " value="5" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class="form-group">
-
-                        	<button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
+                   
+              
                {% endif %}    
             </aside>
 

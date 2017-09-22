@@ -29,14 +29,18 @@ $user->before (function() use ($app){
 
 /* Jaoued */
 
-$user->match('/profil', 'user.controller:profilUser')  
-       ->bind('profilUser');
+$user->match('/profil', 'user.controller:profilUser')      ->bind('profilUser');
 
-$user->match('/profil/{id}', 'user.controller:profilUser')  
+$user->match('/profil/{id}', 'user.controller:profilUser') 
              ->assert('id', '\d+')
             ->bind('profilUser');
 
 $user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
+
+$user->match('/LireMessage/{id}', 'message.controller:LireMessage') 
+        ->assert('id', '\d+')
+        ->bind('LireMessage');
+
 $user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
 
 

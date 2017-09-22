@@ -22,29 +22,29 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->enter($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_f4452bb0004a196552b72f296ec1c521af01d0ba634093352efd40c84daab3cb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f4452bb0004a196552b72f296ec1c521af01d0ba634093352efd40c84daab3cb->enter($__internal_f4452bb0004a196552b72f296ec1c521af01d0ba634093352efd40c84daab3cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->enter($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_c055fea83455258b114693a9c8d792b664744e743e18873433edc3a9d50ed7ac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c055fea83455258b114693a9c8d792b664744e743e18873433edc3a9d50ed7ac->enter($__internal_c055fea83455258b114693a9c8d792b664744e743e18873433edc3a9d50ed7ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->leave($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof);
+        $__internal_f4452bb0004a196552b72f296ec1c521af01d0ba634093352efd40c84daab3cb->leave($__internal_f4452bb0004a196552b72f296ec1c521af01d0ba634093352efd40c84daab3cb_prof);
 
         
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->leave($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof);
+        $__internal_c055fea83455258b114693a9c8d792b664744e743e18873433edc3a9d50ed7ac->leave($__internal_c055fea83455258b114693a9c8d792b664744e743e18873433edc3a9d50ed7ac_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->enter($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_b3863a8604fdff3d045ce60108674748abec7e142dc6b08ef13ae4c2250b42e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b3863a8604fdff3d045ce60108674748abec7e142dc6b08ef13ae4c2250b42e1->enter($__internal_b3863a8604fdff3d045ce60108674748abec7e142dc6b08ef13ae4c2250b42e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->enter($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2d79b8d443801ddf500a63e9fc7efd2c9f0b764e67ff36248856efec2525f7ee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2d79b8d443801ddf500a63e9fc7efd2c9f0b764e67ff36248856efec2525f7ee->enter($__internal_2d79b8d443801ddf500a63e9fc7efd2c9f0b764e67ff36248856efec2525f7ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "                   
@@ -113,25 +113,37 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                              <div class=\"info\">
 
                              <p>Note</p>
-                                 <strong>4.5</strong></div>
+                                 <strong>";
+        // line 60
+        echo twig_escape_filter($this->env, (isset($context["myNote"]) || array_key_exists("myNote", $context) ? $context["myNote"] : (function () { throw new Twig_Error_Runtime('Variable "myNote" does not exist.', 60, $this->getSourceContext()); })()), "html", null, true);
+        echo " </strong></div>
                          </li>
 
                          <li>
                             <div class=\"info\">
                             <p>Annonces </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 66
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["nbAnnoncesByUser"]) || array_key_exists("nbAnnoncesByUser", $context) ? $context["nbAnnoncesByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbAnnoncesByUser" does not exist.', 66, $this->getSourceContext()); })()), "id_post", array()), "html", null, true);
+        echo "        </strong></div>
                         </li>
                         
                         <li>
                             <div class=\"info\">
                             <p>Chroniques </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 72
+        echo twig_escape_filter($this->env, (isset($context["nbChroniquesByUser"]) || array_key_exists("nbChroniquesByUser", $context) ? $context["nbChroniquesByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbChroniquesByUser" does not exist.', 72, $this->getSourceContext()); })()), "html", null, true);
+        echo "   </strong></div>
                         </li>
                         
                          <li>
                             <div class=\"info\">
                             <p>News </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 78
+        echo twig_escape_filter($this->env, (isset($context["nbNewByUser"]) || array_key_exists("nbNewByUser", $context) ? $context["nbNewByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbNewByUser" does not exist.', 78, $this->getSourceContext()); })()), "html", null, true);
+        echo "</strong></div>
                         </li>
 
                        </ul>
@@ -200,65 +212,46 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                     <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >
 
                         <div class=\"row\">
+                            
+                        
+                                    
 
-                            <div class=\"col-md-12\"><h4></h4></div>
+                        <div class=\"col-md-12\"><h4></h4></div>
+                            ";
+        // line 139
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 139, $this->getSourceContext()); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            echo " 
+                                          ";
+            // line 140
+            echo " 
 
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
+                                <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
 
-                                <div class=\"thumbnail\">
+                                    <div class=\"thumbnail\">
 
-                                  <a href=\"#\"><img src=\"";
-        // line 141
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post1.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
+                                        <a href=\"#\"><img src=\"";
+            // line 146
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post1.png "), "html", null, true);
+            echo "\" alt=\"related post\"></a>
 
-                                  <div class=\"caption\">
+                                        <div class=\"caption\">
 
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
+                                            <a href=\"#\">teste</a>
 
-                                  </div>
+                                        </div>
 
+                                    </div>
                                 </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"";
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 157
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post2.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"";
-        // line 173
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post3.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
+        echo "                                        
+                                         
 
                         </div>
 
@@ -283,7 +276,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 \t\t\t\t\t<a href=\"#\">
 
 \t\t\t\t\t\t<img class=\"media-object\" src=\"";
-        // line 207
+        // line 182
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -331,7 +324,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                             <a href=\"#\">
 
                               <img class=\"media-object\" src=\"";
-        // line 252
+        // line 227
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -366,7 +359,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                             <a href=\"#\">
 
                               <img class=\"media-object\" src=\"";
-        // line 284
+        // line 259
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -397,7 +390,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <a href=\"#\">
 
                                   <img class=\"media-object\" src=\"";
-        // line 312
+        // line 287
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -430,7 +423,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                                 <a href=\"#\">
 
                                   <img class=\"media-object\" src=\"";
-        // line 342
+        // line 317
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
         echo "\" alt=\"placeholder image\">
 
@@ -520,91 +513,85 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
             \t
 
                 <div class=\"row\">
-
-                <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                    
+                 
                  ";
-        // line 435
+        // line 407
         if (array_key_exists("modeadmin", $context)) {
-            // line 436
-            echo "                  <div class=\"panel-heading\">Consulter mes messages</div>
+            // line 408
+            echo "                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Consulter mes messages</div>
+                                 <div class=\"panel-body\">
+                                    ";
+            // line 412
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 412, $this->getSourceContext()); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                echo " 
+                                           <p><a href=\"";
+                // line 413
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("LireMessage", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "idmessage", array()))), "html", null, true);
+                echo "\"> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "id_member_send", array()), "html", null, true);
+                echo " - ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "date", array()), "html", null, true);
+                echo "/ ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "title", array()), "html", null, true);
+                echo "</a> </p>     
+                                     ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 414
+            echo "  
 
-                    <div class=\"panel-body\">
-
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
-               ";
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                ";
         } else {
-            // line 470
+            // line 420
             echo " 
+                    
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Donner une note</div>
+                                 <div class=\"panel-body\">
+                                         ";
+            // line 427
+            echo "                                                 <form action=\"#\" method=\"post\">
+                                           
+                                            <div class=\"form-group\">
+                                                    <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                                          <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                                          <option  class=\"form-control \" value=\"1\" >1</option>
+                                                          <option  class=\"form-control \" value=\"2\" >2</option>
+                                                          <option  class=\"form-control \" value=\"3\" >3</option>
+                                                          <option  class=\"form-control \" value=\"4\" >4</option>
+                                                          <option  class=\"form-control \" value=\"5\" >5</option>
+
+                                                      </select>
+                                             </div>
+                                             <div class=\"form-group\">
+                                                 <button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
                    
-                   <div class=\"panel-heading\">Donner une note</div>
 
-                    <div class=\"panel-body\">
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
+                   
+              
                ";
         }
-        // line 506
+        // line 454
         echo "    
             </aside>
 
@@ -619,23 +606,23 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
     
 ";
         
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->leave($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof);
+        $__internal_2d79b8d443801ddf500a63e9fc7efd2c9f0b764e67ff36248856efec2525f7ee->leave($__internal_2d79b8d443801ddf500a63e9fc7efd2c9f0b764e67ff36248856efec2525f7ee_prof);
 
         
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->leave($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof);
+        $__internal_b3863a8604fdff3d045ce60108674748abec7e142dc6b08ef13ae4c2250b42e1->leave($__internal_b3863a8604fdff3d045ce60108674748abec7e142dc6b08ef13ae4c2250b42e1_prof);
 
     }
 
-    // line 520
+    // line 468
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->enter($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8e34a5f5e86215d78c833fd38abb7aa947848c368cd9d7282c54ab9f92ac1762 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8e34a5f5e86215d78c833fd38abb7aa947848c368cd9d7282c54ab9f92ac1762->enter($__internal_8e34a5f5e86215d78c833fd38abb7aa947848c368cd9d7282c54ab9f92ac1762_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->enter($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8cf3e681be2ae42315566e58dbca004de285dd5595d955af5a0fd05e257d2919 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8cf3e681be2ae42315566e58dbca004de285dd5595d955af5a0fd05e257d2919->enter($__internal_8cf3e681be2ae42315566e58dbca004de285dd5595d955af5a0fd05e257d2919_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 521
+        // line 469
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -704,10 +691,10 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 \t</script>
 ";
         
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->leave($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof);
+        $__internal_8cf3e681be2ae42315566e58dbca004de285dd5595d955af5a0fd05e257d2919->leave($__internal_8cf3e681be2ae42315566e58dbca004de285dd5595d955af5a0fd05e257d2919_prof);
 
         
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->leave($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof);
+        $__internal_8e34a5f5e86215d78c833fd38abb7aa947848c368cd9d7282c54ab9f92ac1762->leave($__internal_8e34a5f5e86215d78c833fd38abb7aa947848c368cd9d7282c54ab9f92ac1762_prof);
 
     }
 
@@ -723,7 +710,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     public function getDebugInfo()
     {
-        return array (  639 => 521,  630 => 520,  608 => 506,  569 => 470,  532 => 436,  530 => 435,  434 => 342,  401 => 312,  370 => 284,  335 => 252,  287 => 207,  250 => 173,  231 => 157,  212 => 141,  184 => 115,  178 => 112,  169 => 105,  157 => 96,  148 => 89,  146 => 88,  103 => 48,  87 => 35,  78 => 29,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  626 => 469,  617 => 468,  595 => 454,  565 => 427,  557 => 420,  548 => 414,  534 => 413,  528 => 412,  522 => 408,  520 => 407,  427 => 317,  394 => 287,  363 => 259,  328 => 227,  280 => 182,  253 => 157,  236 => 146,  228 => 140,  222 => 139,  196 => 115,  190 => 112,  181 => 105,  169 => 96,  160 => 89,  158 => 88,  145 => 78,  136 => 72,  127 => 66,  118 => 60,  103 => 48,  87 => 35,  78 => 29,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -787,25 +774,25 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                              <div class=\"info\">
 
                              <p>Note</p>
-                                 <strong>4.5</strong></div>
+                                 <strong>{{ myNote }} </strong></div>
                          </li>
 
                          <li>
                             <div class=\"info\">
                             <p>Annonces </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbAnnoncesByUser.id_post }}        </strong></div>
                         </li>
                         
                         <li>
                             <div class=\"info\">
                             <p>Chroniques </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbChroniquesByUser }}   </strong></div>
                         </li>
                         
                          <li>
                             <div class=\"info\">
                             <p>News </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbNewByUser }}</strong></div>
                         </li>
 
                        </ul>
@@ -861,56 +848,31 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                     <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >
 
                         <div class=\"row\">
+                            
+                        
+                                    
 
-                            <div class=\"col-md-12\"><h4></h4></div>
+                        <div class=\"col-md-12\"><h4></h4></div>
+                            {% for message in messages %} 
+                                          {# <p><a href=\"{{ path('LireMessage', {id: message.idmessage}) }}\"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     #} 
 
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
+                                <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
 
-                                <div class=\"thumbnail\">
+                                    <div class=\"thumbnail\">
 
-                                  <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post1.png ') }}\" alt=\"related post\"></a>
+                                        <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post1.png ') }}\" alt=\"related post\"></a>
 
-                                  <div class=\"caption\">
+                                        <div class=\"caption\">
 
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
+                                            <a href=\"#\">teste</a>
 
-                                  </div>
+                                        </div>
 
+                                    </div>
                                 </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post2.png ') }}\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post3.png ') }}\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
+                            {% endfor %}
+                                        
+                                         
 
                         </div>
 
@@ -1157,82 +1119,55 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
             \t
 
                 <div class=\"row\">
-
-                <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                    
+                 
                  {% if modeadmin is defined %}
-                  <div class=\"panel-heading\">Consulter mes messages</div>
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Consulter mes messages</div>
+                                 <div class=\"panel-body\">
+                                    {% for message in messages %} 
+                                           <p><a href=\"{{ path('LireMessage', {id: message.idmessage}) }}\"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                     {% endfor %}  
 
-                    <div class=\"panel-body\">
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                {% else %} 
+                    
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Donner une note</div>
+                                 <div class=\"panel-body\">
+                                         {#<form action=\"{{ path('EnvoyerNote', {id: {{user.id_member}} }}\" method=\"post\"> #}
+                                                 <form action=\"#\" method=\"post\">
+                                           
+                                            <div class=\"form-group\">
+                                                    <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                                          <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                                          <option  class=\"form-control \" value=\"1\" >1</option>
+                                                          <option  class=\"form-control \" value=\"2\" >2</option>
+                                                          <option  class=\"form-control \" value=\"3\" >3</option>
+                                                          <option  class=\"form-control \" value=\"4\" >4</option>
+                                                          <option  class=\"form-control \" value=\"5\" >5</option>
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
-               {% else %} 
+                                                      </select>
+                                             </div>
+                                             <div class=\"form-group\">
+                                                 <button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
                    
-                   <div class=\"panel-heading\">Donner une note</div>
 
-                    <div class=\"panel-body\">
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
+                   
+              
                {% endif %}    
             </aside>
 

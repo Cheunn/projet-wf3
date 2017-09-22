@@ -106,7 +106,7 @@ class AnnonceController {
         return $this->redirectRoute('user_annonce');
     }
     
-    public function listUserAnnonce(){
+    public function listAnnoncesByUser($id){
         $user = $this->app['user.manager']->getUser();
         
         $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
@@ -117,5 +117,18 @@ class AnnonceController {
                 ]
         );
     }
+    
+     public function nbAnnoncesByUser($id){
+        $user = $this->app['user.manager']->getUser();
+        
+        $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
+        
+        return $this->render('user/annonce/list.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
     
 }

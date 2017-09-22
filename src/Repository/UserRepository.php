@@ -83,7 +83,7 @@ class UserRepository extends RepositoryAbstract
                 'url_img' => $user->geturl_img(),
                 'is_active' => 'yes',
                 'description' => $user->getdescription(),
-                'date_create' => 'NOW()',
+                //'date_create' => '',
                 'adress' => $user->getadress(),  
                 'postal_code' => $user->getPostal_code(), 
                 'country' => 'FRANCE', 
@@ -141,7 +141,7 @@ class UserRepository extends RepositoryAbstract
             ->setDate_create($data['date_create'])
             ->setAdress($data['adress'])
             ->setTown($data['town'])
-                ->setTown($data['postal_code'])
+                ->setPostal_code($data['postal_code'])
             ->setUrl_web_orga($data['url_web_orga'])
             ->setUrl_fb($data['url_fb'])
     
@@ -149,6 +149,28 @@ class UserRepository extends RepositoryAbstract
         //dump($user);die;
         return $user;
     }
+
+    private function getMyMessages($idSession)
+            
+    {
+         
+        $dbUser = $this->db->fetchAssoc(
+           
+            'SELECT msg.* , mb.name as sender FROM  message msg, member mb WHERE id_member_send = 43 AND id_member_receive = :idSession',
+            [
+                ':idSession' => $idSession
+            ]
+        );
+        
+        if (!empty($dbUser)) {
+            return $this->buildEntity($dbUser);
+        }
+    }
+    
+
+
+
+    
 }
 
 

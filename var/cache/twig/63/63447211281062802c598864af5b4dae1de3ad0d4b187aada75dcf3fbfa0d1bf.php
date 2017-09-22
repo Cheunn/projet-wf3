@@ -15,11 +15,11 @@ class __TwigTemplate_039cce1b05bdf4cc3f56b8d975647e182427c85eb62d0361e35562c1838
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_80dbbe6cddc9b315e84a788087e9026a199f59df3347dbe46bde99deb7da56d5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_80dbbe6cddc9b315e84a788087e9026a199f59df3347dbe46bde99deb7da56d5->enter($__internal_80dbbe6cddc9b315e84a788087e9026a199f59df3347dbe46bde99deb7da56d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "aside.html.twig"));
+        $__internal_7e72b0a6ae5898ed2fe324c2ad699308359efe6e9f3902bcf74f19f1fe981a76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7e72b0a6ae5898ed2fe324c2ad699308359efe6e9f3902bcf74f19f1fe981a76->enter($__internal_7e72b0a6ae5898ed2fe324c2ad699308359efe6e9f3902bcf74f19f1fe981a76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "aside.html.twig"));
 
-        $__internal_4fd582bb63f65d6d85e4fc5c820f3df3442153a1931f1f40e261ebbc1230b15e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4fd582bb63f65d6d85e4fc5c820f3df3442153a1931f1f40e261ebbc1230b15e->enter($__internal_4fd582bb63f65d6d85e4fc5c820f3df3442153a1931f1f40e261ebbc1230b15e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "aside.html.twig"));
+        $__internal_61dd2926cfd962c3633f40855fbcd9c561909691d5cb81afedf874ffb1a26720 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_61dd2926cfd962c3633f40855fbcd9c561909691d5cb81afedf874ffb1a26720->enter($__internal_61dd2926cfd962c3633f40855fbcd9c561909691d5cb81afedf874ffb1a26720_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "aside.html.twig"));
 
         // line 2
         echo "        <div class=\"list-group\"> 
@@ -40,13 +40,13 @@ class __TwigTemplate_039cce1b05bdf4cc3f56b8d975647e182427c85eb62d0361e35562c1838
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 7
-        echo "                   
+        echo "        
         </div>";
         
-        $__internal_80dbbe6cddc9b315e84a788087e9026a199f59df3347dbe46bde99deb7da56d5->leave($__internal_80dbbe6cddc9b315e84a788087e9026a199f59df3347dbe46bde99deb7da56d5_prof);
+        $__internal_7e72b0a6ae5898ed2fe324c2ad699308359efe6e9f3902bcf74f19f1fe981a76->leave($__internal_7e72b0a6ae5898ed2fe324c2ad699308359efe6e9f3902bcf74f19f1fe981a76_prof);
 
         
-        $__internal_4fd582bb63f65d6d85e4fc5c820f3df3442153a1931f1f40e261ebbc1230b15e->leave($__internal_4fd582bb63f65d6d85e4fc5c820f3df3442153a1931f1f40e261ebbc1230b15e_prof);
+        $__internal_61dd2926cfd962c3633f40855fbcd9c561909691d5cb81afedf874ffb1a26720->leave($__internal_61dd2926cfd962c3633f40855fbcd9c561909691d5cb81afedf874ffb1a26720_prof);
 
     }
 
@@ -73,7 +73,7 @@ class __TwigTemplate_039cce1b05bdf4cc3f56b8d975647e182427c85eb62d0361e35562c1838
                     {% for category in categories %} 
                         <a href=\"#\" class=\"list-group-item\">{{ category.name }}</a>
                     {% endfor %}
-                   
+        
         </div>", "aside.html.twig", "C:\\xampp\\htdocs\\projet-wf3\\templates\\aside.html.twig");
     }
 }

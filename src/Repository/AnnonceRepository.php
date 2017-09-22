@@ -210,6 +210,55 @@ SQL;
         return $annonce;
     }
     
+    
+     public function listeAnnoncesByUser( $idreceiver)       
+    {
+        // dump($idreceiver);
+        
+        $query = " SELECT * FROM annonce WHERE member_id_member =" . $idreceiver ;  
+       
+         $dbMessages = $this->db->fetchAll($query);
+        $messages =[];
+        
+        foreach ($dbMessages as $dbmesage) {
+            $messages[] = $this->buildEntity($dbmesage); 
+        }
+        return $messages;
 
+        if (!empty($dbMessage)) {
+            return $this->buildEntity($dbMessage);
+        } else return FALSE ;
+         
+      
+    }
+    
+    public function nbAnnoncesByUser($id)
+    {
+        $annonce = new Annonce();
+        $dbAnnonce = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_annonces FROM annonce WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+       
+        return $this->buildEntity2($dbAnnonce);
+      
+    }
+    
+
+    private function buildEntity2(array $data)
+    {
+        $annonce = new Annonce();
+      
+        $annonce->setId_post($data['nb_annonces']);
+        //dump($annonce);die; 
+        return $annonce;
+    }
+
+  
+    
     
 }

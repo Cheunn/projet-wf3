@@ -195,4 +195,55 @@ SQL;
         return $chroniques;
    }
    
+   public function listChroniqueAllUsers(){
+       $query = <<<SQL
+SELECT
+    ch.*, 
+FROM chronique ch
+SQL;
+       $dbChroniques = $this->db->fetchAll($query);
+       
+       $chroniques = [];
+       
+       foreach($dbChroniques as $dbChronique){
+           $chroniques[] = $this->buildEntity($dbChronique);
+       }
+       
+       return $chroniques;
+   }
+   
+   public function ListChroniqueByType($type){
+               $query = <<<SQL
+SELECT
+    ch.*, 
+FROM chronique ch
+WHERE post_type = :type
+SQL;
+        $dbChroniques = $this->db->fetchAll($query,
+                [
+                    ':type' => $type
+                ]
+        );
+        
+        $chroniques = [];
+        
+        foreach($dbChroniques as $dbChronique){
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        
+        return $chroniques;
+   }
+   
+   public function ListChroniqueByUserType($userType){
+       $dbChroniques = $this->fetchAll("SELECT * FROM chronique WHERE type = $userType");
+       
+       $chroniques = [];
+       
+       foreach($dbChroniques as $dbChronique){
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        
+        return $chroniques;
+       
+   }
 }

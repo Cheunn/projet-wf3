@@ -21,4 +21,53 @@ class ChroniqueController extends ControllerAbstract{
                 ]
         );
     }
+    public function ListChroniqueAll(){
+        $chroniques = $this->app['chronique.repository']->listChroniqueAllUsers();
+        
+        return $this->render('',
+                [
+                    'chroniques' => $chroniques
+                ]
+        );
+    }
+    
+    public function ListNews(){
+        $news = $this->app['chronique.repository']->ListChroniqueByType('news');
+        
+        return $this->render('',
+                [
+                    'news' => $news
+                ]
+        );
+    }
+    
+    public function ListChroniques(){
+        $chroniques = $this->app['chronique.repository']->ListChroniqueByType('chronique');
+        
+        return $this->render('',
+                [
+                    'chroniques' =>$chroniques
+                ]
+        );
+    }
+    
+    public function ListChroniquesUser(){
+        $chroniquesUser = $this->app['chronique.repository']->ListChroniqueByUserType('user_chronique');
+        
+        return $this->render('',
+                [
+                    'chroniquesUser' => $chroniquesUser
+                ]
+        );
+    }
+    
+    public function ListChroniquesAsso(){
+        $chroniquesAsso = $this->app['chronique.repository']->ListChroniqueByUserType('asso_chronique');
+        
+        return $this->render('',
+                [
+                    'chroniquesUser' => $chroniquesAsso
+                ]
+        );
+    }
 }

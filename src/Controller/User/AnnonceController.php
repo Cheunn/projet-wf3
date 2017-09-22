@@ -18,7 +18,7 @@ use Entity\Category;
  *
  * @author Etudiant
  */
-class AnnonceController {
+class AnnonceController extends ControllerAbstract{
     
     public function editAction($id = null)
     {
@@ -44,17 +44,18 @@ class AnnonceController {
         if (!empty($_POST)) {
             $this->sanitizePost();
             
+            $user = $this->app['user.manager']->getUser();
+            
             $annonce
                 ->setPost_title($_POST['post_title'])
-                //->setId_post($_POST['id_post'])
                 ->setParagraphe_1($_POST['paragraphe_1'])
                 ->setParagraphe_2($_POST['paragraphe_2'])
                 ->setUrl_img_1($_POST['url_img_1'])
                 ->setUrl_img_2($_POST['url_img_2'])
                 ->setUrl_img_3($_POST['url_img_3'])
-                ->setMember_id_member(1)
-                ->setType_id_type(1)
-                ->setCategory_id_category($_POST['category_id_category'])
+                ->setMember_id_member($user->getId_member())
+                ->setType_id_type($_POST['type'])
+                ->setCategory_id_category($_POST['category'])
                 ;
                
 

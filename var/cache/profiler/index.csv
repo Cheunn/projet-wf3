@@ -967,3 +967,9 @@ bd43f9,::1,GET,http://localhost/projet_v3/web/index_dev.php/single_annonce/asset
 18a381,::1,GET,http://localhost/projet_v3/web/index_dev.php/user/profil/35,1505999038,,200
 f50c8c,::1,GET,http://localhost/projet_v3/web/index_dev.php/user/profil/assets/icon/favicon.ico,1505999038,,404
 f8e090,::1,GET,http://localhost/projet_v3/web/index_dev.php/user/profil/25,1505999097,,200
+cba4d1,::1,GET,http://localhost/projet_v3/web/index_dev.php/,1506003034,,200
+290d33,::1,GET,http://localhost/projet_v3/web/index_dev.php/admin/annonces,1506009693,,403
+109a17,::1,GET,http://localhost/projet_v3/web/index_dev.php/admin/annonces,1506009786,,403
+1d7b7e,::1,GET,http://localhost/projet_v3/web/index_dev.php/admin/annonces,1506009790,,403
+de3d9c,::1,GET,http://localhost/projet_v3/web/index_dev.php/,1506009822,,200
+41097d,::1,GET,http://localhost/projet_v3/web/index_dev.php/admin/annonces,1506009827,,403

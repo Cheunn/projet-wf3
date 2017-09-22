@@ -147,9 +147,26 @@ SQL;
         }
         return $annonces;
     }
+   
+//public function findLastThree()
+//    {
+//        $query = <<<SQL
+//SELECT 
+//    a.*
+//FROM annonce a
+//ORDER BY id_post DESC
+//SQL;
+//        $dbAnnonces = $this->db->fetchAll($query);    
+//        $annonces = [];
+//
+//        
+//        /*for ($i=0 ; $i < $limit; $i++) {
+//            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+//        }*/
+//        return $annonces;
+//    }
     
-
-public function findLastThree()
+    public function findLastSix()
     {
         $query = <<<SQL
 SELECT 
@@ -158,16 +175,14 @@ FROM annonce a
 ORDER BY id_post DESC
 LIMIT 6
 SQL;
-        $dbAnnonces = $this->db->fetchAll($query);    
+        $dbAnnonces = $this->db->fetchAll($query);
         $annonces = [];
-
-        
-        /*for ($i=0 ; $i < $limit; $i++) {
-            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-        }*/
+    
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
         return $annonces;
     }
-    
     
 
     private function buildEntity(array $data)

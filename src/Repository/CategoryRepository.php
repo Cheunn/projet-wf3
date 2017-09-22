@@ -25,13 +25,23 @@ class CategoryRepository extends RepositoryAbstract
     
     public function findAllChronique()
     {
-        $dbCategoriesByChronique = $this->db->fetchAll('SELECT * FROM category WHERE type_post = "chronique"');
+        $dbCategoriesByChronique = $this->db->fetchAll('SELECT DISTINCT name FROM category WHERE type_post = "chronique"'); // ICI
         $categoriesByChronique = [];
-        
+      
         foreach ($dbCategoriesByChronique as $dbCategoryByChronique) {
             $categoriesByChronique[] = $this->buildEntity($dbCategoryByChronique);
         }
         
+        return $categoriesByChronique;
+    }
+    
+    public function findAllAside()
+    {
+        $dbCategoriesByChronique = $this->db->fetchAll('SELECT DISTINCT name FROM category WHERE type_post = "chronique"'); // ICI
+        $categoriesByChronique = [];
+        foreach ($dbCategoriesByChronique as $dbCategoryByChronique) {
+            $categoriesByChronique[] = $this->buildEntity($dbCategoryByChronique);
+        }
         return $categoriesByChronique;
     }
     
@@ -114,11 +124,13 @@ class CategoryRepository extends RepositoryAbstract
         $category = new Category();
         
         $category
-            ->setId_category($data['id_category'])
-            ->setName($data['name'])
-            ->setType_post($data['type_post'])
-        ;
+            ->setName($data['name']);
+            //->setId_category($data['id_category'])
+            //->setName($data['name'])
+            //->setType_post($data['type_post'])
+        //;
         
         return $category;
     }
 }
+   

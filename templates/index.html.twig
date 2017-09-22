@@ -6,7 +6,7 @@
   <div class="feature-posts-grid" id="feature-posts-grid">
     <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/association.jpg') }}" alt="Canan Digital Photography"> </a>
       <div class="feature-text">
-        <h3><a href="{{ path('annonces')}}" title="Canan Digital Photography">Associations</a></h3>
+        <h3><a href="" title="Canan Digital Photography">Associations</a></h3>
        {# <p>Photography</p>#}
       </div>
     </article>
@@ -16,15 +16,15 @@
        {# <p>Travel</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/petites-annonces.jpg') }}" alt="Google Play Music"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="{{ path('annonces')}}" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/petites-annonces.jpg') }}" alt="Google Play Music"> </a>
       <div class="feature-text">
         <h3><a href="{{ path('annonces')}}" title="Google play Music">Petites annonces</a></h3>
       {#  <p>Music</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/chronique.png') }}" alt="Best Mobile Apps"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/chronique.png') }}" alt="Best Mobile Apps"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Best Mobile Apps">Chroniques</a></h3>
+        <h3><a href="{{ path('chroniques')}}" title="Best Mobile Apps">Chroniques</a></h3>
        {# <p>apps</p>#}
       </div>
     </article>
@@ -195,7 +195,7 @@
                       <strong>Mar 21, 2015</strong></div>
                   </li>
                   <li>
-                  <div class="icon-box"><img src="{{ asset ('assets/images/post/author.png') }}" class="img-responsive" alt="image post" /></div>
+                  <div class="icon-box"><img src="{{ asset ('assets/images/post/author.jpg') }}" class="img-responsive" alt="image post" /></div>
                   <div class="info">
                   <p>Posted by:</p>
                   <a href="author.html">Waqas Hussain</a> </div>
@@ -239,13 +239,13 @@
               <div class="caption">
                 <h3 class="md-heading"><a href="#">The Heading Text Size Should Match</a></h3>
                 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-                <div class="post-category"> <a href="#"><span>&nbsp;</span> Featured image</a> </div>
+            
                 <a class="btn btn-default" href="#" role="button">Read More</a> </div>
             </article>
           </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <article class="post">
-              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/post-2.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
+              <div class="post-type post-img"> <a href="#"><img src="{{ asset ('assets/images/post/author.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
               <div class="author-info author-info-2">
                 <ul class="list-inline">
                   <li>
@@ -262,7 +262,7 @@
               <div class="caption">
                 <h3 class="md-heading"><a href="#">The Heading Text Size Should Match</a></h3>
                 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-                <div class="post-category"> <a href="#"><span>&nbsp;</span> Featured image</a> </div>
+              
                 <a class="btn btn-default" href="#" role="button">Read More</a> </div>
             </article>
           </div>
@@ -288,10 +288,13 @@
               </div>
               
               <div class="panel-body nopadding">
-                                                   
-                   {% include 'aside.html.twig'%}  
-                   {# cf. indexController #}
-               
+                <div class="list-group"> 
+                  
+                    {% for category in categories %} 
+                        <a href="{{ path('chronique_rubrique', {rubrique: category.name}) }}" class="list-group-item">{{ category.name }}</a>
+                    {% endfor %}
+        
+                </div>
               </div>
             </div>
           </div>
@@ -303,8 +306,7 @@
    
     <div class="row">
       <div class="col-md-8 col-lg-8">
-        
-       <article class="post vt-post">
+        <article class="post vt-post">
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
               <div class="post-type post-img"><a href="#"><img src="{{ asset ('assets/images/post/m1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>

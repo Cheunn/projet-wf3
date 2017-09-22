@@ -1,10 +1,8 @@
 <?php
 
+use Controller\User\AnnonceController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
@@ -32,14 +30,13 @@ $user->before (function() use ($app){
 $user->match('/profil', 'user.controller:profilUser')  
        ->bind('profilUser');
 
-$user->match('/messProfilToUs', 'user.controller:messProfilToUs')  
-       ->bind('messProfilToUs');
-
 $user->match('/profil/{id}', 'user.controller:profilUser')  
              ->assert('id', '\d+')
             ->bind('profilUser');
 
-$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+$user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
+$user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
+
 
 /* Cheunn */
 
@@ -71,11 +68,18 @@ $app
 /* Cheunn */
 
 /* Julien */
+$am = new AnnonceController();
 
-$app/* SINGLE ANNONCE REDIRECTION */
+$setup = function (Request $request) use ($am){
+    $header = $am->lastSixHeader();
+};
+
+
+$app
     ->match('/annonces', 'annonce.controller:listActionMain')  
     ->bind('annonces')
 ;
+
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
@@ -90,13 +94,29 @@ $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
-
 ;
-
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
     ->bind('annonce_edit')
 ;
+/* CHRONIQUE COTE FRONT */
+
+$app
+    ->match('/chroniques', 'chronique.controller:listActionMain')  
+    ->bind('chroniques')
+;
+$app
+    ->get('/single_chronique/{id}', 'annonce.controller:getAnnonceId')  
+    ->assert('id', '\d+')
+    ->bind('single_chronique')
+;
+
+$app
+    ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
+    ->bind('chronique_rubrique')
+;
+
+
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
     ->match('/', 'category.controller:listActionChronique')

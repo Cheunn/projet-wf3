@@ -27,7 +27,8 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 });
 
 
-$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
+$app['user.manager'] = function() use ($app){   
+ return new Service\UserManager ($app['session']);  };
 
 /*
  * Ajout de Doctrine DBAL ($app['db'])
@@ -55,10 +56,14 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 // CONTROLLERS
 
 /* FRONT */
-$app['index.controller'] = function() use ($app)            {   return new Controller\IndexController ($app);  };
+$app['index.controller'] = function() use ($app){   
+return new Controller\IndexController ($app);  };
 
-$app['user.controller'] = function() use ($app)            {   return new Controller\UserController ($app);  };
-$app['cp.controller'] = function() use ($app)            {   return new Controller\CpController ($app);  };
+$app['user.controller'] = function() use ($app){   
+return new Controller\UserController ($app);  };
+
+$app['cp.controller'] = function() use ($app){  
+return new Controller\CpController ($app);  };
 
 $app['annonce.controller'] = function () use ($app) {
     return new Controller\AnnonceController($app);
@@ -90,11 +95,17 @@ $app['admin.tag.controller'] = function () use ($app) {
     return new Controller\Admin\TagController($app);
 };
 
+$app['admin.type.controller'] = function () use ($app) {
+    return new Controller\Admin\TypeController($app);
+};
+
 // REPOSITORIES
 
-$app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+$app['user.repository'] = function() use ($app){   
+return new Repository\UserRepository( $app['db']  ); };
 
-$app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
+$app['cp.repository'] = function() use ($app){   
+return new Repository\CpRepository( $app['db']  ); };
 
 
 $app['annonce.repository'] = function () use ($app) {
@@ -114,6 +125,10 @@ $app['handicap.repository'] = function () use ($app) {
   
 $app['tag.repository'] = function () use ($app) {
     return new Repository\TagRepository($app['db']);
+};
+
+$app['type.repository'] = function () use ($app) {
+    return new Repository\TypeRepository($app['db']);
 };
 
 // USER

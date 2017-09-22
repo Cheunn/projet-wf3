@@ -125,7 +125,7 @@ $app
 
 //Handicap
 
-$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+$admin = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
 
 
@@ -239,6 +239,22 @@ $admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
 $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
+
+
+//******************ROUTE POUR ADMIN Type*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/type
+$admin->get('/type', 'admin.type.controller:listAction')
+            ->bind('admin_type');
+
+$admin->match('/type/edition/{id_type}', 'admin.type.controller:editAction')
+            ->value('id_type', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_type_edit');
+
+$admin->get('/type/supression/{id_type}', 'admin.type.controller:deleteAction')
+            ->assert('id_type', '\d+')
+            ->bind('admin_type_delete');
+
 
 // COMMON FILES
 

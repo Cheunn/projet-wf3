@@ -15,11 +15,11 @@ class __TwigTemplate_e8323780adb7e6d4f68572c2c3cb47b4a7f838b6fa36e66c4fe168cffe8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0f125b4a3b69f21aa9509ddaabd7f9915f9321363f50789c3242a674930446c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0f125b4a3b69f21aa9509ddaabd7f9915f9321363f50789c3242a674930446c0->enter($__internal_0f125b4a3b69f21aa9509ddaabd7f9915f9321363f50789c3242a674930446c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_9501ce253a67984c353faf09c00f19453393aa1a44b31a392f6f8a36b8823418 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9501ce253a67984c353faf09c00f19453393aa1a44b31a392f6f8a36b8823418->enter($__internal_9501ce253a67984c353faf09c00f19453393aa1a44b31a392f6f8a36b8823418_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_21cbf0fd2ffa6fb49c43a430659af4257695801c57b5bae80c42bd9123de0732 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_21cbf0fd2ffa6fb49c43a430659af4257695801c57b5bae80c42bd9123de0732->enter($__internal_21cbf0fd2ffa6fb49c43a430659af4257695801c57b5bae80c42bd9123de0732_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_83714a4b3924276c3f88efa02fa57b629c445d0b30871b6cb29681610a9eef85 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_83714a4b3924276c3f88efa02fa57b629c445d0b30871b6cb29681610a9eef85->enter($__internal_83714a4b3924276c3f88efa02fa57b629c445d0b30871b6cb29681610a9eef85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
@@ -38,17 +38,16 @@ class __TwigTemplate_e8323780adb7e6d4f68572c2c3cb47b4a7f838b6fa36e66c4fe168cffe8
               <span class=\"icon-bar\"></span>
               <span class=\"icon-bar\"></span>
             </button>
-      <a class=\"navbar-brand logo\" href=\"";
+     <a class=\"navbar-brand logo\" href=\"";
         // line 17
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
         echo "\" title=\"logo\">
          <img src=\"";
         // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/logo.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/ivana.gif"), "html", null, true);
         echo "\" alt=\"logo\" />
-      ";
-        // line 20
-        echo "      </a> </div>
+      
+      </a> </div>
     <div class=\"navbar-collapse collapse pull-left\">
       <ul class=\"nav navbar-nav menu\" id=\"menu\">
         <!-- <li class=\"dropdown\">  class=\"dropdown-toggle\"-->
@@ -481,10 +480,10 @@ class __TwigTemplate_e8323780adb7e6d4f68572c2c3cb47b4a7f838b6fa36e66c4fe168cffe8
         // line 366
         echo "  ";
         
-        $__internal_0f125b4a3b69f21aa9509ddaabd7f9915f9321363f50789c3242a674930446c0->leave($__internal_0f125b4a3b69f21aa9509ddaabd7f9915f9321363f50789c3242a674930446c0_prof);
+        $__internal_9501ce253a67984c353faf09c00f19453393aa1a44b31a392f6f8a36b8823418->leave($__internal_9501ce253a67984c353faf09c00f19453393aa1a44b31a392f6f8a36b8823418_prof);
 
         
-        $__internal_21cbf0fd2ffa6fb49c43a430659af4257695801c57b5bae80c42bd9123de0732->leave($__internal_21cbf0fd2ffa6fb49c43a430659af4257695801c57b5bae80c42bd9123de0732_prof);
+        $__internal_83714a4b3924276c3f88efa02fa57b629c445d0b30871b6cb29681610a9eef85->leave($__internal_83714a4b3924276c3f88efa02fa57b629c445d0b30871b6cb29681610a9eef85_prof);
 
     }
 
@@ -500,7 +499,7 @@ class __TwigTemplate_e8323780adb7e6d4f68572c2c3cb47b4a7f838b6fa36e66c4fe168cffe8
 
     public function getDebugInfo()
     {
-        return array (  482 => 366,  474 => 345,  468 => 343,  466 => 342,  462 => 340,  443 => 326,  440 => 323,  434 => 321,  428 => 318,  419 => 312,  414 => 310,  410 => 308,  406 => 304,  372 => 272,  367 => 271,  363 => 270,  360 => 269,  354 => 267,  350 => 266,  346 => 265,  283 => 204,  246 => 168,  235 => 160,  224 => 152,  213 => 144,  200 => 134,  189 => 126,  178 => 118,  167 => 110,  154 => 100,  143 => 92,  132 => 84,  121 => 76,  108 => 66,  97 => 58,  86 => 50,  75 => 42,  51 => 20,  47 => 18,  43 => 17,  25 => 1,);
+        return array (  481 => 366,  473 => 345,  467 => 343,  465 => 342,  461 => 340,  442 => 326,  439 => 323,  433 => 321,  427 => 318,  418 => 312,  413 => 310,  409 => 308,  405 => 304,  371 => 272,  366 => 271,  362 => 270,  359 => 269,  353 => 267,  349 => 266,  345 => 265,  282 => 204,  245 => 168,  234 => 160,  223 => 152,  212 => 144,  199 => 134,  188 => 126,  177 => 118,  166 => 110,  153 => 100,  142 => 92,  131 => 84,  120 => 76,  107 => 66,  96 => 58,  85 => 50,  74 => 42,  47 => 18,  43 => 17,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -529,9 +528,9 @@ class __TwigTemplate_e8323780adb7e6d4f68572c2c3cb47b4a7f838b6fa36e66c4fe168cffe8
               <span class=\"icon-bar\"></span>
               <span class=\"icon-bar\"></span>
             </button>
-      <a class=\"navbar-brand logo\" href=\"{{ path('homepage') }}\" title=\"logo\">
-         <img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" />
-      {#yGrekinf#}
+     <a class=\"navbar-brand logo\" href=\"{{ path('homepage') }}\" title=\"logo\">
+         <img src=\"{{ asset ('assets/images/ivana.gif') }}\" alt=\"logo\" />
+      
       </a> </div>
     <div class=\"navbar-collapse collapse pull-left\">
       <ul class=\"nav navbar-nav menu\" id=\"menu\">

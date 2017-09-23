@@ -39,7 +39,8 @@ $user->match('/profil/{id}', 'user.controller:profilUser')
              ->assert('id', '\d+')
             ->bind('profilUser');
 
-$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+$user->match('/updateProfil', 'user.controller:registerAction2')     
+            ->bind('updateProfil');
 
 /* Cheunn */
 
@@ -100,7 +101,7 @@ $app
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
     ->match('/', 'category.controller:listActionChronique')
-    ->bind('category_list')
+    ->bind('category')
 ;
 /* BOUCLE CATEGORIE */
 $app
@@ -140,31 +141,6 @@ $admin->before (function() use ($app){
 }) ;
 
 /* Cheunn */
-
-// CATEGORY
-
-$admin
-    ->get('/category', 'admin.category.controller:listAction')
-    ->bind('admin_categories')
-;
-
-$admin
-        ->get('/category/{type}', 'admin.category.controller:listByType')
-        ->assert('type','[annonce]|[chronique]')
-        ->bind('admin_categories_by_type')
-;
-
-$admin
-        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
-        ->value('id', null)
-        ->bind('admin_categories_edit')
-;
-
-$admin
-    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
-    ->assert('id', '\d+') // force id a être un nombre
-    ->bind('admin_category_delete')
-;
 
 // Chhronique
 
@@ -254,6 +230,32 @@ $admin->match('/type/edition/{id_type}', 'admin.type.controller:editAction')
 $admin->get('/type/supression/{id_type}', 'admin.type.controller:deleteAction')
             ->assert('id_type', '\d+')
             ->bind('admin_type_delete');
+
+
+//******************ROUTE POUR ADMIN Category*******************
+
+$admin
+    ->get('/category', 'admin.category.controller:listAction')
+    ->bind('admin_category')
+;
+
+$admin
+        ->get('/category/{type}', 'admin.category.controller:listByType')
+        ->assert('type','[annonce]|[chronique]')
+        ->bind('admin_category_type')
+;
+
+$admin
+        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_category_edit')
+;
+
+$admin
+    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_category_delete')
+;
 
 
 // COMMON FILES

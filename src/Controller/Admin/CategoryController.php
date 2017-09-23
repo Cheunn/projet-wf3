@@ -16,23 +16,23 @@ class CategoryController extends ControllerAbstract
         $categories = $this->app['category.repository']->findAll();
         
         return $this->render(
-            'admin/category/index.html.twig',
+            'admin/category/category.html.twig',
             [
                 'categories' => $categories
             ]
         );
     }
     
-    public function listByType($type){
-        $categories = $this->app['category.repository']->findByType($type);
-        
-        return $this->render(
-                'admin/category/list.html.twig',
-                [
-                    'categories' => $categories
-                ]
-        );
-    }
+//    public function listByType($type){
+//        $categories = $this->app['category.repository']->findByType($type);
+//        
+//        return $this->render(
+//                'admin/category/category.html.twig',
+//                [
+//                    'categories' => $categories
+//                ]
+//        );
+//    }
     
     public function editAction($id = null)
     {
@@ -62,7 +62,7 @@ class CategoryController extends ControllerAbstract
                 $this->app['category.repository']->save($category);
                 $this->addFlashMessage('La rubrique est enregistrée');
                 
-                return $this->redirectRoute('admin_categories');
+                return $this->redirectRoute('admin_category');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -89,6 +89,6 @@ class CategoryController extends ControllerAbstract
         $this->app['category.repository']->delete($category);
         $this->addFlashMessage('La rubrique est supprimée');
         
-        return $this->redirectRoute('admin_categories');
+        return $this->redirectRoute('admin_category');
     }
 }

@@ -15,11 +15,11 @@ class __TwigTemplate_2649942595b345f2667442ff4a3163c6d918344578a9476c26f14a5442a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5be1a17f91c4d8dc7ee0c5cdcc581df34e68246f069b1e3c287ffedfac4f2186 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5be1a17f91c4d8dc7ee0c5cdcc581df34e68246f069b1e3c287ffedfac4f2186->enter($__internal_5be1a17f91c4d8dc7ee0c5cdcc581df34e68246f069b1e3c287ffedfac4f2186_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/headerAdmin.html.twig"));
+        $__internal_a86b119066263ba46843379deaf5cc4fe29519807ba862fa9885c6f65a7c5c2b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a86b119066263ba46843379deaf5cc4fe29519807ba862fa9885c6f65a7c5c2b->enter($__internal_a86b119066263ba46843379deaf5cc4fe29519807ba862fa9885c6f65a7c5c2b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/headerAdmin.html.twig"));
 
-        $__internal_967a96e4152d037327103678ce977f13dc5b546b8af84fc349dc2898e05dbbd7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_967a96e4152d037327103678ce977f13dc5b546b8af84fc349dc2898e05dbbd7->enter($__internal_967a96e4152d037327103678ce977f13dc5b546b8af84fc349dc2898e05dbbd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/headerAdmin.html.twig"));
+        $__internal_6653873689027d59d6afc71fd4845ab23d31eec12ec2025f2e965011ac8951ec = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6653873689027d59d6afc71fd4845ab23d31eec12ec2025f2e965011ac8951ec->enter($__internal_6653873689027d59d6afc71fd4845ab23d31eec12ec2025f2e965011ac8951ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/headerAdmin.html.twig"));
 
         // line 1
         echo "
@@ -40,7 +40,7 @@ class __TwigTemplate_2649942595b345f2667442ff4a3163c6d918344578a9476c26f14a5442a
                             <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
                                 <h3><a href=\"";
         // line 17
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_categories");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_category");
         echo "\" >Categories</a></h3>  
                                 <ul class=\"list-unstyled\">                   
                                     ";
@@ -103,10 +103,10 @@ class __TwigTemplate_2649942595b345f2667442ff4a3163c6d918344578a9476c26f14a5442a
         
    ";
         
-        $__internal_5be1a17f91c4d8dc7ee0c5cdcc581df34e68246f069b1e3c287ffedfac4f2186->leave($__internal_5be1a17f91c4d8dc7ee0c5cdcc581df34e68246f069b1e3c287ffedfac4f2186_prof);
+        $__internal_a86b119066263ba46843379deaf5cc4fe29519807ba862fa9885c6f65a7c5c2b->leave($__internal_a86b119066263ba46843379deaf5cc4fe29519807ba862fa9885c6f65a7c5c2b_prof);
 
         
-        $__internal_967a96e4152d037327103678ce977f13dc5b546b8af84fc349dc2898e05dbbd7->leave($__internal_967a96e4152d037327103678ce977f13dc5b546b8af84fc349dc2898e05dbbd7_prof);
+        $__internal_6653873689027d59d6afc71fd4845ab23d31eec12ec2025f2e965011ac8951ec->leave($__internal_6653873689027d59d6afc71fd4845ab23d31eec12ec2025f2e965011ac8951ec_prof);
 
     }
 
@@ -151,7 +151,7 @@ class __TwigTemplate_2649942595b345f2667442ff4a3163c6d918344578a9476c26f14a5442a
                             
 
                             <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-                                <h3><a href=\"{{ path('admin_categories') }}\" >Categories</a></h3>  
+                                <h3><a href=\"{{ path('admin_category') }}\" >Categories</a></h3>  
                                 <ul class=\"list-unstyled\">                   
                                     {#  {% for category in categories %}              
                                          <li><a href=\"#\">{{ category.name }}</a></li>

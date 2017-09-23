@@ -89,7 +89,7 @@ class UserRepository extends RepositoryAbstract
                 'country' => 'FRANCE', 
                 'town' => $user->getTown (), 
                 'url_web_orga' => $user->geturl_web_orga(),
-                'url_fb' => $user->geturl_fb(),
+                'url_fb' => $user->geturl_fb()
             ];
              //dump($user);
         //dump($data); 

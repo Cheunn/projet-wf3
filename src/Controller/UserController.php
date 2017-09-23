@@ -196,50 +196,49 @@ class UserController extends ControllerAbstract
                 else                                                            $idsend = $user->getId_member(); 
                 
     
+                // affiche note et comments
                 $TabNote  = $this->app['notation.repository']->getMyNote($idsend );  
                 $myNote = number_format($TabNote->getNote(), 2);
                 if ($myNote == '0.00') $myNote = 'Aucune';
                 
+                
                 $nbAnnoncesByUser  = $this->app['annonce.repository']->nbAnnoncesByUser($idsend ); 
                 //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend );
-                    $nbNewByUser = 0;
-                 $nbChroniquesByUser  = $this->app['chronique.repository']->nbChroniquesByUser($idsend)->getId_post() ;
-                
-                
-                // Contient les donnees propres si user = user session
-                
+                $nbNewByUser = 0;
+                $nbChroniquesByUser  = $this->app['chronique.repository']->nbChroniquesByUser($idsend)->getId_post() ;
+                $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
+               
+                $nbCommentaires  = $this->app['notation.repository']->nbCommentsByUser($idsend )->getNote();
+                $getMyComments  = $this->app['notation.repository']->getMyComments($idsend );                       
+                dump($getMyComments); 
+                $listeCommentsChroniquesByUser  = $this->app['notation.repository']->listeCommentsChroniquesByUser($idsend );
+                $listeCommentsAnnoncesByUser  = $this->app['notation.repository']->listeCommentsAnnoncesByUser($idsend );
+                dump($listeCommentsChroniquesByUser);             dump($listeCommentsAnnoncesByUser); 
+// Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
                 { 
+                       $messageCheck = 'NOK' ; 
                        $messages = [];
                        $messages  = $this->app['message.repository']->getMyMessages($userSession->getId_member() );  
-
-                        // on reecrase si on affiche notre profil
-                            $TabNote  = $this->app['notation.repository']->getMyNote($userSession->getId_member() );  
-                            $myNote = number_format($TabNote->getNote(), 2);
-                            if ($myNote == '0.00') $myNote = 'Aucune';
-
-                            $nbAnnoncesByUser  = $this->app['annonce.repository']->nbAnnoncesByUser($idsend ); 
-                            //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend ); 
-                             $nbNewByUser =0; 
-                            $nbChroniquesByUser  = $this->app['chronique.repository']->nbChroniquesByUser($idsend)->getId_post() ;
-                            
-                        
-                            $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend ); 
-                            dump($listeAnnoncesByUser); 
-                            //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend ); 
-                            $listeNewByUser =0; 
-                            //$listeChroniquesByUser  = $this->app['chronique.repository']->listeChroniquesByUser($idsend)->getId_post() ;
+                       if (! empty($messages)) $messageCheck = 'OK'; 
+      
                         $mode = 'adminuser';
                         return $this->render('user/consultProfil.html.twig',
                             [
-                               'user'                       => $user, 
-                               'modeadmin'                  =>  $mode,
+                                'user'                      =>  $user, 
+                                'modeadmin'                 =>  $mode,
                                 'messages'                  =>  $messages, 
+                                'messageCheck'                     =>  $messageCheck,
                                 'myNote'                    =>  $myNote, 
                                 'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
                                 'nbNewByUser'               =>  $nbNewByUser,
-                                'nbChroniquesByUser'      =>  $nbChroniquesByUser, 
-                                'listeAnnoncesByUser'        =>  $listeAnnoncesByUser
+                                'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
+                                'nbCommentaires'                            =>  $nbCommentaires, 
+                                'getMyComments'                             =>  $getMyComments, 
+                                'listeCommentsChroniquesByUser'                             =>  $listeCommentsChroniquesByUser,
+                                'listeCommentsAnnoncesByUser'             =>  $listeCommentsAnnoncesByUser
+                           
 
 
                             ]
@@ -249,11 +248,16 @@ class UserController extends ControllerAbstract
                 {
                      return $this->render('user/consultProfil.html.twig',
                             [
-                                'user'          => $user, 
-                                'myNote'        =>  $myNote, 
-                                'nbAnnoncesByUser'      =>  $nbAnnoncesByUser, 
-                                'nbNewByUser'      =>  $nbNewByUser, 
-                                'nbChroniquesByUser'      =>  $nbChroniquesByUser
+                                'user'                      =>  $user, 
+                                'myNote'                    =>  $myNote, 
+                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
+                                'nbNewByUser'               =>  $nbNewByUser, 
+                                'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
+                                'nbCommentaires'            =>  $nbCommentaires, 
+                                'getMyComments'            =>  $getMyComments, 
+                                'listeCommentsChroniquesByUser'            =>  $listeCommentsChroniquesByUser,
+                                'listeCommentsAnnoncesByUser'             =>  $listeCommentsAnnoncesByUser   
                             ]
                         );    
                 }
@@ -274,7 +278,7 @@ class UserController extends ControllerAbstract
     
  
     
-        public function envoyerPostInterne()
+        public function posterMessage($id_destinataire) 
     {
         /*$this->app['user.manager']->logout();
         

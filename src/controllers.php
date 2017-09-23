@@ -40,6 +40,9 @@ $user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('update
 $user->match('/LireMessage/{id}', 'message.controller:LireMessage') 
         ->assert('id', '\d+')
         ->bind('LireMessage');
+$user->match('/posterMessage/{id}', 'user.controller:posterMessage')
+        ->assert('id', '\d+')
+        ->bind('posterMessage');
 
 $user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
 

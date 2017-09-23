@@ -13,7 +13,7 @@ class Notation
       /**
      * @var int
      */
-    private $member_id_note;
+    private $id_member_note;
     
       /**
      * @var string 
@@ -30,13 +30,16 @@ class Notation
     private $date_create ;
     
 
+    private $user ;
+     private $annonce ;
+
 
     public function getId_member_noteur() {
         return $this->id_member_noteur;
     }
 
     public function getMember_id_note() {
-        return $this->member_id_note;
+        return $this->id_member_note;
     }
 
     public function getNote() {
@@ -56,8 +59,8 @@ class Notation
         return $this;
     }
 
-    public function setMember_id_note($member_id_note) {
-        $this->member_id_note = $member_id_note;
+    public function setId_member_note($id_member_note) {
+        $this->id_member_note = $id_member_note;
         return $this;
     }
 
@@ -73,6 +76,26 @@ class Notation
 
     public function setDate_create($date_create) {
         $this->date_create = $date_create;
+        return $this;
+    }
+
+    public function getUserName() {
+        return $this->user->getName();
+    }
+
+    public function setUser(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+    
+    
+
+    public function getAnnonce() {
+        return $this->annonce;
+    }
+
+    public function setAnnonce( Annonce $annonce) {
+        $this->annonce = $annonce;
         return $this;
     }
 

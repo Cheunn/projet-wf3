@@ -32,26 +32,42 @@ class ChroniqueController extends ControllerAbstract{
 //                ]
 //        );
 //    }
+    
     public function getChroniqueId($id)
     {
-        $annonce = $this->app['chronique.repository']->find($id); 
-               
+        $chronique = $this->app['chronique.repository']->find($id); 
+        $annonces = $this->app['annonce.repository']->findLastSix();       
+       
         return $this->render(
             'single_chronique.html.twig',
             [
-                'annonce' => $annonce,
-           
-                // 'categories' => $categories
+                'chronique' => $chronique,
+                'annonces'=> $annonces
             ]
         );
     }
+    
+    public function lastTwo()
+    {
+        $chroniques = $this->app['chronique.repository']->findLastTwo(); 
+                     
+        return $this->render(
+            'index.html.twig',
+            [               
+                'chroniques' => $chroniques
+                
+            ]    
+        );
+    }
+    
     public function ListChroniqueAll(){
         $chroniques = $this->app['chronique.repository']->listChroniqueAllUsers();
+              
         
         return $this->render(
                 'chroniques.html.twig',
                 [
-                    'chroniques' => $chroniques
+                    'chroniques' => $chroniques,
                 ]
         );
     }
@@ -100,28 +116,32 @@ class ChroniqueController extends ControllerAbstract{
     }
 
     
-    public function findByRubrique(){
-             $chroniques = $this->app['chronique.repository']->findByRubrique('chronique_rubrique');
+    public function findByRubrique($rubrique){
+             $chroniques = $this->app['chronique.repository']->findByRubrique($rubrique);
              $categories = $this->app['category.repository']->findAllAside();
+             $annonces = $this->app['annonce.repository']->findLastSix(); 
              
         return $this->render(
                 'chroniques.html.twig',
                 [
                     'chroniques' => $chroniques,
-                    'categories' => $categories                
+                    'categories' => $categories,
+                    'annonces'=> $annonces
                 ]
         );
     }    
     
     public function listActionMain(){
-             $chroniques = $this->app['chronique.repository']->findAll('chronique_rubrique');
+             $chroniques = $this->app['chronique.repository']->findAll();
              $categories = $this->app['category.repository']->findAllAside();
-             
-        return $this->render(
+             $annonce = $this->app['annonce.repository']->findLastSix();  
+      
+             return $this->render(
                 'chroniques.html.twig',
                 [
                     'chroniques' => $chroniques,
-                    'categories' => $categories                
+                    'categories' => $categories,
+                    'annnonce' => $annonce
                 ]
         );
     }    

@@ -31,7 +31,7 @@ $user->match('/profil', 'user.controller:profilUser')
        ->bind('profilUser');
 
 $user->match('/profil/{id}', 'user.controller:profilUser')  
-             ->assert('id', '\d+')
+            ->assert('id', '\d+')
             ->bind('profilUser');
 
 $user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
@@ -106,7 +106,7 @@ $app
     ->bind('chroniques')
 ;
 $app
-    ->get('/single_chronique/{id}', 'annonce.controller:getAnnonceId')  
+    ->get('/single_chronique/{id}', 'chronique.controller:getChroniqueId')  
     ->assert('id', '\d+')
     ->bind('single_chronique')
 ;
@@ -115,7 +115,10 @@ $app
     ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
     ->bind('chronique_rubrique')
 ;
-
+$app
+    ->match('/' , 'chronique.controller:findlastTwo')  
+    ->bind('chronique_front')
+;
 
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
@@ -145,7 +148,8 @@ $app
 
 //Handicap
 
-$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+$bind = $app
+        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
 
 
@@ -169,9 +173,9 @@ $admin
 ;
 
 $admin
-        ->get('/category/{type}', 'admin.category.controller:listByType')
-        ->assert('type','[annonce]|[chronique]')
-        ->bind('admin_categories_by_type')
+    ->get('/category/{type}', 'admin.category.controller:listByType')
+    ->assert('type','[annonce]|[chronique]')
+    ->bind('admin_categories_by_type')
 ;
 
 $admin

@@ -21,35 +21,37 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3e79ebfb4318a5d0cd8b0f838c432a26751aa83b7d97418047c79bddec2915a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3e79ebfb4318a5d0cd8b0f838c432a26751aa83b7d97418047c79bddec2915a3->enter($__internal_3e79ebfb4318a5d0cd8b0f838c432a26751aa83b7d97418047c79bddec2915a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_chronique.html.twig"));
+        $__internal_2f6cd6ac1d3ea7b401271f4a3d594cb5c156a83209d2272244e28d1069604e72 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f6cd6ac1d3ea7b401271f4a3d594cb5c156a83209d2272244e28d1069604e72->enter($__internal_2f6cd6ac1d3ea7b401271f4a3d594cb5c156a83209d2272244e28d1069604e72_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_chronique.html.twig"));
 
-        $__internal_c6fb1035dfe0d74f68a77ae93efd02a1b73c3bf4dfe2132d86e69a97ea747405 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c6fb1035dfe0d74f68a77ae93efd02a1b73c3bf4dfe2132d86e69a97ea747405->enter($__internal_c6fb1035dfe0d74f68a77ae93efd02a1b73c3bf4dfe2132d86e69a97ea747405_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_chronique.html.twig"));
+        $__internal_ea71397cb32f2adbd5f30072d459e496a429dce9f717c725be71105fea80646d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ea71397cb32f2adbd5f30072d459e496a429dce9f717c725be71105fea80646d->enter($__internal_ea71397cb32f2adbd5f30072d459e496a429dce9f717c725be71105fea80646d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "single_chronique.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3e79ebfb4318a5d0cd8b0f838c432a26751aa83b7d97418047c79bddec2915a3->leave($__internal_3e79ebfb4318a5d0cd8b0f838c432a26751aa83b7d97418047c79bddec2915a3_prof);
+        $__internal_2f6cd6ac1d3ea7b401271f4a3d594cb5c156a83209d2272244e28d1069604e72->leave($__internal_2f6cd6ac1d3ea7b401271f4a3d594cb5c156a83209d2272244e28d1069604e72_prof);
 
         
-        $__internal_c6fb1035dfe0d74f68a77ae93efd02a1b73c3bf4dfe2132d86e69a97ea747405->leave($__internal_c6fb1035dfe0d74f68a77ae93efd02a1b73c3bf4dfe2132d86e69a97ea747405_prof);
+        $__internal_ea71397cb32f2adbd5f30072d459e496a429dce9f717c725be71105fea80646d->leave($__internal_ea71397cb32f2adbd5f30072d459e496a429dce9f717c725be71105fea80646d_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_8c0bd19860e056d93f9bbd7eb5fea0369374363baeddfa760deb0f33ce313ecd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8c0bd19860e056d93f9bbd7eb5fea0369374363baeddfa760deb0f33ce313ecd->enter($__internal_8c0bd19860e056d93f9bbd7eb5fea0369374363baeddfa760deb0f33ce313ecd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_d1667b402ed7ddfe838231d666b6a914b9f83c48e2dabb9cb063b6d1857269d6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d1667b402ed7ddfe838231d666b6a914b9f83c48e2dabb9cb063b6d1857269d6->enter($__internal_d1667b402ed7ddfe838231d666b6a914b9f83c48e2dabb9cb063b6d1857269d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_ecaf1458fe7b6c3dae4acd57ec0e4b1037e36718ed0d82f475096d25e2d43605 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ecaf1458fe7b6c3dae4acd57ec0e4b1037e36718ed0d82f475096d25e2d43605->enter($__internal_ecaf1458fe7b6c3dae4acd57ec0e4b1037e36718ed0d82f475096d25e2d43605_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_19ccaac2ada3175eab025494dfdd11d96f469e81aa8b76ff899e73d9efb690ac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_19ccaac2ada3175eab025494dfdd11d96f469e81aa8b76ff899e73d9efb690ac->enter($__internal_19ccaac2ada3175eab025494dfdd11d96f469e81aa8b76ff899e73d9efb690ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "               
 <section class=\"innercontent\">
     <div class=\"container\">
-    <h2 class=\"heading\">Annonce</h2>
+    <h2 class=\"heading\">Chronique";
+        // line 6
+        echo "</h2>
  
         <div class=\"row\">
             <div class=\"col-md-8 col-lg-8\">
@@ -89,18 +91,18 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                     <div class=\"caption\">
             <h3><a href=\"#\"> ";
         // line 44
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "post_title", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["chronique"] ?? $this->getContext($context, "chronique")), "post_title", array()), "html", null, true);
         echo "  </a></h3>
             <p>";
         // line 45
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "paragraphe_1", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["chronique"] ?? $this->getContext($context, "chronique")), "paragraph_1", array()), "html", null, true);
         echo "</p>
                 
             <hr>
             
             <p>";
         // line 49
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "paragraphe_2", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["chronique"] ?? $this->getContext($context, "chronique")), "paragraph_2", array()), "html", null, true);
         echo "</p>
                <ul class=\"list-inline img-grid\">
                    <li class=\"col-sm-4 col-md-4 col-lg-4\"><a href=\"#\"><img src=\"assets/images/feature-posts/feature-post6.png\" class=\"img-responsive\" alt=\"\" /> </a></li>
@@ -161,54 +163,32 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                                   </div>
                                 </div>
                             </div>
-
                             <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
                                 <div class=\"thumbnail\">
-
                                     <a href=\"#\"><img src=\"assets/images/post/related-post3.png\" alt=\"related post\"></a>
-
                                   <div class=\"caption\">
-
                                     <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
                                   </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class=\"comment-list\">
-
-                 
-
-                    </div>
+            
+                   </div>
                      <div class=\"comment-form\">
                         <h4>Send A Message</h4>
                         <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
-
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-
                            <div class=\"form-group\">
-
                              <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Full Name:\">
-
-                           </div>
-
-                                    </div>
-
                             </div>
-
+                                    </div>
+                            </div>
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-                       
+               
                                     </div>
                                     </div>
                             <div class=\"row\">
@@ -224,53 +204,60 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                           <button type=\"submit\" class=\"btn btn-default\">Post Reply</button>
                         </form>
                     </div>
-                  
+                
                 </article>
             <div class=\"clearfix\"></div>
             </div>
             <aside class=\"col-md-4 col-lg-4\">
-           \t
+          \t
                 <div class=\"row\">
                 <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
                   <div class=\"panel-heading\">Annonces récentes</div>
                     <div class=\"panel-body nopadding\">
-              ";
-        // line 183
+                            ";
+        // line 161
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["chroniques"] ?? $this->getContext($context, "chroniques")));
-        foreach ($context['_seq'] as $context["_key"] => $context["chronique"]) {
+        $context['_seq'] = twig_ensure_traversable(($context["annonces"] ?? $this->getContext($context, "annonces")));
+        foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
             echo " 
-               <div class=\"panel-body nopadding\">
-                <div class=\"media\">
-                  <div class=\"media-left\"> <a href=\"";
-            // line 186
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_chronique", array("id" => $this->getAttribute($context["chronique"], "id_post", array()))), "html", null, true);
+                            <div class=\"panel-body nopadding\">
+                             <div class=\"media\">
+                               <div class=\"media-left\"> <a href=\"";
+            // line 164
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\"> <img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp1.jpg"), "html", null, true);
             echo "\" alt=\"author\" /></a> </div>
-                  <div class=\"media-body\">
-                    <h4 class=\"media-heading\"><a href=\"";
-            // line 188
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_chronique", array("id" => $this->getAttribute($context["chronique"], "id_post", array()))), "html", null, true);
+                               <div class=\"media-body\">
+                                 <h4 class=\"media-heading\"><a href=\"";
+            // line 166
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["chronique"], "post_title", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "post_title", array()), "html", null, true);
             echo "</a></h4>
-                    <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
-                  </div>
-                </div>
-               </div>
-              ";
+                                 <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
+                               </div>
+                             </div>
+                            </div>
+                           ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chronique'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 194
-        echo "                </div>
+        // line 172
+        echo "                        
+                        
+                        
+                        
+                </div>
                            </div>
 ";
-        // line 211
-        echo "                       
+        // line 192
+        echo "           
+ ";
+        // line 204
+        echo "
 </div>
                <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
@@ -322,10 +309,10 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
     
 ";
         
-        $__internal_ecaf1458fe7b6c3dae4acd57ec0e4b1037e36718ed0d82f475096d25e2d43605->leave($__internal_ecaf1458fe7b6c3dae4acd57ec0e4b1037e36718ed0d82f475096d25e2d43605_prof);
+        $__internal_19ccaac2ada3175eab025494dfdd11d96f469e81aa8b76ff899e73d9efb690ac->leave($__internal_19ccaac2ada3175eab025494dfdd11d96f469e81aa8b76ff899e73d9efb690ac_prof);
 
         
-        $__internal_8c0bd19860e056d93f9bbd7eb5fea0369374363baeddfa760deb0f33ce313ecd->leave($__internal_8c0bd19860e056d93f9bbd7eb5fea0369374363baeddfa760deb0f33ce313ecd_prof);
+        $__internal_d1667b402ed7ddfe838231d666b6a914b9f83c48e2dabb9cb063b6d1857269d6->leave($__internal_d1667b402ed7ddfe838231d666b6a914b9f83c48e2dabb9cb063b6d1857269d6_prof);
 
     }
 
@@ -341,7 +328,7 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
 
     public function getDebugInfo()
     {
-        return array (  273 => 211,  269 => 194,  255 => 188,  248 => 186,  240 => 183,  103 => 49,  96 => 45,  92 => 44,  49 => 3,  40 => 2,  11 => 1,);
+        return array (  260 => 204,  257 => 192,  249 => 172,  235 => 166,  228 => 164,  220 => 161,  105 => 49,  98 => 45,  94 => 44,  54 => 6,  49 => 3,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -359,7 +346,7 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                
 <section class=\"innercontent\">
     <div class=\"container\">
-    <h2 class=\"heading\">Annonce</h2>
+    <h2 class=\"heading\">Chronique{# {% if chronique.id_post %} - {{chronique.post_title }} {% endif %}#}</h2>
  
         <div class=\"row\">
             <div class=\"col-md-8 col-lg-8\">
@@ -397,12 +384,12 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                        </ul>
                     </div>
                     <div class=\"caption\">
-            <h3><a href=\"#\"> {{ annonce.post_title }}  </a></h3>
-            <p>{{ annonce.paragraphe_1 }}</p>
+            <h3><a href=\"#\"> {{ chronique.post_title }}  </a></h3>
+            <p>{{ chronique.paragraph_1 }}</p>
                 
             <hr>
             
-            <p>{{ annonce.paragraphe_2 }}</p>
+            <p>{{ chronique.paragraph_2 }}</p>
                <ul class=\"list-inline img-grid\">
                    <li class=\"col-sm-4 col-md-4 col-lg-4\"><a href=\"#\"><img src=\"assets/images/feature-posts/feature-post6.png\" class=\"img-responsive\" alt=\"\" /> </a></li>
                    <li class=\"col-sm-4 col-md-4 col-lg-4\"><a href=\"#\"><img src=\"assets/images/feature-posts/feature-post1.png\" class=\"img-responsive\" alt=\"\" /> </a></li>
@@ -462,54 +449,32 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                                   </div>
                                 </div>
                             </div>
-
                             <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
                                 <div class=\"thumbnail\">
-
                                     <a href=\"#\"><img src=\"assets/images/post/related-post3.png\" alt=\"related post\"></a>
-
                                   <div class=\"caption\">
-
                                     <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
                                   </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class=\"comment-list\">
-
-                 
-
-                    </div>
+            
+                   </div>
                      <div class=\"comment-form\">
                         <h4>Send A Message</h4>
                         <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
-
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-
                            <div class=\"form-group\">
-
                              <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Full Name:\">
-
-                           </div>
-
-                                    </div>
-
                             </div>
-
+                                    </div>
+                            </div>
                             <div class=\"row\">
-
                                 <div class=\"col-md-6 col-lg-5\">
-                       
+               
                                     </div>
                                     </div>
                             <div class=\"row\">
@@ -525,28 +490,32 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                           <button type=\"submit\" class=\"btn btn-default\">Post Reply</button>
                         </form>
                     </div>
-                  
+                
                 </article>
             <div class=\"clearfix\"></div>
             </div>
             <aside class=\"col-md-4 col-lg-4\">
-           \t
+          \t
                 <div class=\"row\">
                 <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
                   <div class=\"panel-heading\">Annonces récentes</div>
                     <div class=\"panel-body nopadding\">
-              {% for chronique in chroniques %} 
-               <div class=\"panel-body nopadding\">
-                <div class=\"media\">
-                  <div class=\"media-left\"> <a href=\"{{ path('single_chronique', {id: chronique.id_post}) }}\"> <img src=\"{{ asset ('assets/images/post/rp1.jpg') }}\" alt=\"author\" /></a> </div>
-                  <div class=\"media-body\">
-                    <h4 class=\"media-heading\"><a href=\"{{ path('single_chronique', {id: chronique.id_post}) }}\">{{ chronique.post_title }}</a></h4>
-                    <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
-                  </div>
-                </div>
-               </div>
-              {% endfor %}
+                            {% for annonce in annonces %} 
+                            <div class=\"panel-body nopadding\">
+                             <div class=\"media\">
+                               <div class=\"media-left\"> <a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\"> <img src=\"{{ asset ('assets/images/post/rp1.jpg') }}\" alt=\"author\" /></a> </div>
+                               <div class=\"media-body\">
+                                 <h4 class=\"media-heading\"><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></h4>
+                                 <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
+                               </div>
+                             </div>
+                            </div>
+                           {% endfor %}
+                        
+                        
+                        
+                        
                 </div>
                            </div>
 {#
@@ -563,8 +532,19 @@ class __TwigTemplate_b54d62fd8b7e5a9a2d763afdcc169a60f1b60dd0782b79d22a010fdf0b1
                     </div>
                 </div>
                </div>
-#}
-                       
+#}           
+ {#{% for chronique in chroniques %} 
+               <div class=\"panel-body nopadding\">
+                <div class=\"media\">
+                  <div class=\"media-left\"> <a href=\"{{ path('single_chronique', {id: chronique.id_post}) }}\"> <img src=\"{{ asset ('assets/images/post/rp1.jpg') }}\" alt=\"author\" /></a> </div>
+                  <div class=\"media-body\">
+                    <h4 class=\"media-heading\"><a href=\"{{ path('single_chronique', {id: chronique.id_post}) }}\">{{ chronique.post_title }}</a></h4>
+                    <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
+                  </div>
+                </div>
+               </div>
+              {% endfor %}#}
+
 </div>
                <div class=\"col-sm-6 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">

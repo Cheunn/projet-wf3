@@ -21,35 +21,35 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7e51310a21b4154cbba220801dca7b34831ecd2fc69db8e49fc30be7531d8c7c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7e51310a21b4154cbba220801dca7b34831ecd2fc69db8e49fc30be7531d8c7c->enter($__internal_7e51310a21b4154cbba220801dca7b34831ecd2fc69db8e49fc30be7531d8c7c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "chroniques.html.twig"));
+        $__internal_693c2ff1366b4755d659ffc044e49863aa693ffea42e6ef592ac1de84a9438a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_693c2ff1366b4755d659ffc044e49863aa693ffea42e6ef592ac1de84a9438a5->enter($__internal_693c2ff1366b4755d659ffc044e49863aa693ffea42e6ef592ac1de84a9438a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "chroniques.html.twig"));
 
-        $__internal_f7cdc00f3d489a1e29847c30ebefe83fe513363cdfbcb4e1ab8edae010d6b96f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f7cdc00f3d489a1e29847c30ebefe83fe513363cdfbcb4e1ab8edae010d6b96f->enter($__internal_f7cdc00f3d489a1e29847c30ebefe83fe513363cdfbcb4e1ab8edae010d6b96f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "chroniques.html.twig"));
+        $__internal_db0d2114493f4aa847759655aac00e874be2aaf0b4ffe8547f822c4f77f50193 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_db0d2114493f4aa847759655aac00e874be2aaf0b4ffe8547f822c4f77f50193->enter($__internal_db0d2114493f4aa847759655aac00e874be2aaf0b4ffe8547f822c4f77f50193_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "chroniques.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7e51310a21b4154cbba220801dca7b34831ecd2fc69db8e49fc30be7531d8c7c->leave($__internal_7e51310a21b4154cbba220801dca7b34831ecd2fc69db8e49fc30be7531d8c7c_prof);
+        $__internal_693c2ff1366b4755d659ffc044e49863aa693ffea42e6ef592ac1de84a9438a5->leave($__internal_693c2ff1366b4755d659ffc044e49863aa693ffea42e6ef592ac1de84a9438a5_prof);
 
         
-        $__internal_f7cdc00f3d489a1e29847c30ebefe83fe513363cdfbcb4e1ab8edae010d6b96f->leave($__internal_f7cdc00f3d489a1e29847c30ebefe83fe513363cdfbcb4e1ab8edae010d6b96f_prof);
+        $__internal_db0d2114493f4aa847759655aac00e874be2aaf0b4ffe8547f822c4f77f50193->leave($__internal_db0d2114493f4aa847759655aac00e874be2aaf0b4ffe8547f822c4f77f50193_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_abea865f88455e900a4732e86ce17323c5190783612a054991da74356884e52a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_abea865f88455e900a4732e86ce17323c5190783612a054991da74356884e52a->enter($__internal_abea865f88455e900a4732e86ce17323c5190783612a054991da74356884e52a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_cfbdccfc0814300a32480547141bd7f1942439af8f3e7ff2201f34652360ad35 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cfbdccfc0814300a32480547141bd7f1942439af8f3e7ff2201f34652360ad35->enter($__internal_cfbdccfc0814300a32480547141bd7f1942439af8f3e7ff2201f34652360ad35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_53bae1f8add0fea995451797d51324fda88d100e84716cef965c69eb0eea6284 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_53bae1f8add0fea995451797d51324fda88d100e84716cef965c69eb0eea6284->enter($__internal_53bae1f8add0fea995451797d51324fda88d100e84716cef965c69eb0eea6284_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2d87dacc97ac35acfa5c5d3b24d7475c60cd62a79b5e2e6a9824737d72c3b962 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2d87dacc97ac35acfa5c5d3b24d7475c60cd62a79b5e2e6a9824737d72c3b962->enter($__internal_2d87dacc97ac35acfa5c5d3b24d7475c60cd62a79b5e2e6a9824737d72c3b962_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "
 <section class=\"innercontent\">
     <div class=\"container\">
-        <h2 class=\"heading\">Chronique - XXX</h2>
+        <h2 class=\"heading\">Chronique</h2>
          <div class=\"row\">
             <div class=\"col-md-8 col-lg-8\">
                 ";
@@ -129,66 +129,27 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
 \t\t\t</div>
             <div class=\"clearfix\"></div>
             </div>
+          
             <aside class=\"col-md-4 col-lg-4\">
-            \t
-                <div class=\"row\">
-            ";
-        // line 85
-        echo "               </div>
-                      <div class=\"col-sm-12 col-md-12 col-lg-12\">
-                <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Recent Articles</div>
-                    <div class=\"panel-body nopadding\">
-                      <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp1.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-        <h4 class=\"media-heading\"><a href=\"#\">this is long Blog Heading Text Size for recent articles</a></h4>
-       <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
-      </div>
-    </div>
-    <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp2.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-      <h4 class=\"media-heading\"><a href=\"#\">this is Blog Heading Text Size</a></h4>
-        <p><a href=\"#\">Photography</a> &bull; 3 hours ago</p>
-      </div>
-    </div>
-                        <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp3.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-        <h4 class=\"media-heading\"><a href=\"#\">this is Blog Heading Text Size</a></h4>
-        <p><a href=\"#\">Chroniques</a> &bull; 2 hours ago</p>
-      </div>
-        </div>
-                    </div>
-                </div>
-                           </div>
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
+            \t<div class=\"row\">
+       ";
+        // line 86
+        echo "               
+               
+                <div class=\"col-sm-12 col-md-12 col-lg-12\">
                       <div class=\"panel panel-default theme-panel\">
                      <div class=\"panel-heading\">Categories</div>
                   <div class=\"panel-body nopadding\">
                 <div class=\"list-group\"> 
                   
                     ";
-        // line 132
+        // line 94
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             echo " 
                      <a href=\"";
-            // line 133
+            // line 95
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("chronique_rubrique", array("rubrique" => $this->getAttribute($context["category"], "name", array()))), "html", null, true);
             echo "\" class=\"list-group-item\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
@@ -198,63 +159,35 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 135
+        // line 97
         echo "        
                 </div>
               </div>
                     </div>
                 </div>
-          
-                      
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
+               
+               
+               <div class=\"col-sm-12 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Tags</div>
-                    <div class=\"panel-body\">
-                      <ul class=\"list-inline tags\">
-                        <li><a href=\"#\">LifeStyle</a></li>
-                        <li class=\"big\"><a href=\"#\">Music</a></li>
-                        <li><a href=\"#\">SmartPhones</a></li>
-                        <li><a href=\"#\">Business</a></li>
-                    
-                        <li><a href=\"#\">Travel</a></li>
-                       
-                        <li class=\"big\"><a href=\"#\">Business</a></li>
-                        <li class=\"small\"><a href=\"#\">LifeStyle</a></li>
-                        <li><a href=\"#\">SmartPhones</a></li>
-                       
-                        <li><a href=\"#\">Fireworks</a></li>
-                        <li class=\"big\"><a href=\"#\">Travel</a></li>
-                        <li><a href=\"#\">Fireworks</a></li>
-                        <li class=\"small\"><a href=\"#\">Music</a></li>
-                        </ul>
-                    </div>
-                </div>
-               </div>
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
-                <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Archives</div>
+                  <div class=\"panel-heading\">Recent Articles</div>
                     <div class=\"panel-body nopadding\">
-                      <div class=\"list-group\">
-                        <a href=\"#\" class=\"list-group-item\">January 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">February 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">March 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">April 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">May 2014</a>
-                </div>
+                    ";
+        // line 119
+        echo "                        </div>
+                      </div>
                     </div>
+              
                 </div>
-               </div>
-               </div>
              </aside>
            </div>      
       </div>
     </section>
 ";
         
-        $__internal_53bae1f8add0fea995451797d51324fda88d100e84716cef965c69eb0eea6284->leave($__internal_53bae1f8add0fea995451797d51324fda88d100e84716cef965c69eb0eea6284_prof);
+        $__internal_2d87dacc97ac35acfa5c5d3b24d7475c60cd62a79b5e2e6a9824737d72c3b962->leave($__internal_2d87dacc97ac35acfa5c5d3b24d7475c60cd62a79b5e2e6a9824737d72c3b962_prof);
 
         
-        $__internal_abea865f88455e900a4732e86ce17323c5190783612a054991da74356884e52a->leave($__internal_abea865f88455e900a4732e86ce17323c5190783612a054991da74356884e52a_prof);
+        $__internal_cfbdccfc0814300a32480547141bd7f1942439af8f3e7ff2201f34652360ad35->leave($__internal_cfbdccfc0814300a32480547141bd7f1942439af8f3e7ff2201f34652360ad35_prof);
 
     }
 
@@ -270,7 +203,7 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
 
     public function getDebugInfo()
     {
-        return array (  202 => 135,  192 => 133,  186 => 132,  137 => 85,  109 => 45,  95 => 37,  89 => 36,  57 => 9,  49 => 3,  40 => 2,  11 => 1,);
+        return array (  176 => 119,  163 => 97,  153 => 95,  147 => 94,  137 => 86,  109 => 45,  95 => 37,  89 => 36,  57 => 9,  49 => 3,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -288,7 +221,7 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
 
 <section class=\"innercontent\">
     <div class=\"container\">
-        <h2 class=\"heading\">Chronique - XXX</h2>
+        <h2 class=\"heading\">Chronique</h2>
          <div class=\"row\">
             <div class=\"col-md-8 col-lg-8\">
                 {% for chronique in chroniques %} 
@@ -350,11 +283,11 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
 \t\t\t</div>
             <div class=\"clearfix\"></div>
             </div>
+          
             <aside class=\"col-md-4 col-lg-4\">
-            \t
-                <div class=\"row\">
-            {#    <div class=\"col-sm-12 col-md-12 col-lg-12\">
-                <div class=\"panel panel-default theme-panel\">
+            \t<div class=\"row\">
+       {#         <div class=\"col-sm-12 col-md-12 col-lg-12\">
+                  <div class=\"panel panel-default theme-panel\">
                   <div class=\"panel-heading\">Subscribe us</div>
                     <div class=\"panel-body\">
                       <form action=\"#\" method=\"post\">
@@ -366,49 +299,11 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
                         </div>
                         </form>
                     </div>
-                </div>#}
-               </div>
-                      <div class=\"col-sm-12 col-md-12 col-lg-12\">
-                <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Recent Articles</div>
-                    <div class=\"panel-body nopadding\">
-                      <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp1.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-        <h4 class=\"media-heading\"><a href=\"#\">this is long Blog Heading Text Size for recent articles</a></h4>
-       <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
-      </div>
-    </div>
-    <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp2.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-      <h4 class=\"media-heading\"><a href=\"#\">this is Blog Heading Text Size</a></h4>
-        <p><a href=\"#\">Photography</a> &bull; 3 hours ago</p>
-      </div>
-    </div>
-                        <div class=\"media\">
-      <div class=\"media-left\">
-        <a href=\"#\">
-          <img src=\"assets/images/post/rp3.jpg\" alt=\"author\" />
-        </a>
-      </div>
-      <div class=\"media-body\">
-        <h4 class=\"media-heading\"><a href=\"#\">this is Blog Heading Text Size</a></h4>
-        <p><a href=\"#\">Chroniques</a> &bull; 2 hours ago</p>
-      </div>
-        </div>
-                    </div>
                 </div>
-                           </div>
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
+               </div>#}
+               
+               
+                <div class=\"col-sm-12 col-md-12 col-lg-12\">
                       <div class=\"panel panel-default theme-panel\">
                      <div class=\"panel-heading\">Categories</div>
                   <div class=\"panel-body nopadding\">
@@ -422,47 +317,28 @@ class __TwigTemplate_163e1bb570f009b4c1ee0b7d1059541bd0e0b3b976b42ffef4ac81385c3
               </div>
                     </div>
                 </div>
-          
-                      
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
+               
+               
+               <div class=\"col-sm-12 col-md-12 col-lg-12\">
                 <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Tags</div>
-                    <div class=\"panel-body\">
-                      <ul class=\"list-inline tags\">
-                        <li><a href=\"#\">LifeStyle</a></li>
-                        <li class=\"big\"><a href=\"#\">Music</a></li>
-                        <li><a href=\"#\">SmartPhones</a></li>
-                        <li><a href=\"#\">Business</a></li>
-                    
-                        <li><a href=\"#\">Travel</a></li>
-                       
-                        <li class=\"big\"><a href=\"#\">Business</a></li>
-                        <li class=\"small\"><a href=\"#\">LifeStyle</a></li>
-                        <li><a href=\"#\">SmartPhones</a></li>
-                       
-                        <li><a href=\"#\">Fireworks</a></li>
-                        <li class=\"big\"><a href=\"#\">Travel</a></li>
-                        <li><a href=\"#\">Fireworks</a></li>
-                        <li class=\"small\"><a href=\"#\">Music</a></li>
-                        </ul>
-                    </div>
-                </div>
-               </div>
-                       <div class=\"col-sm-12 col-md-12 col-lg-12\">
-                <div class=\"panel panel-default theme-panel\">
-                  <div class=\"panel-heading\">Archives</div>
+                  <div class=\"panel-heading\">Recent Articles</div>
                     <div class=\"panel-body nopadding\">
-                      <div class=\"list-group\">
-                        <a href=\"#\" class=\"list-group-item\">January 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">February 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">March 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">April 2014</a>
-                        <a href=\"#\" class=\"list-group-item\">May 2014</a>
-                </div>
+                    {# {% for annonce in annonces %} 
+                            <div class=\"panel-body nopadding\">
+                             <div class=\"media\">
+                               <div class=\"media-left\"> <a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\"> <img src=\"{{ asset ('assets/images/post/rp1.jpg') }}\" alt=\"author\" /></a> </div>
+                               <div class=\"media-body\">
+                                 <h4 class=\"media-heading\"><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></h4>
+                                 <p><a href=\"#\">LifeStyle</a> &bull; 5 hours ago</p>
+                               </div>
+                             </div>
+                            </div>
+                         {% endfor %}#}
+                        </div>
+                      </div>
                     </div>
+              
                 </div>
-               </div>
-               </div>
              </aside>
            </div>      
       </div>

@@ -83,6 +83,7 @@ SQL;
         foreach ($dbChroniques as $dbChronique) {
             $chroniques[] = $this->buildEntity($dbChronique);
         }
+       
         return $chroniques;
     }
     /**
@@ -111,6 +112,24 @@ SQL;
         if (!empty($dbChronique)) {
             return $this->buildEntity($dbChronique);
         }
+    }
+    
+    public function findLastTwo()
+    {
+        $query = <<<SQL
+SELECT 
+    c.*
+FROM chronique c
+ORDER BY id_post DESC
+LIMIT 2
+SQL;
+        $dbchroniques = $this->db->fetchAll($query);
+        $chroniques = [];
+    
+        foreach ($dbChroniques as $dbchronique) {
+            $chroniques[] = $this->buildEntity($dbchronique);
+        }
+        return $chroniques;
     }
 
     /**
@@ -197,8 +216,7 @@ SQL;
             ->setMember_id_member($data['member_id_member'])
             ->setCategory_id_category($data['category_id_category'])
             ->setCategory_name($data['category_name'])
-            
-        ;
+            ;
         
         return $chronique;
     }

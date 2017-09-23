@@ -3,7 +3,7 @@
                
 <section class="innercontent">
     <div class="container">
-    <h2 class="heading">Annonce</h2>
+    <h2 class="heading">Chronique{# {% if chronique.id_post %} - {{chronique.post_title }} {% endif %}#}</h2>
  
         <div class="row">
             <div class="col-md-8 col-lg-8">
@@ -41,12 +41,12 @@
                        </ul>
                     </div>
                     <div class="caption">
-            <h3><a href="#"> {{ annonce.post_title }}  </a></h3>
-            <p>{{ annonce.paragraphe_1 }}</p>
+            <h3><a href="#"> {{ chronique.post_title }}  </a></h3>
+            <p>{{ chronique.paragraph_1 }}</p>
                 
             <hr>
             
-            <p>{{ annonce.paragraphe_2 }}</p>
+            <p>{{ chronique.paragraph_2 }}</p>
                <ul class="list-inline img-grid">
                    <li class="col-sm-4 col-md-4 col-lg-4"><a href="#"><img src="assets/images/feature-posts/feature-post6.png" class="img-responsive" alt="" /> </a></li>
                    <li class="col-sm-4 col-md-4 col-lg-4"><a href="#"><img src="assets/images/feature-posts/feature-post1.png" class="img-responsive" alt="" /> </a></li>
@@ -106,54 +106,32 @@
                                   </div>
                                 </div>
                             </div>
-
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-
                                 <div class="thumbnail">
-
                                     <a href="#"><img src="assets/images/post/related-post3.png" alt="related post"></a>
-
                                   <div class="caption">
-
                                     <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
-
                                   </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="comment-list">
-
-                 
-
-                    </div>
+            
+                   </div>
                      <div class="comment-form">
                         <h4>Send A Message</h4>
                         <form role="form" action="#" method="post" novalidate id="comment-form">
-
                             <div class="row">
-
                                 <div class="col-md-6 col-lg-5">
-
                            <div class="form-group">
-
                              <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Full Name:">
-
-                           </div>
-
-                                    </div>
-
                             </div>
-
+                                    </div>
+                            </div>
                             <div class="row">
-
                                 <div class="col-md-6 col-lg-5">
-                       
+               
                                     </div>
                                     </div>
                             <div class="row">
@@ -169,28 +147,32 @@
                           <button type="submit" class="btn btn-default">Post Reply</button>
                         </form>
                     </div>
-                  
+                
                 </article>
             <div class="clearfix"></div>
             </div>
             <aside class="col-md-4 col-lg-4">
-           	
+          	
                 <div class="row">
                 <div class="col-sm-6 col-md-12 col-lg-12">
                 <div class="panel panel-default theme-panel">
                   <div class="panel-heading">Annonces récentes</div>
                     <div class="panel-body nopadding">
-              {% for chronique in chroniques %} 
-               <div class="panel-body nopadding">
-                <div class="media">
-                  <div class="media-left"> <a href="{{ path('single_chronique', {id: chronique.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="{{ path('single_chronique', {id: chronique.id_post}) }}">{{ chronique.post_title }}</a></h4>
-                    <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
-                  </div>
-                </div>
-               </div>
-              {% endfor %}
+                            {% for annonce in annonces %} 
+                            <div class="panel-body nopadding">
+                             <div class="media">
+                               <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
+                               <div class="media-body">
+                                 <h4 class="media-heading"><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></h4>
+                                 <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
+                               </div>
+                             </div>
+                            </div>
+                           {% endfor %}
+                        
+                        
+                        
+                        
                 </div>
                            </div>
 {#
@@ -207,8 +189,19 @@
                     </div>
                 </div>
                </div>
-#}
-                       
+#}           
+ {#{% for chronique in chroniques %} 
+               <div class="panel-body nopadding">
+                <div class="media">
+                  <div class="media-left"> <a href="{{ path('single_chronique', {id: chronique.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="{{ path('single_chronique', {id: chronique.id_post}) }}">{{ chronique.post_title }}</a></h4>
+                    <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
+                  </div>
+                </div>
+               </div>
+              {% endfor %}#}
+
 </div>
                <div class="col-sm-6 col-md-12 col-lg-12">
                 <div class="panel panel-default theme-panel">

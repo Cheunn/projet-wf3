@@ -21,29 +21,29 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1d69f39115ed92a775e7c0a76540c1c311e4b1c07fefa4a6c86add5a092575da = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1d69f39115ed92a775e7c0a76540c1c311e4b1c07fefa4a6c86add5a092575da->enter($__internal_1d69f39115ed92a775e7c0a76540c1c311e4b1c07fefa4a6c86add5a092575da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6->enter($__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
-        $__internal_bb78abc3718216c860b9b4d03337c0f50cf37389d5bbd36952934971bc56fa32 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bb78abc3718216c860b9b4d03337c0f50cf37389d5bbd36952934971bc56fa32->enter($__internal_bb78abc3718216c860b9b4d03337c0f50cf37389d5bbd36952934971bc56fa32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64->enter($__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1d69f39115ed92a775e7c0a76540c1c311e4b1c07fefa4a6c86add5a092575da->leave($__internal_1d69f39115ed92a775e7c0a76540c1c311e4b1c07fefa4a6c86add5a092575da_prof);
+        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6->leave($__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6_prof);
 
         
-        $__internal_bb78abc3718216c860b9b4d03337c0f50cf37389d5bbd36952934971bc56fa32->leave($__internal_bb78abc3718216c860b9b4d03337c0f50cf37389d5bbd36952934971bc56fa32_prof);
+        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64->leave($__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_203e00133896439d238d73800d46ebbc46e17793cf9f8e548d51ade95da5f48f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_203e00133896439d238d73800d46ebbc46e17793cf9f8e548d51ade95da5f48f->enter($__internal_203e00133896439d238d73800d46ebbc46e17793cf9f8e548d51ade95da5f48f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885->enter($__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_1b1bdb623c1bffa0b823290fcea238e627a69dca671cf488b3bcbdd39b59ab19 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1b1bdb623c1bffa0b823290fcea238e627a69dca671cf488b3bcbdd39b59ab19->enter($__internal_1b1bdb623c1bffa0b823290fcea238e627a69dca671cf488b3bcbdd39b59ab19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d->enter($__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "</div> 
@@ -133,18 +133,19 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 <section class=\"content\">
   <div class=\"container\">
     <h2 class=\"heading\">News</h2>
+                               
     <div class=\"row\">
       <div class=\"col-md-8 col-lg-8\">
         <article class=\"post\">
           <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"";
-        // line 58
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/post.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
           <div class=\"author-info\">
             <ul class=\"list-inline\">
               <li>
                 <div class=\"icon-box\"><img src=\"";
-        // line 62
+        // line 63
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/author.png"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></div>
                 <div class=\"info\">
@@ -173,7 +174,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
           </div>
           <div class=\"caption\">
             ";
-        // line 89
+        // line 90
         echo "            <h3><a href=\"\">Jeux Paralympiques Paris 2024</a></h3>
             <p>
                 Les Mouvements Olympiques et Paralympiques Français ne font qu’un pour la candidature de Paris aux Jeux de 2024. 
@@ -194,14 +195,17 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         </article>
             
         ";
-        // line 109
+        // line 110
         echo "        
            
      <div class=\"clearfix\"></div>
       </div>
      
       <aside class=\"col-md-4 col-lg-4\">
-                 
+         <div class=\"row\">
+             
+   
+                    
         <div class=\"row\">
           <div class=\"col-sm-6 col-md-12 col-lg-12\">
             <div class=\"panel panel-default theme-panel\">
@@ -220,7 +224,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
               
               
               ";
-        // line 133
+        // line 137
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["annonces"] ?? $this->getContext($context, "annonces")));
         foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
@@ -228,14 +232,14 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                <div class=\"panel-body nopadding\">
                 <div class=\"media\">
                   <div class=\"media-left\"> <a href=\"";
-            // line 136
+            // line 140
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\"> <img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/rp1.jpg"), "html", null, true);
             echo "\" alt=\"author\" /></a> </div>
                   <div class=\"media-body\">
                     <h4 class=\"media-heading\"><a href=\"";
-            // line 138
+            // line 142
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => $this->getAttribute($context["annonce"], "id_post", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "post_title", array()), "html", null, true);
@@ -249,7 +253,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 143
+        // line 147
         echo "                     
             </div>
           </div>  
@@ -262,7 +266,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
           <div class=\"row\">
             <div class=\"col-xs-12 col-sm-5 col-md-5 col-lg-4\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"";
-        // line 154
+        // line 158
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/m1.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
               <div class=\"author-info author-info-2\">
@@ -274,7 +278,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                   </li>
                   <li>
                 <div class=\"icon-box\"><img src=\"";
-        // line 163
+        // line 167
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/author.png"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></div>
                 <div class=\"info\">
@@ -288,7 +292,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
             <div class=\"col-xs-12 col-sm-7 col-md-7 col-lg-8\">
               <div class=\"caption\">
                 <h3 class=\"md-heading\"><a href=\"";
-        // line 174
+        // line 178
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
         echo "\">Évaluateurs Tourisme et Handicap : Pourquoi pas vous ?</a></h3>
                 <p> Le Comité Régional du Tourisme et la DIRECCTE Auvergne-Rhône-Alpes recherchent des évaluateurs tourisme et handicap.
@@ -306,7 +310,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
           <div class=\"row\">
             <div class=\"col-xs-12 col-sm-5 col-md-5 col-lg-4\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"";
-        // line 189
+        // line 193
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/m2.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
               <div class=\"author-info author-info-2\">
@@ -318,7 +322,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                   </li>
                   <li>
                   <div class=\"icon-box\"><img src=\"";
-        // line 198
+        // line 202
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/author.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></div>
                   <div class=\"info\">
@@ -330,12 +334,17 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
             </div>
               
             <div class=\"col-xs-12 col-sm-7 col-md-7 col-lg-8\">
-              <div class=\"caption\">
+             <div class=\"caption\">
                 <h3 class=\"md-heading\"><a href=\"";
-        // line 209
+        // line 213
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
-        echo "\">The Heading Text Size Should Match</a></h3>
-                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. </p>
+        echo "\">Musique et handicap, c’est possible ?</a></h3>
+                <p> Les ateliers avec des personnes handicapées sont très « prenants » ; ils demandent une forte énergie et une grande expérience personnelles… 
+                    L’animateur se remet constamment en cause ; 
+                    il lui arrive d’être découragé car l’enfant réagit rarement comme il le souhaite ou encore refuse de rentrer dans la « bulle » musicale qu’il a créée. 
+                
+                    <br> (src) http://stephane.hanquet.fr/surdite/musique-et-handicap-article-ufcv/
+                </p>
                 <a class=\"btn btn-default btn-lg\" href=\"#\" role=\"button\">Read More</a> </div>
             </div>
           </div>
@@ -347,10 +356,13 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
     <div class=\"row\">
       <div class=\"col-md-8 col-lg-8\">
         <div class=\"row\">
-          <div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6\">
+            
+        ";
+        // line 233
+        echo "          <div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6\">
             <article class=\"post\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"";
-        // line 224
+        // line 235
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/post-1.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
               <div class=\"author-info author-info-2\">
@@ -374,10 +386,13 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                 <a class=\"btn btn-default\" href=\"#\" role=\"button\">Read More</a> </div>
             </article>
           </div>
+        ";
+        // line 258
+        echo "               
         <div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6\">
             <article class=\"post\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"";
-        // line 248
+        // line 261
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/author.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
               <div class=\"author-info author-info-2\">
@@ -407,7 +422,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         <div class=\"row\">
                     
             ";
-        // line 276
+        // line 289
         echo "            <div class=\"col-sm-6 col-md-12 col-lg-12\">
             <div class=\"panel panel-default theme-panel\">
               <div class=\"panel-heading\">Chroniques</div>
@@ -426,13 +441,13 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                 <div class=\"list-group\"> 
                   
                     ";
-        // line 293
+        // line 306
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             echo " 
                         <a href=\"";
-            // line 294
+            // line 307
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("chronique_rubrique", array("rubrique" => $this->getAttribute($context["category"], "name", array()))), "html", null, true);
             echo "\" class=\"list-group-item\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
@@ -442,14 +457,14 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 296
+        // line 309
         echo "        
                 </div>
               </div>
             </div>
           </div>
         ";
-        // line 302
+        // line 315
         echo "        </div>
       </aside>
     </div>
@@ -461,7 +476,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
           <div class=\"row\">
             <div class=\"col-xs-12 col-sm-5 col-md-5 col-lg-4\">
               <div class=\"post-type post-img\"><a href=\"#\"><img src=\"";
-        // line 312
+        // line 325
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/m1.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
               <div class=\"author-info author-info-2\">
@@ -483,7 +498,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
             <div class=\"col-xs-12 col-sm-7 col-md-7 col-lg-8\">
               <div class=\"caption\">
                 <h3 class=\"md-heading\"><a href=\"";
-        // line 331
+        // line 344
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
         echo "\">The Heading Text Size Should Match</a></h3>
                 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla.</p>
@@ -496,7 +511,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
           <div class=\"row\">
             <div class=\"col-xs-12 col-sm-5 col-md-5 col-lg-4\">
               <div class=\"post-type post-img\"><a href=\"#\"><img src=\"";
-        // line 341
+        // line 354
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/m1.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></a></div>
               <div class=\"author-info author-info-2\">
@@ -518,7 +533,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
             <div class=\"col-xs-12 col-sm-7 col-md-7 col-lg-8\">
               <div class=\"caption\">
                 <h3 class=\"md-heading\"><a href=\"";
-        // line 360
+        // line 373
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
         echo "\">The Heading Text Size Should Match</a></h3>
                 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla. </p>
@@ -572,10 +587,10 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
 ";
         
-        $__internal_1b1bdb623c1bffa0b823290fcea238e627a69dca671cf488b3bcbdd39b59ab19->leave($__internal_1b1bdb623c1bffa0b823290fcea238e627a69dca671cf488b3bcbdd39b59ab19_prof);
+        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d->leave($__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d_prof);
 
         
-        $__internal_203e00133896439d238d73800d46ebbc46e17793cf9f8e548d51ade95da5f48f->leave($__internal_203e00133896439d238d73800d46ebbc46e17793cf9f8e548d51ade95da5f48f_prof);
+        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885->leave($__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885_prof);
 
     }
 
@@ -591,7 +606,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
     public function getDebugInfo()
     {
-        return array (  522 => 360,  500 => 341,  487 => 331,  465 => 312,  453 => 302,  446 => 296,  436 => 294,  430 => 293,  411 => 276,  381 => 248,  354 => 224,  336 => 209,  322 => 198,  310 => 189,  292 => 174,  278 => 163,  266 => 154,  253 => 143,  239 => 138,  232 => 136,  224 => 133,  198 => 109,  177 => 89,  148 => 62,  141 => 58,  128 => 47,  122 => 43,  118 => 41,  112 => 37,  108 => 35,  102 => 31,  98 => 29,  94 => 27,  89 => 25,  85 => 23,  81 => 21,  74 => 19,  70 => 17,  64 => 13,  60 => 11,  54 => 7,  49 => 4,  40 => 2,  11 => 1,);
+        return array (  537 => 373,  515 => 354,  502 => 344,  480 => 325,  468 => 315,  461 => 309,  451 => 307,  445 => 306,  426 => 289,  396 => 261,  391 => 258,  366 => 235,  362 => 233,  340 => 213,  326 => 202,  314 => 193,  296 => 178,  282 => 167,  270 => 158,  257 => 147,  243 => 142,  236 => 140,  228 => 137,  199 => 110,  178 => 90,  149 => 63,  142 => 59,  128 => 47,  122 => 43,  118 => 41,  112 => 37,  108 => 35,  102 => 31,  98 => 29,  94 => 27,  89 => 25,  85 => 23,  81 => 21,  74 => 19,  70 => 17,  64 => 13,  60 => 11,  54 => 7,  49 => 4,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -658,6 +673,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 <section class=\"content\">
   <div class=\"container\">
     <h2 class=\"heading\">News</h2>
+                               
     <div class=\"row\">
       <div class=\"col-md-8 col-lg-8\">
         <article class=\"post\">
@@ -718,7 +734,10 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
       </div>
      
       <aside class=\"col-md-4 col-lg-4\">
-                 
+         <div class=\"row\">
+             
+   
+                    
         <div class=\"row\">
           <div class=\"col-sm-6 col-md-12 col-lg-12\">
             <div class=\"panel panel-default theme-panel\">
@@ -811,9 +830,14 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
             </div>
               
             <div class=\"col-xs-12 col-sm-7 col-md-7 col-lg-8\">
-              <div class=\"caption\">
-                <h3 class=\"md-heading\"><a href=\"{{ path('single_annonce', {id: 1}) }}\">The Heading Text Size Should Match</a></h3>
-                <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. </p>
+             <div class=\"caption\">
+                <h3 class=\"md-heading\"><a href=\"{{ path('single_annonce', {id: 1}) }}\">Musique et handicap, c’est possible ?</a></h3>
+                <p> Les ateliers avec des personnes handicapées sont très « prenants » ; ils demandent une forte énergie et une grande expérience personnelles… 
+                    L’animateur se remet constamment en cause ; 
+                    il lui arrive d’être découragé car l’enfant réagit rarement comme il le souhaite ou encore refuse de rentrer dans la « bulle » musicale qu’il a créée. 
+                
+                    <br> (src) http://stephane.hanquet.fr/surdite/musique-et-handicap-article-ufcv/
+                </p>
                 <a class=\"btn btn-default btn-lg\" href=\"#\" role=\"button\">Read More</a> </div>
             </div>
           </div>
@@ -825,6 +849,8 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
     <div class=\"row\">
       <div class=\"col-md-8 col-lg-8\">
         <div class=\"row\">
+            
+        {#{% for chronique in chroniques %}#}
           <div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6\">
             <article class=\"post\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"{{ asset ('assets/images/post/post-1.jpg') }}\" class=\"img-responsive\" alt=\"image post\" /></a> </div>
@@ -849,6 +875,8 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
                 <a class=\"btn btn-default\" href=\"#\" role=\"button\">Read More</a> </div>
             </article>
           </div>
+        {#{% endfor %}#}
+               
         <div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6\">
             <article class=\"post\">
               <div class=\"post-type post-img\"> <a href=\"#\"><img src=\"{{ asset ('assets/images/post/author.jpg') }}\" class=\"img-responsive\" alt=\"image post\" /></a> </div>

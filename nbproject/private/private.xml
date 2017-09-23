@@ -9,18 +9,16 @@
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/AnnonceController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/header.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/ChroniqueRepository.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/layout.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Entity/Category.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/CategoryRepository.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/chroniques.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/ChroniqueController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/CategoryController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/index.html.twig</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/console.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/AnnonceRepository.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/single_chronique.html.twig</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Entity/Annonce.php</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Entity/Chronique.php</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/single_annonce.html.twig</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/Admin/AnnonceController.php</file>
         </group>
     </open-files>
 </project-private>

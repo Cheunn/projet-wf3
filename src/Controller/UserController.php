@@ -30,10 +30,11 @@ class UserController extends ControllerAbstract
             if (isset ($_POST['adress']))      $user->setAdress($_POST['adress'])   ;               
             if (isset ($_POST['postal_code'])) $user->setPostal_code($_POST['postal_code'])  ;                                  
             if (isset ($_POST['town']))        $user->setTown($_POST['town']) ;
-           if (isset ($_POST['phone']))        $user->setTown($_POST['phone']);             
+           if (isset ($_POST['phone']))        $user->setPhone($_POST['phone']);             
             if (isset ($_POST['url_web_orga']))     $user->setUrl_web_orga($_POST['url_web_orga'])    ;                
             if (isset ($_POST['url_fb']))           $user->setUrl_fb($_POST['url_fb']);
- 
+                
+
 
             if (empty($_POST['name'])) 
             {
@@ -46,10 +47,11 @@ class UserController extends ControllerAbstract
           
             if ( ! empty($user->getPhone() ))         
             {
-                    if ( ! is_int($user->getPhone() ))          {$errors['Phone'] = "Le telephone doit etre numerique";}
-                    if ( strlen($user->getPhone) != 10 )        {$errors['Phone'] = "Le telephone doit contenir 10 chiffres";}
+                   
+                    if ( ! is_int(intval($user->getPhone() )))          {$errors['Phone'] = "Le telephone doit etre numerique";}
+                    if ( strlen($user->getPhone() ) != 10 )        {$errors['Phone'] = "Le telephone doit contenir 10 chiffres";}
             }
-           
+            
             // if (empty($_POST['lastname'])) {
                 // $errors['lastname'] = 'Le nom est obligatoire';
             // } elseif (strlen($_POST['lastname']) > 100) {
@@ -113,7 +115,7 @@ class UserController extends ControllerAbstract
         $user = $this->app['user.manager']->getUser(); 
         $this->app['user.controller']->controle_Saisie($user, 'update');
         $civility = $this->app['user.manager']->getUser()->getCivility(); 
-        //dump($user);
+       //dump($user);dump($user->getPhone());
         if ($user->getRole() == 'user') return $this->render('user/register.html.twig',['user' => $user, 'roleuser' => 'yes', 'civility'=>$civility]);
         elseif ($user->getRole() == 'asso') return $this->render('user/register.html.twig',['user' => $user, 'roleasso' => 'yes']);
     }
@@ -168,7 +170,7 @@ class UserController extends ControllerAbstract
         $userSession = $this->app['user.manager']->getUser();
         dump($userConsult->getId_member() );
         dump($userSession->getId_member() );
-        die;
+      
         
         return $this->render(
             'user/consultProfil.html.twig',
@@ -184,27 +186,98 @@ class UserController extends ControllerAbstract
        
         $user = $this->app['user.repository']->findById($id);
         $userSession = $this->app['user.manager']->getUser();
-        //dump($userConsult->getId_member() );
-        //dump($userSession->getId_member() );
        
-        if ($userSession->getId_member() == $user->getId_member())
-        { 
-                $mode = 'adminuser';
-                return $this->render('user/consultProfil.html.twig',
-                    [
-                        'user'          => $user, 
-                        'modeadmin'     =>  $mode
-                    ]
-                ); 
-        }
-        else 
+        // SI on est connecté sinon on le jarte
+        if ($userSession->getId_member() ) 
         {
-             return $this->render('user/consultProfil.html.twig',
-                    [
-                        'user' => $user
-                    ]
-                );    
+                   
+                // quand on affiche le profil de qqun 
+                if ($userSession->getId_member() == $user->getId_member())      $idsend = $userSession->getId_member(); 
+                else                                                            $idsend = $user->getId_member(); 
+                
+    
+                // affiche note et comments
+                $TabNote  = $this->app['notation.repository']->getMyNote($idsend );  
+                $myNote = number_format($TabNote->getNote(), 2);
+                if ($myNote == '0.00') $myNote = 'Aucune';
+                
+                
+                $nbAnnoncesByUser  = $this->app['annonce.repository']->nbAnnoncesByUser($idsend ); 
+                //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend );
+                $nbNewByUser = 0;
+                $nbChroniquesByUser  = $this->app['chronique.repository']->nbChroniquesByUser($idsend)->getId_post() ;
+                $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
+               
+                $nbCommentaires  = $this->app['notation.repository']->nbCommentsByUser($idsend )->getNote();
+                $getMyComments  = $this->app['notation.repository']->getMyComments($idsend );                       
+                //dump($getMyComments); 
+              
+                $listeCommentsFromUser  = $this->app['notation.repository']->listeCommentsChroniquesAnnoncesByUser($idsend );
+                dump($listeCommentsFromUser); 
+                $nbCommentairesChroniquesFromUser  = $this->app['notation.repository']->nbCommentairesChroniquesFromUser($idsend )->getNote();
+                $nbCommentairesAnnoncesFromUser  = $this->app['notation.repository']->nbCommentairesAnnoncesFromUser($idsend )->getNote();
+                $nbCommentairesFromUser = $nbCommentairesChroniquesFromUser + $nbCommentairesAnnoncesFromUser; 
+                dump($nbCommentairesFromUser); 
+               
+                 
+                //$listeCommentsAnnoncesByUser  = $this->app['notation.repository']->listeCommentsAnnoncesByUser($idsend );
+               
+                // Contient les donnees propres si user = user session
+                if ($userSession->getId_member() == $user->getId_member())
+                { 
+                       $messageCheck = 'NOK' ; 
+                       $messages = [];
+                       $messages  = $this->app['message.repository']->getMyMessages($userSession->getId_member() );  
+                       if (! empty($messages)) $messageCheck = 'OK'; 
+      
+                        $mode = 'adminuser';
+                        return $this->render('user/consultProfil.html.twig',
+                            [
+                                'user'                      =>  $user, 
+                                'modeadmin'                 =>  $mode,
+                                'messages'                  =>  $messages, 
+                                'messageCheck'              =>  $messageCheck,
+                                'myNote'                    =>  $myNote, 
+                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
+                                'nbNewByUser'               =>  $nbNewByUser,
+                                'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
+                                'nbCommentaires'                            =>  $nbCommentaires, 
+                                'getMyComments'                             =>  $getMyComments ,
+                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                     
+
+
+                            ]
+                        ); 
+                }
+                else 
+                {
+                     return $this->render('user/consultProfil.html.twig',
+                            [
+                                'user'                      =>  $user, 
+                                'myNote'                    =>  $myNote, 
+                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
+                                'nbNewByUser'               =>  $nbNewByUser, 
+                                'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
+                                'nbCommentaires'            =>  $nbCommentaires, 
+                                'getMyComments'            =>  $getMyComments ,
+                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                           
+                            ]
+                        );    
+                }
         }
+        else    {
+                     return $this->render('errors/406.html.twig',
+                            [
+                                'message_error' => 'VOUS DEVEZ VOUS CONNECTER POUR VISUALISER LES PROFILS'
+                            ]
+                        );    
+                }
     }
     
     public function messProfilToUs()
@@ -214,7 +287,7 @@ class UserController extends ControllerAbstract
     
  
     
-        public function envoyerPostInterne()
+        public function posterMessage($id_destinataire) 
     {
         /*$this->app['user.manager']->logout();
         

@@ -4,25 +4,24 @@ namespace Controller;
 class CategoryController extends ControllerAbstract
 {
     /* BOUCLE */ /* BOUCLE */ /* BOUCLE */ /* BOUCLE */
-    public function listAction()
-    {
-        $categories = $this->app['category.repository']->findAll();
-        
-        return $this->render(
-            'index.html.twig',
-            [
-                'categories' => $categories
-            ]
-        );
-    }
+//    public function listAction()
+//    {
+//        $categories = $this->app['category.repository']->findAll();
+//        
+//        return $this->render(
+//            'index.html.twig',
+//            [
+//                'categories' => $categories
+//            ]
+//        );
+//    }
     /* BOUCLE */ /* BOUCLE */ /* BOUCLE */ /* BOUCLE */
     /* Julien */ /* Julien */ /* Julien */ /* Julien */
     public function listActionChronique()
     {
-        $categories = $this->app['category.repository']->findAllChronique();
-        
+        $categories = $this->app['category.repository']->findAllAside();
         return $this->render(
-            'aside.html.twig',
+            'index.html.twig',
             [
                 'categories' => $categories
             ]

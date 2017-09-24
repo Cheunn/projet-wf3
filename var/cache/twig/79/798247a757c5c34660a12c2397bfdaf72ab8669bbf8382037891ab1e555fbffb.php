@@ -15,30 +15,16 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0->enter($__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_c12c077afc578c59b0fb8d0235aeb6617a154e8092fec26f00401cf777e33173 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c12c077afc578c59b0fb8d0235aeb6617a154e8092fec26f00401cf777e33173->enter($__internal_c12c077afc578c59b0fb8d0235aeb6617a154e8092fec26f00401cf777e33173_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948->enter($__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_01d402ac9b864cc379f5f1e15457f355561d81a7c9a16f51c8543197a840126b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_01d402ac9b864cc379f5f1e15457f355561d81a7c9a16f51c8543197a840126b->enter($__internal_01d402ac9b864cc379f5f1e15457f355561d81a7c9a16f51c8543197a840126b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
         echo "<header>
 
-<!-- Preloader
-    <div id=\"preloader\">
-        <div id=\"status\">
-            <div class='spinner-wrap'>
-                <div class='leftside'></div>
-                <div class='rightside'></div>
-            <div class='spinner'>
-                <div class='bounce1'></div>
-                <div class='bounce2'></div>
-                <div class='bounce3'></div>
-            </div>
-            </div>
-        </div>
-    </div> 
-     -->
+
 <!-- Fixed navbar -->
 
 <nav class=\"navbar main-menu navbar-default navbar-fixed-top\" role=\"navigation\">
@@ -46,646 +32,348 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
   <div class=\"container\">
 
     <div class=\"navbar-header\">
-
       <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
-
               <span class=\"sr-only\">Toggle navigation</span>
-
               <span class=\"icon-bar\"></span>
-
               <span class=\"icon-bar\"></span>
-
               <span class=\"icon-bar\"></span>
-
             </button>
-
-      <a class=\"navbar-brand\" href=\"";
-        // line 38
+      <a class=\"navbar-brand logo\" href=\"";
+        // line 17
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
-        echo "\" title=\"logo\"><img src=\"";
+        echo "\" title=\"logo\">
+         <img src=\"";
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo\" /></a> </div>
-
+        echo "\" alt=\"logo\" />
+      ";
+        // line 20
+        echo "      </a> </div>
     <div class=\"navbar-collapse collapse pull-left\">
-
       <ul class=\"nav navbar-nav menu\" id=\"menu\">
-
-        <!-- <li class=\"dropdown\">  class=\"dropdown-toggle\"--><li><a href=\"#\" role=\"button\" aria-expanded=\"false\">Accueil</a></li>
-
-            <!-- TO DELETE -->
-            <!-- <ul class=\"dropdown-menu\" role=\"menu\">
-                <li><a href=\"index.html\">Home 1</a></li>
-                <li><a href=\"index-2.html\">Home 2</a></li>
-            </ul> 
-        </li> -->
-
+        <!-- <li class=\"dropdown\">  class=\"dropdown-toggle\"-->
+        <li><a href=\"#\" role=\"button\" aria-expanded=\"false\">Accueil</a></li>
         <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">News <span class=\"caret\"></span></a>
-
             <div class=\"dropdown-menu\">
-
-                <div class=\"container\">
-
+                <div class=\"container\"> 
                     <div class=\"mega-dropdown-menu\">
-
                         <div class=\"tabbable tabs-left\">
-
                             <ul class=\"nav nav-tabs\">
-
-                              <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Travel <i class=\"arrow_carrot-right\"></i></a></li>
-
+                              <li class=\"active\"><a href=\"#Actualites\" data-toggle=\"tab\">Actualité<i class=\"arrow_carrot-right\"></i></a></li>
                               <li><a href=\"#Sport\" data-toggle=\"tab\">Sport <i class=\"arrow_carrot-right\"></i></a></li>
-
-                              <li><a href=\"#Apps\" data-toggle=\"tab\">Apps <i class=\"arrow_carrot-right\"></i></a></li>
-                              
-                              <li><a href=\"#Photography\" data-toggle=\"tab\">Photography <i class=\"arrow_carrot-right\"></i></a></li>
-
-                              <li><a href=\"#Music\" data-toggle=\"tab\">Music <i class=\"arrow_carrot-right\"></i></a></li>
-
+                              <li><a href=\"#Culture\" data-toggle=\"tab\">Culture <i class=\"arrow_carrot-right\"></i></a></li>
+                              <li><a href=\"#Sortie\" data-toggle=\"tab\">Sortie <i class=\"arrow_carrot-right\"></i></a></li>
+                              <li><a href=\"#Insolite\" data-toggle=\"tab\">Insolite  <i class=\"arrow_carrot-right\"></i></a></li>
                             </ul>
-
                             <div class=\"tab-content\">
-
                                 <div class=\"tab-pane active\" id=\"Photography\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 87
+        // line 42
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Travel The World</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 103
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Google Play Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 119
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Business Plan</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 135
+        // line 66
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Best Mobile Apps</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>       
-
                                 </div>
-
                                 <div class=\"tab-pane\" id=\"Travel\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 155
+        // line 76
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post5.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>LifeStyle</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                    <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 171
+        // line 84
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post2.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Mobile reviews</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 187
+        // line 92
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post7.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Apple Probook</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 203
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post4.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Business Call</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>  
-
                                 <div class=\"tab-pane\" id=\"Music\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 223
+        // line 110
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Android Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 239
+        // line 118
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Canan Digital Cam</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 255
+        // line 126
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Classical Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 271
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>IPhone Tunes</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>
-
                                 <div class=\"tab-pane\" id=\"Apps\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 291
+        // line 144
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post1.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Android Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 307
+        // line 152
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post6.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Canan Digital Cam</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                    <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 323
+        // line 160
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post8.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Classical Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"";
-        // line 339
+        // line 168
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post3.png "), "html", null, true);
         echo "\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>IPhone Tunes</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>   
-
                     </div>
-
                 </div>
-
             </div>              
-
         </li>
 
         <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Annonces<span class=\"caret\"></span></a>               
-
                 <div class=\"dropdown-menu\">
-
                     <div class=\"container\">
-
                     <div class=\"mega-dropdown-menu\">
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Categories</h3>
-
+                        <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
+                            <h3>Rubriques </h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\">Photography </a></li>
-
-                                <li><a href=\"#\">Travel </a></li>
-
-                                <li><a href=\"#\">Music </a></li>
-
-                                <li><a href=\"#\">LifeStyle </a></li>
-
-                                <li><a href=\"#\">Apps </a></li>
-
-                                <li><a href=\"#\">Business </a></li>
-
+                                <li><a href=\"#\">Matériels </a></li>
+                                <li><a href=\"#\">Véhicule </a></li>
+                                <li><a href=\"#\">Informatique </a></li>
+                                <li><a href=\"#\">Service </a></li>
+                                <li><a href=\"#\">Vétements </a></li>
+                                <li><a href=\"#\">Autres </a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Social Menu</h3>
-
+                        
+                        <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
+                            <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\"><i class=\"fa fa-facebook-square\"></i> Facebook </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-google-plus-square\"></i> Google Plus </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-twitter-square\"></i> Twitter </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-pinterest-square\"></i> Pinterest </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-linkedin-square\"></i> Linkedin </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-tumblr-square\"></i> Tumblr </a></li>
-
+                               ";
+        // line 204
+        echo "     
+                                <li><a href=\"single.html\">TEST</a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu hidden-xs\">
-
-                            <h3>Recent Post Menu</h3>
-
-                            <ul class=\"list-unstyled\">
-
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu  hidden-xs\">
-
-                            <h3>About Us</h3>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue mi viverra congue in sed leo.</p>
-
+                        <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
+                            <h3>Suivez-nous</h3>
+                            <p>Vous pouvez également maintenant nous suivre sur les réseaux sociaux</p>
                             <br/>
-
-                            <ul class=\"list-inline store-icon\">
-
-                              <li><a href=\"\"><i class=\"fa fa-android\"></i> Google Play</a></li>
-
-                              <li><a href=\"\"><i class=\"fa fa-apple\"></i> Apple Store</a></li>
-
+                             <ul class=\"list-inline store-icon\">
+                              <li><a href=\"\"><i class=\"fa fa-facebook\"></i> Facebook </a></li>
+                              <li><a href=\"\"><i class=\"fa fa-twitter\"></i> Twitter </a></li>
                             </ul>
-
                         </div>
-
                     </div>
-
                     </div>   
-
                 </div>              
-
             </li>
-
          <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Chroniques<span class=\"caret\"></span></a>               
-
                 <div class=\"dropdown-menu\">
-
                     <div class=\"container\">
-
                     <div class=\"mega-dropdown-menu\">
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Categories</h3>
-
+                        <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
+                            <h3>Rubriques</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\">Photography </a></li>
-
-                                <li><a href=\"#\">Travel </a></li>
-
-                                <li><a href=\"#\">Music </a></li>
-
-                                <li><a href=\"#\">LifeStyle </a></li>
-
-                                <li><a href=\"#\">Apps </a></li>
-
-                                <li><a href=\"#\">Business </a></li>
-
+                              <li><a href=\"#\">Actualité</a></li>
+                                <li><a href=\"#\">Sport  </a></li>
+                                <li><a href=\"#\">Culture </a></li>
+                                <li><a href=\"#\">Sortie </a></li>
+                                <li><a href=\"#\">Insolite</a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Social Menu</h3>
-
+                     
+                        <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
+                            <h3>Dernières chroniques</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\"><i class=\"fa fa-facebook-square\"></i> Facebook </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-google-plus-square\"></i> Google Plus </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-twitter-square\"></i> Twitter </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-pinterest-square\"></i> Pinterest </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-linkedin-square\"></i> Linkedin </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-tumblr-square\"></i> Tumblr </a></li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu hidden-xs\">
-
-                            <h3>Recent Post Menu</h3>
-
-                            <ul class=\"list-unstyled\">
-
                               <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
-
+                              <li><a href=\"single.html\">Match With the Size  </a></li>
+                              <li><a href=\"single.html\">The Heading Text Size</a></li>
+                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
+                              <li><a href=\"single.html\">Match With the Image  </a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu  hidden-xs\">
-
-                            <h3>About Us</h3>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue mi viverra congue in sed leo.</p>
-
+                        <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
+                            <h3>Suivez-nous</h3>
+                            <p>Vous pouvez également maintenant nous suivre sur les réseaux sociaux</p>
                             <br/>
-
                             <ul class=\"list-inline store-icon\">
-
-                              <li><a href=\"\"><i class=\"fa fa-android\"></i> Google Play</a></li>
-
-                              <li><a href=\"\"><i class=\"fa fa-apple\"></i> Apple Store</a></li>
-
+                              <li><a href=\"\"><i class=\"fa fa-facebook\"></i> Facebook </a></li>
+                              <li><a href=\"\"><i class=\"fa fa-twitter\"></i> Twitter </a></li>
                             </ul>
-
                         </div>
-
                     </div>
-
                     </div>   
-
                 </div>              
-
             </li>
-
           <li class=\"dropdown\">
-
-        
-                
 \t\t<li><a href=\"";
-        // line 573
+        // line 265
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
         echo "\">Contact</a></li>
 \t\t";
-        // line 574
-        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 574, $this->getSourceContext()); })()), "user", array())) {
+        // line 266
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 266, $this->getSourceContext()); })()), "user", array())) {
             echo " 
 \t\t\t<li><a href=\"";
-            // line 575
+            // line 267
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\" class=\"inscription\">Deconnexion</a></li>
 
 \t\t ";
         } else {
-            // line 577
+            // line 269
             echo " 
 \t\t\t<li><a href=\"";
-            // line 578
+            // line 270
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\" class=\"connexion\">Connexion</a></li>
 \t\t\t<li><a href=\"";
-            // line 579
+            // line 271
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
             echo "\" class=\"connexion\">Inscription</a></li>
 \t\t";
         }
-        // line 580
+        // line 272
         echo "  
-
-        
-        
-        
+          
       </ul>
-
     </div>
-
     <ul class=\"nav navbar-nav navbar-right menu social-icons\">
-
         <li class=\"dropdown mega-dropdown search\">
           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-search\"></i></a>
           <div class=\"dropdown-menu\">
@@ -704,42 +392,31 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
                             </div><!-- /input-group -->
 
                           </div>
-
                           </div>
-
                       </form>
-
                     </div>
-
                     </div>
-
                     </div>
-
-
 
                     </div>   
-
                 </div>
-
         </li>
-        
-       
 \t\t";
-        // line 629
-        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 629, $this->getSourceContext()); })()), "user", array())) {
+        // line 304
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 304, $this->getSourceContext()); })()), "user", array())) {
             echo " 
 \t\t\t";
-            // line 633
-            echo "\t\t\t
-\t\t\t\t\t\t\t
+            // line 308
+            echo "\t\t
+\t\t\t\t\t\t
 \t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">";
-            // line 635
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 635, $this->getSourceContext()); })()), "username", array()), "html", null, true);
+            // line 310
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 310, $this->getSourceContext()); })()), "username", array()), "html", null, true);
             echo " <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
 \t\t\t\t\t\t\t <li class=\"active\"><a href=\"";
-            // line 637
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 637, $this->getSourceContext()); })()), "id", array()))), "html", null, true);
+            // line 312
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 312, $this->getSourceContext()); })()), "id", array()))), "html", null, true);
             echo "\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
@@ -747,22 +424,22 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"";
-            // line 643
+            // line 318
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\">Deconnexion</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t  </li>
 \t\t\t\t  <li><a href=\"";
-            // line 646
+            // line 321
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\"><i class=\"fa fa-times\"></i></a></li>
 \t\t\t\t  
 \t\t";
         } else {
-            // line 648
+            // line 323
             echo " 
 \t\t\t";
-            // line 651
+            // line 326
             echo "\t\t\t<li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\"><i class=\"fa fa-user\"></i></a></li>
@@ -781,39 +458,33 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t\t\t  </li>
 \t\t";
         }
-        // line 665
+        // line 340
         echo " 
 \t\t
 \t\t ";
-        // line 667
-        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 667, $this->getSourceContext()); })()), "admin", array())) {
-            // line 668
+        // line 342
+        if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user_manager"]) || array_key_exists("user_manager", $context) ? $context["user_manager"] : (function () { throw new Twig_Error_Runtime('Variable "user_manager" does not exist.', 342, $this->getSourceContext()); })()), "admin", array())) {
+            // line 343
             echo "                    ";
-            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 668)->display($context);
+            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 343)->display($context);
             echo " 
                  ";
         }
-        // line 670
-        echo "       
-
-      </ul>
-
+        // line 345
+        echo "         </ul>
     <!--/.nav-collapse --> 
-
   </div>
-
 </nav>
-
 </header>
  
 ";
-        // line 697
+        // line 366
         echo "  ";
         
-        $__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0->leave($__internal_82b60b4faea8cf513951e2b9b7937d1485a635b43a565e84dc444f03bd745ec0_prof);
+        $__internal_c12c077afc578c59b0fb8d0235aeb6617a154e8092fec26f00401cf777e33173->leave($__internal_c12c077afc578c59b0fb8d0235aeb6617a154e8092fec26f00401cf777e33173_prof);
 
         
-        $__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948->leave($__internal_8318c2d6832983652001f5d8115b486eaf0a2f038f4d9f237d64666488c3b948_prof);
+        $__internal_01d402ac9b864cc379f5f1e15457f355561d81a7c9a16f51c8543197a840126b->leave($__internal_01d402ac9b864cc379f5f1e15457f355561d81a7c9a16f51c8543197a840126b_prof);
 
     }
 
@@ -829,28 +500,14 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 
     public function getDebugInfo()
     {
-        return array (  811 => 697,  797 => 670,  791 => 668,  789 => 667,  785 => 665,  766 => 651,  763 => 648,  757 => 646,  751 => 643,  742 => 637,  737 => 635,  733 => 633,  729 => 629,  678 => 580,  673 => 579,  669 => 578,  666 => 577,  660 => 575,  656 => 574,  652 => 573,  415 => 339,  396 => 323,  377 => 307,  358 => 291,  335 => 271,  316 => 255,  297 => 239,  278 => 223,  255 => 203,  236 => 187,  217 => 171,  198 => 155,  175 => 135,  156 => 119,  137 => 103,  118 => 87,  64 => 38,  25 => 1,);
+        return array (  482 => 366,  474 => 345,  468 => 343,  466 => 342,  462 => 340,  443 => 326,  440 => 323,  434 => 321,  428 => 318,  419 => 312,  414 => 310,  410 => 308,  406 => 304,  372 => 272,  367 => 271,  363 => 270,  360 => 269,  354 => 267,  350 => 266,  346 => 265,  283 => 204,  246 => 168,  235 => 160,  224 => 152,  213 => 144,  200 => 134,  189 => 126,  178 => 118,  167 => 110,  154 => 100,  143 => 92,  132 => 84,  121 => 76,  108 => 66,  97 => 58,  86 => 50,  75 => 42,  51 => 20,  47 => 18,  43 => 17,  25 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("<header>
 
-<!-- Preloader
-    <div id=\"preloader\">
-        <div id=\"status\">
-            <div class='spinner-wrap'>
-                <div class='leftside'></div>
-                <div class='rightside'></div>
-            <div class='spinner'>
-                <div class='bounce1'></div>
-                <div class='bounce2'></div>
-                <div class='bounce3'></div>
-            </div>
-            </div>
-        </div>
-    </div> 
-     -->
+
 <!-- Fixed navbar -->
 
 <nav class=\"navbar main-menu navbar-default navbar-fixed-top\" role=\"navigation\">
@@ -858,554 +515,260 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
   <div class=\"container\">
 
     <div class=\"navbar-header\">
-
       <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
-
               <span class=\"sr-only\">Toggle navigation</span>
-
               <span class=\"icon-bar\"></span>
-
               <span class=\"icon-bar\"></span>
-
               <span class=\"icon-bar\"></span>
-
             </button>
-
-      <a class=\"navbar-brand\" href=\"{{ path('homepage') }}\" title=\"logo\"><img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" /></a> </div>
-
+      <a class=\"navbar-brand logo\" href=\"{{ path('homepage') }}\" title=\"logo\">
+         <img src=\"{{ asset ('assets/images/logo.png') }}\" alt=\"logo\" />
+      {#yGrekinf#}
+      </a> </div>
     <div class=\"navbar-collapse collapse pull-left\">
-
       <ul class=\"nav navbar-nav menu\" id=\"menu\">
-
-        <!-- <li class=\"dropdown\">  class=\"dropdown-toggle\"--><li><a href=\"#\" role=\"button\" aria-expanded=\"false\">Accueil</a></li>
-
-            <!-- TO DELETE -->
-            <!-- <ul class=\"dropdown-menu\" role=\"menu\">
-                <li><a href=\"index.html\">Home 1</a></li>
-                <li><a href=\"index-2.html\">Home 2</a></li>
-            </ul> 
-        </li> -->
-
+        <!-- <li class=\"dropdown\">  class=\"dropdown-toggle\"-->
+        <li><a href=\"#\" role=\"button\" aria-expanded=\"false\">Accueil</a></li>
         <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">News <span class=\"caret\"></span></a>
-
             <div class=\"dropdown-menu\">
-
-                <div class=\"container\">
-
+                <div class=\"container\"> 
                     <div class=\"mega-dropdown-menu\">
-
                         <div class=\"tabbable tabs-left\">
-
                             <ul class=\"nav nav-tabs\">
-
-                              <li class=\"active\"><a href=\"#Travel\" data-toggle=\"tab\">Travel <i class=\"arrow_carrot-right\"></i></a></li>
-
+                              <li class=\"active\"><a href=\"#Actualites\" data-toggle=\"tab\">Actualité<i class=\"arrow_carrot-right\"></i></a></li>
                               <li><a href=\"#Sport\" data-toggle=\"tab\">Sport <i class=\"arrow_carrot-right\"></i></a></li>
-
-                              <li><a href=\"#Apps\" data-toggle=\"tab\">Apps <i class=\"arrow_carrot-right\"></i></a></li>
-                              
-                              <li><a href=\"#Photography\" data-toggle=\"tab\">Photography <i class=\"arrow_carrot-right\"></i></a></li>
-
-                              <li><a href=\"#Music\" data-toggle=\"tab\">Music <i class=\"arrow_carrot-right\"></i></a></li>
-
+                              <li><a href=\"#Culture\" data-toggle=\"tab\">Culture <i class=\"arrow_carrot-right\"></i></a></li>
+                              <li><a href=\"#Sortie\" data-toggle=\"tab\">Sortie <i class=\"arrow_carrot-right\"></i></a></li>
+                              <li><a href=\"#Insolite\" data-toggle=\"tab\">Insolite  <i class=\"arrow_carrot-right\"></i></a></li>
                             </ul>
-
                             <div class=\"tab-content\">
-
                                 <div class=\"tab-pane active\" id=\"Photography\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Travel The World</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Google Play Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Business Plan</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Best Mobile Apps</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>       
-
                                 </div>
-
                                 <div class=\"tab-pane\" id=\"Travel\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post5.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>LifeStyle</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                    <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post2.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Mobile reviews</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post7.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Apple Probook</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post4.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Business Call</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>  
-
                                 <div class=\"tab-pane\" id=\"Music\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Android Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Canan Digital Cam</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Classical Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>IPhone Tunes</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>
-
                                 <div class=\"tab-pane\" id=\"Apps\">
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post1.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Android Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post6.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Canan Digital Cam</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                    <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post8.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>Classical Music</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                     <div class=\"col-sm-6 col-xs-12 col-md-3\">
-
                                             <div class=\"thumbnail\">
-
                                                 <a href=\"single.html\"><img src=\"{{ asset('assets/images/feature-posts/feature-post3.png ') }}\"  alt=\"Generic placeholder thumbnail\"></a>
-
                                                 <div class=\"caption\">
-
                                                     <h3>IPhone Tunes</h3>
-
                                                 </div>
-
                                             </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>   
-
                     </div>
-
                 </div>
-
             </div>              
-
         </li>
 
         <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Annonces<span class=\"caret\"></span></a>               
-
                 <div class=\"dropdown-menu\">
-
                     <div class=\"container\">
-
                     <div class=\"mega-dropdown-menu\">
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Categories</h3>
-
+                        <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
+                            <h3>Rubriques </h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\">Photography </a></li>
-
-                                <li><a href=\"#\">Travel </a></li>
-
-                                <li><a href=\"#\">Music </a></li>
-
-                                <li><a href=\"#\">LifeStyle </a></li>
-
-                                <li><a href=\"#\">Apps </a></li>
-
-                                <li><a href=\"#\">Business </a></li>
-
+                                <li><a href=\"#\">Matériels </a></li>
+                                <li><a href=\"#\">Véhicule </a></li>
+                                <li><a href=\"#\">Informatique </a></li>
+                                <li><a href=\"#\">Service </a></li>
+                                <li><a href=\"#\">Vétements </a></li>
+                                <li><a href=\"#\">Autres </a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Social Menu</h3>
-
+                        
+                        <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
+                            <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\"><i class=\"fa fa-facebook-square\"></i> Facebook </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-google-plus-square\"></i> Google Plus </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-twitter-square\"></i> Twitter </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-pinterest-square\"></i> Pinterest </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-linkedin-square\"></i> Linkedin </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-tumblr-square\"></i> Tumblr </a></li>
-
+                               {# {% for annonce in annonces %} 
+                                <li><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></li>
+                               {% endfor %}   #}     
+                                <li><a href=\"single.html\">TEST</a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu hidden-xs\">
-
-                            <h3>Recent Post Menu</h3>
-
-                            <ul class=\"list-unstyled\">
-
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu  hidden-xs\">
-
-                            <h3>About Us</h3>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue mi viverra congue in sed leo.</p>
-
+                        <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
+                            <h3>Suivez-nous</h3>
+                            <p>Vous pouvez également maintenant nous suivre sur les réseaux sociaux</p>
                             <br/>
-
-                            <ul class=\"list-inline store-icon\">
-
-                              <li><a href=\"\"><i class=\"fa fa-android\"></i> Google Play</a></li>
-
-                              <li><a href=\"\"><i class=\"fa fa-apple\"></i> Apple Store</a></li>
-
+                             <ul class=\"list-inline store-icon\">
+                              <li><a href=\"\"><i class=\"fa fa-facebook\"></i> Facebook </a></li>
+                              <li><a href=\"\"><i class=\"fa fa-twitter\"></i> Twitter </a></li>
                             </ul>
-
                         </div>
-
                     </div>
-
                     </div>   
-
                 </div>              
-
             </li>
-
          <li class=\"dropdown mega-dropdown\">
-
                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Chroniques<span class=\"caret\"></span></a>               
-
                 <div class=\"dropdown-menu\">
-
                     <div class=\"container\">
-
                     <div class=\"mega-dropdown-menu\">
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Categories</h3>
-
+                        <div class=\"col-md-4 col-xs-12 col-sm-6 sub-menu\">
+                            <h3>Rubriques</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\">Photography </a></li>
-
-                                <li><a href=\"#\">Travel </a></li>
-
-                                <li><a href=\"#\">Music </a></li>
-
-                                <li><a href=\"#\">LifeStyle </a></li>
-
-                                <li><a href=\"#\">Apps </a></li>
-
-                                <li><a href=\"#\">Business </a></li>
-
+                              <li><a href=\"#\">Actualité</a></li>
+                                <li><a href=\"#\">Sport  </a></li>
+                                <li><a href=\"#\">Culture </a></li>
+                                <li><a href=\"#\">Sortie </a></li>
+                                <li><a href=\"#\">Insolite</a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-xs-12 col-sm-6 sub-menu\">
-
-                            <h3>Social Menu</h3>
-
+                     
+                        <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
+                            <h3>Dernières chroniques</h3>
                             <ul class=\"list-unstyled\">
-
-                              <li><a href=\"#\"><i class=\"fa fa-facebook-square\"></i> Facebook </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-google-plus-square\"></i> Google Plus </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-twitter-square\"></i> Twitter </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-pinterest-square\"></i> Pinterest </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-linkedin-square\"></i> Linkedin </a></li>
-
-                                <li><a href=\"#\"><i class=\"fa fa-tumblr-square\"></i> Tumblr </a></li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu hidden-xs\">
-
-                            <h3>Recent Post Menu</h3>
-
-                            <ul class=\"list-unstyled\">
-
                               <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Size  </a></li>
-
-                                <li><a href=\"single.html\">The Heading Text Size</a></li>
-
-                                <li><a href=\"single.html\">Lorem ipsum dolor sit </a></li>
-
-                                <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-
-                                <li><a href=\"single.html\">Match With the Image  </a></li>
-
+                              <li><a href=\"single.html\">Match With the Size  </a></li>
+                              <li><a href=\"single.html\">The Heading Text Size</a></li>
+                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
+                              <li><a href=\"single.html\">Match With the Image  </a></li>
                             </ul>
-
                         </div>
-
-                        <div class=\"col-md-3 col-sm-6 sub-menu  hidden-xs\">
-
-                            <h3>About Us</h3>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue mi viverra congue in sed leo.</p>
-
+                        <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
+                            <h3>Suivez-nous</h3>
+                            <p>Vous pouvez également maintenant nous suivre sur les réseaux sociaux</p>
                             <br/>
-
                             <ul class=\"list-inline store-icon\">
-
-                              <li><a href=\"\"><i class=\"fa fa-android\"></i> Google Play</a></li>
-
-                              <li><a href=\"\"><i class=\"fa fa-apple\"></i> Apple Store</a></li>
-
+                              <li><a href=\"\"><i class=\"fa fa-facebook\"></i> Facebook </a></li>
+                              <li><a href=\"\"><i class=\"fa fa-twitter\"></i> Twitter </a></li>
                             </ul>
-
                         </div>
-
                     </div>
-
                     </div>   
-
                 </div>              
-
             </li>
-
           <li class=\"dropdown\">
-
-        
-                
 \t\t<li><a href=\"{{ path('messProfilToUs') }}\">Contact</a></li>
 \t\t{% if user_manager.user %} 
 \t\t\t<li><a href=\"{{ path('deconnexion') }}\" class=\"inscription\">Deconnexion</a></li>
@@ -1414,16 +777,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t\t<li><a href=\"{{ path('connexion') }}\" class=\"connexion\">Connexion</a></li>
 \t\t\t<li><a href=\"{{ path('inscription') }}\" class=\"connexion\">Inscription</a></li>
 \t\t{% endif %}  
-
-        
-        
-        
+          
       </ul>
-
     </div>
-
     <ul class=\"nav navbar-nav navbar-right menu social-icons\">
-
         <li class=\"dropdown mega-dropdown search\">
           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-search\"></i></a>
           <div class=\"dropdown-menu\">
@@ -1442,32 +799,21 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
                             </div><!-- /input-group -->
 
                           </div>
-
                           </div>
-
                       </form>
-
                     </div>
-
                     </div>
-
                     </div>
-
-
 
                     </div>   
-
                 </div>
-
         </li>
-        
-       
 \t\t{% if user_manager.user %} 
 \t\t\t{#
 \t\t\t<li><a href=\"#\"><i>{{user_manager.username}}</i></a></li>
 \t\t\t<li><a href=\"{{ path('deconnexion') }}\"><i class=\"fa fa-times\"></i></a></li> #}
-\t\t\t
-\t\t\t\t\t\t\t
+\t\t
+\t\t\t\t\t\t
 \t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">{{user_manager.username}} <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
 \t\t\t\t\t\t\t <li class=\"active\"><a href=\"{{ path('profilUser', {id: user_manager.id}) }}\" >Mon tableau de bord</a></li>
@@ -1503,16 +849,10 @@ class __TwigTemplate_b2f625c012870f62cb0b48827a5137691629ba5386f8723de1c555f0954
 \t\t {% if user_manager.admin %}
                     {% include 'admin/headerAdmin.html.twig'%} 
                  {% endif %}
-       
-
-      </ul>
-
+         </ul>
     <!--/.nav-collapse --> 
-
   </div>
-
 </nav>
-
 </header>
  
 {#  <!-- Preloader -->

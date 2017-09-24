@@ -15,11 +15,12 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc->enter($__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2->enter($__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
-        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871->enter($__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+        $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4->enter($__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
+
 
         // line 1
         echo "<header>
@@ -278,15 +279,36 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
                             <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-                               ";
+                                <li><a href=\"";
+        // line 202
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                <li><a href=\"";
+        // line 203
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                <li><a href=\"";
         // line 204
-        echo "     
-                                <li><a href=\"single.html\">TEST</a></li>
-                                <li><a href=\"single.html\"></a></li>
-                                <li><a href=\"single.html\"></a></li>
-                                <li><a href=\"single.html\"></a></li>
-                                <li><a href=\"single.html\"></a></li>
-                            </ul>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                <li><a href=\"";
+        // line 205
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                <li><a href=\"";
+        // line 206
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                <li><a href=\"";
+        // line 207
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("single_annonce", array("id" => 1));
+        echo "}\">Annonce 1</a></li>
+                                
+                               ";
+        // line 212
+        echo "                                ";
+        // line 217
+        echo "                            </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
                             <h3>Suivez-nous</h3>
@@ -320,12 +342,9 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
                             <h3>Dernières chroniques</h3>
                             <ul class=\"list-unstyled\">
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                              <li><a href=\"single.html\">Match With the Size  </a></li>
-                              <li><a href=\"single.html\">The Heading Text Size</a></li>
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                              <li><a href=\"single.html\">Match With the Image  </a></li>
-                            </ul>
+                              ";
+        // line 256
+        echo "                            </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
                             <h3>Suivez-nous</h3>
@@ -342,33 +361,33 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
             </li>
           <li class=\"dropdown\">
 \t\t<li><a href=\"";
-        // line 265
+        // line 272
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
         echo "\">Contact</a></li>
 \t\t";
-        // line 266
+        // line 273
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "user", array())) {
             echo " 
 \t\t\t<li><a href=\"";
-            // line 267
+            // line 274
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\" class=\"inscription\">Deconnexion</a></li>
 
 \t\t ";
         } else {
-            // line 269
+            // line 276
             echo " 
 \t\t\t<li><a href=\"";
-            // line 270
+            // line 277
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\" class=\"connexion\">Connexion</a></li>
 \t\t\t<li><a href=\"";
-            // line 271
+            // line 278
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("inscription");
             echo "\" class=\"connexion\">Inscription</a></li>
 \t\t";
         }
-        // line 272
+        // line 279
         echo "  
           
       </ul>
@@ -402,44 +421,49 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                 </div>
         </li>
 \t\t";
-        // line 304
+        // line 311
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "user", array())) {
             echo " 
 \t\t\t";
-            // line 308
+            // line 315
             echo "\t\t
 \t\t\t\t\t\t
 \t\t\t\t\t<li class=\"dropdown\"> <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">";
-            // line 310
+            // line 317
             echo twig_escape_filter($this->env, $this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "username", array()), "html", null, true);
             echo " <span class=\"caret\"></span></a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
 \t\t\t\t\t\t\t <li class=\"active\"><a href=\"";
-            // line 312
+            // line 319
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => $this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "id", array()))), "html", null, true);
             echo "\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"";
+            // line 321
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_annonce_edit");
+            echo "\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"";
+            // line 322
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_chronique_edit");
+            echo "\">Poster une chronique</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"";
-            // line 318
+            // line 324
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\">Deconnexion</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t  </li>
 \t\t\t\t  <li><a href=\"";
-            // line 321
+            // line 327
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deconnexion");
             echo "\"><i class=\"fa fa-times\"></i></a></li>
 \t\t\t\t  
 \t\t";
         } else {
-            // line 323
+            // line 329
             echo " 
 \t\t\t";
-            // line 326
+            // line 332
             echo "\t\t\t<li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("connexion");
             echo "\"><i class=\"fa fa-user\"></i></a></li>
@@ -458,19 +482,19 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 \t\t\t\t  </li>
 \t\t";
         }
-        // line 340
+        // line 346
         echo " 
 \t\t
 \t\t ";
-        // line 342
+        // line 348
         if ($this->getAttribute(($context["user_manager"] ?? $this->getContext($context, "user_manager")), "admin", array())) {
-            // line 343
+            // line 349
             echo "                    ";
-            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 343)->display($context);
+            $this->loadTemplate("admin/headerAdmin.html.twig", "header.html.twig", 349)->display($context);
             echo " 
                  ";
         }
-        // line 345
+        // line 351
         echo "         </ul>
     <!--/.nav-collapse --> 
   </div>
@@ -478,13 +502,15 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 </header>
  
 ";
-        // line 366
+        // line 372
         echo "  ";
         
-        $__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc->leave($__internal_da861ca971d6e5d0e3b2cedaf32704de21ef353f8a832ad322dcd2267ccb8abc_prof);
+
+        $__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2->leave($__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2_prof);
 
         
-        $__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871->leave($__internal_1641b52ea0ccd1e725a5951151074b9a749b28418f166588f23a74ef02eeb871_prof);
+        $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4->leave($__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4_prof);
+
 
     }
 
@@ -500,7 +526,7 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 
     public function getDebugInfo()
     {
-        return array (  482 => 366,  474 => 345,  468 => 343,  466 => 342,  462 => 340,  443 => 326,  440 => 323,  434 => 321,  428 => 318,  419 => 312,  414 => 310,  410 => 308,  406 => 304,  372 => 272,  367 => 271,  363 => 270,  360 => 269,  354 => 267,  350 => 266,  346 => 265,  283 => 204,  246 => 168,  235 => 160,  224 => 152,  213 => 144,  200 => 134,  189 => 126,  178 => 118,  167 => 110,  154 => 100,  143 => 92,  132 => 84,  121 => 76,  108 => 66,  97 => 58,  86 => 50,  75 => 42,  51 => 20,  47 => 18,  43 => 17,  25 => 1,);
+        return array (  505 => 372,  497 => 351,  491 => 349,  489 => 348,  485 => 346,  466 => 332,  463 => 329,  457 => 327,  451 => 324,  446 => 322,  442 => 321,  437 => 319,  432 => 317,  428 => 315,  424 => 311,  390 => 279,  385 => 278,  381 => 277,  378 => 276,  372 => 274,  368 => 273,  364 => 272,  346 => 256,  310 => 217,  308 => 212,  303 => 207,  299 => 206,  295 => 205,  291 => 204,  287 => 203,  283 => 202,  246 => 168,  235 => 160,  224 => 152,  213 => 144,  200 => 134,  189 => 126,  178 => 118,  167 => 110,  154 => 100,  143 => 92,  132 => 84,  121 => 76,  108 => 66,  97 => 58,  86 => 50,  75 => 42,  51 => 20,  47 => 18,  43 => 17,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -714,14 +740,21 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
                             <h3>Dernières annonces</h3>
                             <ul class=\"list-unstyled\">
-                               {# {% for annonce in annonces %} 
-                                <li><a href=\"{{ path('single_annonce', {id: annonce.id_post}) }}\">{{ annonce.post_title }}</a></li>
-                               {% endfor %}   #}     
-                                <li><a href=\"single.html\">TEST</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                <li><a href=\"{{ path('single_annonce', {id : 1})}}}\">Annonce 1</a></li>
+                                
+                               {#{% for annonceHeader in annoncesHeader %} 
+                                <li><a href=\"{{ path('single_annonce', {id: annonceHeader.id_post}) }}\">{{ annonceHeader.post_title }}</a></li>
+                               {% endfor %}#}
+                                {#<li><a href=\"single.html\">TEST</a></li>
                                 <li><a href=\"single.html\"></a></li>
                                 <li><a href=\"single.html\"></a></li>
                                 <li><a href=\"single.html\"></a></li>
-                                <li><a href=\"single.html\"></a></li>
+                                <li><a href=\"single.html\"></a></li>#}
                             </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
@@ -756,11 +789,11 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
                         <div class=\"col-md-4 col-sm-6 sub-menu hidden-xs\">
                             <h3>Dernières chroniques</h3>
                             <ul class=\"list-unstyled\">
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                              <li><a href=\"single.html\">Match With the Size  </a></li>
-                              <li><a href=\"single.html\">The Heading Text Size</a></li>
-                              <li><a href=\"single.html\">Should Be A Large Heading </a></li>
-                              <li><a href=\"single.html\">Match With the Image  </a></li>
+                              {#<li><a href=\"{{ path('single_chronique', {id : 1})}}}\">Chronique 1</a></li>
+                              <li><a href=\"{{ path('single_chronique', {id : 1})}}}\">Chronique 1</a></li>
+                              <li><a href=\"{{ path('single_chronique', {id : 1})}}}\">Chronique 1</a></li>
+                              <li><a href=\"{{ path('single_chronique', {id : 1})}}}\">Chronique 1</a></li>
+                              <li><a href=\"{{ path('single_chronique', {id : 1})}}}\">Chronique 1</a></li>#}
                             </ul>
                         </div>
                         <div class=\"col-md-4 col-sm-6 sub-menu  hidden-xs\">
@@ -826,9 +859,8 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
 \t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">
 \t\t\t\t\t\t\t <li class=\"active\"><a href=\"{{ path('profilUser', {id: user_manager.id}) }}\" >Mon tableau de bord</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une annonce</a></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une news</a></li>
-\t\t\t\t\t\t\t  <li><a href=\"single.html\">Poster une chronique</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"{{path('user_annonce_edit')}}\">Poster une annonce</a></li>
+\t\t\t\t\t\t\t  <li><a href=\"{{path('user_chronique_edit')}}\">Poster une chronique</a></li>
 \t\t\t\t\t\t\t  <li class=\"divider\"></li>
 \t\t\t\t\t\t\t  <li><a href=\"{{ path('deconnexion') }}\">Deconnexion</a></li>
 \t\t\t\t\t\t</ul>

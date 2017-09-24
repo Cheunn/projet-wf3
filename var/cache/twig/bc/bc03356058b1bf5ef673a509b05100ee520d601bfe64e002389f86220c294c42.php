@@ -22,29 +22,29 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4b1e037fe564f421bc5e3b409ba2c0acd56cee7c93fc5551a2170a20b93cf677 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4b1e037fe564f421bc5e3b409ba2c0acd56cee7c93fc5551a2170a20b93cf677->enter($__internal_4b1e037fe564f421bc5e3b409ba2c0acd56cee7c93fc5551a2170a20b93cf677_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_e086c9a93229f70244e8c7d80b87cbaa68747bfd3fd9d0ceb0abc5dc1f5ff464 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e086c9a93229f70244e8c7d80b87cbaa68747bfd3fd9d0ceb0abc5dc1f5ff464->enter($__internal_e086c9a93229f70244e8c7d80b87cbaa68747bfd3fd9d0ceb0abc5dc1f5ff464_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
-        $__internal_0526adfdc0b2ca83b6dcfc25607320a6e0eb284169233cb86d270196d2cc0cf9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0526adfdc0b2ca83b6dcfc25607320a6e0eb284169233cb86d270196d2cc0cf9->enter($__internal_0526adfdc0b2ca83b6dcfc25607320a6e0eb284169233cb86d270196d2cc0cf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
+        $__internal_10af35146c8e366bd71cde55213939d4882e78f4e355d1c60d5e6d2afdc9f206 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_10af35146c8e366bd71cde55213939d4882e78f4e355d1c60d5e6d2afdc9f206->enter($__internal_10af35146c8e366bd71cde55213939d4882e78f4e355d1c60d5e6d2afdc9f206_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4b1e037fe564f421bc5e3b409ba2c0acd56cee7c93fc5551a2170a20b93cf677->leave($__internal_4b1e037fe564f421bc5e3b409ba2c0acd56cee7c93fc5551a2170a20b93cf677_prof);
+        $__internal_e086c9a93229f70244e8c7d80b87cbaa68747bfd3fd9d0ceb0abc5dc1f5ff464->leave($__internal_e086c9a93229f70244e8c7d80b87cbaa68747bfd3fd9d0ceb0abc5dc1f5ff464_prof);
 
         
-        $__internal_0526adfdc0b2ca83b6dcfc25607320a6e0eb284169233cb86d270196d2cc0cf9->leave($__internal_0526adfdc0b2ca83b6dcfc25607320a6e0eb284169233cb86d270196d2cc0cf9_prof);
+        $__internal_10af35146c8e366bd71cde55213939d4882e78f4e355d1c60d5e6d2afdc9f206->leave($__internal_10af35146c8e366bd71cde55213939d4882e78f4e355d1c60d5e6d2afdc9f206_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_045cd429bbfff7560d5c6efd2dcce66723c03912f97bfafa763740e1a8421b2e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_045cd429bbfff7560d5c6efd2dcce66723c03912f97bfafa763740e1a8421b2e->enter($__internal_045cd429bbfff7560d5c6efd2dcce66723c03912f97bfafa763740e1a8421b2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_79fe8b1b79de9f3382f5b6f34cb4736fe84a0d71d25af909f3f1bd9074bf752f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_79fe8b1b79de9f3382f5b6f34cb4736fe84a0d71d25af909f3f1bd9074bf752f->enter($__internal_79fe8b1b79de9f3382f5b6f34cb4736fe84a0d71d25af909f3f1bd9074bf752f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_bb43e91d0f526db6a48f057394cda5e36f1450d29952109d366a5c41b6cf8d05 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bb43e91d0f526db6a48f057394cda5e36f1450d29952109d366a5c41b6cf8d05->enter($__internal_bb43e91d0f526db6a48f057394cda5e36f1450d29952109d366a5c41b6cf8d05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_8659737523f55fb9d46a1772f782ece611824215b6cc68af58f2eef0f99e6c6e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8659737523f55fb9d46a1772f782ece611824215b6cc68af58f2eef0f99e6c6e->enter($__internal_8659737523f55fb9d46a1772f782ece611824215b6cc68af58f2eef0f99e6c6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -87,7 +87,7 @@ class __TwigTemplate_73ea4775aca89d085b7373b3bbb362556e6d0bb086c807a232027b838ff
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 28, $this->getSourceContext()); })()), "name", array()), "html", null, true);
             echo "\"></div>
-            <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"";
+            <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo (champ obligatoire)\" value=\"";
             // line 29
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 29, $this->getSourceContext()); })()), "name", array()), "html", null, true);
             echo "\"></div>
@@ -230,7 +230,7 @@ array_key_exists("roleasso", $context)) {
             // line 74
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 74, $this->getSourceContext()); })()), "email", array()), "html", null, true);
             echo "\"></div>
-            <div class=\"form-group form-element commun-element\"  ><input type=\"text\" name=\"phone\" id=\"phone\" tabindex=\"1\" class=\"form-control\" placeholder=\"phone \" value=\"";
+            <div class=\"form-group form-element commun-element\"  ><input type=\"text\" name=\"phone\"  id=\"phone\" tabindex=\"1\" class=\"form-control\" placeholder=\"phone \" value=\"";
             // line 75
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 75, $this->getSourceContext()); })()), "phone", array()), "html", null, true);
             echo "\"></div>
@@ -289,21 +289,21 @@ array_key_exists("roleasso", $context)) {
 
 ";
         
-        $__internal_bb43e91d0f526db6a48f057394cda5e36f1450d29952109d366a5c41b6cf8d05->leave($__internal_bb43e91d0f526db6a48f057394cda5e36f1450d29952109d366a5c41b6cf8d05_prof);
+        $__internal_8659737523f55fb9d46a1772f782ece611824215b6cc68af58f2eef0f99e6c6e->leave($__internal_8659737523f55fb9d46a1772f782ece611824215b6cc68af58f2eef0f99e6c6e_prof);
 
         
-        $__internal_045cd429bbfff7560d5c6efd2dcce66723c03912f97bfafa763740e1a8421b2e->leave($__internal_045cd429bbfff7560d5c6efd2dcce66723c03912f97bfafa763740e1a8421b2e_prof);
+        $__internal_79fe8b1b79de9f3382f5b6f34cb4736fe84a0d71d25af909f3f1bd9074bf752f->leave($__internal_79fe8b1b79de9f3382f5b6f34cb4736fe84a0d71d25af909f3f1bd9074bf752f_prof);
 
     }
 
     // line 111
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_3beb19fe8c63af95cec4dbc8775d5bd1a3f1813e69f6baf5f0ca78b233c18032 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3beb19fe8c63af95cec4dbc8775d5bd1a3f1813e69f6baf5f0ca78b233c18032->enter($__internal_3beb19fe8c63af95cec4dbc8775d5bd1a3f1813e69f6baf5f0ca78b233c18032_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_3b1edd577c06db3fed81ea82c37fc4b16805b76f23948c0eaa92beb979a13358 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3b1edd577c06db3fed81ea82c37fc4b16805b76f23948c0eaa92beb979a13358->enter($__internal_3b1edd577c06db3fed81ea82c37fc4b16805b76f23948c0eaa92beb979a13358_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_3329d782554eae15f242537e397a41fb5a2fc0ed426f4a4002f02119281426f5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3329d782554eae15f242537e397a41fb5a2fc0ed426f4a4002f02119281426f5->enter($__internal_3329d782554eae15f242537e397a41fb5a2fc0ed426f4a4002f02119281426f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_846e431ee76a3437debfd18e8aafff742dd8e6b026296a146f7b54f4b4b2e70b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_846e431ee76a3437debfd18e8aafff742dd8e6b026296a146f7b54f4b4b2e70b->enter($__internal_846e431ee76a3437debfd18e8aafff742dd8e6b026296a146f7b54f4b4b2e70b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 112
         echo "    ";
@@ -373,10 +373,10 @@ array_key_exists("roleasso", $context)) {
 \t</script>
 ";
         
-        $__internal_3329d782554eae15f242537e397a41fb5a2fc0ed426f4a4002f02119281426f5->leave($__internal_3329d782554eae15f242537e397a41fb5a2fc0ed426f4a4002f02119281426f5_prof);
+        $__internal_846e431ee76a3437debfd18e8aafff742dd8e6b026296a146f7b54f4b4b2e70b->leave($__internal_846e431ee76a3437debfd18e8aafff742dd8e6b026296a146f7b54f4b4b2e70b_prof);
 
         
-        $__internal_3beb19fe8c63af95cec4dbc8775d5bd1a3f1813e69f6baf5f0ca78b233c18032->leave($__internal_3beb19fe8c63af95cec4dbc8775d5bd1a3f1813e69f6baf5f0ca78b233c18032_prof);
+        $__internal_3b1edd577c06db3fed81ea82c37fc4b16805b76f23948c0eaa92beb979a13358->leave($__internal_3b1edd577c06db3fed81ea82c37fc4b16805b76f23948c0eaa92beb979a13358_prof);
 
     }
 
@@ -425,7 +425,7 @@ array_key_exists("roleasso", $context)) {
             <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"firstname\" id=\"firstname\" tabindex=\"1\" class=\"form-control\" placeholder=\"firstname\" value=\"{{ user.firstname }}\"></div>
             <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"lastname\" id=\"lastname\" tabindex=\"1\" class=\"form-control\" placeholder=\"lastname\" value=\"{{ user.lastname }}\"></div>
             <div class=\"form-group form-element asso-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Nom de l'association\" value=\"{{ user.name }}\"></div>
-            <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo\" value=\"{{ user.name }}\"></div>
+            <div class=\"form-group form-element user-element\"  style=\"display:none;\"><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" placeholder=\"Pseudo (champ obligatoire)\" value=\"{{ user.name }}\"></div>
             <div class=\"form-group form-element commun-element\" style=\"display:none;\"><input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control user\" placeholder=\"Email Address (champ obligatoire)\" value=\"{{ user.email }}\"></div>
             <div class=\"form-group form-element commun-element\" style=\"display:none;\" ><input type=\"password\" name=\"password\" id=\"password\" tabindex=\"2\" class=\"form-control user\" placeholder=\"Password (champ obligatoire)\"></div>
             <div class=\"form-group form-element commun-element\"  style=\"display:none;\"><input type=\"password\" name=\"password_confirm\" id=\"password_confirm\" tabindex=\"2\" class=\"form-control user\" placeholder=\"Confirm Password(champ obligatoire) \"></div>
@@ -471,7 +471,7 @@ array_key_exists("roleasso", $context)) {
              <input type=\"text\" tabindex=\"1\" class=\"form-control\" readonly=\"readonly\" name=\"role\"  value=\"{{ user.role}}\" >
             <div class=\"form-group form-element asso-element\"  ><input type=\"text\" name=\"name\" id=\"name\" tabindex=\"1\" class=\"form-control\" readonly=\"readonly\" value=\"{{ user.name }}\"></div>
             <div class=\"form-group form-element commun-element\" ><input type=\"email\" name=\"email\" id=\"email\" tabindex=\"1\" class=\"form-control user\" readonly=\"readonly\" value=\"{{ user.email }}\"></div>
-            <div class=\"form-group form-element commun-element\"  ><input type=\"text\" name=\"phone\" id=\"phone\" tabindex=\"1\" class=\"form-control\" placeholder=\"phone \" value=\"{{ user.phone }}\"></div>
+            <div class=\"form-group form-element commun-element\"  ><input type=\"text\" name=\"phone\"  id=\"phone\" tabindex=\"1\" class=\"form-control\" placeholder=\"phone \" value=\"{{ user.phone }}\"></div>
             <div class=\"form-group form-element commun-element\"  ><small class=\"\">Avatar : </small><input class=\"btn-file btn-default btn-block\" type=\"file\"  name=\"url_img\" id=\"url_img\" tabindex=\"1\"  value=\"\"> </div>
             <div class=\"form-group form-element commun-element\"  ><input type=\"text\" name=\"adress\" id=\"adress\" tabindex=\"1\" class=\"form-control\" placeholder=\"adress\" value=\"{{ user.adress }}\"></div>
             <div class=\"form-group form-element commun-element\"  ><input type=\"text\" onBlur=\"envoyerCP()\" name=\"postal_code\" id=\"postal_code\" tabindex=\"1\" class=\"form-control\" placeholder=\"postal code\" value=\"{{ user.postal_code }}\"></div>

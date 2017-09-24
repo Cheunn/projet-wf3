@@ -39,15 +39,15 @@ class AnnonceController extends ControllerAbstract
         return $this->render(
             'single_annonce.html.twig',
             [
-                'annonce' => $annonce,
-                'categories' => $categories
+                'annonce' => $annonce
+//                'categories' => $categories
             ]
         );
     }
     public function getAnnonceId($id)
     {
         $annonce = $this->app['annonce.repository']->find($id); 
-        $annonces = $this->app['annonce.repository']->findLastThree();
+        $annonces = $this->app['annonce.repository']->findLastSix();
         
         return $this->render(
             'single_annonce.html.twig',
@@ -60,38 +60,41 @@ class AnnonceController extends ControllerAbstract
     }
     public function lastThree()
     {
-        $annonces = $this->app['annonce.repository']->findLastThree(7); 
+        $annonces = $this->app['annonce.repository']->findLastSix(); 
+        
         return $this->render(
             'index.html.twig',
             [               
                 'annonces' => $annonces
+                
             ]
                
         );
     }
-    public function lastThreeHeader()
+    public function lastSixHeader()
     {
-        $annonces = $this->app['annonce.repository']->findLastThree(6); // $limit
+        $annonces = $this->app['annonce.repository']->findLastSix(); // $limit
+        
         return $this->render(
             'header.html.twig',
             [               
                 'annonces' => $annonces
             ]
-               
+            
         );
     }
-    public function lastThreeSingle()
-    {
-        $annonces = $this->app['annonce.repository']->findAllSingle(10); 
-        die('pas ok');
-        return $this->render(
-            'single_annonce.html.twig',
-            [               
-                'annonces' => $annonces
-            ]
-        );
-    }
-    
+//    public function lastThreeSingle()
+//    {
+//        $annonces = $this->app['annonce.repository']->findAllSingle(); 
+//        die('pas ok');
+//        return $this->render(
+//            'single_annonce.html.twig',
+//            [               
+//                'annonces' => $annonces
+//            ]
+//        );
+//    }
+ 
     public function editAction($id = null)
     {
         // pour construire la liste déroulante des rubriques

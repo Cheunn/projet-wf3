@@ -224,7 +224,30 @@ SQL;
         
         return $annonce;
     }
-    
+     public function findByRubrique($category)
+    {
+$query = <<<SQL
+SELECT
+    a.*,  
+    c.name AS category_name
+FROM annonce a
+JOIN category c ON a.category_id_category  = c.id_category
+WHERE c.name  = :name
+SQL;
+        $dbAnnonces = $this->db->fetchAll(
+            $query,
+            [
+                ':name' => $category
+            ]
+        );
+        $annonces = [];
+        
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+       
+        return $annonces;
+    }
 
     
 }

@@ -21,29 +21,29 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6->enter($__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_fb3e899c66c7cf1ac866696bfb0cc347bd48a189beaf061631285adabbfd6227 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fb3e899c66c7cf1ac866696bfb0cc347bd48a189beaf061631285adabbfd6227->enter($__internal_fb3e899c66c7cf1ac866696bfb0cc347bd48a189beaf061631285adabbfd6227_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
-        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64->enter($__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_e98795b642bab6f5745dc753b736bf7f12b13b74e9c169e8dcfb0cf456fe3f93 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e98795b642bab6f5745dc753b736bf7f12b13b74e9c169e8dcfb0cf456fe3f93->enter($__internal_e98795b642bab6f5745dc753b736bf7f12b13b74e9c169e8dcfb0cf456fe3f93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6->leave($__internal_2fc3e4191738dbbd0047d244d28a52beeab8d9571312cf71fb68ab8826787ac6_prof);
+        $__internal_fb3e899c66c7cf1ac866696bfb0cc347bd48a189beaf061631285adabbfd6227->leave($__internal_fb3e899c66c7cf1ac866696bfb0cc347bd48a189beaf061631285adabbfd6227_prof);
 
         
-        $__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64->leave($__internal_77716be49b5b1cc157383522cdd34fe47cdab19265100dfa46754bb3aaae9f64_prof);
+        $__internal_e98795b642bab6f5745dc753b736bf7f12b13b74e9c169e8dcfb0cf456fe3f93->leave($__internal_e98795b642bab6f5745dc753b736bf7f12b13b74e9c169e8dcfb0cf456fe3f93_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885->enter($__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_b096ad55b95753184ea52d5434d431ee72c65e3edf35b40b0b3fc052127af952 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b096ad55b95753184ea52d5434d431ee72c65e3edf35b40b0b3fc052127af952->enter($__internal_b096ad55b95753184ea52d5434d431ee72c65e3edf35b40b0b3fc052127af952_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d->enter($__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2e0c45e16993d6f282c572e74dd0efa3a87e58eba26d5646d2e0b43cd5544f03 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2e0c45e16993d6f282c572e74dd0efa3a87e58eba26d5646d2e0b43cd5544f03->enter($__internal_2e0c45e16993d6f282c572e74dd0efa3a87e58eba26d5646d2e0b43cd5544f03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "</div> 
@@ -84,8 +84,10 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         // line 23
         echo "      </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"\" class=\"thumbnail\"> <img src=\"";
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"";
         // line 25
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("chroniques");
+        echo "\" class=\"thumbnail\"> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/chronique.png"), "html", null, true);
         echo "\" alt=\"Best Mobile Apps\"> </a>
       <div class=\"feature-text\">
@@ -107,22 +109,32 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
         // line 35
         echo "      </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"single.html\" class=\"thumbnail\"> <img src=\"";
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"";
         // line 37
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
+        echo "\" class=\"thumbnail\"> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/feature-post7.png"), "html", null, true);
         echo "\" alt=\"Best Feature Products\"> </a>
       <div class=\"feature-text\">
-        <h3><a href=\"single.html\" title=\"Best Feature Products\">Contact</a></h3>
+        <h3><a href=\"";
+        // line 39
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("messProfilToUs");
+        echo "\" title=\"Best Feature Products\">Contact</a></h3>
       ";
         // line 41
         echo "      </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"single.html\" class=\"thumbnail\"> <img src=\"";
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"";
         // line 43
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("about");
+        echo "\" class=\"thumbnail\"> <img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/feature-posts/about-us.jpg"), "html", null, true);
         echo "\" alt=\"Tablet Vs SmartPhones\"> </a>
       <div class=\"feature-text\">
-        <h3><a href=\"single.html\" title=\"Tablet Vs SmartPhones\">Qui sommes-nous ?</a></h3>
+        <h3><a href=\"";
+        // line 45
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("about");
+        echo "\" title=\"Tablet Vs SmartPhones\">Qui sommes-nous ?</a></h3>
        ";
         // line 47
         echo "      </div>
@@ -587,10 +599,10 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
 ";
         
-        $__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d->leave($__internal_ca80c0400f4f2672f03da298dc07af9844e8c6bb25f51c878a01bbb08451a74d_prof);
+        $__internal_2e0c45e16993d6f282c572e74dd0efa3a87e58eba26d5646d2e0b43cd5544f03->leave($__internal_2e0c45e16993d6f282c572e74dd0efa3a87e58eba26d5646d2e0b43cd5544f03_prof);
 
         
-        $__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885->leave($__internal_45c948df7c93e6fd2bc64f7917276949b5bda0291a80f6fd3a3006da678a1885_prof);
+        $__internal_b096ad55b95753184ea52d5434d431ee72c65e3edf35b40b0b3fc052127af952->leave($__internal_b096ad55b95753184ea52d5434d431ee72c65e3edf35b40b0b3fc052127af952_prof);
 
     }
 
@@ -606,7 +618,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
 
     public function getDebugInfo()
     {
-        return array (  537 => 373,  515 => 354,  502 => 344,  480 => 325,  468 => 315,  461 => 309,  451 => 307,  445 => 306,  426 => 289,  396 => 261,  391 => 258,  366 => 235,  362 => 233,  340 => 213,  326 => 202,  314 => 193,  296 => 178,  282 => 167,  270 => 158,  257 => 147,  243 => 142,  236 => 140,  228 => 137,  199 => 110,  178 => 90,  149 => 63,  142 => 59,  128 => 47,  122 => 43,  118 => 41,  112 => 37,  108 => 35,  102 => 31,  98 => 29,  94 => 27,  89 => 25,  85 => 23,  81 => 21,  74 => 19,  70 => 17,  64 => 13,  60 => 11,  54 => 7,  49 => 4,  40 => 2,  11 => 1,);
+        return array (  549 => 373,  527 => 354,  514 => 344,  492 => 325,  480 => 315,  473 => 309,  463 => 307,  457 => 306,  438 => 289,  408 => 261,  403 => 258,  378 => 235,  374 => 233,  352 => 213,  338 => 202,  326 => 193,  308 => 178,  294 => 167,  282 => 158,  269 => 147,  255 => 142,  248 => 140,  240 => 137,  211 => 110,  190 => 90,  161 => 63,  154 => 59,  140 => 47,  136 => 45,  129 => 43,  125 => 41,  121 => 39,  114 => 37,  110 => 35,  104 => 31,  100 => 29,  96 => 27,  89 => 25,  85 => 23,  81 => 21,  74 => 19,  70 => 17,  64 => 13,  60 => 11,  54 => 7,  49 => 4,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -643,7 +655,7 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
       {#  <p>Music</p>#}
       </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/chronique.png') }}\" alt=\"Best Mobile Apps\"> </a>
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"{{ path('chroniques')}}\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/chronique.png') }}\" alt=\"Best Mobile Apps\"> </a>
       <div class=\"feature-text\">
         <h3><a href=\"{{ path('chroniques')}}\" title=\"Best Mobile Apps\">Chroniques</a></h3>
        {# <p>apps</p>#}
@@ -655,15 +667,15 @@ class __TwigTemplate_d3d4a36a8b92e4ee7ffcc5fa6d00392fa8aea01be1dd3a74a56e5b2d579
        {# <p>LifeStyle</p>#}
       </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"single.html\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/feature-post7.png') }}\" alt=\"Best Feature Products\"> </a>
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"{{ path('messProfilToUs') }}\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/feature-post7.png') }}\" alt=\"Best Feature Products\"> </a>
       <div class=\"feature-text\">
-        <h3><a href=\"single.html\" title=\"Best Feature Products\">Contact</a></h3>
+        <h3><a href=\"{{ path('messProfilToUs') }}\" title=\"Best Feature Products\">Contact</a></h3>
       {#  <p>Products</p>#}
       </div>
     </article>
-    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"single.html\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/about-us.jpg') }}\" alt=\"Tablet Vs SmartPhones\"> </a>
+    <article class=\"col-md-12 col-sm-12 nopadding item\"> <a href=\"{{ path('about')}}\" class=\"thumbnail\"> <img src=\"{{ asset ('assets/images/feature-posts/about-us.jpg') }}\" alt=\"Tablet Vs SmartPhones\"> </a>
       <div class=\"feature-text\">
-        <h3><a href=\"single.html\" title=\"Tablet Vs SmartPhones\">Qui sommes-nous ?</a></h3>
+        <h3><a href=\"{{ path('about')}}\" title=\"Tablet Vs SmartPhones\">Qui sommes-nous ?</a></h3>
        {# <p>SmartPhones</p>#}
       </div>
     </article>

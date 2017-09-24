@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/UserController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/IndexController.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/annonces.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/controllers.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/about.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/app.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/User/ChroniqueController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/AnnonceController.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/UserRepository.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/header.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/ChroniqueRepository.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/layout.html.twig</file>
@@ -17,8 +22,8 @@
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/CategoryController.php</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/index.html.twig</file>
             <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Repository/AnnonceRepository.php</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/templates/single_chronique.html.twig</file>
-            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Controller/Admin/AnnonceController.php</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/web/about.html</file>
+            <file>file:/C:/xampp/htdocs/projet_fin/projet3/src/Service/UserManager.php</file>
         </group>
     </open-files>
 </project-private>

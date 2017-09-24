@@ -12,6 +12,7 @@ $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscript
 $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bind('APIautoCompletion');
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+$app->match('/about', 'index.controller:about')                 ->bind('about');
 
 
 /* USER */
@@ -115,6 +116,7 @@ $app
     ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
     ->bind('chronique_rubrique')
 ;
+
 $app
     ->match('/' , 'chronique.controller:findlastTwo')  
     ->bind('chronique_front')

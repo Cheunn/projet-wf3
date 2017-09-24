@@ -147,9 +147,26 @@ SQL;
         }
         return $annonces;
     }
+   
+//public function findLastThree()
+//    {
+//        $query = <<<SQL
+//SELECT 
+//    a.*
+//FROM annonce a
+//ORDER BY id_post DESC
+//SQL;
+//        $dbAnnonces = $this->db->fetchAll($query);    
+//        $annonces = [];
+//
+//        
+//        /*for ($i=0 ; $i < $limit; $i++) {
+//            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+//        }*/
+//        return $annonces;
+//    }
     
-
-public function findLastThree()
+    public function findLastSix()
     {
         $query = <<<SQL
 SELECT 
@@ -158,27 +175,35 @@ FROM annonce a
 ORDER BY id_post DESC
 LIMIT 6
 SQL;
-        $dbAnnonces = $this->db->fetchAll($query);    
+        $dbAnnonces = $this->db->fetchAll($query);
         $annonces = [];
-
-        
-        /*for ($i=0 ; $i < $limit; $i++) {
-            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-        }*/
+    
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
         return $annonces;
     }
     
+
     
     private function buildEntity2(array $data)
     {
-        $annonce = new Annonce();
+//        $category = new Category();
       
-        $annonce->setId_post($data['nb_annonces']);
-        //dump($annonce);die; 
-        return $annonce;
+//        $category// A FINIR
+//            ->setId_category($data['id_category'])
+//            ->setName($data['name'])
+//            ->setType_post('annonce')    
+//                ;
+//        
+        //$author = new Member();
+
+       /* $author // RESTE A FAIRE
+            ->setId($data['author_id'])
+            ->setLastname($data['lastname'])
+            ->setFirstname($data['firstname'])
+        ;*/
     }
-
-
     private function buildEntity(array $data)
     {
         $user= new User();
@@ -208,7 +233,31 @@ SQL;
         
         return $annonce;
     }
-    
+     public function findByRubrique($category)
+    {
+$query = <<<SQL
+SELECT
+    a.*,  
+    c.name AS category_name
+FROM annonce a
+JOIN category c ON a.category_id_category  = c.id_category
+WHERE c.name  = :name
+SQL;
+        $dbAnnonces = $this->db->fetchAll(
+            $query,
+            [
+                ':name' => $category
+            ]
+        );
+        $annonces = [];
+        
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+       
+        return $annonces;
+    }
+  
     
      public function listeAnnoncesByUser( $idUser)       
     {

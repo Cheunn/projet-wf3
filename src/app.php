@@ -64,7 +64,9 @@ $app['notation.controller'] = function() use ($app)      {   return new Controll
 $app['annonce.controller'] = function () use ($app) {
     return new Controller\AnnonceController($app);
 };
-
+$app['chronique.controller'] = function () use ($app) {
+    return new Controller\ChroniqueController($app);
+};
 $app['category.controller'] = function () use ($app) {
     return new Controller\CategoryController($app);
 };

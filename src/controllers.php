@@ -1,10 +1,8 @@
 <?php
 
+use Controller\User\AnnonceController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
@@ -14,6 +12,7 @@ $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscript
 $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bind('APIautoCompletion');
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+$app->match('/about', 'index.controller:about')                 ->bind('about');
 
 
 /* USER */
@@ -29,7 +28,8 @@ $user->before (function() use ($app){
 
 /* Jaoued */
 
-$user->match('/profil', 'user.controller:profilUser')      ->bind('profilUser');
+$user->match('/profil', 'user.controller:profilUser')  
+       ->bind('profilUser');
 
 $user->match('/profil/{id}', 'user.controller:profilUser') 
              ->assert('id', '\d+')
@@ -77,11 +77,18 @@ $app
 /* Cheunn */
 
 /* Julien */
+$am = new AnnonceController();
 
-$app/* SINGLE ANNONCE REDIRECTION */
+$setup = function (Request $request) use ($am){
+    $header = $am->lastSixHeader();
+};
+
+
+$app
     ->match('/annonces', 'annonce.controller:listActionMain')  
     ->bind('annonces')
 ;
+
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
@@ -96,13 +103,33 @@ $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
-
 ;
-
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
     ->bind('annonce_edit')
 ;
+/* CHRONIQUE COTE FRONT */
+
+$app
+    ->match('/chroniques', 'chronique.controller:listActionMain')  
+    ->bind('chroniques')
+;
+$app
+    ->get('/single_chronique/{id}', 'chronique.controller:getChroniqueId')  
+    ->assert('id', '\d+')
+    ->bind('single_chronique')
+;
+
+$app
+    ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
+    ->bind('chronique_rubrique')
+;
+
+$app
+    ->match('/' , 'chronique.controller:findlastTwo')  
+    ->bind('chronique_front')
+;
+
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
     ->match('/', 'category.controller:listActionChronique')
@@ -131,7 +158,8 @@ $app
 
 //Handicap
 
-$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+$bind = $app
+        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
 
 
@@ -155,9 +183,9 @@ $admin
 ;
 
 $admin
-        ->get('/category/{type}', 'admin.category.controller:listByType')
-        ->assert('type','[annonce]|[chronique]')
-        ->bind('admin_categories_by_type')
+    ->get('/category/{type}', 'admin.category.controller:listByType')
+    ->assert('type','[annonce]|[chronique]')
+    ->bind('admin_categories_by_type')
 ;
 
 $admin

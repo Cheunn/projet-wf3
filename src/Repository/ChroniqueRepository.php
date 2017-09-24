@@ -62,6 +62,30 @@ SQL;
         return $chroniques;
     }
     
+   public function findByRubrique($category)
+    {
+$query = <<<SQL
+SELECT
+    ch.*,  
+    c.name AS category_name
+FROM chronique ch
+JOIN category c ON ch.category_id_category  = c.id_category
+WHERE c.name  = :name
+SQL;
+        $dbChroniques = $this->db->fetchAll(
+            $query,
+            [
+                ':name' => $category
+            ]
+        );
+        $chroniques = [];
+        
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+       
+        return $chroniques;
+    }
     /**
      * 
      * @param int $id
@@ -88,6 +112,24 @@ SQL;
         if (!empty($dbChronique)) {
             return $this->buildEntity($dbChronique);
         }
+    }
+    
+    public function findLastTwo()
+    {
+        $query = <<<SQL
+SELECT 
+    c.*
+FROM chronique c
+ORDER BY id_post DESC
+LIMIT 2
+SQL;
+        $dbchroniques = $this->db->fetchAll($query);
+        $chroniques = [];
+    
+        foreach ($dbChroniques as $dbchronique) {
+            $chroniques[] = $this->buildEntity($dbchronique);
+        }
+        return $chroniques;
     }
 
     /**
@@ -174,8 +216,7 @@ SQL;
             ->setMember_id_member($data['member_id_member'])
             ->setCategory_id_category($data['category_id_category'])
             ->setCategory_name($data['category_name'])
-            
-        ;
+            ;
         
         return $chronique;
     }
@@ -195,7 +236,60 @@ SQL;
         return $chroniques;
    }
    
+
+   public function listChroniqueAllUsers(){
+       $query = <<<SQL
+SELECT
+    ch.*, 
+FROM chronique ch
+SQL;
+       $dbChroniques = $this->db->fetchAll($query);
+       
+       $chroniques = [];
+       
+       foreach($dbChroniques as $dbChronique){
+           $chroniques[] = $this->buildEntity($dbChronique);
+       }
+       
+       return $chroniques;
+   }
    
+   public function ListChroniqueByType($type){
+               $query = <<<SQL
+SELECT
+    ch.*, 
+FROM chronique ch
+WHERE post_type = :type
+SQL;
+        $dbChroniques = $this->db->fetchAll($query,
+                [
+                    ':type' => $type
+                ]
+        );
+        
+        $chroniques = [];
+        
+        foreach($dbChroniques as $dbChronique){
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        
+        return $chroniques;
+   }
+   
+   public function ListChroniqueByUserType($userType){
+       $dbChroniques = $this->fetchAll("SELECT * FROM chronique WHERE type = $userType");
+       
+       $chroniques = [];
+       
+       foreach($dbChroniques as $dbChronique){
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        
+        return $chroniques;
+       
+   }
+
+  
      public function nbChroniquesByUser($id)
     {
         $chronique = new Chronique();

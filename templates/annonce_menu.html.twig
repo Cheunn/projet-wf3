@@ -1,0 +1,6 @@
+{% extends "header.html.twig" %}
+{% block annonce_menu %}
+{% for headerAnnonce in headerAnnonces %} 
+    <li><a href="{{ path('single_annonce', {id: headerAnnonce.id_post}) }}">{{ headerAnnonce.post_title }}</a></li>
+{% endfor %}
+{% endblock %}

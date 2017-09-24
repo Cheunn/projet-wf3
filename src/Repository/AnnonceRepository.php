@@ -149,23 +149,61 @@ SQL;
     }
     
 
-public function findLastThree()
+public function findLastThree($limit)
     {
-        $query = <<<SQL
-SELECT 
-    a.*
-FROM annonce a
-ORDER BY id_post DESC
-LIMIT 6
-SQL;
-        $dbAnnonces = $this->db->fetchAll($query);    
+        $query = "SELECT a.* FROM annonce a ORDER BY id_post DESC LIMIT $limit";
+
+          
+        $dbAnnonces = $this->db->fetchAll($query); 
+        
         $annonces = [];
         
         /*for ($i=0 ; $i < $limit; $i++) {
             $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+           
         }*/
-        return $annonces;
+        
+       
+        
+       
+
+        
+
+       foreach ($dbAnnonces as $dbAnnonce) { 
+           $annonces[] = $this->buildEntity($dbAnnonce);
+                   
+       }
+       
+       return $annonces;  
+       
+
+
+
     }
+    
+    
+    
+    public function findLastThree2($limit)
+    {
+        $query = "SELECT a.* FROM annonce a ORDER BY id_post DESC LIMIT $limit";
+
+            dump($limit); 
+        $dbAnnonces = $this->db->fetchAll($query); 
+        
+        $annonces = [];
+       
+
+       foreach ($dbAnnonces as $dbAnnonce) { 
+           $annonces[] = $this->buildEntity($dbAnnonce);
+                   
+       }
+       dump($annonces);
+       return $annonces;  
+       
+
+
+    }
+    
     
     
 
@@ -209,6 +247,20 @@ SQL;
         return $annonce;
     }
     
+        /* FONCTION POUR LE FRONT */
+
+    public function listByUserId($id) {
+
+        $dbAnnonces = $this->db->fetchAll("SELECT a.*,c.name AS category_name FROM annonce a JOIN category c ON a.category_id_category = c.id_category WHERE member_id_member = $id");
+
+        $annonces = [];
+
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+
+        return $annonces;
+    }
 
     
 }

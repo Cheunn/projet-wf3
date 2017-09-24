@@ -54,7 +54,7 @@ class AnnonceController extends ControllerAbstract{
                 ->setUrl_img_2($_POST['url_img_2'])
                 ->setUrl_img_3($_POST['url_img_3'])
                 ->setMember_id_member($user->getId_member())
-                ->setType_id_type($_POST['type'])
+                ->setType_id_type($_POST['type_id_type'])
                 ->setCategory_id_category($_POST['category'])
                 ;
                
@@ -76,7 +76,7 @@ class AnnonceController extends ControllerAbstract{
                 $this->app['annonce.repository']->save($annonce);
                 $this->addFlashMessage("L'annonce est enregistré");
                 
-                return $this->redirectRoute('admin_annonces');
+                return $this->redirectRoute('user_annonce_list');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -104,9 +104,11 @@ class AnnonceController extends ControllerAbstract{
         $this->app['annonce.repository']->delete($annonce);
         //$this->addFlashMessage("L'annonce est supprimé");
         
-        return $this->redirectRoute('user_annonce');
+        return $this->redirectRoute('user_annonce_list');
     }
     
+    
+    // USER FONCTION    
     public function listUserAnnonce(){
         $user = $this->app['user.manager']->getUser();
         

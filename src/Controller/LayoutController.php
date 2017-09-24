@@ -8,6 +8,11 @@
 
 namespace Controller;
 
+use Entity\Annonce;
+use Entity\Category;
+use Entity\User;
+use Controller\AnnonceController;
+
 /**
  * Description of LayoutController
  *
@@ -15,6 +20,24 @@ namespace Controller;
  */
 class LayoutController extends ControllerAbstract {
     
+    public function annonceMenu(){
+        
+       
+        $headerAnnonces = $this->app['annonce.repository']->findLastThree2(12);
+        
+        
+        
+        return $this->render('layout.html.twig',
+                [
+                    'headerAnnonces' => $headerAnnonces
+                ]
+        );
+        
+    }
     
-
+    public function lol(){
+        die("lili");
+        
+        return "toto";
+    }
 }

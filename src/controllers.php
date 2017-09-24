@@ -2,17 +2,37 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
+/*$before = function (Application $app) {
+    $annonces = new Application();
+    $annonces = $app['layout.controller']->annonceMenu();
+};*/
+/*$app
+        ->match('/{reste}', 'layout.controller:annonceMenu')
+        ->assert('reste', '.*')
+        ->bind('annonce_menu')
+;*/
 
-$app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
+/*$app->before (function() use ($app){
+    $app['layout.controller']->annonceMenu() ;  
+}) ;*/
+
+
+
+$app->get('/', 'index.controller:indexAction')                  
+       /* ->before($before)*/
+        ->bind('homepage');
+
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
 $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bind('APIautoCompletion');
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
+
 
 
 /* USER */
@@ -42,16 +62,36 @@ $user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('upd
 
 /* Cheunn */
 
+/* USER CHRONIQUES*/
+
 $user->get('/chronique','user.chronique.controller:listUserChronique')
         ->bind('user_chronique_list')        
 ;
 
-$user->match('/chronique/edit','user.chronique.controller:editAction')
+$user->match('/chronique/edit/{id}','user.chronique.controller:editAction')
+        ->value('id', null)
         ->bind('user_chronique_edit')        
 ;
 
-$user->match('/chronique/supression','user.chronique:deleteAction')
+$user->match('/chronique/supression/{id}','user.chronique:deleteAction')
+        ->assert('id', '\d+')
         ->bind('user_chronique_delete')
+;
+
+/* USER ANNONCES*/
+
+$user->get('/annonce','user.annonce.controller:listUserAnnonce')
+        ->bind('user_annonce_list')        
+;
+
+$user->match('/annonce/edit/{id}','user.annonce.controller:editAction')
+        ->value('id', null)
+        ->bind('user_annonce_edit')        
+;
+
+$user->match('/annonce/supression/{id}','user.annonce:deleteAction')
+        ->assert('id', '\d+')
+        ->bind('user_annonce_delete')
 ;
 
 /* Julien */
@@ -69,27 +109,35 @@ $app
   
 /* Cheunn */
 
+/* TEST POUR BOUCLES*/
+
+
+
 /* Julien */
 
-$app/* SINGLE ANNONCE REDIRECTION */
+/* SINGLE ANNONCE REDIRECTION */
+
+$app
     ->match('/annonces', 'annonce.controller:listActionMain')  
     ->bind('annonces')
 ;
+
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
 ;
+
 $app
     ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
 ;
+
 $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
-
 ;
 
 $app

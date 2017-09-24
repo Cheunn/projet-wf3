@@ -185,10 +185,11 @@ SQL;
     }
     
 
-    private function buildEntity(array $data)
+    
+    private function buildEntity2(array $data)
     {
 //        $category = new Category();
-        
+      
 //        $category// A FINIR
 //            ->setId_category($data['id_category'])
 //            ->setName($data['name'])
@@ -196,15 +197,22 @@ SQL;
 //                ;
 //        
         //$author = new Member();
-        
+
        /* $author // RESTE A FAIRE
             ->setId($data['author_id'])
             ->setLastname($data['lastname'])
             ->setFirstname($data['firstname'])
         ;*/
+    }
+    private function buildEntity(array $data)
+    {
+        $user= new User();
+        $user
+              -> setName($data['name'])
+        ; 
         
+       
         $annonce = new Annonce();
-        
         $annonce
             ->setPost_date($data['post_date'])
             ->setId_post($data['id_post'])
@@ -217,6 +225,7 @@ SQL;
             ->setMember_id_member($data['member_id_member'])
             ->setType_id_type($data['type_id_type'])
             ->setCategory_id_category($data['category_id_category'])
+            ->setName($user)
           
             //->setCategory($category)
             //->setAuthor($author)
@@ -248,6 +257,43 @@ SQL;
        
         return $annonces;
     }
+  
+    
+     public function listeAnnoncesByUser( $idUser)       
+    {
+        // dump($idreceiver);
+        
+        $query = " SELECT a.* , m.name FROM annonce a, member m where member_id_member = id_member AND `member_id_member` = " . $idUser ;  
+       
+         $dbMessages = $this->db->fetchAll($query);
+        
+        $messages =[];
+         //dump($dbMessages);
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity($dbmesage); } 
+        dump($messages); 
+        return $messages;
+      
+    }
+    
+ 
+    
+    public function nbAnnoncesByUser($id)
+    {
+        $annonce = new Annonce();
+        $dbAnnonce = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_annonces FROM annonce WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+        return $this->buildEntity2($dbAnnonce);
+      
+    }
+    
 
+  
+    
     
 }

@@ -236,6 +236,7 @@ SQL;
         return $chroniques;
    }
    
+
    public function listChroniqueAllUsers(){
        $query = <<<SQL
 SELECT
@@ -287,4 +288,48 @@ SQL;
         return $chroniques;
        
    }
+
+  
+     public function nbChroniquesByUser($id)
+    {
+        $chronique = new Chronique();
+        $dbChronique = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_chroniques FROM chronique WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+       
+        return $this->buildEntity2($dbChronique);
+      
+    }
+    
+       public function nbNewsByUser($id)
+    {
+        $news= new Chronique();
+        $dbNews = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_chroniques FROM news WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+       
+        return $this->buildEntity2($dbNews);
+      
+    }
+    
+
+    private function buildEntity2(array $data)
+    {
+        $chronique = new Chronique();
+      
+        $chronique->setId_post($data['nb_chroniques']);
+        //dump($chronique);die; 
+        return $chronique;
+    }
+   
 }

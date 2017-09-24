@@ -19,6 +19,10 @@ class Annonce
     private $name;
     private $user;
      private $annonce;
+     private $userName;
+     private $categoryName;
+     private $post_type;
+
 
     public function getId_post() {
         return $this->id_post;
@@ -149,7 +153,31 @@ class Annonce
         return $this;
     }
     
+  
 
+    public function getCategoryName() {
+        return $this->category->getName();
+    }
+
+    public function setUserName(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+
+    public function setCategoryName(Category $category) {
+        $this->category = $category;
+        return $this;
+    }
+
+
+    public function getPost_type() {
+        return $this->post_type;
+    }
+
+    public function setPost_type($post_type) {
+        $this->post_type = $post_type;
+        return $this;
+    }
 
 
 }

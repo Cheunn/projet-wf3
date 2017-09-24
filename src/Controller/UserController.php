@@ -168,8 +168,8 @@ class UserController extends ControllerAbstract
     {
         $userConsult = $this->app['user.repository']->findById($id);
         $userSession = $this->app['user.manager']->getUser();
-        dump($userConsult->getId_member() );
-        dump($userSession->getId_member() );
+        //dump($userConsult->getId_member() );
+        //dump($userSession->getId_member() );
       
         
         return $this->render(
@@ -202,26 +202,35 @@ class UserController extends ControllerAbstract
                 if ($myNote == '0.00') $myNote = 'Aucune';
                 
                 
-                $nbAnnoncesByUser  = $this->app['annonce.repository']->nbAnnoncesByUser($idsend ); 
                 //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend );
                 $nbNewByUser = 0;
                 $nbChroniquesByUser  = $this->app['chronique.repository']->nbChroniquesByUser($idsend)->getId_post() ;
-                $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
-               
+                 //$listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
+                $nbAnnoncesByUser  = $this->app['annonce.repository']->nbAnnoncesByUser($idsend )->getId_post() ;
+                //dump($nbAnnoncesByUser); die; 
+             
+                
+                
                 $nbCommentaires  = $this->app['notation.repository']->nbCommentsByUser($idsend )->getNote();
                 $getMyComments  = $this->app['notation.repository']->getMyComments($idsend );                       
                 //dump($getMyComments); 
               
                 $listeCommentsFromUser  = $this->app['notation.repository']->listeCommentsChroniquesAnnoncesByUser($idsend );
-                dump($listeCommentsFromUser); 
+               
                 $nbCommentairesChroniquesFromUser  = $this->app['notation.repository']->nbCommentairesChroniquesFromUser($idsend )->getNote();
                 $nbCommentairesAnnoncesFromUser  = $this->app['notation.repository']->nbCommentairesAnnoncesFromUser($idsend )->getNote();
                 $nbCommentairesFromUser = $nbCommentairesChroniquesFromUser + $nbCommentairesAnnoncesFromUser; 
-                dump($nbCommentairesFromUser); 
+                //dump($nbCommentairesFromUser); 
+                //dump($listeCommentsFromUser); 
                
-                 
-                //$listeCommentsAnnoncesByUser  = $this->app['notation.repository']->listeCommentsAnnoncesByUser($idsend );
+                //$listeAnnoncesFromUser  = $this->app['annonce.repository']->listeAnnoncesFromUser($idsend );
+                //$listeChroniquesFromUser  = $this->app['annonce.repository']->listeChroniquesFromUser($idsend );
                
+               $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
+                $listeChroniquesByUser  = $this->app['chronique.repository']->listeChroniquesByUser($idsend );
+               //dump($listeAnnoncesByUser);   
+               dump($listeChroniquesByUser);
+                
                 // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
                 { 
@@ -237,15 +246,16 @@ class UserController extends ControllerAbstract
                                 'modeadmin'                 =>  $mode,
                                 'messages'                  =>  $messages, 
                                 'messageCheck'              =>  $messageCheck,
-                                'myNote'                    =>  $myNote, 
-                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
-                                'nbNewByUser'               =>  $nbNewByUser,
+                                'myNote'                    =>  $myNote,
+                                'nbNewByUser'               =>  $nbNewByUser,          
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser,            
                                 'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
-                                'nbCommentaires'                            =>  $nbCommentaires, 
-                                'getMyComments'                             =>  $getMyComments ,
-                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
-                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                                'listeChroniquesByUser'       =>  $listeChroniquesByUser,
+                                'nbCommentaires'            =>  $nbCommentaires, 
+                                'getMyComments'             =>  $getMyComments ,
+                                'listeCommentsFromUser'     =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'    =>  $nbCommentairesFromUser
                      
 
 

@@ -1,0 +1,45 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="container">
+
+    <h1>Annonces</h1>
+    
+    <p><a href="{{ path('admin_annonce_edit') }}">Ajouter un annonce</a></p>
+    
+    <table class="table">
+        <tr>
+            <th>Id </th>
+            <th>Name </th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Img </th>
+            <th>Code postal</th>
+            <th>Role</th>
+            <th width="120px"></th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id_member }}</td>{# en php : $article->getId() #}
+                <td>{{ user.name }}</td>{# en php : $article->getId() #}
+                <td>{{ user.email}}</td>
+                <td>{{ user.phone}}</td>
+                <td>{{ user.url_img}}</td>
+                <td>{{ user.postal_code}}</td>
+                <td>{{ user.role}}</td>
+                <td>                    
+                    <a href="{{ path('admin_annonce_edit', {id: annonce.id_post}) }}" class="btn btn-primary">
+                        Modifier
+                    </a>
+                       <hr>
+                    <a href="{{ path('admin_annonce_delete', {id: annonce.id_post}) }}" class="btn btn-danger">
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

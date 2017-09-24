@@ -135,10 +135,38 @@ class NotationRepository extends RepositoryAbstract
       
     }
     
+    public function nbCommentairesChroniquesFromUser($id)
+    {
+        //$annonce = new Annonce();
+        $nbCommentsFromUser = $this->db->fetchAssoc
+        (
+            "SELECT count(*) as note  FROM comment_annonce WHERE member_id_member = $id AND comment != '' ", 
+            [
+                ':id' => $id
+            ]
+        );
+        return $this->buildEntityNoteEtNbComments($nbCommentsFromUser);
+    }
+    
+     public function nbCommentairesAnnoncesFromUser($id)
+     {
+         $nbCommentsFromUser = $this->db->fetchAssoc
+        (
+            "SELECT count(*) as note  FROM comment_chronique WHERE member_id_member = $id AND comment  != '' ", 
+            [
+                ':id' => $id
+            ]
+        );
+ 
+        return $this->buildEntityNoteEtNbComments($nbCommentsFromUser);
+    }
+            
+    
+   
    private function buildEntityCommentsByUser(array $data)
     {
         
-        dump($data); 
+        //dump($data); 
         $user = new User();
         $user   -> setId_member($data['id_member'])
                 -> setName($data['name'])   
@@ -149,6 +177,7 @@ class NotationRepository extends RepositoryAbstract
                     -> setPost_title($data['post_title'])      
                     -> setParagraphe_1($data['comment'])
                     -> setPost_date($data['post_date'])
+                    -> setParagraphe_2($data['type'])
                 ; 
         $notation = new Notation();
         $notation
@@ -159,15 +188,21 @@ class NotationRepository extends RepositoryAbstract
         return $notation;
     }
     
-    public function listeCommentsAnnoncesByUser( $idUser)       
+    public function listeCommentsChroniquesAnnoncesByUser( $idUser)       
     {
         // dump($idreceiver);
                 $query = <<<SQL
-SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post_date
+SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post_date, com.type
 FROM annonce ann, member m, comment_annonce com
 WHERE ann.member_id_member = 44 
 AND ann.member_id_member = id_member
 AND com.id_comment = ann.id_post
+UNION
+SELECT chr.id_post , chr.post_title ,  m.id_member, m.name, comchr.comment,  comchr.post_date, comchr.type
+FROM comment_chronique comchr, member m , chronique chr 
+WHERE comchr.member_id_member = 44 
+AND  comchr.member_id_member = id_member
+AND  comchr.id_post = chr.id_post
 SQL;
         
          

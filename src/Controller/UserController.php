@@ -211,10 +211,18 @@ class UserController extends ControllerAbstract
                 $nbCommentaires  = $this->app['notation.repository']->nbCommentsByUser($idsend )->getNote();
                 $getMyComments  = $this->app['notation.repository']->getMyComments($idsend );                       
                 dump($getMyComments); 
-                $listeCommentsChroniquesByUser  = $this->app['notation.repository']->listeCommentsChroniquesByUser($idsend );
-                $listeCommentsAnnoncesByUser  = $this->app['notation.repository']->listeCommentsAnnoncesByUser($idsend );
-                dump($listeCommentsChroniquesByUser);             dump($listeCommentsAnnoncesByUser); 
-// Contient les donnees propres si user = user session
+                /*
+                $listeCommentsFromUser  = $this->app['notation.repository']->listeCommentsChroniquesAnnoncesByUser($idsend );
+                dump($listeCommentsFromUser); 
+                $nbCommentairesChroniquesFromUser  = $this->app['notation.repository']->nbCommentairesChroniquesFromUser($idsend )->getNote();
+                $nbCommentairesAnnoncesFromUser  = $this->app['notation.repository']->nbCommentairesAnnoncesFromUser($idsend )->getNote();
+                $nbCommentairesFromUser = $nbCommentairesChroniquesFromUser + $nbCommentairesAnnoncesFromUser; 
+                dump($nbCommentairesFromUser);
+                 */
+                 
+                //$listeCommentsAnnoncesByUser  = $this->app['notation.repository']->listeCommentsAnnoncesByUser($idsend );
+               
+                // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
                 { 
                        $messageCheck = 'NOK' ; 
@@ -235,10 +243,10 @@ class UserController extends ControllerAbstract
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
                                 'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
                                 'nbCommentaires'                            =>  $nbCommentaires, 
-                                'getMyComments'                             =>  $getMyComments, 
-                                'listeCommentsChroniquesByUser'                             =>  $listeCommentsChroniquesByUser,
-                                'listeCommentsAnnoncesByUser'             =>  $listeCommentsAnnoncesByUser
-                           
+                                'getMyComments'                             =>  $getMyComments /*,
+                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                           */
 
 
                             ]
@@ -255,9 +263,10 @@ class UserController extends ControllerAbstract
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
                                 'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
                                 'nbCommentaires'            =>  $nbCommentaires, 
-                                'getMyComments'            =>  $getMyComments, 
-                                'listeCommentsChroniquesByUser'            =>  $listeCommentsChroniquesByUser,
-                                'listeCommentsAnnoncesByUser'             =>  $listeCommentsAnnoncesByUser   
+                                'getMyComments'            =>  $getMyComments /*,
+                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                           */
                             ]
                         );    
                 }

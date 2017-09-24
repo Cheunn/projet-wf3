@@ -32,7 +32,7 @@ class Notation
 
     private $user ;
      private $annonce ;
-
+     private $commentAnnonce ;
 
     public function getId_member_noteur() {
         return $this->id_member_noteur;
@@ -94,12 +94,31 @@ class Notation
         return $this->annonce;
     }
 
-    public function setAnnonce( Annonce $annonce) {
+    public function setAnnonce($annonce) {
         $this->annonce = $annonce;
         return $this;
     }
 
-
- 
+    public function getIdAnnonce() {
+        return $this->annonce->getId_post();
+    }
+    
+     public function getPost_date() {
+        return $this->annonce->getPost_date();
+    }
+    
+    public function getCommentAnnonce() {
+        return $this->annonce->getParagraphe_1();
+    }
+    
+      public function getTitle() {
+        return $this->annonce->getPost_title();
+    }
+    
+     public function getType() {
+        return $this->annonce->getParagraphe_2();
+    }
+    
+    
     
 }

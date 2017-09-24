@@ -1,5 +1,6 @@
 <?php
 
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Application;
@@ -8,6 +9,9 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
+
+/* TEST POUR HEADER */
+
 /*$before = function (Application $app) {
     $annonces = new Application();
     $annonces = $app['layout.controller']->annonceMenu();
@@ -22,17 +26,12 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
     $app['layout.controller']->annonceMenu() ;  
 }) ;*/
 
-
-
-$app->get('/', 'index.controller:indexAction')                  
-       /* ->before($before)*/
-        ->bind('homepage');
-
+$app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
 $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bind('APIautoCompletion');
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
-
+$app->match('/about', 'index.controller:about')                 ->bind('about');
 
 
 /* USER */
@@ -51,14 +50,21 @@ $user->before (function() use ($app){
 $user->match('/profil', 'user.controller:profilUser')  
        ->bind('profilUser');
 
-$user->match('/messProfilToUs', 'user.controller:messProfilToUs')  
-       ->bind('messProfilToUs');
-
-$user->match('/profil/{id}', 'user.controller:profilUser')  
-             ->assert('id', '\d+')
+$user->match('/profil/{id}', 'user.controller:profilUser') 
+            ->assert('id', '\d+')
             ->bind('profilUser');
 
-$user->match('/updateProfil', 'user.controller:registerAction2')     ->bind('updateProfil');
+$user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
+
+$user->match('/LireMessage/{id}', 'message.controller:LireMessage') 
+        ->assert('id', '\d+')
+        ->bind('LireMessage');
+$user->match('/posterMessage/{id}', 'user.controller:posterMessage')
+        ->assert('id', '\d+')
+        ->bind('posterMessage');
+
+$user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
+
 
 /* Cheunn */
 
@@ -109,10 +115,6 @@ $app
   
 /* Cheunn */
 
-/* TEST POUR BOUCLES*/
-
-
-
 /* Julien */
 
 /* SINGLE ANNONCE REDIRECTION */
@@ -127,23 +129,42 @@ $app
     ->assert('id', '\d+')
     ->bind('single_annonce')
 ;
-
 $app
     ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
 ;
-
 $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
 ;
-
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
     ->bind('annonce_edit')
 ;
+/* CHRONIQUE COTE FRONT */
+
+$app
+    ->match('/chroniques', 'chronique.controller:listActionMain')  
+    ->bind('chroniques')
+;
+$app
+    ->get('/single_chronique/{id}', 'chronique.controller:getChroniqueId')  
+    ->assert('id', '\d+')
+    ->bind('single_chronique')
+;
+
+$app
+    ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
+    ->bind('chronique_rubrique')
+;
+
+$app
+    ->match('/' , 'chronique.controller:findlastTwo')  
+    ->bind('chronique_front')
+;
+
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
     ->match('/', 'category.controller:listActionChronique')
@@ -172,7 +193,8 @@ $app
 
 //Handicap
 
-$bind = $app->get('/handicap/{id}', 'handicap.controller:handicapAction')
+$bind = $app
+        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
         ->bind('handicap');
 
 
@@ -196,9 +218,9 @@ $admin
 ;
 
 $admin
-        ->get('/category/{type}', 'admin.category.controller:listByType')
-        ->assert('type','[annonce]|[chronique]')
-        ->bind('admin_categories_by_type')
+    ->get('/category/{type}', 'admin.category.controller:listByType')
+    ->assert('type','[annonce]|[chronique]')
+    ->bind('admin_categories_by_type')
 ;
 
 $admin
@@ -304,4 +326,5 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     );
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+
 });

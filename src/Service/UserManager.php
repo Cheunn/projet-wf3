@@ -79,7 +79,7 @@ class UserManager
         return '';
     }
     
-        public function getId()
+     public function getId()
     {
         if ($this->session->has('user')) {
             return $this->getUser()->getId_member();

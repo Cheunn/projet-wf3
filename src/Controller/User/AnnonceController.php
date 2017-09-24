@@ -107,9 +107,9 @@ class AnnonceController extends ControllerAbstract{
         return $this->redirectRoute('user_annonce_list');
     }
     
-    
-    // USER FONCTION    
-    public function listUserAnnonce(){
+
+  /* DEV (jaoued) */ 
+  public function listAnnoncesByUser($id){
         $user = $this->app['user.manager']->getUser();
         
         $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
@@ -120,5 +120,31 @@ class AnnonceController extends ControllerAbstract{
                 ]
         );
     }
+  
+  /* Cheunn */
+  public function listUserAnnonce(){
+  $user = $this->app['user.manager']->getUser();
+        
+        $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
+        
+        return $this->render('user/annonce/list.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
+     public function nbAnnoncesByUser($id){
+        $user = $this->app['user.manager']->getUser();
+        
+        $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
+        
+        return $this->render('user/annonce/list.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
     
 }

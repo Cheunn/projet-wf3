@@ -16,6 +16,9 @@ class Annonce
     private $type_id_type;
     private $category_id_category; // 11
     private $category_name;
+    private $name;
+    private $user;
+     private $annonce;
 
     public function getId_post() {
         return $this->id_post;
@@ -124,6 +127,29 @@ class Annonce
         $this->category_name = $category_name;
         return $this;
     }
+
+
+    public function setName(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+
+      public function getUserName() 
+     {
+          if (! is_null ($this->user))
+            {
+                 return $this->user->getName();
+            }
+
+            return '';
+    }
+   
+    public function setUser(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+    
+
 
 
 }

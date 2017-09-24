@@ -147,70 +147,87 @@ SQL;
         }
         return $annonces;
     }
+   
+//public function findLastThree()
+//    {
+//        $query = <<<SQL
+//SELECT 
+//    a.*
+//FROM annonce a
+//ORDER BY id_post DESC
+//SQL;
+//        $dbAnnonces = $this->db->fetchAll($query);    
+//        $annonces = [];
+//
+//        
+//        /*for ($i=0 ; $i < $limit; $i++) {
+//            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+//        }*/
+//        return $annonces;
+//    }
     
-
-public function findLastThree($limit)
+    public function findLastSix()
     {
-        $query = "SELECT a.* FROM annonce a ORDER BY id_post DESC LIMIT $limit";
-
-          
-        $dbAnnonces = $this->db->fetchAll($query); 
-        
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);
         $annonces = [];
-        
-        /*for ($i=0 ; $i < $limit; $i++) {
-            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-           
-        }*/
-        
-       
-        
-       
-
-        
-
-       foreach ($dbAnnonces as $dbAnnonce) { 
-           $annonces[] = $this->buildEntity($dbAnnonce);
-                   
-       }
-       
-       return $annonces;  
-       
-
-
-
+    
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+        return $annonces;
     }
     
-    
-    
-    public function findLastThree2($limit)
-    {
-        $query = "SELECT a.* FROM annonce a ORDER BY id_post DESC LIMIT $limit";
-
-            dump($limit); 
-        $dbAnnonces = $this->db->fetchAll($query); 
-        
-        $annonces = [];
-       
-
-       foreach ($dbAnnonces as $dbAnnonce) { 
-           $annonces[] = $this->buildEntity($dbAnnonce);
-                   
-       }
-       dump($annonces);
-       return $annonces;  
-       
-
-
-    }
-    
-    
-    
-
     private function buildEntity(array $data)
+        {
+    //        $category = new Category();
+            
+    //        $category// A FINIR
+    //            ->setId_category($data['id_category'])
+    //            ->setName($data['name'])
+    //            ->setType_post('annonce')    
+    //                ;
+    //        
+            //$author = new Member();
+            
+           /* $author // RESTE A FAIRE
+                ->setId($data['author_id'])
+                ->setLastname($data['lastname'])
+                ->setFirstname($data['firstname'])
+            ;*/
+            
+            $annonce = new Annonce();
+            
+            $annonce
+                ->setPost_date($data['post_date'])
+                ->setId_post($data['id_post'])
+                ->setParagraphe_1($data['paragraphe_1'])
+                ->setParagraphe_2($data['paragraphe_2'])
+                ->setPost_title($data['post_title'])
+                ->setUrl_img_1($data['url_img_1'])
+                ->setUrl_img_2($data['url_img_2'])
+                ->setUrl_img_3($data['url_img_3'])
+                ->setMember_id_member($data['member_id_member'])
+                ->setType_id_type($data['type_id_type'])
+                ->setCategory_id_category($data['category_id_category'])
+              
+                //->setCategory($category)
+                //->setAuthor($author)
+            ;
+            
+            return $annonce;
+        }
+    
+    private function buildEntity2(array $data)
     {
 //        $category = new Category();
-        
+      
 //        $category// A FINIR
 //            ->setId_category($data['id_category'])
 //            ->setName($data['name'])
@@ -218,15 +235,22 @@ public function findLastThree($limit)
 //                ;
 //        
         //$author = new Member();
-        
+
        /* $author // RESTE A FAIRE
             ->setId($data['author_id'])
             ->setLastname($data['lastname'])
             ->setFirstname($data['firstname'])
         ;*/
+    }
+    private function buildEntity3(array $data)
+    {
+        $user= new User();
+        $user
+              -> setName($data['name'])
+        ; 
         
+       
         $annonce = new Annonce();
-        
         $annonce
             ->setPost_date($data['post_date'])
             ->setId_post($data['id_post'])
@@ -239,6 +263,7 @@ public function findLastThree($limit)
             ->setMember_id_member($data['member_id_member'])
             ->setType_id_type($data['type_id_type'])
             ->setCategory_id_category($data['category_id_category'])
+            ->setName($user)
           
             //->setCategory($category)
             //->setAuthor($author)
@@ -246,8 +271,66 @@ public function findLastThree($limit)
         
         return $annonce;
     }
+     public function findByRubrique($category)
+    {
+$query = <<<SQL
+SELECT
+    a.*,  
+    c.name AS category_name
+FROM annonce a
+JOIN category c ON a.category_id_category  = c.id_category
+WHERE c.name  = :name
+SQL;
+        $dbAnnonces = $this->db->fetchAll(
+            $query,
+            [
+                ':name' => $category
+            ]
+        );
+        $annonces = [];
+        
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+       
+        return $annonces;
+    }
+  
     
-        /* FONCTION POUR LE FRONT */
+     public function listeAnnoncesByUser( $idUser)       
+    {
+        // dump($idreceiver);
+        
+        $query = " SELECT a.* , m.name FROM annonce a, member m where member_id_member = id_member AND `member_id_member` = " . $idUser ;  
+       
+         $dbMessages = $this->db->fetchAll($query);
+        
+        $messages =[];
+         //dump($dbMessages);
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
+        dump($messages); 
+        return $messages;
+      
+    }
+    
+ 
+    
+    public function nbAnnoncesByUser($id)
+    {
+        $annonce = new Annonce();
+        $dbAnnonce = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_annonces FROM annonce WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+        return $this->buildEntity2($dbAnnonce);
+      
+    }
+    
+/* FONCTION POUR LE FRONT */
 
     public function listByUserId($id) {
 
@@ -261,6 +344,8 @@ public function findLastThree($limit)
 
         return $annonces;
     }
-
+  
+    
     
 }
+

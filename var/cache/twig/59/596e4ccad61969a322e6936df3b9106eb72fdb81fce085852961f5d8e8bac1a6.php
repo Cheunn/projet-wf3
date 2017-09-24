@@ -21,6 +21,7 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
         $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4->enter($__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "header.html.twig"));
 
+
         // line 1
         echo "<header>
 
@@ -504,10 +505,12 @@ class __TwigTemplate_2ce520461dfa3a42db747134b02f4fac0a4115cc4adce58256905d84e57
         // line 372
         echo "  ";
         
+
         $__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2->leave($__internal_15b0cc0e10e94e44067971c14833dad07266553e2146c1575a435d8e1441b9e2_prof);
 
         
         $__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4->leave($__internal_124c3aa58edb6b857259532e97fd9c784fbd603c6e6818ac0f5ef98f7bc1afe4_prof);
+
 
     }
 

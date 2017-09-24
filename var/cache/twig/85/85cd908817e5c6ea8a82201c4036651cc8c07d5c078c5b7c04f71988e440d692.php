@@ -22,29 +22,29 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->enter($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_a36329d9c1fc2d951b3e753762b97f7a933ef62a09c4ac61935f0bf97692e3a8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a36329d9c1fc2d951b3e753762b97f7a933ef62a09c4ac61935f0bf97692e3a8->enter($__internal_a36329d9c1fc2d951b3e753762b97f7a933ef62a09c4ac61935f0bf97692e3a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->enter($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
+        $__internal_9b1a93f1c5c2d4df10e4f017688f41741399bd95a09936d5962c0f8dcd65b776 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9b1a93f1c5c2d4df10e4f017688f41741399bd95a09936d5962c0f8dcd65b776->enter($__internal_9b1a93f1c5c2d4df10e4f017688f41741399bd95a09936d5962c0f8dcd65b776_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "user/consultProfil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a->leave($__internal_16eb0f7da6a6bd154812286e9b8685b536bc57d341acda22d67e315f2b14123a_prof);
+        $__internal_a36329d9c1fc2d951b3e753762b97f7a933ef62a09c4ac61935f0bf97692e3a8->leave($__internal_a36329d9c1fc2d951b3e753762b97f7a933ef62a09c4ac61935f0bf97692e3a8_prof);
 
         
-        $__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8->leave($__internal_bafc542f367ae68da7be54c29f87257ab12b21820872bbff38710125111fe2f8_prof);
+        $__internal_9b1a93f1c5c2d4df10e4f017688f41741399bd95a09936d5962c0f8dcd65b776->leave($__internal_9b1a93f1c5c2d4df10e4f017688f41741399bd95a09936d5962c0f8dcd65b776_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->enter($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_3a81a357d1104b2b1acf215aead63362fd8a02ceb92b714a4e2efba6dbce6134 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3a81a357d1104b2b1acf215aead63362fd8a02ceb92b714a4e2efba6dbce6134->enter($__internal_3a81a357d1104b2b1acf215aead63362fd8a02ceb92b714a4e2efba6dbce6134_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->enter($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_059d64d3a40d2351a3800046422701da54ed85a9361b331eb3675a62d0fdba47 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_059d64d3a40d2351a3800046422701da54ed85a9361b331eb3675a62d0fdba47->enter($__internal_059d64d3a40d2351a3800046422701da54ed85a9361b331eb3675a62d0fdba47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "                   
@@ -52,12 +52,6 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 <section class=\"innercontent\">
 
     <div class=\"container\">
-
-    \t
-                   
-      
-       
-   
 
         <div class=\"row\">
 
@@ -74,7 +68,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                         <li>
 
                             <div class=\"icon-box\"><img src=\"";
-        // line 29
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/author_1.png "), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"image post\" /></div>
 
@@ -83,8 +77,8 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                             
 
                            <a href=\"author.html\">";
-        // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 35, $this->getSourceContext()); })()), "name", array()), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 29, $this->getSourceContext()); })()), "name", array()), "html", null, true);
         echo " </a>
 
                             </div>    
@@ -99,8 +93,8 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
                             <p>Inscrit le :</p>
                                 <strong>";
-        // line 48
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 48, $this->getSourceContext()); })()), "date_create", array()), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 42, $this->getSourceContext()); })()), "date_create", array()), "html", null, true);
         echo " </strong></div>
                         </li>
 
@@ -113,25 +107,37 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                              <div class=\"info\">
 
                              <p>Note</p>
-                                 <strong>4.5</strong></div>
+                                 <strong>";
+        // line 54
+        echo twig_escape_filter($this->env, (isset($context["myNote"]) || array_key_exists("myNote", $context) ? $context["myNote"] : (function () { throw new Twig_Error_Runtime('Variable "myNote" does not exist.', 54, $this->getSourceContext()); })()), "html", null, true);
+        echo " </strong></div>
                          </li>
 
                          <li>
                             <div class=\"info\">
                             <p>Annonces </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 60
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["nbAnnoncesByUser"]) || array_key_exists("nbAnnoncesByUser", $context) ? $context["nbAnnoncesByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbAnnoncesByUser" does not exist.', 60, $this->getSourceContext()); })()), "id_post", array()), "html", null, true);
+        echo "        </strong></div>
                         </li>
                         
                         <li>
                             <div class=\"info\">
                             <p>Chroniques </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 66
+        echo twig_escape_filter($this->env, (isset($context["nbChroniquesByUser"]) || array_key_exists("nbChroniquesByUser", $context) ? $context["nbChroniquesByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbChroniquesByUser" does not exist.', 66, $this->getSourceContext()); })()), "html", null, true);
+        echo "   </strong></div>
                         </li>
                         
                          <li>
                             <div class=\"info\">
                             <p>News </p>
-                                <strong>4289</strong></div>
+                                <strong>";
+        // line 72
+        echo twig_escape_filter($this->env, (isset($context["nbNewByUser"]) || array_key_exists("nbNewByUser", $context) ? $context["nbNewByUser"] : (function () { throw new Twig_Error_Runtime('Variable "nbNewByUser" does not exist.', 72, $this->getSourceContext()); })()), "html", null, true);
+        echo "</strong></div>
                         </li>
 
                        </ul>
@@ -142,9 +148,9 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                
                         
             ";
-        // line 88
+        // line 82
         if (array_key_exists("modeadmin", $context)) {
-            // line 89
+            // line 83
             echo "
 
                <div class=\"caption\">
@@ -153,7 +159,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                     <ul class=\"list-inline tags\">
 
                      <li><a  href=\"";
-            // line 96
+            // line 90
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("updateProfil");
             echo "\">Modifier Profil </a></li>
                         <li onclick=\"afficher_div('IdGererAnnonces');\"><a href=\"#\">Gerer mes Annonces</a></li>
@@ -165,348 +171,171 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                 </div></div>
             ";
         }
-        // line 105
+        // line 99
         echo "
             
              <div class=\"caption\">
                 <div class=\"line-block\">
-
+                    
+                    
+                    ";
+        // line 106
+        echo "
                     <ul class=\"list-inline tags\">
                      
                        ";
-        // line 112
+        // line 109
         if (array_key_exists("modeadmin", $context)) {
-            echo "     
-                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
-                        ";
+            echo " <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>";
         }
-        // line 115
-        echo "                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Ses annonces</a></li>
-
-                        <li onclick=\"afficher_div('IdProfilBlockChronique');\"><a href=\"#\">Ses chroniques</a></li>
-                        
-                        <li onclick=\"afficher_div('IdProfilBlockComments');\"><a href=\"#\">Ses commentaires</a></li>
-                        
-                        <li onclick=\"afficher_div('IdProfilBlockAvis');\"><a href=\"#\">Avis</a></li>
-
+        // line 110
+        echo "                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Annonces Postées ( a redefinir )</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockSesPosts');\"><a href=\"#\">Ses Posts</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockComments');\"><a href=\"#\">Ses Interventions sur les posts</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockCommentsAvis');\"><a href=\"#\">Avis des internautes</a></li>
                   
 
                     </ul>
 
                 </div></div>
 
-           
-             
-                    <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >
-
-                        <div class=\"row\">
-
-                            <div class=\"col-md-12\"><h4></h4></div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                  <a href=\"#\"><img src=\"";
-        // line 141
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post1.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"";
-        // line 157
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post2.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"";
-        // line 173
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/post/related-post3.png "), "html", null, true);
-        echo "\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                   
+                    <div id=\"IdProfilBlockSesPosts\" class=\"related-post\" >    Ses Posts          </div>   
                     
-                                    
-                    <div id=\"IdProfilBlockAvis\" class=\"comment-list \">
+                    <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >  Annonce spostées22    </div> 
+                    
+                
+                   
                         
-\t\t\t<div class=\"comment-count \">
-
-\t\t\t\t<h4>32 Avis</h4>
-
-\t\t\t\t<p><a href=\"#\">Sign in</a> to comment or comment as a guest.</p>
-
-\t\t\t</div>
-\t\t\t
-
-\t\t\t<div class=\"media\">
-
-\t\t\t\t<div class=\"media-left\">
-
-\t\t\t\t\t<a href=\"#\">
-
-\t\t\t\t\t\t<img class=\"media-object\" src=\"";
-        // line 207
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
-        echo "\" alt=\"placeholder image\">
-
-\t\t\t\t\t</a>
-
-\t\t\t\t</div>
-
-\t\t\t\t<div class=\"media-body\">
-
-\t\t\t\t\t<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-\t\t\t\t\t  <ul class=\"list-inline\">
-
-\t\t\t\t\t\t  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-\t\t\t\t\t\t  <li>3 hours ago</li>
-
-\t\t\t\t\t\t  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-\t\t\t\t\t\t</ul>
-
-\t\t\t\t  
-
-\t\t\t\t</div>
-
-\t\t\t</div>
-
-
+                   <div id=\"IdProfilBlockComments\" class=\"related-post\" >  
+                        <div class=\"comment-count\"><h4>";
+        // line 129
+        echo twig_escape_filter($this->env, (isset($context["nbCommentaires"]) || array_key_exists("nbCommentaires", $context) ? $context["nbCommentaires"] : (function () { throw new Twig_Error_Runtime('Variable "nbCommentaires" does not exist.', 129, $this->getSourceContext()); })()), "html", null, true);
+        echo " Commentaire(s)</h4>
+                        </div>
+                           ";
+        // line 131
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["listeCommentsFromUser"]) || array_key_exists("listeCommentsFromUser", $context) ? $context["listeCommentsFromUser"] : (function () { throw new Twig_Error_Runtime('Variable "listeCommentsFromUser" does not exist.', 131, $this->getSourceContext()); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["listeCommentFromUser"]) {
+            echo " 
+                                <div class=\"comment-list\">  
+                                   <div class=\"media\">
+                                     <div class=\"media-left\">
+                                         <p>titre :";
+            // line 135
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["listeCommentFromUser"], "annonce", array()), "post_title", array()), "html", null, true);
+            echo " - type  :";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["listeCommentFromUser"], "annonce", array()), "paragraphe_2", array()), "html", null, true);
+            echo " ( </p>  ";
+            // line 136
+            echo "                                        <a href=\"#\"><img class=\"media-object\" src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
+            echo "\" alt=\"placeholder image\"></a>
+                                    </div>
+                                         <ul class=\"list-inline\">
+                                            <li> titre :";
+            // line 139
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["listeCommentFromUser"], "annonce", array()), "post_title", array()), "html", null, true);
+            echo "</li>
+                                            <li> le :";
+            // line 140
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["listeCommentFromUser"], "annonce", array()), "post_date", array()), "html", null, true);
+            echo "</li>
+                                            <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
+                                        </ul>
+                                   </div>
+                                 <div class=\"media-body\">
+                                     
+                                       
+                                 </div>
+                               </div>
+                           ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['listeCommentFromUser'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 149
+        echo "                       
                     </div>
-                                    
-                    <div id=\"IdProfilBlockComments\" class=\"comment-list \">
+                           ";
+        // line 172
+        echo "                    
+                    <div id=\"IdProfilBlockMessage\" class=\"related-post\" > 
+                             <h4>Entrez votre Message</h4>
+                                <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
+                                    <div class=\"row\"><div class=\"col-md-6 col-lg-5\"><div class=\"form-group\">
+                                     <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Nom:\">
+                                   </div>
+                                      </div></div>
+                                    <div class=\"row\"><div class=\"col-md-6 col-lg-5\"><div class=\"form-group\"><input type=\"text\" class=\"form-control\" placeholder=\"Sujet :\"></div></div>
+                                            </div>
+                                    <div class=\"form-group\"><textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea></div>
+                                  <button type=\"submit\" class=\"btn btn-default\">Envoyer</button>
+                                </form>
+                    
+                    </div>                  
+                   
                         
-                        <div class=\"comment-count \">
-
-                        <h4>32 Comments</h4>
-
-                        <p><a href=\"#\">Sign in</a> to comment or comment as a guest.</p>
-
+                   
+                     
+                   
+                    
+                    
+                  
+                                    
+                     <div id=\"IdProfilBlockCommentsAvis\" class=\"related-post\" >  
+                        <div class=\"comment-count\"><h4>";
+        // line 197
+        echo twig_escape_filter($this->env, (isset($context["nbCommentaires"]) || array_key_exists("nbCommentaires", $context) ? $context["nbCommentaires"] : (function () { throw new Twig_Error_Runtime('Variable "nbCommentaires" does not exist.', 197, $this->getSourceContext()); })()), "html", null, true);
+        echo " Commentaire(s)</h4>
                         </div>
-
-                        <div class=\"media\">
-
-                          <div class=\"media-left\">
-
-                            <a href=\"#\">
-
-                              <img class=\"media-object\" src=\"";
-        // line 252
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
-        echo "\" alt=\"placeholder image\">
-
-                            </a>
-
-                          </div>
-
-                          <div class=\"media-body\">
-
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-                              <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-                                </ul>
-
-                              
-
-                          </div>
-
-                        </div>
-
-                        <div class=\"media\">
-
-                          <div class=\"media-left\">
-
-                            <a href=\"#\">
-
-                              <img class=\"media-object\" src=\"";
-        // line 284
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
-        echo "\" alt=\"placeholder image\">
-
-                            </a>
-
-</div>
-
-                          <div class=\"media-body\">
-
-                            
-
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-                              <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-                                </ul>
-
-                            <div class=\"media nested-first\">
-
-                              <div class=\"media-left\">
-
-                                <a href=\"#\">
-
-                                  <img class=\"media-object\" src=\"";
-        // line 312
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
-        echo "\" alt=\"placeholder image\">
-
-                                </a>
-
-                              </div>
-
-                              <div class=\"media-body\">
-
-                                
-
-                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
-
-                                  <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                </ul>
-
-                              </div>
-
-</div>
-
-                            <div class=\"media\">
-
-                              <div class=\"media-left\">
-
-                                <a href=\"#\">
-
-                                  <img class=\"media-object\" src=\"";
-        // line 342
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
-        echo "\" alt=\"placeholder image\">
-
-                                </a>
-
-                              </div>
-
-                              <div class=\"media-body\">
-
-                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
-
-                                  <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                </ul>
-
-                              </div>
-
-</div>
-
-</div>
-
-                        </div>
-
-                    </div>
-
-                    <div id=\"IdProfilBlockMessage\" class=\"comment-form consultProfilBlocMessageInterne\">
-
-                        <h4>Enntrez votre Message</h4>
-
-                        <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
-
-                            <div class=\"row\">
-
-                                <div class=\"col-md-6 col-lg-5\">
-
-                           <div class=\"form-group\">
-
-                             <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Nom:\">
-
-                           </div>
-
+                            ";
+        // line 199
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["getMyComments"]) || array_key_exists("getMyComments", $context) ? $context["getMyComments"] : (function () { throw new Twig_Error_Runtime('Variable "getMyComments" does not exist.', 199, $this->getSourceContext()); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["getMyComment"]) {
+            echo " 
+                                <div class=\"comment-list\">  
+                                   <div class=\"media\">
+                                     <div class=\"media-left\">
+                                     <a href=\"#\"><img class=\"media-object\" src=\"";
+            // line 203
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/comment-thumbnail.png "), "html", null, true);
+            echo "\" alt=\"placeholder image\"></a>
                                     </div>
-
-                            </div>
-
-
-                            <div class=\"row\">
-
-                                <div class=\"col-md-6 col-lg-5\">
-
-                            <div class=\"form-group\">
-
-                            <input type=\"text\" class=\"form-control\" placeholder=\"Sujet :\">
-
-                          </div>
-
-                            </div>
-
-                                    </div>
-
-                            <div class=\"form-group\">
-
-                                <textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea>
-
-                          </div>
-
-                          <button type=\"submit\" class=\"btn btn-default\">Envoyer</button>
-
-                        </form>
-
+                                   </div>
+                                 <div class=\"media-body\"><p>";
+            // line 206
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["getMyComment"], "comment", array()), "html", null, true);
+            echo " </p>
+                                                           <ul class=\"list-inline\">
+                                                               <li><a class=\"media-heading\" href=\"";
+            // line 208
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), $context["getMyComment"], "id_member_noteur", array()))), "html", null, true);
+            echo "\">De : ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["getMyComment"], "username", array()), "html", null, true);
+            echo "</a></li>
+                                                               <li> le :";
+            // line 209
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["getMyComment"], "date_create", array()), "html", null, true);
+            echo "</li>
+                                                               <li><a class=\"reply-btn\" href=\"";
+            // line 210
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profilUser", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), $context["getMyComment"], "id_member_noteur", array()))), "html", null, true);
+            echo "\">Post Reply</a></li>
+                                                           </ul>
+                                 </div>
+                               </div>
+                           ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['getMyComment'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 214
+        echo "                       
                     </div>
-
+ 
                    
 
                 </article>
@@ -520,91 +349,98 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
             \t
 
                 <div class=\"row\">
-
-                <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                    
+                 
                  ";
-        // line 435
+        // line 232
         if (array_key_exists("modeadmin", $context)) {
-            // line 436
-            echo "                  <div class=\"panel-heading\">Consulter mes messages</div>
-
-                    <div class=\"panel-body\">
-
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
-               ";
+            // line 233
+            echo "                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                            
+                                ";
+            // line 236
+            if (((isset($context["messageCheck"]) || array_key_exists("messageCheck", $context) ? $context["messageCheck"] : (function () { throw new Twig_Error_Runtime('Variable "messageCheck" does not exist.', 236, $this->getSourceContext()); })()) == "OK")) {
+                // line 237
+                echo "                                         <div class=\"panel-heading\">Consulter mes messages</div>
+                                             <div class=\"panel-body\">
+                                        ";
+                // line 239
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 239, $this->getSourceContext()); })()));
+                foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                    echo " 
+                                              <p><a href=\"";
+                    // line 240
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("LireMessage", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "idmessage", array()))), "html", null, true);
+                    echo "\"> ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "id_member_send", array()), "html", null, true);
+                    echo " - ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "date", array()), "html", null, true);
+                    echo "/ ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["message"], "title", array()), "html", null, true);
+                    echo "</a> </p>     
+                                        ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 241
+                echo " 
+                                ";
+            } else {
+                // line 243
+                echo "                                            <div class=\"panel-heading\">Aucun Message reçu</div>
+                                             <div class=\"panel-body\">
+                                ";
+            }
+            // line 246
+            echo "
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                ";
         } else {
-            // line 470
+            // line 251
             echo " 
+                    
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Donner une note</div>
+                                 <div class=\"panel-body\">
+                                         ";
+            // line 258
+            echo "                                                 <form action=\"#\" method=\"post\">
+                                           
+                                            <div class=\"form-group\">
+                                                    <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                                          <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                                          <option  class=\"form-control \" value=\"1\" >1</option>
+                                                          <option  class=\"form-control \" value=\"2\" >2</option>
+                                                          <option  class=\"form-control \" value=\"3\" >3</option>
+                                                          <option  class=\"form-control \" value=\"4\" >4</option>
+                                                          <option  class=\"form-control \" value=\"5\" >5</option>
+
+                                                      </select>
+                                             </div>
+                                             <div class=\"form-group\">
+                                                 <button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
                    
-                   <div class=\"panel-heading\">Donner une note</div>
 
-                    <div class=\"panel-body\">
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
+                   
+              
                ";
         }
-        // line 506
+        // line 285
         echo "    
             </aside>
 
@@ -619,23 +455,23 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
     
 ";
         
-        $__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295->leave($__internal_baead1e87930fbbb433692cd46515b56dc6e749137cbe486e86f5ebff6d70295_prof);
+        $__internal_059d64d3a40d2351a3800046422701da54ed85a9361b331eb3675a62d0fdba47->leave($__internal_059d64d3a40d2351a3800046422701da54ed85a9361b331eb3675a62d0fdba47_prof);
 
         
-        $__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170->leave($__internal_f61be80e1bdab2ec757862d5d934d3b757a049f78a515631039afe76c71e8170_prof);
+        $__internal_3a81a357d1104b2b1acf215aead63362fd8a02ceb92b714a4e2efba6dbce6134->leave($__internal_3a81a357d1104b2b1acf215aead63362fd8a02ceb92b714a4e2efba6dbce6134_prof);
 
     }
 
-    // line 520
+    // line 299
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->enter($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_17c34970d3583be13e4a99676020dac5b89353cbd95a110dd3874d0c6cdd8084 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_17c34970d3583be13e4a99676020dac5b89353cbd95a110dd3874d0c6cdd8084->enter($__internal_17c34970d3583be13e4a99676020dac5b89353cbd95a110dd3874d0c6cdd8084_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->enter($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_c677236c9ea2d9a3d96928d0d5c4b7208e42ac5b8f6c7dc9d1dcff8bbe1a5b45 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c677236c9ea2d9a3d96928d0d5c4b7208e42ac5b8f6c7dc9d1dcff8bbe1a5b45->enter($__internal_c677236c9ea2d9a3d96928d0d5c4b7208e42ac5b8f6c7dc9d1dcff8bbe1a5b45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 521
+        // line 300
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -645,43 +481,56 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
         <link rel=\"Stylesheet\" type=\"text/css\" href=\"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css\" />
 \t 
         <script type=\"text/javascript\">
+            
+             \$('#IdProfilBlockCommentsAvis').hide(); 
+                       \$('#IdProfilBlockAnnonces').hide(); 
+                       \$('#IdProfilBlockMessage').hide(); 
+                       \$('#IdProfilBlockComments').hide(); 
+                       \$('#IdProfilBlockSesPosts').hide();
             function afficher_div(id)
             {
                  console.log(id);
-                 // #IdProfilBlockComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockAvis,  #IdProfilBlockChronique     
-                 id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';;
-                       \$('#IdProfilBlockAnnonces').hide(); \$('#id1').hide(); \$('#id2').hide(); \$('#id3').hide(); \$('#id4').hide();
+                 // #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts     
+                 //id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';
+                       \$('#IdProfilBlockCommentsAvis').hide(); 
+                       \$('#IdProfilBlockAnnonces').hide(); 
+                       \$('#IdProfilBlockMessage').hide(); 
+                       \$('#IdProfilBlockComments').hide(); 
+                       \$('#IdProfilBlockSesPosts').hide();
                        
                 
                        
                         
                 if (id === 'IdProfilBlockAnnonces') 
                     {    console.log('coucou0');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique'; id='IdProfilBlockAnnonces'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts'; id='IdProfilBlockAnnonces'; }
                     
-                if (id == 'IdProfilBlockComments') 
+                if (id == 'IdProfilBlockCommentsAvis') 
                     {    console.log('coucou1');
-                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';id='IdProfilBlockComments'; }
+                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockCommentsAvis'; }
                     
                 if (id == 'IdProfilBlockMessage') {
                      console.log('coucou2');
-                    id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';id='IdProfilBlockMessage'; }
+                    id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockMessage'; }
                     
-                if (id == 'IdProfilBlockAvis') 
+                if (id == 'IdProfilBlockComments') 
                 {    console.log('coucou3');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockChronique';id='IdProfilBlockAvis'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockComments'; }
                     
-                if (id == 'IdProfilBlockChronique') 
+                if (id == 'IdProfilBlockSesPosts') 
                     {    console.log('coucou4');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockAvis';id='IdProfilBlockChronique'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockComments';id='IdProfilBlockSesPosts'; }
                      console.log(id);
                       document.getElementById(id).style.display = 'block';
                       document.getElementById(id1).style.display = 'none';
                        document.getElementById(id2).style.display = 'none';
                         document.getElementById(id3).style.display = 'none';
                          document.getElementById(id4).style.display = 'none';
-                         
-              
+                        \$('#id').show();   
+                      \$('#id1').hide(); 
+                       \$('#id2').hide(); 
+                       \$('#id3').hide(); 
+                       \$('#id4').hide();
                       
                        console.log('fin');
            
@@ -704,10 +553,10 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 \t</script>
 ";
         
-        $__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b->leave($__internal_0bd0904a00e3745cdc365b2c36a371ace28ce97d96324648b43a792bdafe6b1b_prof);
+        $__internal_c677236c9ea2d9a3d96928d0d5c4b7208e42ac5b8f6c7dc9d1dcff8bbe1a5b45->leave($__internal_c677236c9ea2d9a3d96928d0d5c4b7208e42ac5b8f6c7dc9d1dcff8bbe1a5b45_prof);
 
         
-        $__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04->leave($__internal_883b1fcf27929f0f57b818fc0983ea8f3eeb93b5b164523f176722427d64be04_prof);
+        $__internal_17c34970d3583be13e4a99676020dac5b89353cbd95a110dd3874d0c6cdd8084->leave($__internal_17c34970d3583be13e4a99676020dac5b89353cbd95a110dd3874d0c6cdd8084_prof);
 
     }
 
@@ -723,7 +572,7 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 
     public function getDebugInfo()
     {
-        return array (  639 => 521,  630 => 520,  608 => 506,  569 => 470,  532 => 436,  530 => 435,  434 => 342,  401 => 312,  370 => 284,  335 => 252,  287 => 207,  250 => 173,  231 => 157,  212 => 141,  184 => 115,  178 => 112,  169 => 105,  157 => 96,  148 => 89,  146 => 88,  103 => 48,  87 => 35,  78 => 29,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  475 => 300,  466 => 299,  444 => 285,  414 => 258,  406 => 251,  398 => 246,  393 => 243,  389 => 241,  375 => 240,  369 => 239,  365 => 237,  363 => 236,  358 => 233,  356 => 232,  336 => 214,  325 => 210,  321 => 209,  315 => 208,  310 => 206,  304 => 203,  295 => 199,  290 => 197,  263 => 172,  259 => 149,  243 => 140,  239 => 139,  232 => 136,  227 => 135,  218 => 131,  213 => 129,  192 => 110,  188 => 109,  183 => 106,  175 => 99,  163 => 90,  154 => 83,  152 => 82,  139 => 72,  130 => 66,  121 => 60,  112 => 54,  97 => 42,  81 => 29,  72 => 23,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -735,12 +584,6 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
 <section class=\"innercontent\">
 
     <div class=\"container\">
-
-    \t
-                   
-      
-       
-   
 
         <div class=\"row\">
 
@@ -787,25 +630,25 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
                              <div class=\"info\">
 
                              <p>Note</p>
-                                 <strong>4.5</strong></div>
+                                 <strong>{{ myNote }} </strong></div>
                          </li>
 
                          <li>
                             <div class=\"info\">
                             <p>Annonces </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbAnnoncesByUser.id_post }}        </strong></div>
                         </li>
                         
                         <li>
                             <div class=\"info\">
                             <p>Chroniques </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbChroniquesByUser }}   </strong></div>
                         </li>
                         
                          <li>
                             <div class=\"info\">
                             <p>News </p>
-                                <strong>4289</strong></div>
+                                <strong>{{ nbNewByUser }}</strong></div>
                         </li>
 
                        </ul>
@@ -836,314 +679,120 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
             
              <div class=\"caption\">
                 <div class=\"line-block\">
+                    
+                    
+                    {#   #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts   #}
 
                     <ul class=\"list-inline tags\">
                      
-                       {% if modeadmin is defined %}     
-                       <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>
-                        {% endif %}
-                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Ses annonces</a></li>
-
-                        <li onclick=\"afficher_div('IdProfilBlockChronique');\"><a href=\"#\">Ses chroniques</a></li>
-                        
-                        <li onclick=\"afficher_div('IdProfilBlockComments');\"><a href=\"#\">Ses commentaires</a></li>
-                        
-                        <li onclick=\"afficher_div('IdProfilBlockAvis');\"><a href=\"#\">Avis</a></li>
-
+                       {% if modeadmin is defined %} <li onclick=\"afficher_div('IdProfilBlockMessage');\"><a  href=\"#\">Envoyer message </a></li>{% endif %}
+                        <li onclick=\"afficher_div('IdProfilBlockAnnonces');\"><a href=\"#\">Annonces Postées ( a redefinir )</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockSesPosts');\"><a href=\"#\">Ses Posts</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockComments');\"><a href=\"#\">Ses Interventions sur les posts</a></li>
+                        <li onclick=\"afficher_div('IdProfilBlockCommentsAvis');\"><a href=\"#\">Avis des internautes</a></li>
                   
 
                     </ul>
 
                 </div></div>
 
-           
-             
-                    <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >
-
-                        <div class=\"row\">
-
-                            <div class=\"col-md-12\"><h4></h4></div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                  <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post1.png ') }}\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post2.png ') }}\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class=\"col-xs-12 col-sm-4 col-md-4 col-lg-4\">
-
-                                <div class=\"thumbnail\">
-
-                                    <a href=\"#\"><img src=\"{{ asset('assets/images/post/related-post3.png ') }}\" alt=\"related post\"></a>
-
-                                  <div class=\"caption\">
-
-                                    <a href=\"#\">Cras sit amet nibh libero, in gravida nulla</a>
-
-                                  </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                   
+                    <div id=\"IdProfilBlockSesPosts\" class=\"related-post\" >    Ses Posts          </div>   
                     
-                                    
-                    <div id=\"IdProfilBlockAvis\" class=\"comment-list \">
+                    <div id=\"IdProfilBlockAnnonces\" class=\"related-post\" >  Annonce spostées22    </div> 
+                    
+                
+                   
                         
-\t\t\t<div class=\"comment-count \">
-
-\t\t\t\t<h4>32 Avis</h4>
-
-\t\t\t\t<p><a href=\"#\">Sign in</a> to comment or comment as a guest.</p>
-
-\t\t\t</div>
-\t\t\t
-
-\t\t\t<div class=\"media\">
-
-\t\t\t\t<div class=\"media-left\">
-
-\t\t\t\t\t<a href=\"#\">
-
-\t\t\t\t\t\t<img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\">
-
-\t\t\t\t\t</a>
-
-\t\t\t\t</div>
-
-\t\t\t\t<div class=\"media-body\">
-
-\t\t\t\t\t<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-\t\t\t\t\t  <ul class=\"list-inline\">
-
-\t\t\t\t\t\t  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-\t\t\t\t\t\t  <li>3 hours ago</li>
-
-\t\t\t\t\t\t  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-\t\t\t\t\t\t</ul>
-
-\t\t\t\t  
-
-\t\t\t\t</div>
-
-\t\t\t</div>
-
-
+                   <div id=\"IdProfilBlockComments\" class=\"related-post\" >  
+                        <div class=\"comment-count\"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
+                        </div>
+                           {% for listeCommentFromUser in listeCommentsFromUser %} 
+                                <div class=\"comment-list\">  
+                                   <div class=\"media\">
+                                     <div class=\"media-left\">
+                                         <p>titre :{{ listeCommentFromUser.annonce.post_title }} - type  :{{ listeCommentFromUser.annonce.paragraphe_2 }} ( </p>  {# commentaire #}
+                                        <a href=\"#\"><img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\"></a>
+                                    </div>
+                                         <ul class=\"list-inline\">
+                                            <li> titre :{{ listeCommentFromUser.annonce.post_title }}</li>
+                                            <li> le :{{ listeCommentFromUser.annonce.post_date }}</li>
+                                            <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
+                                        </ul>
+                                   </div>
+                                 <div class=\"media-body\">
+                                     
+                                       
+                                 </div>
+                               </div>
+                           {% endfor %}                       
                     </div>
-                                    
-                    <div id=\"IdProfilBlockComments\" class=\"comment-list \">
+                           {#
+\t\t\t<div class=\"comment-count \"><h4>{{nbCommentairesFromUser }} Commentaires</h4></div>
+                            {% for listeCommentFromUser in listeCommentsFromUser %} 
+                                    <div class=\"media\"><div class=\"media-left\">
+                                            <a href=\"#\"><img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\"></a>
+                                            </div>
+                                            <div class=\"media-body\">
+                                                             <p>{{listeCommentFromUser.commentannonce }} </p>
+                                                      <ul class=\"list-inline\">
+                                                              <li><a class=\"media-heading\" href=\"#\">De : {{listeCommentFromUser.username }}</a></li>
+                                                              <li>le : {{listeCommentFromUser.post_date }}</li>
+                                                              <li><a class=\"reply-btn\" href=\"#\">Title :{{listeCommentFromUser.title }}</a></li>
+                                                              <li><a class=\"reply-btn\" href=\"#\">Title :{{listeCommentFromUser.type }}</a></li>
+                                                              <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
+                                                            </ul>
+                                    </div>
+                            {% endfor %}
                         
-                        <div class=\"comment-count \">
-
-                        <h4>32 Comments</h4>
-
-                        <p><a href=\"#\">Sign in</a> to comment or comment as a guest.</p>
-
+\t\t\t</div>
+                       
+                       #}
+                    
+                    <div id=\"IdProfilBlockMessage\" class=\"related-post\" > 
+                             <h4>Entrez votre Message</h4>
+                                <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
+                                    <div class=\"row\"><div class=\"col-md-6 col-lg-5\"><div class=\"form-group\">
+                                     <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Nom:\">
+                                   </div>
+                                      </div></div>
+                                    <div class=\"row\"><div class=\"col-md-6 col-lg-5\"><div class=\"form-group\"><input type=\"text\" class=\"form-control\" placeholder=\"Sujet :\"></div></div>
+                                            </div>
+                                    <div class=\"form-group\"><textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea></div>
+                                  <button type=\"submit\" class=\"btn btn-default\">Envoyer</button>
+                                </form>
+                    
+                    </div>                  
+                   
+                        
+                   
+                     
+                   
+                    
+                    
+                  
+                                    
+                     <div id=\"IdProfilBlockCommentsAvis\" class=\"related-post\" >  
+                        <div class=\"comment-count\"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
                         </div>
-
-                        <div class=\"media\">
-
-                          <div class=\"media-left\">
-
-                            <a href=\"#\">
-
-                              <img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\">
-
-                            </a>
-
-                          </div>
-
-                          <div class=\"media-body\">
-
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-                              <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-                                </ul>
-
-                              
-
-                          </div>
-
-                        </div>
-
-                        <div class=\"media\">
-
-                          <div class=\"media-left\">
-
-                            <a href=\"#\">
-
-                              <img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\">
-
-                            </a>
-
-</div>
-
-                          <div class=\"media-body\">
-
-                            
-
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
-
-                              <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                  <li><a class=\"reply-btn\" href=\"#\">Post Reply</a></li>
-
-                                </ul>
-
-                            <div class=\"media nested-first\">
-
-                              <div class=\"media-left\">
-
-                                <a href=\"#\">
-
-                                  <img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\">
-
-                                </a>
-
-                              </div>
-
-                              <div class=\"media-body\">
-
-                                
-
-                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
-
-                                  <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                </ul>
-
-                              </div>
-
-</div>
-
-                            <div class=\"media\">
-
-                              <div class=\"media-left\">
-
-                                <a href=\"#\">
-
-                                  <img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\">
-
-                                </a>
-
-                              </div>
-
-                              <div class=\"media-body\">
-
-                               <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
-
-                                  <ul class=\"list-inline\">
-
-                                  <li><a class=\"media-heading\" href=\"#\">Anonymous</a></li>
-
-                                  <li>3 hours ago</li>
-
-                                </ul>
-
-                              </div>
-
-</div>
-
-</div>
-
-                        </div>
-
-                    </div>
-
-                    <div id=\"IdProfilBlockMessage\" class=\"comment-form consultProfilBlocMessageInterne\">
-
-                        <h4>Enntrez votre Message</h4>
-
-                        <form role=\"form\" action=\"#\" method=\"post\" novalidate id=\"comment-form\">
-
-                            <div class=\"row\">
-
-                                <div class=\"col-md-6 col-lg-5\">
-
-                           <div class=\"form-group\">
-
-                             <input type=\"text\" class=\"form-control\" name=\"name\" autocomplete=\"off\" placeholder=\"Nom:\">
-
-                           </div>
-
+                            {% for getMyComment in getMyComments %} 
+                                <div class=\"comment-list\">  
+                                   <div class=\"media\">
+                                     <div class=\"media-left\">
+                                     <a href=\"#\"><img class=\"media-object\" src=\"{{ asset('assets/images/comment-thumbnail.png ') }}\" alt=\"placeholder image\"></a>
                                     </div>
-
-                            </div>
-
-
-                            <div class=\"row\">
-
-                                <div class=\"col-md-6 col-lg-5\">
-
-                            <div class=\"form-group\">
-
-                            <input type=\"text\" class=\"form-control\" placeholder=\"Sujet :\">
-
-                          </div>
-
-                            </div>
-
-                                    </div>
-
-                            <div class=\"form-group\">
-
-                                <textarea class=\"form-control\" name=\"message\" placeholder=\"Message:\" rows=\"3\"></textarea>
-
-                          </div>
-
-                          <button type=\"submit\" class=\"btn btn-default\">Envoyer</button>
-
-                        </form>
-
+                                   </div>
+                                 <div class=\"media-body\"><p>{{ getMyComment.comment }} </p>
+                                                           <ul class=\"list-inline\">
+                                                               <li><a class=\"media-heading\" href=\"{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}\">De : {{ getMyComment.username }}</a></li>
+                                                               <li> le :{{ getMyComment.date_create }}</li>
+                                                               <li><a class=\"reply-btn\" href=\"{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}\">Post Reply</a></li>
+                                                           </ul>
+                                 </div>
+                               </div>
+                           {% endfor %}                       
                     </div>
-
+ 
                    
 
                 </article>
@@ -1157,82 +806,61 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
             \t
 
                 <div class=\"row\">
-
-                <div class=\"col-sm-6 col-md-12 col-lg-12\">
-
-                <div class=\"panel panel-default theme-panel\">
-
+                    
+                 
                  {% if modeadmin is defined %}
-                  <div class=\"panel-heading\">Consulter mes messages</div>
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                            
+                                {% if messageCheck == 'OK' %}
+                                         <div class=\"panel-heading\">Consulter mes messages</div>
+                                             <div class=\"panel-body\">
+                                        {% for message in messages %} 
+                                              <p><a href=\"{{ path('LireMessage', {id: message.idmessage}) }}\"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                        {% endfor %} 
+                                {%  else %}
+                                            <div class=\"panel-heading\">Aucun Message reçu</div>
+                                             <div class=\"panel-body\">
+                                {% endif %}
 
-                    <div class=\"panel-body\">
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                {% else %} 
+                    
+                    <div class=\"col-sm-6 col-md-12 col-lg-12\">
+                        <div class=\"panel panel-default theme-panel\">  
+                             <div class=\"panel-heading\">Donner une note</div>
+                                 <div class=\"panel-body\">
+                                         {#<form action=\"{{ path('EnvoyerNote', {id: {{user.id_member}} }}\" method=\"post\"> #}
+                                                 <form action=\"#\" method=\"post\">
+                                           
+                                            <div class=\"form-group\">
+                                                    <select id=\"role\" class=\"form-control \" name=\"note\"> 
+                                                          <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
+                                                          <option  class=\"form-control \" value=\"1\" >1</option>
+                                                          <option  class=\"form-control \" value=\"2\" >2</option>
+                                                          <option  class=\"form-control \" value=\"3\" >3</option>
+                                                          <option  class=\"form-control \" value=\"4\" >4</option>
+                                                          <option  class=\"form-control \" value=\"5\" >5</option>
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
-               {% else %} 
+                                                      </select>
+                                             </div>
+                                             <div class=\"form-group\">
+                                                 <button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
                    
-                   <div class=\"panel-heading\">Donner une note</div>
 
-                    <div class=\"panel-body\">
 
-                      <form action=\"#\" method=\"post\">
-
-                      <div class=\"form-group\">
-
-                          <select id=\"role\" class=\"form-control \" name=\"note\"> 
-                                <option  value=\"\" class=\"disabled selected hidden\" name=\"text\">Donner une note</option> 
-                                <option  class=\"form-control \" value=\"1\" >1</option>
-                                <option  class=\"form-control \" value=\"2\" >2</option>
-                                <option  class=\"form-control \" value=\"3\" >3</option>
-                                <option  class=\"form-control \" value=\"4\" >4</option>
-                                <option  class=\"form-control \" value=\"5\" >5</option>
-                                
-
-                            </select>
-
-                        </div>
-
-                        <div class=\"form-group\">
-
-                        \t<button class=\"btn btn-default btn-lg pull-right\" type=\"button\">Envoyer</button>
-
-                        </div>
-
-                        </form>
-                       
-                    </div>
-
-                </div>
-
-               </div>
+                   
+              
                {% endif %}    
             </aside>
 
@@ -1255,43 +883,56 @@ class __TwigTemplate_e041a34019766c7a60b7f0b6be6f5efef956417cc5c423a03f71f470f88
         <link rel=\"Stylesheet\" type=\"text/css\" href=\"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css\" />
 \t 
         <script type=\"text/javascript\">
+            
+             \$('#IdProfilBlockCommentsAvis').hide(); 
+                       \$('#IdProfilBlockAnnonces').hide(); 
+                       \$('#IdProfilBlockMessage').hide(); 
+                       \$('#IdProfilBlockComments').hide(); 
+                       \$('#IdProfilBlockSesPosts').hide();
             function afficher_div(id)
             {
                  console.log(id);
-                 // #IdProfilBlockComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockAvis,  #IdProfilBlockChronique     
-                 id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';;
-                       \$('#IdProfilBlockAnnonces').hide(); \$('#id1').hide(); \$('#id2').hide(); \$('#id3').hide(); \$('#id4').hide();
+                 // #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts     
+                 //id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';
+                       \$('#IdProfilBlockCommentsAvis').hide(); 
+                       \$('#IdProfilBlockAnnonces').hide(); 
+                       \$('#IdProfilBlockMessage').hide(); 
+                       \$('#IdProfilBlockComments').hide(); 
+                       \$('#IdProfilBlockSesPosts').hide();
                        
                 
                        
                         
                 if (id === 'IdProfilBlockAnnonces') 
                     {    console.log('coucou0');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique'; id='IdProfilBlockAnnonces'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts'; id='IdProfilBlockAnnonces'; }
                     
-                if (id == 'IdProfilBlockComments') 
+                if (id == 'IdProfilBlockCommentsAvis') 
                     {    console.log('coucou1');
-                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';id='IdProfilBlockComments'; }
+                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockCommentsAvis'; }
                     
                 if (id == 'IdProfilBlockMessage') {
                      console.log('coucou2');
-                    id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockAvis';id4 = 'IdProfilBlockChronique';id='IdProfilBlockMessage'; }
+                    id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockMessage'; }
                     
-                if (id == 'IdProfilBlockAvis') 
+                if (id == 'IdProfilBlockComments') 
                 {    console.log('coucou3');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockChronique';id='IdProfilBlockAvis'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockComments'; }
                     
-                if (id == 'IdProfilBlockChronique') 
+                if (id == 'IdProfilBlockSesPosts') 
                     {    console.log('coucou4');
-                        id1 = 'IdProfilBlockComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockAvis';id='IdProfilBlockChronique'; }
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockComments';id='IdProfilBlockSesPosts'; }
                      console.log(id);
                       document.getElementById(id).style.display = 'block';
                       document.getElementById(id1).style.display = 'none';
                        document.getElementById(id2).style.display = 'none';
                         document.getElementById(id3).style.display = 'none';
                          document.getElementById(id4).style.display = 'none';
-                         
-              
+                        \$('#id').show();   
+                      \$('#id1').hide(); 
+                       \$('#id2').hide(); 
+                       \$('#id3').hide(); 
+                       \$('#id4').hide();
                       
                        console.log('fin');
            

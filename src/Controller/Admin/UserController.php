@@ -1,38 +1,41 @@
 <?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 namespace Controller\Admin;
 
-use Controller\ControllerAbstract;
-use Entity\Annonce;
-use Entity\Category;
-
-class AnnonceController extends ControllerAbstract
-{
-    public function listAction()
+/**
+ * Description of UserController
+ *
+ * @author Etudiant
+ */
+class UserController {
+    
+   public function listAction()
     {
-        $annonces = $this->app['annonce.repository']->findAll();
+        $users = $this->app['user.repository']->findAll();
         return $this->render(
-            'admin/annonce/list.html.twig',
+            'admin/user/list.html.twig',
             [
-                'annonces' => $annonces
+                'users' => $users
             ]
         );
     }
     
     public function editAction($id = null)
     {
-        // pour construire la liste déroulante des rubriques
-        $categories = $this->app['category.repository']->findAll();
         
         if (is_null($id)) {
-            $annonce = new Annonce();
-           // $annonce
-                //->setCategory(new Category())
-                //->setAuthor($this->app['user.manager']->getUser()) //IMPORTANT POUR POLUS TARD
-           // ;
+            $user = new User();
+           
         } else {
-            $annonce = $this->app['annonce.repository']->find($id);
+            $user = $this->app['user.repository']->find($id);
             
-            if (is_null($annonce)) {
+            if (is_null($user)) {
                 $this->app->abort(404);
             }
         }
@@ -42,8 +45,8 @@ class AnnonceController extends ControllerAbstract
         if (!empty($_POST)) {
             $this->sanitizePost();
             
-            $annonce
-                ->setPost_title($_POST['post_title'])
+            $user
+                ->setEmail($_POST['email'])
                 ->setParagraphe_1($_POST['paragraphe_1'])
                 ->setParagraphe_2($_POST['paragraphe_2'])
                 ->setUrl_img_1($_POST['url_img_1'])
@@ -81,25 +84,24 @@ class AnnonceController extends ControllerAbstract
         }
         
         return $this->render(
-            'admin/annonce/edit.html.twig',
+            'admin/user/edit.html.twig',
             [
-                'annonce' => $annonce,
-                'categories' => $categories
+                'user' => $user,
             ]
         );
     }
     
     public function deleteAction($id)
     {
-        $annonce = $this->app['annonce.repository']->find($id);
+        $user = $this->app['user.repository']->find($id);
         
-        if (is_null($annonce)) {
+        if (is_null($user)) {
             $this->app->abort(404);
         }
         
-        $this->app['annonce.repository']->delete($annonce);
+        $this->app['user.repository']->delete($user);
         //$this->addFlashMessage("L'annonce est supprimé");
         
-        return $this->redirectRoute('admin_annonces');
+        return $this->redirectRoute('admin_user');
     }
 }

@@ -184,7 +184,45 @@ SQL;
         return $annonces;
     }
     
-
+    private function buildEntity(array $data)
+        {
+    //        $category = new Category();
+            
+    //        $category// A FINIR
+    //            ->setId_category($data['id_category'])
+    //            ->setName($data['name'])
+    //            ->setType_post('annonce')    
+    //                ;
+    //        
+            //$author = new Member();
+            
+           /* $author // RESTE A FAIRE
+                ->setId($data['author_id'])
+                ->setLastname($data['lastname'])
+                ->setFirstname($data['firstname'])
+            ;*/
+            
+            $annonce = new Annonce();
+            
+            $annonce
+                ->setPost_date($data['post_date'])
+                ->setId_post($data['id_post'])
+                ->setParagraphe_1($data['paragraphe_1'])
+                ->setParagraphe_2($data['paragraphe_2'])
+                ->setPost_title($data['post_title'])
+                ->setUrl_img_1($data['url_img_1'])
+                ->setUrl_img_2($data['url_img_2'])
+                ->setUrl_img_3($data['url_img_3'])
+                ->setMember_id_member($data['member_id_member'])
+                ->setType_id_type($data['type_id_type'])
+                ->setCategory_id_category($data['category_id_category'])
+              
+                //->setCategory($category)
+                //->setAuthor($author)
+            ;
+            
+            return $annonce;
+        }
     
     private function buildEntity2(array $data)
     {
@@ -204,7 +242,7 @@ SQL;
             ->setFirstname($data['firstname'])
         ;*/
     }
-    private function buildEntity(array $data)
+    private function buildEntity3(array $data)
     {
         $user= new User();
         $user
@@ -269,7 +307,7 @@ SQL;
         
         $messages =[];
          //dump($dbMessages);
-        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity($dbmesage); } 
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
         dump($messages); 
         return $messages;
       
@@ -292,8 +330,22 @@ SQL;
       
     }
     
+/* FONCTION POUR LE FRONT */
 
+    public function listByUserId($id) {
+
+        $dbAnnonces = $this->db->fetchAll("SELECT a.*,c.name AS category_name FROM annonce a JOIN category c ON a.category_id_category = c.id_category WHERE member_id_member = $id");
+
+        $annonces = [];
+
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+
+        return $annonces;
+    }
   
     
     
 }
+

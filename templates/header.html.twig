@@ -199,13 +199,23 @@
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
                             <h3>Dernières annonces</h3>
                             <ul class="list-unstyled">
-                              {#{% for annonce in annonces %} 
-                                <li><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></li>
-                               {% endfor %}    #}
+
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                
+                               {#{% for annonceHeader in annoncesHeader %} 
+                                <li><a href="{{ path('single_annonce', {id: annonceHeader.id_post}) }}">{{ annonceHeader.post_title }}</a></li>
+                               {% endfor %}#}
+                                {#<li><a href="single.html">TEST</a></li>
+
                                 <li><a href="single.html"></a></li>
                                 <li><a href="single.html"></a></li>
                                 <li><a href="single.html"></a></li>
-                                <li><a href="single.html"></a></li>
+                                <li><a href="single.html"></a></li>#}
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">
@@ -240,11 +250,11 @@
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
                             <h3>Dernières chroniques</h3>
                             <ul class="list-unstyled">
-                              <li><a href="single.html">Should Be A Large Heading </a></li>
-                              <li><a href="single.html">Match With the Size  </a></li>
-                              <li><a href="single.html">The Heading Text Size</a></li>
-                              <li><a href="single.html">Should Be A Large Heading </a></li>
-                              <li><a href="single.html">Match With the Image  </a></li>
+                              {#<li><a href="{{ path('single_chronique', {id : 1})}}}">Chronique 1</a></li>
+                              <li><a href="{{ path('single_chronique', {id : 1})}}}">Chronique 1</a></li>
+                              <li><a href="{{ path('single_chronique', {id : 1})}}}">Chronique 1</a></li>
+                              <li><a href="{{ path('single_chronique', {id : 1})}}}">Chronique 1</a></li>
+                              <li><a href="{{ path('single_chronique', {id : 1})}}}">Chronique 1</a></li>#}
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">
@@ -310,9 +320,8 @@
 						<ul class="dropdown-menu" role="menu">
 							 <li class="active"><a href="{{ path('profilUser', {id: user_manager.id}) }}" >Mon tableau de bord</a></li>
 							  <li class="divider"></li>
-							  <li><a href="single.html">Poster une annonce</a></li>
-							  <li><a href="single.html">Poster une news</a></li>
-							  <li><a href="single.html">Poster une chronique</a></li>
+							  <li><a href="{{path('user_annonce_edit')}}">Poster une annonce</a></li>
+							  <li><a href="{{path('user_chronique_edit')}}">Poster une chronique</a></li>
 							  <li class="divider"></li>
 							  <li><a href="{{ path('deconnexion') }}">Deconnexion</a></li>
 						</ul>

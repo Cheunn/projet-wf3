@@ -1,11 +1,30 @@
 <?php
 
-use Controller\User\AnnonceController;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Application;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
+/* TEST POUR HEADER */
+
+/*$before = function (Application $app) {
+    $annonces = new Application();
+    $annonces = $app['layout.controller']->annonceMenu();
+};*/
+/*$app
+        ->match('/{reste}', 'layout.controller:annonceMenu')
+        ->assert('reste', '.*')
+        ->bind('annonce_menu')
+;*/
+
+/*$app->before (function() use ($app){
+    $app['layout.controller']->annonceMenu() ;  
+}) ;*/
 
 $app->get('/', 'index.controller:indexAction')                  ->bind('homepage');
 $app->match('/inscription', 'user.controller:registerAction')   ->bind('inscription');
@@ -32,7 +51,7 @@ $user->match('/profil', 'user.controller:profilUser')
        ->bind('profilUser');
 
 $user->match('/profil/{id}', 'user.controller:profilUser') 
-             ->assert('id', '\d+')
+            ->assert('id', '\d+')
             ->bind('profilUser');
 
 $user->match('/updateProfil', 'user.controller:updateProfil')     ->bind('updateProfil');
@@ -49,16 +68,36 @@ $user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('mes
 
 /* Cheunn */
 
+/* USER CHRONIQUES*/
+
 $user->get('/chronique','user.chronique.controller:listUserChronique')
         ->bind('user_chronique_list')        
 ;
 
-$user->match('/chronique/edit','user.chronique.controller:editAction')
+$user->match('/chronique/edit/{id}','user.chronique.controller:editAction')
+        ->value('id', null)
         ->bind('user_chronique_edit')        
 ;
 
-$user->match('/chronique/supression','user.chronique:deleteAction')
+$user->match('/chronique/supression/{id}','user.chronique:deleteAction')
+        ->assert('id', '\d+')
         ->bind('user_chronique_delete')
+;
+
+/* USER ANNONCES*/
+
+$user->get('/annonce','user.annonce.controller:listUserAnnonce')
+        ->bind('user_annonce_list')        
+;
+
+$user->match('/annonce/edit/{id}','user.annonce.controller:editAction')
+        ->value('id', null)
+        ->bind('user_annonce_edit')        
+;
+
+$user->match('/annonce/supression/{id}','user.annonce:deleteAction')
+        ->assert('id', '\d+')
+        ->bind('user_annonce_delete')
 ;
 
 /* Julien */
@@ -77,12 +116,8 @@ $app
 /* Cheunn */
 
 /* Julien */
-$am = new AnnonceController();
 
-$setup = function (Request $request) use ($am){
-    $header = $am->lastSixHeader();
-};
-
+/* SINGLE ANNONCE REDIRECTION */
 
 $app
     ->match('/annonces', 'annonce.controller:listActionMain')  
@@ -291,4 +326,5 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     );
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+
 });

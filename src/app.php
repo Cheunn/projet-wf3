@@ -93,6 +93,10 @@ $app['admin.tag.controller'] = function () use ($app) {
     return new Controller\Admin\TagController($app);
 };
 
+$app['layout.controller']= function () use ($app){
+    return new Controller\LayoutController($app);
+};
+
 // REPOSITORIES
 
 $app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
@@ -127,6 +131,10 @@ $app['message.repository'] = function () use ($app) {
 
 $app['user.chronique.controller'] = function () use ($app){
     return new Controller\User\ChroniqueController($app);
+};
+
+$app['user.annonce.controller'] = function () use ($app){
+    return new Controller\User\AnnonceController($app);
 };
 
 return $app;

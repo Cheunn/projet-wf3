@@ -22,17 +22,27 @@ class ChroniqueController extends ControllerAbstract{
                 ]
         );
     }
-//    public function ListChroniqueAll(){
-//        $chroniques = $this->app['chronique.repository']->listChroniqueAllUsers();
-//        
-//        return $this->render(
-//                'chroniques.html.twig',
-//                [
-//                    'chroniques' => $chroniques
-//                ]
-//        );
-//    }
+
+    public function ListChroniqueAll(){
+        $chroniques = $this->app['chronique.repository']->listChroniqueAllUsers();
+        
+        return $this->render('chroniques.html.twig',
+                [
+                    'chroniques' => $chroniques
+                ]
+        );
+    }
     
+    public function ListNews(){
+        $news = $this->app['chronique.repository']->ListChroniqueByType('news');
+        
+        return $this->render('chroniques.html.twig',
+                [
+                    'news' => $news
+                ]
+        );
+    }
+  
     public function getChroniqueId($id)
     {
         $chronique = $this->app['chronique.repository']->find($id); 
@@ -60,27 +70,7 @@ class ChroniqueController extends ControllerAbstract{
         );
     }
     
-    public function ListChroniqueAll(){
-        $chroniques = $this->app['chronique.repository']->listChroniqueAllUsers();
-              
-        
-        return $this->render(
-                'chroniques.html.twig',
-                [
-                    'chroniques' => $chroniques,
-                ]
-        );
-    }
-    public function ListNews(){
-        $news = $this->app['chronique.repository']->ListChroniqueByType('news');
-        
-        return $this->render(
-                'chroniques.html.twig',
-                [
-                    'news' => $news
-                ]
-        );
-    }
+               
     
     public function ListChroniques(){
         $chroniques = $this->app['chronique.repository']->ListChroniqueByType('chronique');
@@ -96,6 +86,7 @@ class ChroniqueController extends ControllerAbstract{
     public function ListChroniquesUser(){
         $chroniquesUser = $this->app['chronique.repository']->ListChroniqueByUserType('user_chronique');
         
+
         return $this->render(
                 'chroniques.html.twig',
                 [
@@ -106,9 +97,9 @@ class ChroniqueController extends ControllerAbstract{
     
     public function ListChroniquesAsso(){
         $chroniquesAsso = $this->app['chronique.repository']->ListChroniqueByUserType('asso_chronique');
-        
         return $this->render(
                 'single_chroniques.html.twig',
+
                 [
                     'chroniquesUser' => $chroniquesAsso
                 ]
@@ -147,3 +138,4 @@ class ChroniqueController extends ControllerAbstract{
     }    
 
 }
+

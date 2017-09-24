@@ -4,6 +4,7 @@ namespace Repository;
 use Entity\Chronique;
 use Entity\Category;
 use Entity\User;
+use Service\UserManager;
 
 class ChroniqueRepository extends RepositoryAbstract
 {
@@ -172,7 +173,8 @@ SQL;
             ->setParagraph_2($data['paragraph_2'])
             ->setMember_id_member($data['member_id_member'])
             ->setCategory_id_category($data['category_id_category'])
-            //->setAuthor($author)
+            ->setCategory_name($data['category_name'])
+            
         ;
         
         return $chronique;
@@ -180,8 +182,10 @@ SQL;
     
     /* FONCTION POUR LE FRONT */
     
-    public function listByUser($id_member){
-        $dbChroniques = $this->db->fetchAll("SELECT * FROM chronique WHERE member_id_member = $id_member");
+    public function listByUserId($id){
+       
+        $dbChroniques = $this->db->fetchAll("SELECT ch.*,c.name AS category_name FROM chronique ch JOIN category c ON ch.category_id_category = c.id_category WHERE member_id_member = $id");
+        
         $chroniques = [];
         
         foreach ($dbChroniques as $dbChronique) {
@@ -190,5 +194,48 @@ SQL;
         
         return $chroniques;
    }
+   
+   
+     public function nbChroniquesByUser($id)
+    {
+        $chronique = new Chronique();
+        $dbChronique = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_chroniques FROM chronique WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+       
+        return $this->buildEntity2($dbChronique);
+      
+    }
+    
+       public function nbNewsByUser($id)
+    {
+        $news= new Chronique();
+        $dbNews = $this->db->fetchAssoc
+        (
+            'SELECT count(*) as nb_chroniques FROM news WHERE member_id_member = :id',
+            [
+                ':id' => $id
+            ]
+        );
+        
+       
+        return $this->buildEntity2($dbNews);
+      
+    }
+    
+
+    private function buildEntity2(array $data)
+    {
+        $chronique = new Chronique();
+      
+        $chronique->setId_post($data['nb_chroniques']);
+        //dump($chronique);die; 
+        return $chronique;
+    }
    
 }

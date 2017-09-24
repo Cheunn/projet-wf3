@@ -15,6 +15,10 @@ class Annonce
     private $member_id_member;
     private $type_id_type;
     private $category_id_category; // 11
+    private $category_name;
+    private $name;
+    private $user;
+     private $annonce;
 
     public function getId_post() {
         return $this->id_post;
@@ -114,37 +118,42 @@ class Annonce
         $this->category_id_category = $category_id_category;
         return $this;
     }
+    
+    public function getCategory_name() {
+        return $this->category_name;
+    }
+
+    public function setCategory_name($category_name) {
+        $this->category_name = $category_name;
+        return $this;
+    }
+
+
+    public function setName(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+
+      public function getUserName() 
+     {
+          if (! is_null ($this->user))
+            {
+                 return $this->user->getName();
+            }
+
+            return '';
+    }
+   
+    public function setUser(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+    
+
+
+
 }
 
-//    public function getCategoryName()
-//    {
-//        if (!is_null($this->category)) {
-//            return $this->category->getName();
-//        }
-//        
-//        return '';
-//    }
-//    //    /**
-//     * 
-//     * @return int|null
-//     */
-//    public function getCategoryId()
-//    {
-//        if (!is_null($this->category)) {
-//            return $this->category->getId();
-//        }
-//    }
-//    //    public function getAuthor()
-//    {
-//        return $this->author;
-//    }
-//
-//    public function setAuthor(User $author)
-//    {
-//        $this->author = $author;
-//        return $this;
-//    }
-//
 //    /**
 //     * 
 //     * @return int|null

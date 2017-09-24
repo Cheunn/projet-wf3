@@ -1,0 +1,377 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+                   
+
+<section class="innercontent">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8 col-lg-8">
+
+                <article class="post">
+
+             
+
+                    <div class="author-info">
+
+                       <ul class="list-inline">  
+
+                        <li>
+
+                            <div class="icon-box"><img src="{{ asset('assets/images/post/author_1.png ') }}" class="img-responsive" alt="image post" /></div>
+
+                            <div class="info">
+
+                            
+
+                           <a href="author.html">{{user.name}} </a>
+
+                            </div>    
+
+                        </li>
+
+                        <li>
+
+                           
+
+                            <div class="info">
+
+                            <p>Inscrit le :</p>
+                                <strong>{{user.date_create}} </strong></div>
+                        </li>
+
+                        
+
+                         <li>
+
+                             <div class="icon-box"><i class="fa fa-comments-o"></i></div>
+
+                             <div class="info">
+
+                             <p>Note</p>
+                                 <strong>{{ myNote }} </strong></div>
+                         </li>
+
+                         <li>
+                            <div class="info">
+                            <p>Annonces </p>
+                                <strong>{{ nbAnnoncesByUser.id_post }}        </strong></div>
+                        </li>
+                        
+                        <li>
+                            <div class="info">
+                            <p>Chroniques </p>
+                                <strong>{{ nbChroniquesByUser }}   </strong></div>
+                        </li>
+                        
+                         <li>
+                            <div class="info">
+                            <p>News </p>
+                                <strong>{{ nbNewByUser }}</strong></div>
+                        </li>
+
+                       </ul>
+                        
+           
+
+                    </div>
+               
+                        
+            {% if modeadmin is defined %}
+
+
+               <div class="caption">
+                <div class="line-block">
+
+                    <ul class="list-inline tags">
+
+                     <li><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li>
+                        <li onclick="afficher_div('IdGererAnnonces');"><a href="#">Gerer mes Annonces</a></li>
+                        <li onclick="afficher_div('IdGererChronique');"><a href="#">Gerer mes chroniques</a></li>   
+
+
+                    </ul>
+
+                </div></div>
+            {% endif %}
+
+            
+             <div class="caption">
+                <div class="line-block">
+                    
+                    
+                    {#   #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts   #}
+
+                    <ul class="list-inline tags">
+                     
+                       {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %}
+                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées ( a redefinir )</a></li>
+                        <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Posts</a></li>
+                        <li onclick="afficher_div('IdProfilBlockComments');"><a href="#">Ses Interventions sur les posts</a></li>
+                        <li onclick="afficher_div('IdProfilBlockCommentsAvis');"><a href="#">Avis des internautes</a></li>
+                  
+
+                    </ul>
+
+                </div></div>
+
+                   
+                    <div id="IdProfilBlockSesPosts" class="related-post" >    Ses Posts          </div>   
+                    
+                    <div id="IdProfilBlockAnnonces" class="related-post" >  Annonce spostées22    </div> 
+                    
+                
+                   
+                        
+                   <div id="IdProfilBlockComments" class="related-post" >  
+                        <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
+                        </div>
+                           {% for listeCommentFromUser in listeCommentsFromUser %} 
+                                <div class="comment-list">  
+                                   <div class="media">
+                                     <div class="media-left">
+                                         <p>titre :{{ listeCommentFromUser.annonce.post_title }} - type  :{{ listeCommentFromUser.annonce.paragraphe_2 }} ( </p>  {# commentaire #}
+                                        <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
+                                    </div>
+                                         <ul class="list-inline">
+                                            <li> titre :{{ listeCommentFromUser.annonce.post_title }}</li>
+                                            <li> le :{{ listeCommentFromUser.annonce.post_date }}</li>
+                                            <li><a class="reply-btn" href="#">Post Reply</a></li>
+                                        </ul>
+                                   </div>
+                                 <div class="media-body">
+                                     
+                                       
+                                 </div>
+                               </div>
+                           {% endfor %}                       
+                    </div>
+                           {#
+			<div class="comment-count "><h4>{{nbCommentairesFromUser }} Commentaires</h4></div>
+                            {% for listeCommentFromUser in listeCommentsFromUser %} 
+                                    <div class="media"><div class="media-left">
+                                            <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
+                                            </div>
+                                            <div class="media-body">
+                                                             <p>{{listeCommentFromUser.commentannonce }} </p>
+                                                      <ul class="list-inline">
+                                                              <li><a class="media-heading" href="#">De : {{listeCommentFromUser.username }}</a></li>
+                                                              <li>le : {{listeCommentFromUser.post_date }}</li>
+                                                              <li><a class="reply-btn" href="#">Title :{{listeCommentFromUser.title }}</a></li>
+                                                              <li><a class="reply-btn" href="#">Title :{{listeCommentFromUser.type }}</a></li>
+                                                              <li><a class="reply-btn" href="#">Post Reply</a></li>
+                                                            </ul>
+                                    </div>
+                            {% endfor %}
+                        
+			</div>
+                       
+                       #}
+                    
+                    <div id="IdProfilBlockMessage" class="related-post" > 
+                             <h4>Entrez votre Message</h4>
+                                <form role="form" action="#" method="post" novalidate id="comment-form">
+                                    <div class="row"><div class="col-md-6 col-lg-5"><div class="form-group">
+                                     <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Nom:">
+                                   </div>
+                                      </div></div>
+                                    <div class="row"><div class="col-md-6 col-lg-5"><div class="form-group"><input type="text" class="form-control" placeholder="Sujet :"></div></div>
+                                            </div>
+                                    <div class="form-group"><textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea></div>
+                                  <button type="submit" class="btn btn-default">Envoyer</button>
+                                </form>
+                    
+                    </div>                  
+                   
+                        
+                   
+                     
+                   
+                    
+                    
+                  
+                                    
+                     <div id="IdProfilBlockCommentsAvis" class="related-post" >  
+                        <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
+                        </div>
+                            {% for getMyComment in getMyComments %} 
+                                <div class="comment-list">  
+                                   <div class="media">
+                                     <div class="media-left">
+                                     <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
+                                    </div>
+                                   </div>
+                                 <div class="media-body"><p>{{ getMyComment.comment }} </p>
+                                                           <ul class="list-inline">
+                                                               <li><a class="media-heading" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">De : {{ getMyComment.username }}</a></li>
+                                                               <li> le :{{ getMyComment.date_create }}</li>
+                                                               <li><a class="reply-btn" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">Post Reply</a></li>
+                                                           </ul>
+                                 </div>
+                               </div>
+                           {% endfor %}                       
+                    </div>
+ 
+                   
+
+                </article>
+
+            <div class="clearfix"></div>
+
+            </div>
+
+            <aside class="col-md-4 col-lg-4">
+
+            	
+
+                <div class="row">
+                    
+                 
+                 {% if modeadmin is defined %}
+                    <div class="col-sm-6 col-md-12 col-lg-12">
+                        <div class="panel panel-default theme-panel">  
+                            
+                                {% if messageCheck == 'OK' %}
+                                         <div class="panel-heading">Consulter mes messages</div>
+                                             <div class="panel-body">
+                                        {% for message in messages %} 
+                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                        {% endfor %} 
+                                {%  else %}
+                                            <div class="panel-heading">Aucun Message reçu</div>
+                                             <div class="panel-body">
+                                {% endif %}
+
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                {% else %} 
+                    
+                    <div class="col-sm-6 col-md-12 col-lg-12">
+                        <div class="panel panel-default theme-panel">  
+                             <div class="panel-heading">Donner une note</div>
+                                 <div class="panel-body">
+                                         {#<form action="{{ path('EnvoyerNote', {id: {{user.id_member}} }}" method="post"> #}
+                                                 <form action="#" method="post">
+                                           
+                                            <div class="form-group">
+                                                    <select id="role" class="form-control " name="note"> 
+                                                          <option  value="" class="disabled selected hidden" name="text">Donner une note</option> 
+                                                          <option  class="form-control " value="1" >1</option>
+                                                          <option  class="form-control " value="2" >2</option>
+                                                          <option  class="form-control " value="3" >3</option>
+                                                          <option  class="form-control " value="4" >4</option>
+                                                          <option  class="form-control " value="5" >5</option>
+
+                                                      </select>
+                                             </div>
+                                             <div class="form-group">
+                                                 <button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
+                                          </div>
+                                        </form>
+                                </div>
+                            </div>
+                         </div> 
+                     </div> 
+                                      
+                   
+
+
+                   
+              
+               {% endif %}    
+            </aside>
+
+           </div>
+
+       
+
+      </div>
+
+    </section>
+
+    
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.ui/1.8.10/jquery-ui.js"></script>
+        <link rel="Stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" />
+	 
+        <script type="text/javascript">
+            
+             $('#IdProfilBlockCommentsAvis').hide(); 
+                       $('#IdProfilBlockAnnonces').hide(); 
+                       $('#IdProfilBlockMessage').hide(); 
+                       $('#IdProfilBlockComments').hide(); 
+                       $('#IdProfilBlockSesPosts').hide();
+            function afficher_div(id)
+            {
+                 console.log(id);
+                 // #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts     
+                 //id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';
+                       $('#IdProfilBlockCommentsAvis').hide(); 
+                       $('#IdProfilBlockAnnonces').hide(); 
+                       $('#IdProfilBlockMessage').hide(); 
+                       $('#IdProfilBlockComments').hide(); 
+                       $('#IdProfilBlockSesPosts').hide();
+                       
+                
+                       
+                        
+                if (id === 'IdProfilBlockAnnonces') 
+                    {    console.log('coucou0');
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts'; id='IdProfilBlockAnnonces'; }
+                    
+                if (id == 'IdProfilBlockCommentsAvis') 
+                    {    console.log('coucou1');
+                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockCommentsAvis'; }
+                    
+                if (id == 'IdProfilBlockMessage') {
+                     console.log('coucou2');
+                    id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockMessage'; }
+                    
+                if (id == 'IdProfilBlockComments') 
+                {    console.log('coucou3');
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockComments'; }
+                    
+                if (id == 'IdProfilBlockSesPosts') 
+                    {    console.log('coucou4');
+                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockComments';id='IdProfilBlockSesPosts'; }
+                     console.log(id);
+                      document.getElementById(id).style.display = 'block';
+                      document.getElementById(id1).style.display = 'none';
+                       document.getElementById(id2).style.display = 'none';
+                        document.getElementById(id3).style.display = 'none';
+                         document.getElementById(id4).style.display = 'none';
+                        $('#id').show();   
+                      $('#id1').hide(); 
+                       $('#id2').hide(); 
+                       $('#id3').hide(); 
+                       $('#id4').hide();
+                      
+                       console.log('fin');
+           
+           
+            }
+                  /*
+                   * 
+                   * 
+                   if (document.getElementById(id).style.display == 'none')
+                  {
+                       document.getElementById(id).style.display = 'block';
+                  }
+                  else
+                  {
+                       document.getElementById(id).style.display = 'none';
+                  }
+                }
+                 */
+           
+	</script>
+{% endblock %}

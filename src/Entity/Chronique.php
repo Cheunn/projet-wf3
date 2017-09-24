@@ -49,6 +49,8 @@ class Chronique
     
     private $category_id_category;
     
+    private $category_name;
+    
 
     public function getId_post() {
         return $this->id_post;
@@ -137,14 +139,8 @@ class Chronique
      * 
      * @return string
      */
-    public function getCategoryName()
-    {
-        if (!is_null($this->category)) {
-            return $this->category->getName();
-        }
-        
-        return '';
-    }
+    
+    
     public function getParagraph_1() {
         return $this->paragraph_1;
     }
@@ -208,4 +204,16 @@ class Chronique
         
         return '';
     }
+
+    public function getCategory_name() {
+        return $this->category_name;
+    }
+    
+    public function setCategory_name($category_name) {
+        $this->category_name = $category_name;
+        return $this;
+    }
+
+
+    
 }

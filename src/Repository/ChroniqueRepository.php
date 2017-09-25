@@ -362,10 +362,6 @@ SQL;
             ;
         
         return $chronique;
-          
-
-        
-        return $annonce;
     }
     
 
@@ -387,6 +383,7 @@ SQL;
       
     }
     
+    
         /*public function listeAnnoncesByUser( $idUser)       
     {
        
@@ -402,6 +399,61 @@ SQL;
         return $messages;
       
     } */
+        private function buildEntity69(array $data)
+    {       
+        $chronique = new Chronique();
+
+        $chronique
+            ->setId_post($data['id_post'])
+            ->setPost_title($data['post_title'])
+            ->setPost_type($data['post_type'])
+            ->setPost_date($data['post_date'])
+            ->setType($data['type'])
+            ->setUrl_img_1($data['url_img_1'])
+            ->setUrl_img_2($data['url_img_2'])
+            ->setParagraph_1($data['paragraph_1'])
+            ->setParagraph_2($data['paragraph_2'])
+            ->setMember_id_member($data['member_id_member'])
+            ->setCategory_id_category($data['category_id_category'])
+            ;
+        
+        return $chronique;
+    }
+    
+    public function findLastSix(){
+        $query = <<<SQL
+SELECT 
+    ch.*
+FROM chronique ch
+WHERE post_type = "chronique"
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+        $dbChroniques = $this->db->fetchAll($query);
+        $chroniques = [];
+    
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity69($dbChronique);
+        }
+        return $chroniques;
+   }
    
+       public function findLastSixNews(){
+        $query = <<<SQL
+SELECT 
+    ch.*
+FROM chronique ch
+WHERE post_type = "news"
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+        $dbNews = $this->db->fetchAll($query);
+        $news = [];
+    
+        foreach ($dbNews as $dbNew) {
+            $news[] = $this->buildEntity69($dbNew);
+        }
+        return $news;
+   }
 }
 

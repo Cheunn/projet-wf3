@@ -142,7 +142,7 @@
                                 <li><a href="{{ path('chronique_rubrique', {rubrique: "Actualité"}) }}">Actualité</a></li>
                                 <li><a href="{{ path('chronique_rubrique', {rubrique: "Sport"}) }}">Sport  </a></li>
                                 <li><a href="{{ path('chronique_rubrique', {rubrique: "Culture"}) }}">Culture </a></li>
-                                <li><a href="{{ path('chronique_rubrique', {rubrique: "Sortie"}) }}"">Sortie </a></li>
+                                <li><a href="{{ path('chronique_rubrique', {rubrique: "Sortie"}) }}">Sortie </a></li>
                                 <li><a href="{{ path('chronique_rubrique', {rubrique: "Insolite"}) }}">Insolite</a></li>
                             </ul>
                         </div>
@@ -150,11 +150,12 @@
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
                             <h3>Dernières chroniques</h3>
                             <ul class="list-unstyled">
-                              <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
-                              <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
-                              <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
-                              <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
-                              <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
+                                {{ render(url('chronique_menu')) }}
+                                {#<li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
+                                <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
+                                <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
+                                <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>
+                                <li><a href="{{ path('single_chronique', {id : 1}) }}">Chronique 1</a></li>#}
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">
@@ -254,6 +255,7 @@
     <!--/.nav-collapse --> 
   </div>
 </nav>
+        {#{{ render(url('breadcrumb')) }}#}
 </header>
  
 {#  <!-- Preloader -->

@@ -79,7 +79,7 @@ $user->match('/chronique/edit/{id}','user.chronique.controller:editAction')
         ->bind('user_chronique_edit')        
 ;
 
-$user->match('/chronique/supression/{id}','user.chronique:deleteAction')
+$user->match('/chronique/supression/{id}','user.chronique.controller:deleteAction')
         ->assert('id', '\d+')
         ->bind('user_chronique_delete')
 ;
@@ -95,7 +95,7 @@ $user->match('/annonce/edit/{id}','user.annonce.controller:editAction')
         ->bind('user_annonce_edit')        
 ;
 
-$user->match('/annonce/supression/{id}','user.annonce:deleteAction')
+$user->match('/annonce/supression/{id}','user.annonce.controller:deleteAction')
         ->assert('id', '\d+')
         ->bind('user_annonce_delete')
 ;
@@ -112,13 +112,18 @@ $app
 ;
 
 $app
-        ->get('/chronique/menu', 'chronique.controller:lastSixHeader')
+        ->get('/chronique/menu', 'chronique.controller:lastSixChroniquesHeader')
         ->bind('chronique_menu')
 ;
 
 $app
         ->get('/news/menu', 'chronique.controller:lastSixNewsHeader')
         ->bind('news_menu')
+;
+
+$app
+        ->get('/breadcrumb', 'layout.controller:breadcrumbs')
+        ->bind('breadcrumb')
 ;
 
 /* Julien */

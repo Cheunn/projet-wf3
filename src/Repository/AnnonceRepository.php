@@ -224,24 +224,16 @@ SQL;
             return $annonce;
         }
     
+  
     private function buildEntity2(array $data)
     {
-//        $category = new Category();
-      
-//        $category// A FINIR
-//            ->setId_category($data['id_category'])
-//            ->setName($data['name'])
-//            ->setType_post('annonce')    
-//                ;
-//        
-        //$author = new Member();
-
-       /* $author // RESTE A FAIRE
-            ->setId($data['author_id'])
-            ->setLastname($data['lastname'])
-            ->setFirstname($data['firstname'])
-        ;*/
-    }
+       $annonce = new Annonce();
+     
+       $annonce->setId_post($data['nb_annonces']);
+       //dump($annonce);die;
+       return $annonce;
+   }
+    
     private function buildEntity3(array $data)
     {
         $user= new User();

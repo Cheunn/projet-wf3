@@ -100,15 +100,6 @@ $user->match('/annonce/supression/{id}','user.annonce:deleteAction')
         ->bind('user_annonce_delete')
 ;
 
-/* Julien */
-
-/* SINGLE ANNONCE REDIRECTION */
-$app
-    ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
-        ->assert('id', '\d+')
-        ->bind('single_annonce')
-;
-
 /* Anis */
 
 /* FRONT */  
@@ -123,7 +114,6 @@ $app
     ->match('/annonces', 'annonce.controller:listActionMain')  
     ->bind('annonces')
 ;
-
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
@@ -138,6 +128,10 @@ $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
+;
+$app
+    ->get('/annonces/{rubrique}' ,'annonce.controller:findByRubrique')  
+    ->bind('annonce_rubrique')
 ;
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
@@ -156,7 +150,7 @@ $app
 ;
 
 $app
-    ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
+    ->get('/chroniques/{rubrique}' ,'chronique.controller:findByRubrique')  
     ->bind('chronique_rubrique')
 ;
 

@@ -135,6 +135,15 @@ $app
     ->bind('single_annonce')
 ;
 $app
+    ->match('/news', 'chronique.controller:ListNews')  
+    ->bind('news')
+;
+$app
+    ->match('/single_news/{id}', 'chronique.controller:getNewsId')  
+    ->assert('id', '\d+')
+    ->bind('single_news')
+;
+$app
     ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
@@ -161,7 +170,7 @@ $app
 /* CHRONIQUE COTE FRONT */
 
 $app
-    ->match('/chroniques', 'chronique.controller:listActionMain')  
+    ->match('/chroniques', 'chronique.controller:ListChroniques')  
     ->bind('chroniques')
 ;
 $app

@@ -35,10 +35,11 @@ class ChroniqueController extends ControllerAbstract{
     
     public function ListNews(){
         $news = $this->app['chronique.repository']->ListChroniqueByType('news');
-        
-        return $this->render('chroniques.html.twig',
+        $annonces = $this->app['annonce.repository']->findLastSix();      
+        return $this->render('news.html.twig',
                 [
-                    'news' => $news
+                    'news' => $news,
+                    'annonces'=> $annonces
                 ]
         );
     }
@@ -57,6 +58,20 @@ class ChroniqueController extends ControllerAbstract{
         );
     }
     
+    public function getNewsId($id)
+    {
+        $news = $this->app['chronique.repository']->findNews($id); 
+        $annonces = $this->app['annonce.repository']->findLastSix();       
+       
+        return $this->render(
+            'single_news.html.twig',
+            [
+                'news' => $news,
+                'annonces'=> $annonces
+            ]
+        );
+    }
+    
     public function lastTwo()
     {
         $chroniques = $this->app['chronique.repository']->findLastTwo(); 
@@ -69,24 +84,25 @@ class ChroniqueController extends ControllerAbstract{
             ]    
         );
     }
-    
-               
-    
+          
     public function ListChroniques(){
         $chroniques = $this->app['chronique.repository']->ListChroniqueByType('chronique');
+        $categories = $this->app['category.repository']->findAllAside();
+        $annonce = $this->app['annonce.repository']->findLastSix();  
         
         return $this->render(
                 'chroniques.html.twig',
                 [
-                    'chroniques' =>$chroniques
+                    'chroniques' => $chroniques,
+                    'categories' => $categories,
+                    'annnonce' => $annonce
                 ]
         );
     }
     
     public function ListChroniquesUser(){
         $chroniquesUser = $this->app['chronique.repository']->ListChroniqueByUserType('user_chronique');
-        
-
+      
         return $this->render(
                 'chroniques.html.twig',
                 [

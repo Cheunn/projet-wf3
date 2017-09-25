@@ -91,17 +91,17 @@
                      {% for annonce in annonces %} 
                <div class="panel-body nopadding">
                 <div class="media">
-                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
+                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ annonce.url_img_1 }}" alt="author" /></a> </div>
                   <div class="media-body">
                     <h4 class="media-heading"><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></h4>
                     <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
                   </div>
                 </div>
                </div>
-              {% endfor %}
-                </div>
-              </div>
-           </div>
+               {% endfor %}
+               </div>
+             </div>
+          </div>
                
                 {#  <div class="col-sm-12 col-md-12 col-lg-12">
                       <div class="panel panel-default theme-panel">

@@ -32,7 +32,7 @@ $app->match('/inscription/APIautoCompletion', 'cp.controller:renvoieVille') ->bi
 $app->match('/connexion', 'user.controller:loginAction')        ->bind('connexion');
 $app->match('/deconnexion', 'user.controller:logoutAction')     ->bind('deconnexion');
 $app->match('/about', 'index.controller:about')                 ->bind('about');
-
+$app->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');  // contact
 
 /* USER */
 
@@ -63,7 +63,9 @@ $user->match('/posterMessage/{id}', 'user.controller:posterMessage')
         ->assert('id', '\d+')
         ->bind('posterMessage');
 
-$user->match('/messProfilToUs', 'user.controller:messProfilToUs')    ->bind('messProfilToUs');
+
+
+
 
 
 /* Cheunn */
@@ -138,6 +140,12 @@ $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
+;
+
+$app
+    ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
+    ->assert('id', '\d+')
+    ->bind('single_annonce_jaoued')
 ;
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')

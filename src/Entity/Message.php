@@ -40,8 +40,42 @@ class Message
      */
     private $content = '';
     
+    /**
+     *
+     * @var User 
+     */
+    private $sender;
+    
+    public function getSender() {
+        return $this->sender;
+    }
+    
+    public function getSenderName()
+    {
+        if (!empty($this->sender)) {
+            return $this->sender->getName();
+        }
+        
+        return '';
+    }
 
-    public function getIdmessage() {
+    public function setSender(User $sender) {
+        $this->sender = $sender;
+        return $this;
+    }
+
+    /*    
+     public function getUserName() {
+         return $this->user->getName();
+     }
+
+     
+     public function setUser( User $user) {
+         $this->user = $user;
+         return $this;
+     }
+*/
+         public function getIdmessage() {
         return $this->idmessage;
     }
 

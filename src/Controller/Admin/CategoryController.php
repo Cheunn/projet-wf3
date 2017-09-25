@@ -68,8 +68,7 @@ class CategoryController extends ControllerAbstract
                 $message .= '<br>' . implode('<br>', $errors);
                 $this->addFlashMessage($message, 'error');
             }
-        }
-        
+        }     
         return $this->render(
             'admin/category/edit.html.twig',
             [
@@ -91,4 +90,7 @@ class CategoryController extends ControllerAbstract
         
         return $this->redirectRoute('admin_category');
     }
+
+    
+    
 }

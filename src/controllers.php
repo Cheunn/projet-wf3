@@ -47,6 +47,10 @@ $user->before (function() use ($app){
 
 /* Jaoued */
 
+ 
+$user->match('/envoyerNote', 'notation.controller:envoyerNote')      ->bind('envoyerNote');
+$user->match('/envoyerMessageInterne', 'message.controller:envoyerMessageInterne')      ->bind('envoyerMessageInterne');
+            
 $user->match('/profil', 'user.controller:profilUser')  
        ->bind('profilUser');
 

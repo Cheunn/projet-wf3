@@ -44,7 +44,15 @@ class CategoryRepository extends RepositoryAbstract
         }
         return $categoriesByChronique;
     }
-    
+    public function findAllAsideAnnonce()
+    {
+        $dbCategoriesByAbonne = $this->db->fetchAll('SELECT DISTINCT name FROM category WHERE type_post = "annonce"'); // ICI
+        $categoriesByAbonne = [];
+        foreach ($dbCategoriesByAbonne as $dbCategoryByAbonne) {
+            $categoriesByAbonne[] = $this->buildEntity($dbCategoryByAbonne);
+        }
+        return $categoriesByAbonne;
+    }
     /**
      * 
      * @param string $type

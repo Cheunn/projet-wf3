@@ -26,7 +26,7 @@
 
                             
 
-                           <a href="#">{{user.name}} </a>
+                           <a href="#">  {{user.name}} </a>
 
                             </div>    
 
@@ -108,14 +108,22 @@
 
                     <ul class="list-inline tags">
                      
-                     {#  {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %} #}
+                     {# afficheuser {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %} #}
                         
-                        <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>       
-                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées </a></li>                       
-                        <li onclick="afficher_div('IdProfilBlockChroniques');"><a href="#">Chroniques Postées </a></li>  
-                        <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Interventions sur les posts</a></li>
-                        <li onclick="afficher_div('IdProfilBlockAvisComments');"><a href="#">Avis des internautes</a></li>
+                     
+                        
+                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a  href="#"><button type="button" class="btn btn-info btn-lg">Annonces Postées</button></a></li> 
+                        <li onclick="afficher_div('IdProfilBlockChroniques');"><a  href="#"><button type="button" class="btn btn-info btn-lg">Chroniques Postées</button></a></li> 
+                        <hr>
+                        <li onclick="afficher_div('IdProfilBlockSesPosts');"><a  href="#"><button type="button" class="btn btn-info btn-lg"> Ses  Interventions</button></a></li> 
+                        <li onclick="afficher_div('IdProfilBlockAvisComments');"><a  href="#"><button type="button" class="btn btn-info btn-lg">Avis des internautes</button></a></li>
 
+                        <hr>
+               
+                            
+                         {% if afficheuser is defined %}
+                          <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#"><button type="button" class="btn btn-primary btn-lg">Envoyer message</button></a></li> 
+                         {% endif %}
                     </ul>
 
                 </div></div>

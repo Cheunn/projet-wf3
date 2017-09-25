@@ -148,23 +148,23 @@ SQL;
         return $annonces;
     }
    
-//public function findLastThree()
-//    {
-//        $query = <<<SQL
-//SELECT 
-//    a.*
-//FROM annonce a
-//ORDER BY id_post DESC
-//SQL;
-//        $dbAnnonces = $this->db->fetchAll($query);    
-//        $annonces = [];
-//
-//        
-//        /*for ($i=0 ; $i < $limit; $i++) {
-//            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-//        }*/
-//        return $annonces;
-//    }
+public function findLastThree()
+    {
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY id_post DESC
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);    
+        $annonces = [];
+
+        
+        /*for ($i=0 ; $i < $limit; $i++) {
+            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+        }*/
+        return $annonces;
+    }
     
     public function findLastSix()
     {
@@ -294,10 +294,11 @@ SQL;
     
      public function listeAnnoncesByUser( $idUser)       
     {
+        
 $query = <<<SQL
 SELECT m.name as nameUser, t.name as nameCategory, a.* 
 FROM annonce a, member m , type t 
-WHERE `member_id_member` = 44
+WHERE `member_id_member` = $idUser
 AND a.member_id_member = m.id_member
 AND a.type_id_type = t.id_type
 SQL;

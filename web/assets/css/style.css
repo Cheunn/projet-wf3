@@ -547,6 +547,13 @@ a.blogger { color: #f39d38; }
 
 }
 @media (max-width: 768px) {
+.connexion {
+    background: #E74C3C !important;
+    border-right: 1px solid #E74C3C !important;
+}
+.inscription {
+    background: #E74C3C;
+}
   .navbar-fixed-top{ position: relative;}
   body{ padding-top: 0px;}
   .navbar-default .navbar-nav .mega-dropdown-menu .tabs-left > .nav-tabs li a{ text-align: left;position: relative;
@@ -649,7 +656,13 @@ a.blogger { color: #f39d38; }
 }
 }
 @media (max-width: 640px) {
-
+.connexion {
+    background: #E74C3C !important;
+    border-right: 1px solid #E74C3C !important;
+}
+.inscription {
+    background: #E74C3C !important;
+}
   .navbar-header {
   float: left;margin: 0px !important;
 }

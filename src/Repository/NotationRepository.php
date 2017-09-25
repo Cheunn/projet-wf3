@@ -250,17 +250,17 @@ class NotationRepository extends RepositoryAbstract
     
     public function listeCommentsChroniquesAnnoncesByUser( $idUser)       
     {
-        // dump($idreceiver);
+         dump($idreceiver);
                 $query = <<<SQL
 SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post_date, com.type
 FROM annonce ann, member m, comment_annonce com
-WHERE ann.member_id_member = 44 
+WHERE ann.member_id_member = $idUser
 AND ann.member_id_member = id_member
 AND com.id_comment = ann.id_post
 UNION
 SELECT chr.id_post , chr.post_title ,  m.id_member, m.name, comchr.comment,  comchr.post_date, comchr.type
 FROM comment_chronique comchr, member m , chronique chr 
-WHERE comchr.member_id_member = 44 
+WHERE comchr.member_id_member = $idUser
 AND  comchr.member_id_member = id_member
 AND  comchr.id_post = chr.id_post
 SQL;
@@ -283,7 +283,7 @@ SQL;
                 $query = <<<SQL
 SELECT chr.id_post , chr.post_title ,  m.id_member, m.name, comchr.comment,  comchr.post_date
 FROM comment_chronique comchr, member m , chronique chr 
-WHERE comchr.member_id_member = 44 
+WHERE comchr.member_id_member = $idUser
 AND  comchr.member_id_member = id_member
 AND  comchr.id_post = chr.id_post
 SQL;

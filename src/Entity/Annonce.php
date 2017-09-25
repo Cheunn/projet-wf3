@@ -18,11 +18,10 @@ class Annonce
     private $category_name;
     private $name;
     private $user;
-     private $annonce;
-     private $userName;
-     private $categoryName;
-     private $post_type;
- 
+    private $userName;
+    private $categoryName;
+    private $post_type;
+    private $price;
 
     
    
@@ -185,6 +184,14 @@ class Annonce
     public function setPost_type($post_type) {
         $this->post_type = $post_type;
         return $this;
+    }
+
+    function getPrice() {
+        return $this->price;
+    }
+
+    function setPrice($price) {
+        $this->price = $price;
     }
 
 

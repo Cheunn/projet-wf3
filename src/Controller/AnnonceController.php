@@ -76,7 +76,7 @@ class AnnonceController extends ControllerAbstract
         $annonces = $this->app['annonce.repository']->findLastSix(); // $limit
         
         return $this->render(
-            'header.html.twig',
+            'annonce_menu.html.twig',
             [               
                 'annonces' => $annonces
             ]
@@ -166,6 +166,22 @@ class AnnonceController extends ControllerAbstract
         );
     }
     
+    public function findByRubrique($rubrique){
+        
+         $annonces = $this->app['annonce.repository']->findByRubrique($rubrique);
+         $categories_search = $this->app['category.repository']->findAllAsideAnnonce();
+         //$annonces = $this->app['annonce.repository']->findLastSix(); 
+             
+        return $this->render(
+                'annonces.html.twig',
+                [
+                   // 'chroniques_search' => $chroniques_search,
+                    'categories_search' => $categories_search,
+                    'annonces'=> $annonces
+                ]
+        );
+    }   
+    
     public function deleteAction($id)
     {
         $annonce = $this->app['annonce.repository']->find($id);
@@ -173,11 +189,10 @@ class AnnonceController extends ControllerAbstract
         if (is_null($annonce)) {
             $this->app->abort(404);
         }
-        
         $this->app['annonce.repository']->delete($annonce);
         //$this->addFlashMessage("L'annonce est supprimé");
         
-        return $this->redirectRoute('annonce'); ///(s)
+        return $this->redirectRoute('annonce'); 
     }
     
 //    public function show($id)

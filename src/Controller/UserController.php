@@ -234,8 +234,7 @@ class UserController extends ControllerAbstract
                //dump($listeAnnoncesByUser);   
                //dump($listeChroniquesByUser);
                //dump($listeAnnoncesByUser);
-                
-
+                dump($listeCommentsFromUser);
                 
                 // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
@@ -254,6 +253,7 @@ class UserController extends ControllerAbstract
                                 
                                 'user'                      =>  $user, 
                                 'usersession'               =>  $userSession, 
+                                'affichesession'            => 'yes', 
                                 'usersessionid'             =>  $userSession->getId_member(), 
                                 'modeadmin'                 =>  $mode,
                                 'messages'                  =>  $messages, 
@@ -281,6 +281,7 @@ class UserController extends ControllerAbstract
                             [
                                 'user'                      =>  $user,
                                 'usersessionid'             =>  $userSession->getId_member(), 
+                                 'afficheuser'            => 'yes', 
                                 'myNote'                    =>  $myNote,
                                 'nbNewByUser'               =>  $nbNewByUser,          
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 

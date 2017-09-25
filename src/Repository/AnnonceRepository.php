@@ -224,50 +224,48 @@ SQL;
             return $annonce;
         }
     
-    private function buildEntity2(array $data)
-
+  private function buildEntity2(array $data)
    {
-
        $annonce = new Annonce();
-
      
-
        $annonce->setId_post($data['nb_annonces']);
-
        //dump($annonce);die;
-
        return $annonce;
-
    }
+   
+   
     private function buildEntity3(array $data)
     {
         $user= new User();
         $user
-              -> setName($data['name'])
+              -> setName($data['nameUser'])
         ; 
         
-       
-        $annonce = new Annonce();
-        $annonce
-            ->setPost_date($data['post_date'])
-            ->setId_post($data['id_post'])
-            ->setParagraphe_1($data['paragraphe_1'])
-            ->setParagraphe_2($data['paragraphe_2'])
-            ->setPost_title($data['post_title'])
-            ->setUrl_img_1($data['url_img_1'])
-            ->setUrl_img_2($data['url_img_2'])
-            ->setUrl_img_3($data['url_img_3'])
-            ->setMember_id_member($data['member_id_member'])
-            ->setType_id_type($data['type_id_type'])
-            ->setCategory_id_category($data['category_id_category'])
-            ->setName($user)
-          
-            //->setCategory($category)
-            //->setAuthor($author)
+        $category = new Category();
+        $category
+              -> setName($data['nameCategory'])
         ;
-        
+        $annonce = new Annonce();
+                 $annonce
+                ->setPost_date($data['post_date'])
+                ->setId_post($data['id_post'])
+                ->setParagraphe_1($data['paragraphe_1'])
+                ->setParagraphe_2($data['paragraphe_2'])
+                ->setPost_title($data['post_title'])
+                ->setUrl_img_1($data['url_img_1'])
+                ->setUrl_img_2($data['url_img_2'])
+                ->setUrl_img_3($data['url_img_3'])
+                ->setMember_id_member($data['member_id_member'])
+                ->setType_id_type($data['type_id_type'])
+                ->setCategory_id_category($data['category_id_category'])
+               ->setUserName($user)
+                ->setCategoryName($category)
+                         ;
         return $annonce;
     }
+    
+
+    
      public function findByRubrique($category)
     {
 $query = <<<SQL
@@ -296,16 +294,17 @@ SQL;
     
      public function listeAnnoncesByUser( $idUser)       
     {
-        // dump($idreceiver);
-        
-        $query = " SELECT a.* , m.name FROM annonce a, member m where member_id_member = id_member AND `member_id_member` = " . $idUser ;  
-       
-         $dbMessages = $this->db->fetchAll($query);
+$query = <<<SQL
+SELECT m.name as nameUser, t.name as nameCategory, a.* 
+FROM annonce a, member m , type t 
+WHERE `member_id_member` = 44
+AND a.member_id_member = m.id_member
+AND a.type_id_type = t.id_type
+SQL;
+      $dbMessages = $this->db->fetchAll($query);
         
         $messages =[];
-         //dump($dbMessages);
-        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
-        dump($messages); 
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); }    
         return $messages;
       
     }

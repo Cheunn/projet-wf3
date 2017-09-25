@@ -86,12 +86,25 @@ class NotationRepository extends RepositoryAbstract
      * @param string $email
      * @return Notation|null
      */
+    public function getNbNotants($id)
+    {
+        $notation = new Notation();
+        $dbNotation = $this->db->fetchAssoc
+        (
+            "SELECT count(note)as note FROM notation WHERE id_member_note = :id AND note != ''",
+            [
+                ':id' => $id
+            ]
+        );
+        return $this->buildEntityNoteEtNbComments($dbNotation);
+    }
+    
     public function getMyNote($id)
     {
         $notation = new Notation();
         $dbNotation = $this->db->fetchAssoc
         (
-            'SELECT AVG(note)as note FROM notation WHERE id_member_note = :id',
+            "SELECT AVG(note)as note FROM notation WHERE id_member_note = :id AND note != ''",
             [
                 ':id' => $id
             ]

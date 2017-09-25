@@ -332,33 +332,76 @@ SQL;
         return $chronique;
     }
     
-        public function findLastSix()
+    private function buildEntity3(array $data)
     {
-        $query = <<<SQL
-SELECT 
-    ch.*
-FROM chronique ch
-ORDER BY id_post DESC
-LIMIT 6
-SQL;
-        $dbChroniques = $this->db->fetchAll($query);
-        $chroniques = [];
-    
-        foreach ($dbChroniques as $dbChronique) {
-            $chroniques[] = $this->buildEntity($dbChronique);
-        }
-        return $chroniques;
+        $user= new User();
+        $user
+              -> setName($data['nameUser'])
+        ; 
+
+       $category = new Category();
+        $category
+              -> setName($data['nameCategory'])
+        ; 
+       $chronique = new Chronique();
+
+        $chronique
+            ->setId_post($data['id_post'])
+            ->setPost_title($data['post_title'])
+            ->setPost_type($data['post_type'])
+            ->setPost_date($data['post_date'])
+            ->setType($data['type'])
+            ->setUrl_img_1($data['url_img_1'])
+            ->setUrl_img_2($data['url_img_2'])
+            ->setParagraph_1($data['paragraph_1'])
+            ->setParagraph_2($data['paragraph_2'])
+            ->setMember_id_member($data['member_id_member'])
+            ->setCategory_id_category($data['category_id_category'])
+            ->setUserName($user)
+            ->setCategoryName($category)
+            ;
+        
+        return $chronique;
+          
+
+        
+        return $annonce;
     }
     
-    public function findLastSixNews(){
-                $query = <<<SQL
-SELECT 
-    ch.*
-FROM chronique ch
-WHERE post_type = 'news'
-ORDER BY id_post DESC
-LIMIT 6
+
+    
+         public function listeChroniquesByUser( $idUser)       
+    {
+$query = <<<SQL
+SELECT m.name as nameUser, cat.name as nameCategory, c.*
+FROM chronique c, member m, category cat
+where c.member_id_member = $idUser
+AND m.id_member = c.member_id_member
+AND c.category_id_category = cat.id_category
 SQL;
+      $dbMessages = $this->db->fetchAll($query);
+        
+        $messages =[];
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
+        return $messages;
+      
     }
+    
+        /*public function listeAnnoncesByUser( $idUser)       
+    {
+       
+        
+        $query = " SELECT c.* , m.name FROM chronique c, member m where member_id_member = id_member AND `member_id_member` = " . $idUser ;  
+       
+         $dbMessages = $this->db->fetchAll($query);
+        
+        $messages =[];
+      
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
+
+        return $messages;
+      
+    } */
+   
 }
 

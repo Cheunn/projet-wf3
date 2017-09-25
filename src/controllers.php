@@ -100,15 +100,6 @@ $user->match('/annonce/supression/{id}','user.annonce:deleteAction')
         ->bind('user_annonce_delete')
 ;
 
-/* Julien */
-
-/* SINGLE ANNONCE REDIRECTION */
-$app
-    ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
-        ->assert('id', '\d+')
-        ->bind('single_annonce')
-;
-
 /* Anis */
 
 /* FRONT */  
@@ -138,7 +129,6 @@ $app
     ->match('/annonces', 'annonce.controller:listActionMain')  
     ->bind('annonces')
 ;
-
 $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
@@ -153,6 +143,10 @@ $app
     ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
+;
+$app
+    ->get('/annonces/{rubrique}' ,'annonce.controller:findByRubrique')  
+    ->bind('annonce_rubrique')
 ;
 $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
@@ -171,7 +165,7 @@ $app
 ;
 
 $app
-    ->get('/chronique/{rubrique}' ,'chronique.controller:findByRubrique')  
+    ->get('/chroniques/{rubrique}' ,'chronique.controller:findByRubrique')  
     ->bind('chronique_rubrique')
 ;
 
@@ -183,7 +177,7 @@ $app
 /* BOUCLE CATEGORY */ /* BOUCLE CATEGORY */
 $app
     ->match('/', 'category.controller:listActionChronique')
-    ->bind('category_list')
+    ->bind('category')
 ;
 /* BOUCLE CATEGORIE */
 $app
@@ -323,6 +317,48 @@ $admin->match('/tag/edition/{idtag}', 'admin.tag.controller:editAction')
 $admin->get('/tag/supression/{idtag}', 'admin.tag.controller:deleteAction')
             ->assert('idtag', '\d+')
             ->bind('admin_tag_delete');
+
+
+//******************ROUTE POUR ADMIN Type*******************
+
+// localhost/projet-wf3/web/index_dev.php/admin/type
+$admin->get('/type', 'admin.type.controller:listAction')
+            ->bind('admin_type');
+
+$admin->match('/type/edition/{id_type}', 'admin.type.controller:editAction')
+            ->value('id_type', null) // id est optionnel est vaut null par défaut
+            ->bind('admin_type_edit');
+
+$admin->get('/type/supression/{id_type}', 'admin.type.controller:deleteAction')
+            ->assert('id_type', '\d+')
+            ->bind('admin_type_delete');
+
+
+//******************ROUTE POUR ADMIN Category*******************
+
+$admin
+    ->get('/category', 'admin.category.controller:listAction')
+    ->bind('admin_category')
+;
+
+$admin
+        ->get('/category/{type}', 'admin.category.controller:listByType')
+        ->assert('type','[annonce]|[chronique]')
+        ->bind('admin_category_type')
+;
+
+$admin
+        ->match('/category/edition/{id}', 'admin.category.controller:editAction')
+        ->value('id', null)
+        ->bind('admin_category_edit')
+;
+
+$admin
+    ->get('/category/suppression/{id}', 'admin.category.controller:deleteAction')
+    ->assert('id', '\d+') // force id a être un nombre
+    ->bind('admin_category_delete')
+;
+
 
 // COMMON FILES
 

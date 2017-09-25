@@ -1,0 +1,29 @@
+<ul class="nav navbar-nav">
+    {% for category in categories %}
+        <li><a href="{{ path('admin_category', {id_category: category.id_category}) }}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>
+
+ <p><a href="{{ path('admin_category_edit') }}">Ajouter une category</a></p>
+ 
+ 
+ 
+ <table class="table">
+        <tr>
+            <th>Id_category</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id_category }}</td>
+                <td>{{ category.name }}</td>
+               
+                <td><a href="{{ path('admin_category_edit', {id_category: category.id_category}) }}" class="btn btn-primary">Modifier</a>
+                      {#  <a href="{{ path('admin_category_delete', {id_category: category.id_category}) }}" class="btn btn-danger">Supprimer</a></td>#}
+             </tr>
+             
+                 {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>

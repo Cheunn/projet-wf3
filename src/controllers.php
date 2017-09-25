@@ -47,6 +47,10 @@ $user->before (function() use ($app){
 
 /* Jaoued */
 
+ 
+$user->match('/envoyerNote', 'notation.controller:envoyerNote')      ->bind('envoyerNote');
+$user->match('/envoyerMessageInterne', 'message.controller:envoyerMessageInterne')      ->bind('envoyerMessageInterne');
+            
 $user->match('/profil', 'user.controller:profilUser')  
        ->bind('profilUser');
 
@@ -79,7 +83,7 @@ $user->match('/chronique/edit/{id}','user.chronique.controller:editAction')
         ->bind('user_chronique_edit')        
 ;
 
-$user->match('/chronique/supression/{id}','user.chronique:deleteAction')
+$user->match('/chronique/supression/{id}','user.chronique.controller:deleteAction')
         ->assert('id', '\d+')
         ->bind('user_chronique_delete')
 ;
@@ -95,7 +99,7 @@ $user->match('/annonce/edit/{id}','user.annonce.controller:editAction')
         ->bind('user_annonce_edit')        
 ;
 
-$user->match('/annonce/supression/{id}','user.annonce:deleteAction')
+$user->match('/annonce/supression/{id}','user.annonce.controller:deleteAction')
         ->assert('id', '\d+')
         ->bind('user_annonce_delete')
 ;
@@ -112,7 +116,7 @@ $app
 ;
 
 $app
-        ->get('/chronique/menu', 'chronique.controller:lastSixHeader')
+        ->get('/chronique/menu', 'chronique.controller:lastSixChroniquesHeader')
         ->bind('chronique_menu')
 ;
 
@@ -121,6 +125,25 @@ $app
         ->bind('news_menu')
 ;
 
+$app
+        ->get('/breadcrumb', 'layout.controller:breadcrumbs')
+        ->bind('breadcrumb')
+;
+
+$app
+        ->get('/index/chronique_user', 'chronique.controller:IndexChroniqueUser')
+        ->bind('index_chronique_user')
+;
+
+$app
+        ->get('/index/chronique_asso', 'chronique.controller:IndexChroniqueAsso')
+        ->bind('index_chronique_asso')
+;
+
+$app
+        ->get('/index/news', 'chronique.controller:IndexNews')
+        ->bind('index_news')
+;
 /* Julien */
 
 /* SINGLE ANNONCE REDIRECTION */
@@ -133,6 +156,15 @@ $app
     ->match('/single_annonce', 'annonce.controller:singleAnnonce')  
     ->assert('id', '\d+')
     ->bind('single_annonce')
+;
+$app
+    ->match('/news', 'chronique.controller:ListNews')  
+    ->bind('news')
+;
+$app
+    ->match('/single_news/{id}', 'chronique.controller:getNewsId')  
+    ->assert('id', '\d+')
+    ->bind('single_news')
 ;
 $app
     ->match('/single_annonce/{id}', 'annonce.controller:lastThreeSingle')  
@@ -161,7 +193,7 @@ $app
 /* CHRONIQUE COTE FRONT */
 
 $app
-    ->match('/chroniques', 'chronique.controller:listActionMain')  
+    ->match('/chroniques', 'chronique.controller:ListChroniques')  
     ->bind('chroniques')
 ;
 $app
@@ -208,9 +240,9 @@ $app
 
 //Handicap
 
-$bind = $app
-        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
-        ->bind('handicap');
+//$bind = $app
+//        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
+//        ->bind('handicap');
 
 
 /* ADMIN  */

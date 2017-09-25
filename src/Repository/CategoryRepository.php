@@ -29,7 +29,7 @@ class CategoryRepository extends RepositoryAbstract
         $categoriesByChronique = [];
       
         foreach ($dbCategoriesByChronique as $dbCategoryByChronique) {
-            $categoriesByChronique[] = $this->buildEntity($dbCategoryByChronique);
+            $categoriesByChronique[] = $this->buildEntity2($dbCategoryByChronique);
         }
         
         return $categoriesByChronique;
@@ -40,7 +40,7 @@ class CategoryRepository extends RepositoryAbstract
         $dbCategoriesByChronique = $this->db->fetchAll('SELECT DISTINCT name FROM category WHERE type_post = "chronique"'); // ICI
         $categoriesByChronique = [];
         foreach ($dbCategoriesByChronique as $dbCategoryByChronique) {
-            $categoriesByChronique[] = $this->buildEntity($dbCategoryByChronique);
+            $categoriesByChronique[] = $this->buildEntity2($dbCategoryByChronique);
         }
         return $categoriesByChronique;
     }
@@ -49,7 +49,7 @@ class CategoryRepository extends RepositoryAbstract
         $dbCategoriesByAbonne = $this->db->fetchAll('SELECT DISTINCT name FROM category WHERE type_post = "annonce"'); // ICI
         $categoriesByAbonne = [];
         foreach ($dbCategoriesByAbonne as $dbCategoryByAbonne) {
-            $categoriesByAbonne[] = $this->buildEntity($dbCategoryByAbonne);
+            $categoriesByAbonne[] = $this->buildEntity2($dbCategoryByAbonne);
         }
         return $categoriesByAbonne;
     }
@@ -132,11 +132,25 @@ class CategoryRepository extends RepositoryAbstract
         $category = new Category();
         
         $category
-            ->setName($data['name']);
-            //->setId_category($data['id_category'])
+            ->setName($data['name'])
+                
+            ->setId_category($data['id_category'])
             //->setName($data['name'])
             //->setType_post($data['type_post'])
-        //;
+        ;
+        
+        return $category;
+    }
+    
+     private function buildEntity2(array $data)
+    {
+        $category = new Category();
+        
+        $category
+            ->setName($data['name'])
+                
+          
+        ;
         
         return $category;
     }

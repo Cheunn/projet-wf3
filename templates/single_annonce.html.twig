@@ -135,7 +135,7 @@
 
                     </div>
                      <div class="comment-form">
-                        <h4>Send A Message</h4>
+                        <h4>Envoyer un message</h4>
                         <form role="form" action="#" method="post" novalidate id="comment-form">
 
                             <div class="row">
@@ -143,28 +143,12 @@
                                 <div class="col-md-6 col-lg-5">
 
                            <div class="form-group">
-
                              <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Full Name:">
-
                            </div>
-
-                                    </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-md-6 col-lg-5">
-                       
-                                    </div>
-                                    </div>
-                            <div class="row">
-                                <div class="col-md-6 col-lg-5">
-                            <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone Number:">
-                          </div>
-                            </div>
-                                    </div>
+                           </div>
+                           
+                             </div>
+                          
                             <div class="form-group">
                                 <textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea>
                           </div>
@@ -185,7 +169,7 @@
               {% for annonce in annonces %} 
                <div class="panel-body nopadding">
                 <div class="media">
-                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
+                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ annonce.url_img_1}}" alt="author" /></a> </div>
                   <div class="media-body">
                     <h4 class="media-heading"><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></h4>
                     <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>

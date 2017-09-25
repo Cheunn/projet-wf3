@@ -8,42 +8,44 @@ class NotationController extends ControllerAbstract
 {
 
     
+      public function renvoieVille() {
+        $list = $this->app['cp.repository']->findVille($_POST["codePostal"]);
+
+        if (empty($list)) {
+            $response = ['reponse' => 'ERROR'];
+        } else {
+            $list0 = array('reponse' => 'OK');
+            $response = array_merge($list0, $list);
+        }
+        
+        return new JsonResponse($response);
+    }
     
-    public function registerAction()
+    public function envoyerNote()
     {
+        echo 'coucou';//die('titi');
+       dump($_POST);
+        
         $notation = new Notation(); 
-        $this->app['notation.controller']->controle_Saisie($notation, 'insert');
-    
-        return $this->render('notation/register.html.twig',['notation' => $notation, 'createprofil' => 'yes']);
-    
-        if (!empty($_POST)) 
-       {
-			
+        
             $this->sanitizePost();
-            
+
+         
             $notation
-                ->setRole($_POST['role']) 
-                ->setEmail($_POST['email'])
-                ->setPassword($_POST['password'])	
-                ->setName($_POST['name'])
-                    ->setDate_create($_POST['date_create'])
+                ->setId_member_noteur($_POST['id_member_noteur']) 
+                ->setId_member_note($_POST['id_member_note'])
+                ->setNote($_POST['note'])	
+                ->setComment($_POST['comment'])
+             
             ;
           
-    
-                 
+
                 $this->app['notation.repository']->save($notation);
                 $this->addFlashNotation('Enregistrement effectué', 'success');
                 return $this->redirectRoute('homepage');
-    
-        }
+
 
  
-        return $this->render(
-            'notation/login.html.twig',
-            [
-                'email' => $email
-            ]
-        );
     }
     
  

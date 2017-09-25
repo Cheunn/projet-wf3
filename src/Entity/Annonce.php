@@ -18,7 +18,8 @@ class Annonce
     private $category_name;
     private $name;
     private $user;
-     private $annonce;
+    private $annonce;
+    private $prix;
 
     public function getId_post() {
         return $this->id_post;
@@ -149,8 +150,14 @@ class Annonce
         return $this;
     }
     
+    public function getPrix() {
+        return $this->prix;
+    }
 
-
+    public function setPrix($prix) {
+        $this->prix = $prix;
+        return $this;
+    }
 
 }
 

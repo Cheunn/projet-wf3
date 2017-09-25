@@ -44,7 +44,6 @@ class AnnonceController extends ControllerAbstract
             
             $annonce
                 ->setPost_title($_POST['post_title'])
-                //->setId_post($_POST['id_post'])
                 ->setParagraphe_1($_POST['paragraphe_1'])
                 ->setParagraphe_2($_POST['paragraphe_2'])
                 ->setUrl_img_1($_POST['url_img_1'])

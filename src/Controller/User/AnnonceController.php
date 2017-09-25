@@ -18,7 +18,7 @@ use Entity\Category;
  *
  * @author Etudiant
  */
-class AnnonceController {
+class AnnonceController extends ControllerAbstract{
     
     public function editAction($id = null)
     {
@@ -44,17 +44,18 @@ class AnnonceController {
         if (!empty($_POST)) {
             $this->sanitizePost();
             
+            $user = $this->app['user.manager']->getUser();
+            
             $annonce
                 ->setPost_title($_POST['post_title'])
-                //->setId_post($_POST['id_post'])
                 ->setParagraphe_1($_POST['paragraphe_1'])
                 ->setParagraphe_2($_POST['paragraphe_2'])
                 ->setUrl_img_1($_POST['url_img_1'])
                 ->setUrl_img_2($_POST['url_img_2'])
                 ->setUrl_img_3($_POST['url_img_3'])
-                ->setMember_id_member(1)
-                ->setType_id_type(1)
-                ->setCategory_id_category($_POST['category_id_category'])
+                ->setMember_id_member($user->getId_member())
+                ->setType_id_type($_POST['type_id_type'])
+                ->setCategory_id_category($_POST['category'])
                 ;
                
 
@@ -75,7 +76,7 @@ class AnnonceController {
                 $this->app['annonce.repository']->save($annonce);
                 $this->addFlashMessage("L'annonce est enregistré");
                 
-                return $this->redirectRoute('admin_annonces');
+                return $this->redirectRoute('user_annonce_list');
             } else {
                 $message = '<strong>Le formulaire contient des erreurs</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -103,10 +104,12 @@ class AnnonceController {
         $this->app['annonce.repository']->delete($annonce);
         //$this->addFlashMessage("L'annonce est supprimé");
         
-        return $this->redirectRoute('user_annonce');
+        return $this->redirectRoute('user_annonce_list');
     }
     
-    public function listUserAnnonce(){
+
+  /* DEV (jaoued) */ 
+  public function listAnnoncesByUser($id){
         $user = $this->app['user.manager']->getUser();
         
         $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
@@ -117,5 +120,31 @@ class AnnonceController {
                 ]
         );
     }
+  
+  /* Cheunn */
+  public function listUserAnnonce(){
+  $user = $this->app['user.manager']->getUser();
+        
+        $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
+        
+        return $this->render('user/annonce/list.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
+     public function nbAnnoncesByUser($id){
+        $user = $this->app['user.manager']->getUser();
+        
+        $annonces = $this->app['annonce.repository']->listByUserId($user->getId_member());
+        
+        return $this->render('user/annonce/list.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
     
 }

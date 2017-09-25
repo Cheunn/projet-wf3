@@ -56,19 +56,18 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 // CONTROLLERS
 
 /* FRONT */
-$app['index.controller'] = function() use ($app){   
-return new Controller\IndexController ($app);  };
-
-$app['user.controller'] = function() use ($app){   
-return new Controller\UserController ($app);  };
-
-$app['cp.controller'] = function() use ($app){  
-return new Controller\CpController ($app);  };
+$app['index.controller'] = function() use ($app)        {   return new Controller\IndexController ($app);  };
+$app['user.controller'] = function() use ($app)         {   return new Controller\UserController ($app);  };
+$app['cp.controller'] = function() use ($app)           {   return new Controller\CpController ($app);  };
+$app['message.controller'] = function() use ($app)      {   return new Controller\MessageController ($app);  };
+$app['notation.controller'] = function() use ($app)      {   return new Controller\NotationController ($app);  };
 
 $app['annonce.controller'] = function () use ($app) {
     return new Controller\AnnonceController($app);
 };
-
+$app['chronique.controller'] = function () use ($app) {
+    return new Controller\ChroniqueController($app);
+};
 $app['category.controller'] = function () use ($app) {
     return new Controller\CategoryController($app);
 };
@@ -95,8 +94,8 @@ $app['admin.tag.controller'] = function () use ($app) {
     return new Controller\Admin\TagController($app);
 };
 
-$app['admin.type.controller'] = function () use ($app) {
-    return new Controller\Admin\TypeController($app);
+$app['layout.controller']= function () use ($app){
+    return new Controller\LayoutController($app);
 };
 
 // REPOSITORIES
@@ -104,9 +103,8 @@ $app['admin.type.controller'] = function () use ($app) {
 $app['user.repository'] = function() use ($app){   
 return new Repository\UserRepository( $app['db']  ); };
 
-$app['cp.repository'] = function() use ($app){   
-return new Repository\CpRepository( $app['db']  ); };
-
+$app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
+$app['notation.repository'] = function() use ($app)         {   return new Repository\NotationRepository( $app['db']  ); };
 
 $app['annonce.repository'] = function () use ($app) {
     return new AnnonceRepository($app['db']);
@@ -127,14 +125,18 @@ $app['tag.repository'] = function () use ($app) {
     return new Repository\TagRepository($app['db']);
 };
 
-$app['type.repository'] = function () use ($app) {
-    return new Repository\TypeRepository($app['db']);
+$app['message.repository'] = function () use ($app) {
+    return new Repository\MessageRepository($app['db']);
 };
 
 // USER
 
 $app['user.chronique.controller'] = function () use ($app){
     return new Controller\User\ChroniqueController($app);
+};
+
+$app['user.annonce.controller'] = function () use ($app){
+    return new Controller\User\AnnonceController($app);
 };
 
 return $app;

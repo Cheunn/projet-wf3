@@ -50,6 +50,8 @@ class Chronique
     private $category_id_category;
     
     private $category_name;
+    private $userName;
+    private $categoryName;
     
 
     public function getId_post() {
@@ -211,6 +213,25 @@ class Chronique
     
     public function setCategory_name($category_name) {
         $this->category_name = $category_name;
+        return $this;
+    }
+
+
+    public function getUserName() {
+        return $this->user->getName();
+    }
+
+    public function getCategoryName() {
+        return $this->category->getName();
+    }
+
+    public function setUserName(User $user) {
+        $this->user = $user;
+        return $this;
+    }
+
+    public function setCategoryName(Category $category) {
+        $this->category = $category;
         return $this;
     }
 

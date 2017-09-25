@@ -15,7 +15,7 @@ class IndexController extends ControllerAbstract
            'annonces' => $annonces
                
                ]);
-         //return $this->render('user/register.html.twig' );
+         // return $this->render('user/register.html.twig' );
     }
     
     public function about()

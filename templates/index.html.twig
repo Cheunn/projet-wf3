@@ -10,9 +10,9 @@
        {# <p>Photography</p>#}
       </div>
     </article>
-    <article class="col-md-12 col-sm-12 nopadding item"> <a href="single.html" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/news.jpg') }}" alt="Travel The World"> </a>
+    <article class="col-md-12 col-sm-12 nopadding item"> <a href="{{ path('news') }}" class="thumbnail"> <img src="{{ asset ('assets/images/feature-posts/news.jpg') }}" alt="Travel The World"> </a>
       <div class="feature-text">
-        <h3><a href="single.html" title="Travel The World">News</a></h3>
+        <h3><a href="{{ path('news') }}" title="Travel The World">News</a></h3>
        {# <p>Travel</p>#}
       </div>
     </article>
@@ -60,7 +60,7 @@
           <div class="author-info">
             <ul class="list-inline">
               <li>
-                <div class="icon-box"><img src="{{ asset ('assets/images/post/author.png') }}" class="img-responsive" alt="image post" /></div>
+                <div class="icon-box"><img src="{{ asset ('assets/images/post/author.jpg') }}" class="img-responsive" alt="image post" /></div>
                 <div class="info">
                   <p>Posted by:</p>
                   <a href="author.html">Waqas Hussain</a> </div>
@@ -140,7 +140,7 @@
               {% for annonce in annonces %} 
                <div class="panel-body nopadding">
                 <div class="media">
-                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ asset ('assets/images/post/rp1.jpg') }}" alt="author" /></a> </div>
+                  <div class="media-left"> <a href="{{ path('single_annonce', {id: annonce.id_post}) }}"> <img src="{{ annonce.url_img_1}}" alt="author" /></a> </div>
                   <div class="media-body">
                     <h4 class="media-heading"><a href="{{ path('single_annonce', {id: annonce.id_post}) }}">{{ annonce.post_title }}</a></h4>
                     <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
@@ -231,10 +231,9 @@
     <div class="row">
       <div class="col-md-8 col-lg-8">
         <div class="row">
-            
+		
         {{ render(url('index_chronique_user')) }}
-               
-      
+		
         </div>
         <div class="clearfix"></div>
       </div>

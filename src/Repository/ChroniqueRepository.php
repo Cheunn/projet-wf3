@@ -114,6 +114,30 @@ SQL;
         }
     }
     
+        public function findNews($id)
+    {
+        $query = <<<SQL
+SELECT
+    ch.*, 
+    c.name AS category_name
+FROM chronique ch
+JOIN category c ON ch.category_id_category = c.id_category
+WHERE ch.id_post = :id
+SQL;
+        
+        $dbChronique = $this->db->fetchAssoc(
+            $query,
+            [
+                ':id' => $id
+            ]
+        );
+        
+        if (!empty($dbChronique)) {
+            return $this->buildEntity5($dbChronique);
+        }
+    }
+    
+    
     public function findLastTwo()
     {
         $query = <<<SQL
@@ -202,7 +226,7 @@ SQL;
         ;*/
         
         $chronique = new Chronique();
-        
+       
         $chronique
             ->setId_post($data['id_post'])
             ->setPost_title($data['post_title'])
@@ -217,6 +241,51 @@ SQL;
             ->setCategory_id_category($data['category_id_category'])
             ->setCategory_name($data['category_name'])
             ;
+        
+        return $chronique;
+    }
+    
+    private function buildEntity5(array $data)
+    {
+        /*
+        $category = new Category();
+        
+        $category
+            ->setId_category($data['id_category'])
+            ->setName($data['name'])
+            ->setType_post($data['type_post'])
+        ;
+        */
+        //$author = new User();
+        
+        /*$author
+            ->setId($data['author_id'])
+            ->setLastname($data['lastname'])
+            ->setFirstname($data['firstname'])
+        ;*/
+        
+        $chronique = new Chronique();
+        
+        $chronique
+            ->setId_post($data['id_post'])
+            ->setPost_title($data['post_title'])
+            ->setPost_type($data['post_type'])
+            ->setPost_date($data['post_date'])
+            ->setType($data['type'])
+            ->setUrl_img_1($data['url_img_1'])
+            ->setUrl_img_2($data['url_img_2'])
+            ->setParagraph_1($data['paragraph_1'])
+            ->setParagraph_2($data['paragraph_2'])
+            ->setMember_id_member($data['member_id_member'])
+            ->setCategory_id_category($data['category_id_category'])
+            ;
+               
+//                
+//                if(isset($data['category_name'] )){
+//                        $chronique->setCategory_name($data['category_name'])
+//                        ;}
+                
+            
         
         return $chronique;
     }
@@ -257,8 +326,8 @@ SQL;
    public function ListChroniqueByType($type){
                $query = <<<SQL
 SELECT
-    ch.*, 
-FROM chronique ch
+    * 
+FROM chronique
 WHERE post_type = :type
 SQL;
         $dbChroniques = $this->db->fetchAll($query,
@@ -270,7 +339,7 @@ SQL;
         $chroniques = [];
         
         foreach($dbChroniques as $dbChronique){
-            $chroniques[] = $this->buildEntity($dbChronique);
+            $chroniques[] = $this->buildEntity5($dbChronique);
         }
         
         return $chroniques;

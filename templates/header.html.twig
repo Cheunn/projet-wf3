@@ -15,15 +15,16 @@
               <span class="icon-bar"></span>
             </button>
      <a class="navbar-brand logo" href="{{ path('homepage') }}" title="logo">
-         <img src="{{ asset ('assets/images/ivana.gif') }}" alt="logo" />
+         <img src="{{ asset ('assets/images/logo.png') }}" alt="logo" />
       
       </a> </div>
     <div class="navbar-collapse collapse pull-left">
       <ul class="nav navbar-nav menu" id="menu">
         <!-- <li class="dropdown">  class="dropdown-toggle"-->
-        <li><a href="#" role="button" aria-expanded="false">Accueil</a></li>
+        <li><a href="{{ path('homepage') }}" role="button" aria-expanded="false">Accueil</a></li>
         <li class="dropdown mega-dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
+                <a href="{{ path('news') }}">News <span class="caret"></span></a>
+{#                 class="dropdown-toggle" data-toggle="dropdown"#}
             <div class="dropdown-menu">
                 <div class="container"> 
                     <div class="mega-dropdown-menu">
@@ -38,7 +39,7 @@
                             </ul>
                             
                             <div class="col-md-3 col-xs-12 col-sm-4 sub-menu">
-                              <h3>Rubriques </h3>
+                              <h3>Dernières news </h3>
                               <ul class="list-unstyled">
                                  <li><a href="{{ path('annonce_rubrique', {rubrique: "Materiel"}) }}">Matériels </a></li>
                                  <li><a href="{{ path('annonce_rubrique', {rubrique: "Véhicule"}) }}">Véhicule </a></li>
@@ -48,29 +49,27 @@
                                  <li><a href="{{ path('annonce_rubrique', {rubrique: "Autre"}) }}">Autres </a></li>
                              </ul>
                             </div>
+                            
+                            <div class="col-md-3 col-xs-12 col-sm-4 sub-menu">
+                              <h3>Jeux paralympiques d'été Paris 2024 </h3>
+                              <ul class="list-unstyled">
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Materiel"}) }}">Natation </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Véhicule"}) }}">Athlétisme </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Informatique"}) }}">Sport d'équipe </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Service"}) }}">Tous les sports </a></li>
+                            </ul>
+                            </div>
                              
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="Photography">
-                                    <div class="col-sm-6 col-xs-12 col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="single.html"><img src="{{ asset('assets/images/feature-posts/feature-post1.png ') }}"  alt="Generic placeholder thumbnail"></a>
-                                                <div class="caption">
-                                                    <h3>Nos auteurs</h3>
-                                                </div>
-                                            </div>
-                                    </div>
-                                                                   
-                                    <div class="col-sm-6 col-xs-12 col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="single.html"><img src="{{ asset('assets/images/feature-posts/feature-post8.png ') }}"  alt="Generic placeholder thumbnail"></a>
-                                                <div class="caption">
-                                                    <h3>Nos actions</h3>
-                                                </div>
-                                            </div>
-                                    </div>              
-                                </div>
-                                                       
-                          </div>
+                            <div class="col-md-3 col-xs-12 col-sm-4 sub-menu">
+                              <h3>Jeux paralympiques d'hiver Séoul 2018</h3>
+                              <ul class="list-unstyled">
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Materiel"}) }}">Ski </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Véhicule"}) }}">Hockey </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Informatique"}) }}">Curling </a></li>
+                                 <li><a href="{{ path('annonce_rubrique', {rubrique: "Service"}) }}">Snowboarding </a></li>
+                                
+                             </ul>
+                            </div>
                         </div>   
                     </div>
                 </div>
@@ -229,7 +228,7 @@
 				  </li>
 				  <li><a href="{{ path('deconnexion') }}"><i class="fa fa-times"></i></a></li>
 				  
-		{% else %} 
+                        {% else %} 
 			{# <li><a href="{{ path('connexion') }}"><i class="fa fa-user"></i></a></li>
 			#}
 			<li><a href="{{ path('connexion') }}"><i class="fa fa-user"></i></a></li>

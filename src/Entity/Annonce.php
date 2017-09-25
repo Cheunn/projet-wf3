@@ -18,13 +18,10 @@ class Annonce
     private $category_name;
     private $name;
     private $user;
-    private $annonce;
-    private $prix;
-     private $annonce;
-     private $userName;
-     private $categoryName;
-     private $post_type;
- 
+    private $userName;
+    private $categoryName;
+    private $post_type;
+    private $price;
 
     
    
@@ -163,14 +160,40 @@ class Annonce
         return $this;
     }
     
-    public function getPrix() {
-        return $this->prix;
+  
+
+    public function getCategoryName() {
+        return $this->category->getName();
     }
 
-    public function setPrix($prix) {
-        $this->prix = $prix;
+    public function setUserName(User $user) {
+        $this->user = $user;
         return $this;
     }
+
+    public function setCategoryName(Category $category) {
+        $this->category = $category;
+        return $this;
+    }
+
+
+    public function getPost_type() {
+        return $this->post_type;
+    }
+
+    public function setPost_type($post_type) {
+        $this->post_type = $post_type;
+        return $this;
+    }
+
+    function getPrice() {
+        return $this->price;
+    }
+
+    function setPrice($price) {
+        $this->price = $price;
+    }
+
 
 }
 

@@ -152,6 +152,12 @@ $app
     ->match('/annonce/edition', 'annonce.controller:editAction')
     ->bind('annonce_edit')
 ;
+// a jaoued
+$app
+   ->get('/single_annonce/{id}', 'annonce.controller:getAnnonceId')  
+   ->assert('id', '\d+')
+   ->bind('single_annonce_jaoued')
+;
 /* CHRONIQUE COTE FRONT */
 
 $app

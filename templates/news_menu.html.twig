@@ -1,0 +1,3 @@
+{% for new in news %} 
+    <li><a href="{{ path('single_news', {id: new.id_post}) }}">{{ new.post_title }}</a></li>
+{% endfor %}

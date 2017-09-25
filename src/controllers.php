@@ -36,7 +36,7 @@ $app->match('/about', 'index.controller:about')                 ->bind('about');
 
 /* USER */
 
-$user=$app['controllers_factory'];  // crée un groupe de routes
+$user = $app['controllers_factory'];  // crée un groupe de routes
 
 $app->mount('/user', $user);      
 
@@ -114,6 +114,21 @@ $app
 /* FRONT */  
   
 /* Cheunn */
+
+$app
+        ->get('/annonce/menu', 'annonce.controller:lastSixHeader')
+        ->bind('annonce_menu')
+;
+
+$app
+        ->get('/chronique/menu', 'chronique.controller:lastSixHeader')
+        ->bind('chronique_menu')
+;
+
+$app
+        ->get('/news/menu', 'chronique.controller:lastSixNewsHeader')
+        ->bind('news_menu')
+;
 
 /* Julien */
 

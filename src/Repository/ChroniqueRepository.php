@@ -331,6 +331,34 @@ SQL;
         //dump($chronique);die; 
         return $chronique;
     }
-   
+    
+        public function findLastSix()
+    {
+        $query = <<<SQL
+SELECT 
+    ch.*
+FROM chronique ch
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+        $dbChroniques = $this->db->fetchAll($query);
+        $chroniques = [];
+    
+        foreach ($dbChroniques as $dbChronique) {
+            $chroniques[] = $this->buildEntity($dbChronique);
+        }
+        return $chroniques;
+    }
+    
+    public function findLastSixNews(){
+                $query = <<<SQL
+SELECT 
+    ch.*
+FROM chronique ch
+WHERE post_type = 'news'
+ORDER BY id_post DESC
+LIMIT 6
+SQL;
+    }
 }
 

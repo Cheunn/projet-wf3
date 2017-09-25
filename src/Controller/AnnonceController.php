@@ -76,7 +76,7 @@ class AnnonceController extends ControllerAbstract
         $annonces = $this->app['annonce.repository']->findLastSix(); // $limit
         
         return $this->render(
-            'header.html.twig',
+            'annonce_menu.html.twig',
             [               
                 'annonces' => $annonces
             ]

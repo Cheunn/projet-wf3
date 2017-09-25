@@ -161,6 +161,39 @@ class ChroniqueController extends ControllerAbstract{
             ] 
         );
     }
+    
+    public function IndexChroniqueUser(){
+        $chroniquesUser = $this->app['chronique.repository']->findChroniqueIndex('user_chronique',2);
+        
+        return $this->render(
+                'index_chronique_user.html.twig',
+                [
+                    'chroniquesUser' => $chroniquesUser
+                ]
+        );
+    }
+    
+    public function IndexChroniqueAsso(){
+        $chroniquesAsso = $this->app['chronique.repository']->findChroniqueIndex('asso_chronique',2);
+        
+        return $this->render(
+                'index_chronique_asso.html.twig',
+                [
+                    'chroniquesAsso' => $chroniquesAsso
+                ]
+        );
+    }
+    
+    public function IndexNews(){
+        $chroniquesNews = $this->app['chronique.repository']->findChroniqueIndex('news',2);
+        
+        return $this->render(
+                'index_chronique_news.html.twig',
+                [
+                    'chroniquesNews' => $chroniquesNews
+                ]
+        );
+    }
 
 }
 

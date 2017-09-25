@@ -438,7 +438,7 @@ SQL;
         return $chroniques;
    }
    
-       public function findLastSixNews(){
+    public function findLastSixNews(){
         $query = <<<SQL
 SELECT 
     ch.*
@@ -454,6 +454,24 @@ SQL;
             $news[] = $this->buildEntity69($dbNew);
         }
         return $news;
+   }
+   
+   public function findChroniqueIndex($type, $limit){
+        $query = <<<SQL
+SELECT 
+    ch.*
+FROM chronique ch
+WHERE type = '$type'
+ORDER BY id_post DESC
+LIMIT $limit
+SQL;
+        $dbIndexChroniques = $this->db->fetchAll($query);
+        $chroniques = [];
+        
+        foreach($dbIndexChroniques as $dbIndexChronique){
+            $chroniques[] = $this->buildEntity69($dbIndexChronique);
+        }
+        return $chroniques;
    }
 }
 

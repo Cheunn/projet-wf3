@@ -126,6 +126,20 @@ $app
         ->bind('breadcrumb')
 ;
 
+$app
+        ->get('/index/chronique_user', 'chronique.controller:IndexChroniqueUser')
+        ->bind('index_chronique_user')
+;
+
+$app
+        ->get('/index/chronique_asso', 'chronique.controller:IndexChroniqueAsso')
+        ->bind('index_chronique_asso')
+;
+
+$app
+        ->get('/index/news', 'chronique.controller:IndexNews')
+        ->bind('index_news')
+;
 /* Julien */
 
 /* SINGLE ANNONCE REDIRECTION */

@@ -256,7 +256,7 @@ SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post
 FROM annonce ann, member m, comment_annonce com
 WHERE ann.member_id_member = $idUser
 AND ann.member_id_member = id_member
-AND com.id_comment = ann.id_post
+AND com.id_post = ann.id_post
 UNION
 SELECT chr.id_post , chr.post_title ,  m.id_member, m.name, comchr.comment,  comchr.post_date, comchr.type
 FROM comment_chronique comchr, member m , chronique chr 

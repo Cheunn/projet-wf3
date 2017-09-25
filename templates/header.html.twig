@@ -98,13 +98,13 @@
                         <div class="col-md-4 col-sm-6 sub-menu hidden-xs">
                             <h3>Dernières annonces</h3>
                             <ul class="list-unstyled">
-
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
-                                <li><a href="{{ path('single_annonce', {id: 1}) }}">Annonce 1</a></li>
+                                {{ render(url('annonce_menu')) }}
+                                {#<li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>
+                                <li><a href="{{ path('single_annonce', {id : 1})}}}">Annonce 1</a></li>#}
                                 
                                {#{% for annonceHeader in annoncesHeader %} 
                                 <li><a href="{{ path('single_annonce', {id: annonceHeader.id_post}) }}">{{ annonceHeader.post_title }}</a></li>

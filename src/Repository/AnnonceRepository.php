@@ -148,23 +148,23 @@ SQL;
         return $annonces;
     }
    
-//public function findLastThree()
-//    {
-//        $query = <<<SQL
-//SELECT 
-//    a.*
-//FROM annonce a
-//ORDER BY id_post DESC
-//SQL;
-//        $dbAnnonces = $this->db->fetchAll($query);    
-//        $annonces = [];
-//
-//        
-//        /*for ($i=0 ; $i < $limit; $i++) {
-//            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
-//        }*/
-//        return $annonces;
-//    }
+public function findLastThree()
+    {
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY id_post DESC
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);    
+        $annonces = [];
+
+        
+        /*for ($i=0 ; $i < $limit; $i++) {
+            $annonces[] = $this->buildEntity($dbAnnonces[$i]);
+        }*/
+        return $annonces;
+    }
     
     public function findLastSix()
     {

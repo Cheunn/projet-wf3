@@ -299,7 +299,7 @@ class User
         // return $this->firstname . ' ' . $this->lastname;
         return $this->name ;
     }
-    
+
     /**
      * 
      * @return bool

@@ -135,7 +135,32 @@ class ChroniqueController extends ControllerAbstract{
                     'annnonce' => $annonce
                 ]
         );
-    }    
+    }  
+    
+    public function lastSixChroniquesHeader()
+    {
+        $chroniques = $this->app['chronique.repository']->findLastSix(); // $limit
+        
+        return $this->render(
+            'chronique_menu.html.twig',
+            [               
+                'chroniques' => $chroniques
+            ]
+            
+        );
+    }
+    
+    public function lastSixNewsHeader()
+    {
+        $news = $this->app['chronique.repository']->findLastSixNews(); // $limit
+        
+        return $this->render(
+            'news_menu.html.twig',
+            [               
+                'news' => $news
+            ] 
+        );
+    }
 
 }
 

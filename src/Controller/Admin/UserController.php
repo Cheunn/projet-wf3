@@ -8,14 +8,18 @@
 
 namespace Controller\Admin;
 
+use Controller\ControllerAbstract;
+use Entity\User;
+use Entity\Category;
+
 /**
  * Description of UserController
  *
  * @author Etudiant
  */
-class UserController {
+class UserController extends ControllerAbstract{
     
-   public function listAction()
+    public function listAction()
     {
         $users = $this->app['user.repository']->findAll();
         return $this->render(
@@ -46,15 +50,19 @@ class UserController {
             $this->sanitizePost();
             
             $user
-                ->setEmail($_POST['email'])
-                ->setParagraphe_1($_POST['paragraphe_1'])
-                ->setParagraphe_2($_POST['paragraphe_2'])
-                ->setUrl_img_1($_POST['url_img_1'])
-                ->setUrl_img_2($_POST['url_img_2'])
-                ->setUrl_img_3($_POST['url_img_3'])
-                ->setMember_id_member(1)
-                ->setType_id_type(1)
-                ->setCategory_id_category($_POST['category_id_category'])
+                ->setFirstname($_POST['firstname'])
+                ->setLastname($_POST['lastname'])
+                ->setName($_POST['name'])
+                ->setPhone($_POST['phone'])
+                ->setCivility($_POST['civility'])
+                ->setUrl_img($_POST['url_img'])
+                ->setIs_active($_POST['is_active'])
+                ->setDescription($_POST['description'])
+                ->setAdress($_POST['adress'])
+                ->setPostal_code($_POST['postal_code'])
+                ->setCountry($_POST['country'])
+                ->setTown($_POST['town'])
+                ->setRole($_POST['role'])
                 ;
                
 

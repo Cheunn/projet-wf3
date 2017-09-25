@@ -26,7 +26,7 @@
 
                             
 
-                           <a href="author.html">{{user.name}} </a>
+                           <a href="#">{{user.name}} </a>
 
                             </div>    
 
@@ -51,13 +51,14 @@
                              <div class="info">
 
                              <p>Note</p>
-                                 <strong>{{ myNote }} </strong></div>
+                                 <strong>{{ myNote }} </strong>
+                             </div>
                          </li>
 
                          <li>
                             <div class="info">
                             <p>Annonces </p>
-                                <strong>{{ nbAnnoncesByUser.id_post }}        </strong></div>
+                                <strong>{{ nbAnnoncesByUser }}        </strong></div>
                         </li>
                         
                         <li>
@@ -66,12 +67,7 @@
                                 <strong>{{ nbChroniquesByUser }}   </strong></div>
                         </li>
                         
-                         <li>
-                            <div class="info">
-                            <p>News </p>
-                                <strong>{{ nbNewByUser }}</strong></div>
-                        </li>
-
+                        
                        </ul>
                         
            
@@ -86,11 +82,17 @@
                 <div class="line-block">
 
                     <ul class="list-inline tags">
+                        <a  href="{{ path('updateProfil') }}"><button type="button" class="btn btn-primary btn-lg">Modifier Profil</button></a>
+                        <a   href="{{path('user_annonce_list')}}"><button type="button" class="btn btn-primary btn-lg">Gerer mes Annonces</button></a>
+                        <a  href="{{path('user_chronique_list')}}"><button type="button" class="btn btn-primary btn-lg">Gerer mes chroniques</button></a>
+              
+                        
 
-                     <li><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li>
-                        <li onclick="afficher_div('IdGererAnnonces');"><a href="#">Gerer mes Annonces</a></li>
-                        <li onclick="afficher_div('IdGererChronique');"><a href="#">Gerer mes chroniques</a></li>   
 
+                        {#<li onclick="afficher_div('IdGererDesactivCompte');"><a href="#">Desactiver Mon Compte</a></li> 
+                        <li onclick="afficher_div('IdGererActivCompte');"><a href="#">Activer Mon Compte</a></li> #} 
+                        
+                        
 
                     </ul>
 
@@ -102,73 +104,103 @@
                 <div class="line-block">
                     
                     
-                    {#   #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts   #}
+                    {#   #IdProfilBlockAvisComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockChroniques,  #IdProfilBlockSesPosts   #}
 
                     <ul class="list-inline tags">
                      
                        {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %}
-                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées ( a redefinir )</a></li>
-                        <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Posts</a></li>
-                        <li onclick="afficher_div('IdProfilBlockComments');"><a href="#">Ses Interventions sur les posts</a></li>
-                        <li onclick="afficher_div('IdProfilBlockCommentsAvis');"><a href="#">Avis des internautes</a></li>
                   
+                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées </a></li>                       
+                        <li onclick="afficher_div('IdProfilBlockChroniques');"><a href="#">Chroniques Postées </a></li>  
+                        <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Interventions sur les posts</a></li>
+                        <li onclick="afficher_div('IdProfilBlockAvisComments');"><a href="#">Avis des internautes</a></li>
 
                     </ul>
 
                 </div></div>
 
                    
-                    <div id="IdProfilBlockSesPosts" class="related-post" >    Ses Posts          </div>   
+                      
                     
-                    <div id="IdProfilBlockAnnonces" class="related-post" >  Annonce spostées22    </div> 
+                    <div id="IdProfilBlockAnnonces" class="related-post" >  
+                        <div >
+                            <h4>{{nbAnnoncesByUser }} Annonce(s)</h4><br>
+                        </div>
+                            
+                            {% for listeAnnonceByUser in listeAnnoncesByUser %} 
+                                    <div class="media">
+                                        <div class="media-left">
+                                                <p> <a href="{{ path('single_annonce_jaoued', {id: listeAnnonceByUser.id_post}) }}">Title :{{listeAnnonceByUser.post_title }} (type : {{listeAnnonceByUser.category.name }} ) </a> </p>
+                                                <p><a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a></p>
+                                                                                            
+
+                                             <ul class="list-inline">
+                                                     <li><a class="media-heading" href="#">De : {{listeAnnonceByUser.username }}</a></li>
+                                                     <li>le : {{listeAnnonceByUser.post_date }}</li>
+                                                     <li><a class="reply-btn" href="#">Post Reply</a></li>
+                                            </ul> 
+                                        </div> 
+                                    </div>
+                                           
+                                                <hr>        
+                            {% endfor %}
+                            
+                    </div> 
                     
-                
+                     
                    
                         
-                   <div id="IdProfilBlockComments" class="related-post" >  
-                        <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
+                   <div id="IdProfilBlockChroniques" class="related-post" >  
+                         <div ><h4>{{ nbChroniquesByUser }}  Chronique(s)</h4><br>
                         </div>
-                           {% for listeCommentFromUser in listeCommentsFromUser %} 
-                                <div class="comment-list">  
-                                   <div class="media">
-                                     <div class="media-left">
-                                         <p>titre :{{ listeCommentFromUser.annonce.post_title }} - type  :{{ listeCommentFromUser.annonce.paragraphe_2 }} ( </p>  {# commentaire #}
-                                        <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
-                                    </div>
-                                         <ul class="list-inline">
-                                            <li> titre :{{ listeCommentFromUser.annonce.post_title }}</li>
-                                            <li> le :{{ listeCommentFromUser.annonce.post_date }}</li>
-                                            <li><a class="reply-btn" href="#">Post Reply</a></li>
-                                        </ul>
-                                   </div>
-                                 <div class="media-body">
-                                     
-                                       
-                                 </div>
-                               </div>
-                           {% endfor %}                       
+                            {% for listeChroniquesByUser in listeChroniquesByUser %} 
+                                    <div class="media">
+                                        <div class="media-left">                            
+                                                <p> <a href="{{ path('single_chronique', {id: listeChroniquesByUser.id_post}) }}">Title :{{listeChroniquesByUser.post_title }} (type : {{listeChroniquesByUser.post_type }} ) </a> </p>
+                                                <p><a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a></p>
+                                                <p>Category : {{listeChroniquesByUser.category.name }}</p>                                                 
+
+                                             <ul class="list-inline">
+                                                     <li><a class="media-heading" href="#">De : {{listeChroniquesByUser.username }}</a></li>
+                                                     <li>le : {{listeChroniquesByUser.post_date }}</li>
+                                                     <li><a class="reply-btn" href="#">Post Reply</a></li>
+                                            </ul> 
+                              
+                                        </div> 
+                                    </div><hr>         
+                            {% endfor %}                       
                     </div>
-                           {#
-			<div class="comment-count "><h4>{{nbCommentairesFromUser }} Commentaires</h4></div>
+                    
+                    
+                    
+                    <div id="IdProfilBlockSesPosts" class="related-post" >                         
+                        <div >
+                            <h4>{{nbCommentairesFromUser }} Interventions sur les Posts</h4><br>
+                        </div>
                             {% for listeCommentFromUser in listeCommentsFromUser %} 
-                                    <div class="media"><div class="media-left">
-                                            <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
-                                            </div>
-                                            <div class="media-body">
-                                                             <p>{{listeCommentFromUser.commentannonce }} </p>
-                                                      <ul class="list-inline">
-                                                              <li><a class="media-heading" href="#">De : {{listeCommentFromUser.username }}</a></li>
-                                                              <li>le : {{listeCommentFromUser.post_date }}</li>
-                                                              <li><a class="reply-btn" href="#">Title :{{listeCommentFromUser.title }}</a></li>
-                                                              <li><a class="reply-btn" href="#">Title :{{listeCommentFromUser.type }}</a></li>
-                                                              <li><a class="reply-btn" href="#">Post Reply</a></li>
-                                                            </ul>
-                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            {% if listeCommentFromUser.type == 'ANNONCE' %}    
+                                                <p> <a href="{{ path('single_annonce_jaoued', {id: listeCommentFromUser.annonce.id_post}) }}">Title :{{listeCommentFromUser.annonce.post_title }} (type : {{listeCommentFromUser.type }} ) </a> </p>
+                                            {% else %}
+                                                <p> <a href="{{ path('single_chronique', {id: listeCommentFromUser.annonce.id_post}) }}">Title :{{listeCommentFromUser.annonce.post_title }} (type : {{listeCommentFromUser.type }} ) </a> </p>
+                                            {% endif %}
+
+                                                <p><a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a></p>
+                                                <p>Commentaire / Intervention : {{listeCommentFromUser.annonce.paragraphe_1 }}</p>                                                 
+
+                                             <ul class="list-inline">
+                                                     <li><a class="media-heading" href="#">De : {{listeCommentFromUser.username }}</a></li>
+                                                     <li>le : {{listeCommentFromUser.post_date }}</li>
+                                                     <li><a class="reply-btn" href="#">Post Reply</a></li>
+                                            </ul> 
+                              
+                                        </div> 
+                                    </div><hr>         
                             {% endfor %}
-                        
-			</div>
-                       
-                       #}
+                    </div> 
+                            
+                     
                     
                     <div id="IdProfilBlockMessage" class="related-post" > 
                              <h4>Entrez votre Message</h4>
@@ -192,8 +224,8 @@
                     
                     
                   
-                                    
-                     <div id="IdProfilBlockCommentsAvis" class="related-post" >  
+                                 
+                     <div id="IdProfilBlockAvisComments" class="related-post" >  
                         <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
                         </div>
                             {% for getMyComment in getMyComments %} 
@@ -236,8 +268,9 @@
                                 {% if messageCheck == 'OK' %}
                                          <div class="panel-heading">Consulter mes messages</div>
                                              <div class="panel-body">
-                                        {% for message in messages %} 
-                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                        {% for message in messages %}
+                                                <div class="alert alert-dark" role="alert"> This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.sendername }} - {{ message.date }}/ {{ message.title }}</a> </p>     
                                         {% endfor %} 
                                 {%  else %}
                                             <div class="panel-heading">Aucun Message reçu</div>
@@ -305,20 +338,20 @@
 	 
         <script type="text/javascript">
             
-             $('#IdProfilBlockCommentsAvis').hide(); 
+             $('#IdProfilBlockAvisComments').hide(); 
                        $('#IdProfilBlockAnnonces').hide(); 
                        $('#IdProfilBlockMessage').hide(); 
-                       $('#IdProfilBlockComments').hide(); 
+                       $('#IdProfilBlockChroniques').hide(); 
                        $('#IdProfilBlockSesPosts').hide();
             function afficher_div(id)
             {
                  console.log(id);
-                 // #IdProfilBlockCommentsAvis, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockComments,  #IdProfilBlockSesPosts     
-                 //id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';
-                       $('#IdProfilBlockCommentsAvis').hide(); 
+                 // #IdProfilBlockAvisComments, #IdProfilBlockAnnonces, #IdProfilBlockMessage, #IdProfilBlockChroniques,  #IdProfilBlockSesPosts     
+                 //id1 = 'IdProfilBlockAvisComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockChroniques';id4 = 'IdProfilBlockSesPosts';
+                       $('#IdProfilBlockAvisComments').hide(); 
                        $('#IdProfilBlockAnnonces').hide(); 
                        $('#IdProfilBlockMessage').hide(); 
-                       $('#IdProfilBlockComments').hide(); 
+                       $('#IdProfilBlockChroniques').hide(); 
                        $('#IdProfilBlockSesPosts').hide();
                        
                 
@@ -326,23 +359,23 @@
                         
                 if (id === 'IdProfilBlockAnnonces') 
                     {    console.log('coucou0');
-                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts'; id='IdProfilBlockAnnonces'; }
+                        id1 = 'IdProfilBlockAvisComments';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockChroniques';id4 = 'IdProfilBlockSesPosts'; id='IdProfilBlockAnnonces'; }
                     
-                if (id == 'IdProfilBlockCommentsAvis') 
+                if (id == 'IdProfilBlockAvisComments') 
                     {    console.log('coucou1');
-                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockCommentsAvis'; }
+                        id1 = 'IdProfilBlockAnnonces';id2 = 'IdProfilBlockMessage';id3 = 'IdProfilBlockChroniques';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockAvisComments'; }
                     
                 if (id == 'IdProfilBlockMessage') {
                      console.log('coucou2');
-                    id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockComments';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockMessage'; }
+                    id1 = 'IdProfilBlockAvisComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockChroniques';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockMessage'; }
                     
-                if (id == 'IdProfilBlockComments') 
+                if (id == 'IdProfilBlockChroniques') 
                 {    console.log('coucou3');
-                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockComments'; }
+                        id1 = 'IdProfilBlockAvisComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockSesPosts';id='IdProfilBlockChroniques'; }
                     
                 if (id == 'IdProfilBlockSesPosts') 
                     {    console.log('coucou4');
-                        id1 = 'IdProfilBlockCommentsAvis';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockComments';id='IdProfilBlockSesPosts'; }
+                        id1 = 'IdProfilBlockAvisComments';id2 = 'IdProfilBlockAnnonces';id3 = 'IdProfilBlockMessage';id4 = 'IdProfilBlockChroniques';id='IdProfilBlockSesPosts'; }
                      console.log(id);
                       document.getElementById(id).style.display = 'block';
                       document.getElementById(id1).style.display = 'none';

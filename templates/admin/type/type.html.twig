@@ -1,0 +1,29 @@
+<ul class="nav navbar-nav">
+    {% for type in type %}
+        <li><a href="{{ path('admin_type', {id_type: type.id_type}) }}">{{ type.name }}</a></li>
+    {% endfor %}
+</ul>
+
+ <p><a href="{{ path('admin_type_edit') }}">Ajouter un Type</a></p>
+ 
+ 
+ 
+ <table class="table">
+        <tr>
+            <th>Id_Type</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        {% for type in type %}
+            <tr>
+                <td>{{ type.id_type }}</td>
+                <td>{{ type.name }}</td>
+               
+                <td><a href="{{ path('admin_type_edit', {id_type: type.id_type}) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ path('admin_type_delete', {id_type: type.id_type}) }}" class="btn btn-danger">Supprimer</a></td>
+             </tr>
+             
+                 {% else %}
+            <tr><td colspan="5" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}
+    </table>

@@ -2,6 +2,8 @@
 namespace Repository;
 
 use Entity\Message;
+use Entity\User;
+use function dump;
 
 class MessageRepository extends RepositoryAbstract
 {
@@ -64,7 +66,6 @@ class MessageRepository extends RepositoryAbstract
     private function buildEntity(array $data)
     {
         $message = new Message();
-        
         $message
                  ->setIdmessage($data['idmessage'])
             ->setTitle($data['title'])
@@ -73,20 +74,48 @@ class MessageRepository extends RepositoryAbstract
             ->setDate($data['date'])
             ->setId_member_send($data['id_member_send'])
             ->setId_member_receive($data['id_member_receive'])
-      
         ;
-    
-        return $message;
+        
+        if (isset($data['sender_name'])) {
+            $user = new User(); 
+            $user -> setName($data['sender_name']);
+            
+            $message->setSender($user);
+        }
+            return $message;
+    }
+
+    private function buildEntity2(array $data)
+    {
+        $user = new User(); 
+        $user -> setName($data['sender_name']); 
+                
+        $message = new Message();
+        $message
+                 ->setIdmessage($data['idmessage'])
+            ->setTitle($data['title'])
+            ->setContent($data['content'])
+            ->setId_post($data['id_post'])
+            ->setDate($data['date'])
+            ->setId_member_send($data['id_member_send'])
+            ->setId_member_receive($data['id_member_receive'])
+            ->setUserName($user)
+        ;
+            //dump($message); die('ci'); 
+            return $message;
     }
 
 
 
     public function getMyMessages( $idreceiver)       
     {
-        // dump($idreceiver);
-        
-        $query = " SELECT * FROM message  WHERE id_member_receive = " . $idreceiver ;  
-       
+               
+        $query = <<<SQL
+SELECT mes.*, ms.name as sender_name
+    FROM `message` mes
+join member ms on mes.`id_member_send` = ms.id_member
+WHERE id_member_receive = $idreceiver
+SQL;
          $dbMessages = $this->db->fetchAll($query);
         $messages =[];
         
@@ -96,7 +125,7 @@ class MessageRepository extends RepositoryAbstract
         return $messages;
 
         if (!empty($dbMessage)) {
-            return $this->buildEntity($dbMessage);
+            return $this->buildEntity2($dbMessage);
         }
          
       

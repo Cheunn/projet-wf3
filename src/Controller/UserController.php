@@ -196,10 +196,13 @@ class UserController extends ControllerAbstract
                 else                                                            $idsend = $user->getId_member(); 
                 
     
-                // affiche note et comments
+                // affiche note et nbdeNotants
+                
+                $getNbNotants  = $this->app['notation.repository']->getNbNotants($idsend )->getNote();   
+                
                 $TabNote  = $this->app['notation.repository']->getMyNote($idsend );  
                 $myNote = number_format($TabNote->getNote(), 2);
-                if ($myNote == '0.00') $myNote = 'Aucune';
+                if ($myNote == '0.00') $myNote = 'Aucune'; else $myNote = "$myNote / 5 ($getNbNotants votants)"; 
                 
                 
                 //$nbNewByUser  = $this->app['news.repository']->$nbNewByUser($idsend );
@@ -229,7 +232,8 @@ class UserController extends ControllerAbstract
                $listeAnnoncesByUser  = $this->app['annonce.repository']->listeAnnoncesByUser($idsend );
                 $listeChroniquesByUser  = $this->app['chronique.repository']->listeChroniquesByUser($idsend );
                //dump($listeAnnoncesByUser);   
-               dump($listeChroniquesByUser);
+               //dump($listeChroniquesByUser);
+               //dump($listeAnnoncesByUser);
                 
                 // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
@@ -238,6 +242,7 @@ class UserController extends ControllerAbstract
                        $messages = [];
                        $messages  = $this->app['message.repository']->getMyMessages($userSession->getId_member() );  
                        if (! empty($messages)) $messageCheck = 'OK'; 
+                       dump($messages); 
       
                         $mode = 'adminuser';
                         return $this->render('user/consultProfil.html.twig',
@@ -255,7 +260,8 @@ class UserController extends ControllerAbstract
                                 'nbCommentaires'            =>  $nbCommentaires, 
                                 'getMyComments'             =>  $getMyComments ,
                                 'listeCommentsFromUser'     =>  $listeCommentsFromUser, 
-                                'nbCommentairesFromUser'    =>  $nbCommentairesFromUser
+                                'nbCommentairesFromUser'    =>  $nbCommentairesFromUser, 
+                              
                      
 
 
@@ -267,15 +273,16 @@ class UserController extends ControllerAbstract
                      return $this->render('user/consultProfil.html.twig',
                             [
                                 'user'                      =>  $user, 
-                                'myNote'                    =>  $myNote, 
-                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser, 
-                                'nbNewByUser'               =>  $nbNewByUser, 
+                                'myNote'                    =>  $myNote,
+                                'nbNewByUser'               =>  $nbNewByUser,          
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 
+                                'nbAnnoncesByUser'          =>  $nbAnnoncesByUser,            
                                 'listeAnnoncesByUser'       =>  $listeAnnoncesByUser,
+                                'listeChroniquesByUser'       =>  $listeChroniquesByUser,
                                 'nbCommentaires'            =>  $nbCommentaires, 
-                                'getMyComments'            =>  $getMyComments ,
-                                'listeCommentsFromUser'             =>  $listeCommentsFromUser, 
-                                'nbCommentairesFromUser'             =>  $nbCommentairesFromUser
+                                'getMyComments'             =>  $getMyComments ,
+                                'listeCommentsFromUser'     =>  $listeCommentsFromUser, 
+                                'nbCommentairesFromUser'    =>  $nbCommentairesFromUser
                            
                             ]
                         );    

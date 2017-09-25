@@ -26,7 +26,7 @@
 
                             
 
-                           <a href="author.html">{{user.name}} </a>
+                           <a href="#">{{user.name}} </a>
 
                             </div>    
 
@@ -51,7 +51,8 @@
                              <div class="info">
 
                              <p>Note</p>
-                                 <strong>{{ myNote }} </strong></div>
+                                 <strong>{{ myNote }} </strong>
+                             </div>
                          </li>
 
                          <li>
@@ -66,12 +67,7 @@
                                 <strong>{{ nbChroniquesByUser }}   </strong></div>
                         </li>
                         
-                         <li>
-                            <div class="info">
-                            <p>News </p>
-                                <strong>{{ nbNewByUser }}</strong></div>
-                        </li>
-
+                        
                        </ul>
                         
            
@@ -86,11 +82,17 @@
                 <div class="line-block">
 
                     <ul class="list-inline tags">
+                        <a  href="{{ path('updateProfil') }}"><button type="button" class="btn btn-primary btn-lg">Modifier Profil</button></a>
+                        <a   href="{{path('user_annonce_list')}}"><button type="button" class="btn btn-primary btn-lg">Gerer mes Annonces</button></a>
+                        <a  href="{{path('user_chronique_list')}}"><button type="button" class="btn btn-primary btn-lg">Gerer mes chroniques</button></a>
+              
+                        
 
-                     <li><a  href="{{ path('updateProfil') }}">Modifier Profil </a></li>
-                        <li onclick="afficher_div('IdGererAnnonces');"><a href="#">Gerer mes Annonces</a></li>
-                        <li onclick="afficher_div('IdGererChronique');"><a href="#">Gerer mes chroniques</a></li>   
 
+                        {#<li onclick="afficher_div('IdGererDesactivCompte');"><a href="#">Desactiver Mon Compte</a></li> 
+                        <li onclick="afficher_div('IdGererActivCompte');"><a href="#">Activer Mon Compte</a></li> #} 
+                        
+                        
 
                     </ul>
 
@@ -107,11 +109,11 @@
                     <ul class="list-inline tags">
                      
                        {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %}
-                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées </a></li>{# listeAnnoncesByUser #}                        
+                  
+                        <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées </a></li>                       
                         <li onclick="afficher_div('IdProfilBlockChroniques');"><a href="#">Chroniques Postées </a></li>  
                         <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Interventions sur les posts</a></li>
                         <li onclick="afficher_div('IdProfilBlockAvisComments');"><a href="#">Avis des internautes</a></li>
-                  
 
                     </ul>
 
@@ -128,7 +130,7 @@
                             {% for listeAnnonceByUser in listeAnnoncesByUser %} 
                                     <div class="media">
                                         <div class="media-left">
-                                                <p> <a href="{{ path('single_annonce_jaoued', {id: listeAnnonceByUser.id_post}) }}">Title :{{listeAnnonceByUser.post_title }} (type : {{listeAnnonceByUser.post_type }} ) </a> </p>
+                                                <p> <a href="{{ path('single_annonce_jaoued', {id: listeAnnonceByUser.id_post}) }}">Title :{{listeAnnonceByUser.post_title }} (type : {{listeAnnonceByUser.category.name }} ) </a> </p>
                                                 <p><a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a></p>
                                                                                             
 
@@ -266,8 +268,9 @@
                                 {% if messageCheck == 'OK' %}
                                          <div class="panel-heading">Consulter mes messages</div>
                                              <div class="panel-body">
-                                        {% for message in messages %} 
-                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.id_member_send }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                        {% for message in messages %}
+                                                <div class="alert alert-dark" role="alert"> This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
+                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.sendername }} - {{ message.date }}/ {{ message.title }}</a> </p>     
                                         {% endfor %} 
                                 {%  else %}
                                             <div class="panel-heading">Aucun Message reçu</div>

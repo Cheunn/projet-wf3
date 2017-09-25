@@ -245,22 +245,22 @@ SQL;
         $category
               -> setName($data['nameCategory'])
         ;
-        
         $annonce = new Annonce();
-         $annonce
+                 $annonce
                 ->setPost_date($data['post_date'])
                 ->setId_post($data['id_post'])
-                ->setParagraphe_1($data['paragraph_1'])
-                ->setParagraphe_2($data['paragraph_2'])
+                ->setParagraphe_1($data['paragraphe_1'])
+                ->setParagraphe_2($data['paragraphe_2'])
                 ->setPost_title($data['post_title'])
                 ->setUrl_img_1($data['url_img_1'])
                 ->setUrl_img_2($data['url_img_2'])
+                ->setUrl_img_3($data['url_img_3'])
                 ->setMember_id_member($data['member_id_member'])
-                ->setPost_Type($data['post_type'])
+                ->setType_id_type($data['type_id_type'])
                 ->setCategory_id_category($data['category_id_category'])
-                ->setUserName($user)
+               ->setUserName($user)
                 ->setCategoryName($category)
-        ;     
+                         ;
         return $annonce;
     }
     
@@ -295,18 +295,16 @@ SQL;
      public function listeAnnoncesByUser( $idUser)       
     {
 $query = <<<SQL
-SELECT m.name as nameUser, cat.name as nameCategory, c.*
-FROM chronique c, member m, category cat
-where c.member_id_member = $idUser
-AND m.id_member = c.member_id_member
-AND c.category_id_category = cat.id_category
+SELECT m.name as nameUser, t.name as nameCategory, a.* 
+FROM annonce a, member m , type t 
+WHERE `member_id_member` = 44
+AND a.member_id_member = m.id_member
+AND a.type_id_type = t.id_type
 SQL;
       $dbMessages = $this->db->fetchAll($query);
         
         $messages =[];
-        dump($dbMessages); 
-        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); } 
-        dump($messages);//die ;
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity3($dbmesage); }    
         return $messages;
       
     }

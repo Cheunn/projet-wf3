@@ -22,9 +22,17 @@ class Annonce
      private $userName;
      private $categoryName;
      private $post_type;
+ 
 
+    
+   
 
-    public function getId_post() {
+    public function setParagraph_2($paragraph_2) {
+        $this->paragraph_2 = $paragraph_2;
+        return $this;
+    }
+
+        public function getId_post() {
         return $this->id_post;
     }
 

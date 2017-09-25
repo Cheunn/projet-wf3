@@ -13,7 +13,32 @@ class MessageController extends ControllerAbstract
       
             
     
-    
+    public function envoyerMessageInterne()
+    {
+        echo 'coucou';//die('titi');
+       dump($_POST);
+        
+        $message = new Message(); 
+        
+            $this->sanitizePost();
+
+         
+            $message
+                ->setId_member_send($_POST['id_member_noteur']) 
+                ->setId_member_receive($_POST['id_member_note'])
+                ->setTitle($_POST['title'])	
+                ->setContent($_POST['content'])
+             
+            ;
+          
+
+                $this->app['message.repository']->save($message);
+                $this->addFlashNotation('Enregistrement effectué', 'success');
+                return $this->redirectRoute('homepage');
+
+
+ 
+    }
     
     
     public function registerAction()
@@ -101,12 +126,6 @@ class MessageController extends ControllerAbstract
     
     
  
-        return $this->render(
-            'message/login.html.twig',
-            [
-                'email' => $email
-            ]
-        );
     }
     
 

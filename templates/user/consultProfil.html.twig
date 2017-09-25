@@ -108,8 +108,9 @@
 
                     <ul class="list-inline tags">
                      
-                       {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %}
-                  
+                     {#  {% if modeadmin is defined %} <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>{% endif %} #}
+                        
+                        <li onclick="afficher_div('IdProfilBlockMessage');"><a  href="#">Envoyer message </a></li>       
                         <li onclick="afficher_div('IdProfilBlockAnnonces');"><a href="#">Annonces Postées </a></li>                       
                         <li onclick="afficher_div('IdProfilBlockChroniques');"><a href="#">Chroniques Postées </a></li>  
                         <li onclick="afficher_div('IdProfilBlockSesPosts');"><a href="#">Ses Interventions sur les posts</a></li>
@@ -203,17 +204,20 @@
                      
                     
                     <div id="IdProfilBlockMessage" class="related-post" > 
-                             <h4>Entrez votre Message</h4>
-                                <form role="form" action="#" method="post" novalidate id="comment-form">
-                                    <div class="row"><div class="col-md-6 col-lg-5"><div class="form-group">
-                                     <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Nom:">
-                                   </div>
-                                      </div></div>
-                                    <div class="row"><div class="col-md-6 col-lg-5"><div class="form-group"><input type="text" class="form-control" placeholder="Sujet :"></div></div>
-                                            </div>
-                                    <div class="form-group"><textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea></div>
-                                  <button type="submit" class="btn btn-default">Envoyer</button>
-                                </form>
+                        <h4>Entrez votre Message</h4>
+                        <form role="form" action="#" method="post" novalidate id="comment-form">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="form-group">
+                                                    <input type="text" class="form-control" name="sujet" placeholder="Sujet :">
+                                    </div>
+                                </div>
+                             </div>
+                            
+                            <div class="form-group"><textarea class="form-control" name="message" placeholder="Message:" rows="3"></textarea>
+                            </div>
+                          <button type="button"  id="envoyerMessageInterne" class="btn btn-default">Envoyer</button>
+                        </form>
                     
                     </div>                  
                    
@@ -226,22 +230,19 @@
                   
                                  
                      <div id="IdProfilBlockAvisComments" class="related-post" >  
-                        <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4>
-                        </div>
+                            <div class="comment-count"><h4>{{ nbCommentaires }} Commentaire(s)</h4></div>
                             {% for getMyComment in getMyComments %} 
                                 <div class="comment-list">  
-                                   <div class="media">
-                                     <div class="media-left">
-                                     <a href="#"><img class="media-object" src="{{ asset('assets/images/comment-thumbnail.png ') }}" alt="placeholder image"></a>
+                                    <div class="media">
+                                              
                                     </div>
-                                   </div>
-                                 <div class="media-body"><p>{{ getMyComment.comment }} </p>
-                                                           <ul class="list-inline">
-                                                               <li><a class="media-heading" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">De : {{ getMyComment.username }}</a></li>
-                                                               <li> le :{{ getMyComment.date_create }}</li>
-                                                               <li><a class="reply-btn" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">Post Reply</a></li>
-                                                           </ul>
-                                 </div>
+                                    <div class="media-body"><p>{{ getMyComment.comment }} </p>
+                                        <ul class="list-inline">
+                                            <li><a class="media-heading" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">De : {{ getMyComment.username }}</a></li>
+                                            <li> le :{{ getMyComment.date_create }}</li>
+                                            <li><a class="reply-btn" href="{{ path('profilUser', {id: getMyComment.id_member_noteur}) }}">Post Reply</a></li>
+                                        </ul>
+                                    </div>
                                </div>
                            {% endfor %}                       
                     </div>
@@ -269,14 +270,23 @@
                                          <div class="panel-heading">Consulter mes messages</div>
                                              <div class="panel-body">
                                         {% for message in messages %}
-                                                <div class="alert alert-dark" role="alert"> This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
-                                              <p><a href="{{ path('LireMessage', {id: message.idmessage}) }}"> {{ message.sendername }} - {{ message.date }}/ {{ message.title }}</a> </p>     
+                                            
+
+<button type="button" class="btn btn-secondary btn-lg btn-block"><a href="{{ path('LireMessage', {id: message.idmessage}) }}">{{ message.title }}</a> </button>
+                                            
+                                     
+<div class="alert alert-primary" role="alert">De :  <a href="{{ path('profilUser', {id: message.id_member_send}) }}" class="alert-link">{{ message.sendername }}</a> -  le :  {{ message.date }} .</div>
+                      
+                                              
                                         {% endfor %} 
                                 {%  else %}
                                             <div class="panel-heading">Aucun Message reçu</div>
                                              <div class="panel-body">
                                 {% endif %}
+                                                <div class="list-group">
 
+  
+</div>
                                 </div>
                             </div>
                          </div> 
@@ -285,10 +295,10 @@
                     
                     <div class="col-sm-6 col-md-12 col-lg-12">
                         <div class="panel panel-default theme-panel">  
-                             <div class="panel-heading">Donner une note</div>
+                             <div class="panel-heading">Noter {{user.name}}  </div>
                                  <div class="panel-body">
                                          {#<form action="{{ path('EnvoyerNote', {id: {{user.id_member}} }}" method="post"> #}
-                                                 <form action="#" method="post">
+                                      <form action="" method="post">
                                            
                                             <div class="form-group">
                                                     <select id="role" class="form-control " name="note"> 
@@ -299,10 +309,12 @@
                                                           <option  class="form-control " value="4" >4</option>
                                                           <option  class="form-control " value="5" >5</option>
 
-                                                      </select>
+                                                    </select><hr>
+                                                      <div class="form-group form-element commun-element" ><input type="text" name="comment" id="comment" tabindex="1" class="form-control" placeholder="Entrer votre commentaire" value=""></div>
                                              </div>
                                              <div class="form-group">
-                                                 <button class="btn btn-default btn-lg pull-right" type="button">Envoyer</button>
+                                                 {# <button class="btn btn-default btn-lg pull-right" id="envoyerNote" onclick="envoyerNote()"  type="button">Envoyer</button> #}
+                                                 <button class="btn btn-default btn-lg pull-right" id="envoyerNote" type="button">Envoyer</button>
                                           </div>
                                         </form>
                                 </div>
@@ -405,6 +417,53 @@
                   }
                 }
                  */
-           
+                 $('#envoyerNote').click(function ()
+                 {
+                     console.log('{{user.id_member}}') ;    console.log('{{usersessionid}}') ;  console.log($('select[name="note"]').val()) ;  console.log($('input[name="comment"]').val()) ;  
+               
+                     
+                        $.ajax
+                        ({
+                                url : '{{ path('envoyerNote') }}', 
+                                method  : "POST", 
+                                data    : {     "id_member_note"          :   {{user.id_member}},   
+                                                "id_member_noteur"             : {{usersessionid}},    
+                                                "note"                  : $('select[name="note"]').val(),
+                                                "comment"               : $('input[name="comment"]').val()
+                                           }
+                                           
+      
+                        })
+          
+                    });
+                    
+
+                $('#envoyerMessageInterne').click(function ()
+                {
+                    
+                    
+                    console.log('toto'); 
+                    console.log('{{user.id_member}}') ;    console.log('{{usersessionid}}') ;  console.log($('textarea[name="message"]').val()) ;  console.log($('input[name="sujet"]').val()) ;  
+               
+                     
+                        $.ajax
+                        ({
+                                url : '{{ path('envoyerMessageInterne') }}', 
+                                method  : "POST", 
+                                data    : {     "id_member_note"          :   {{user.id_member}},   //id_member_send
+                                                "id_member_noteur"             : {{usersessionid}},    
+                                                "title"                  : $('input[name="sujet"]').val(),
+                                                "content"               : $('textarea[name="message"]').val()
+                                           }
+                                           
+      
+                        })
+                       
+                       
+                        
+                        
+                        
+                });
+
 	</script>
 {% endblock %}

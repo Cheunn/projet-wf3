@@ -15,20 +15,20 @@ class NotationRepository extends RepositoryAbstract
      */
     public function save(Notation $notation) 
     {
-
+            
                $data = [
                 'id_member_noteur' => $notation->getId_member_noteur(),
                 'id_member_note' => $notation->getId_member_note(),
                  'note' => $notation->getNote(),
-                'comment' => $notation->getComment(),
-                 'date_create' => $notation->getDate_create()
+                'comment' => $notation->getComment()
+                
             ];
-
+               
             $this->db->insert(
                 'notation', 
                 $data
             );
-            $notation->setId_notation($this->db->lastInsertId());
+         
 
     }
     
@@ -38,7 +38,7 @@ class NotationRepository extends RepositoryAbstract
      * @param array $data
      * @return Notation
      */
-    private function buildEntity(array $data)
+    private function buildEntity2(array $data)
     {
         
         $user = new User();
@@ -57,7 +57,38 @@ class NotationRepository extends RepositoryAbstract
     
         return $notation;
     }
+    
+        private function buildEntity(array $data)
+    {
+        
+        $notation = new Notation();
+        $notation
+            ->setId_member_noteur($data['id_member_noteur'])
+            ->setId_member_note($data['id_member_note'])
+            ->setNote($data['note'])
+            ->setComment($data['comment'])
+            ->setDate_create($data['date_create'])
+      
+        ;
+    
+        return $notation;
+    }
 
+        private function buildEntity3(array $data)
+    {
+        
+        $notation = new Notation();
+        $notation
+            ->setId_member_noteur($data['id_member_noteur'])
+            ->setId_member_note($data['id_member_note'])
+            ->setNote($data['note'])
+            ->setComment($data['comment'])
+       
+      
+        ;
+    
+        return $notation;
+    }
 
 
     public function getMyNotations($idreceiver)       
@@ -75,7 +106,7 @@ class NotationRepository extends RepositoryAbstract
         return $notations;
 
         if (!empty($dbNotation)) {
-            return $this->buildEntity($dbNotation);
+            return $this->buildEntity2($dbNotation);
         }
          
       
@@ -128,10 +159,26 @@ class NotationRepository extends RepositoryAbstract
         
         $messages =[];
          //dump($dbMessages);
-        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity($dbmesage); } 
+        foreach ($dbMessages as $dbmesage) { $messages[] = $this->buildEntity2($dbmesage); } 
        
         return $messages;
       
+    }
+    
+        private function buildEntitygetMyComments(array $data)
+    {
+        
+        $notation = new Notation();
+        $notation
+            ->setId_member_noteur($data['id_member_noteur'])
+            ->setId_member_note($data['id_member_note'])
+            ->setNote($data['note'])
+            ->setComment($data['comment'])
+            ->setDate_create($data['date_create'])
+      
+        ;
+    
+        return $notation;
     }
     
     public function nbCommentsByUser($id)

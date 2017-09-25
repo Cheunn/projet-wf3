@@ -216,7 +216,7 @@ class UserController extends ControllerAbstract
                 
                 $nbCommentaires  = $this->app['notation.repository']->nbCommentsByUser($idsend )->getNote();
                 $getMyComments  = $this->app['notation.repository']->getMyComments($idsend );                       
-                //dump($getMyComments); 
+               
               
                 $listeCommentsFromUser  = $this->app['notation.repository']->listeCommentsChroniquesAnnoncesByUser($idsend );
                
@@ -224,7 +224,7 @@ class UserController extends ControllerAbstract
                 $nbCommentairesAnnoncesFromUser  = $this->app['notation.repository']->nbCommentairesAnnoncesFromUser($idsend )->getNote();
                 $nbCommentairesFromUser = $nbCommentairesChroniquesFromUser + $nbCommentairesAnnoncesFromUser; 
                 //dump($nbCommentairesFromUser); 
-                //dump($listeCommentsFromUser); 
+                //dump($listeCommentsFromUser);
                
                 //$listeAnnoncesFromUser  = $this->app['annonce.repository']->listeAnnoncesFromUser($idsend );
                 //$listeChroniquesFromUser  = $this->app['annonce.repository']->listeChroniquesFromUser($idsend );
@@ -235,19 +235,26 @@ class UserController extends ControllerAbstract
                //dump($listeChroniquesByUser);
                //dump($listeAnnoncesByUser);
                 
+
+                
                 // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())
                 { 
+                    //dump($userSession); 
                        $messageCheck = 'NOK' ; 
-                       $messages = [];
+                       $messages = []; 
                        $messages  = $this->app['message.repository']->getMyMessages($userSession->getId_member() );  
                        if (! empty($messages)) $messageCheck = 'OK'; 
-                       dump($messages); 
-      
+                       //dump($messages); 
+                       
+                       
                         $mode = 'adminuser';
                         return $this->render('user/consultProfil.html.twig',
                             [
+                                
                                 'user'                      =>  $user, 
+                                'usersession'               =>  $userSession, 
+                                'usersessionid'             =>  $userSession->getId_member(), 
                                 'modeadmin'                 =>  $mode,
                                 'messages'                  =>  $messages, 
                                 'messageCheck'              =>  $messageCheck,
@@ -272,7 +279,8 @@ class UserController extends ControllerAbstract
                 {
                      return $this->render('user/consultProfil.html.twig',
                             [
-                                'user'                      =>  $user, 
+                                'user'                      =>  $user,
+                                'usersessionid'             =>  $userSession->getId_member(), 
                                 'myNote'                    =>  $myNote,
                                 'nbNewByUser'               =>  $nbNewByUser,          
                                 'nbChroniquesByUser'        =>  $nbChroniquesByUser, 

@@ -3,7 +3,7 @@ namespace Repository;
 
 use Entity\Message;
 use Entity\User;
-use function dump;
+//use function dump;
 
 class MessageRepository extends RepositoryAbstract
 {
@@ -31,7 +31,7 @@ class MessageRepository extends RepositoryAbstract
         }
     }
     
-    /**
+    /** 
      * 
      * @param Message $message
      */
@@ -41,9 +41,8 @@ class MessageRepository extends RepositoryAbstract
                $data = [
                 'title' => $message->getTitle(),
                  'content' => $message->getContent(),
-                'id_post' => $message->getId_post(),
-                 'date' => $message->getDate(),
-                 'id_post' => $message->getId_post(),
+               
+            
                 'id_member_send' => $message->getId_member_send(),
                 'id_member_receive' => $message->getId_member_receive(),
          
@@ -53,7 +52,7 @@ class MessageRepository extends RepositoryAbstract
                 'message', 
                 $data
             );
-            $message->setId_message($this->db->lastInsertId());
+   
 
     }
     
@@ -79,7 +78,6 @@ class MessageRepository extends RepositoryAbstract
         if (isset($data['sender_name'])) {
             $user = new User(); 
             $user -> setName($data['sender_name']);
-            
             $message->setSender($user);
         }
             return $message;

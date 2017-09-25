@@ -212,9 +212,9 @@ $app
 
 //Handicap
 
-$bind = $app
-        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
-        ->bind('handicap');
+//$bind = $app
+//        ->get('/handicap/{id}', 'handicap.controller:handicapAction')
+//        ->bind('handicap');
 
 
 /* ADMIN  */

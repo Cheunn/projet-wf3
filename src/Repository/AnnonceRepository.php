@@ -342,6 +342,14 @@ SQL;
         return $annonces;
     }
   
+    // FONCTION DELETE
+    
+       public function delete (Annonce $annonce) {
+        $this->db->delete('annonce', ['id_post' => $annonce->getId_post()]);
+    
+  
+    }
+    
     
     
 }

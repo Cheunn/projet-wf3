@@ -294,10 +294,11 @@ SQL;
     
      public function listeAnnoncesByUser( $idUser)       
     {
+        
 $query = <<<SQL
 SELECT m.name as nameUser, t.name as nameCategory, a.* 
 FROM annonce a, member m , type t 
-WHERE `member_id_member` = 44
+WHERE `member_id_member` = $idUser
 AND a.member_id_member = m.id_member
 AND a.type_id_type = t.id_type
 SQL;
@@ -341,6 +342,14 @@ SQL;
         return $annonces;
     }
   
+    // FONCTION DELETE
+    
+       public function delete (Annonce $annonce) {
+        $this->db->delete('annonce', ['id_post' => $annonce->getId_post()]);
+    
+  
+    }
+    
     
     
 }

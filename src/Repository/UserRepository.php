@@ -156,7 +156,7 @@ class UserRepository extends RepositoryAbstract
          
         $dbUser = $this->db->fetchAssoc(
            
-            'SELECT msg.* , mb.name as sender FROM  message msg, member mb WHERE id_member_send = 43 AND id_member_receive = :idSession',
+            'SELECT msg.* , mb.name as sender FROM  message msg, member mb WHERE id_member_send = $idSession AND id_member_receive = :idSession',
             [
                 ':idSession' => $idSession
             ]

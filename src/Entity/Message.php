@@ -40,6 +40,12 @@ class Message
      */
     private $content = '';
     
+    
+
+    
+    
+    
+    
     /**
      *
      * @var User 

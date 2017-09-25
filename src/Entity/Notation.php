@@ -37,6 +37,10 @@ class Notation
     public function getId_member_noteur() {
         return $this->id_member_noteur;
     }
+    
+      public function getId_member_note() {
+        return $this->id_member_note;
+    }
 
     public function getMember_id_note() {
         return $this->id_member_note;
@@ -80,9 +84,16 @@ class Notation
     }
 
     public function getUserName() {
-        return $this->user->getName();
+        if (!is_null($this->user)) {
+            return $this->user->getName();
+        }
     }
 
+    public function getUser() {
+        return $this->user;
+    }
+
+        
     public function setUser(User $user) {
         $this->user = $user;
         return $this;

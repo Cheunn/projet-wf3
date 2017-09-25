@@ -27,7 +27,8 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 });
 
 
-$app['user.manager'] = function() use ($app)            {   return new Service\UserManager ($app['session']);  };
+$app['user.manager'] = function() use ($app){   
+ return new Service\UserManager ($app['session']);  };
 
 /*
  * Ajout de Doctrine DBAL ($app['db'])
@@ -99,7 +100,8 @@ $app['layout.controller']= function () use ($app){
 
 // REPOSITORIES
 
-$app['user.repository'] = function() use ($app)         {   return new Repository\UserRepository( $app['db']  ); };
+$app['user.repository'] = function() use ($app){   
+return new Repository\UserRepository( $app['db']  ); };
 
 $app['cp.repository'] = function() use ($app)         {   return new Repository\CpRepository( $app['db']  ); };
 $app['notation.repository'] = function() use ($app)         {   return new Repository\NotationRepository( $app['db']  ); };

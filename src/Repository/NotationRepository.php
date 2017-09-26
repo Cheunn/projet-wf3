@@ -250,7 +250,7 @@ class NotationRepository extends RepositoryAbstract
     
     public function listeCommentsChroniquesAnnoncesByUser( $idUser)       
     {
-         dump($idreceiver);
+         
                 $query = <<<SQL
 SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post_date, com.type
 FROM annonce ann, member m, comment_annonce com

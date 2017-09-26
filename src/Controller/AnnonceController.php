@@ -195,6 +195,16 @@ class AnnonceController extends ControllerAbstract
         return $this->redirectRoute('annonce'); 
     }
     
+    public function findLastTwo(){
+        $annonces = $this->app['annonce.repository']->findLastAnnonce(2);
+        
+        return $this->render('annonce_index.html.twig',
+                [
+                    'annonces' => $annonces
+                ]
+        );
+    }
+    
 //    public function show($id)
 //    {
 //        $annonce = $this->app['annonce.repository']->findByAnnonce($id);

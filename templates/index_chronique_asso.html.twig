@@ -1,7 +1,7 @@
 {% for chroniqueAsso in chroniquesAsso %}    
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <article class="post">
-            <div class="post-type post-img"> <a href="{{ path('single_chronique', {id: chronique.id_post}) }}"><img src="{{ asset ('assets/images/post/post-1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
+            <div class="post-type post-img"> <a href="{{ path('single_chronique', {id: chroniqueAsso.id_post}) }}"><img src="{{ asset ('assets/images/post/post-1.jpg') }}" class="img-responsive" alt="image post" /></a> </div>
             <div class="author-info author-info-2">
                 <ul class="list-inline">
                     <li>
@@ -18,9 +18,9 @@
                 </ul>
             </div>
         <div class="caption">
-            <h3 class="md-heading"><a href="{{ path('single_chronique', {id: chronique.id_post}) }}">{{ chroniqueAsso.post_title }}</a></h3>
+            <h3 class="md-heading"><a href="{{ path('single_chronique', {id: chroniqueAsso.id_post}) }}">{{ chroniqueAsso.post_title }}</a></h3>
             <p> {{ chroniqueAsso.paragraph_1 }} </p>
-            <a class="btn btn-default" href="{{ path('single_chronique', {id: chronique.id_post}) }}" role="button">Read More</a> 
+            <a class="btn btn-default" href="{{ path('single_chronique', {id: chroniqueAsso.id_post}) }}" role="button">Read More</a> 
         </div>
         </article>
     </div>

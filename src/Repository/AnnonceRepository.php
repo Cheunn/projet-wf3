@@ -350,7 +350,23 @@ SQL;
   
     }
     
+        public function findLastAnnonce($limit)
+    {
+        $query = <<<SQL
+SELECT 
+    a.*
+FROM annonce a
+ORDER BY id_post DESC
+LIMIT $limit
+SQL;
+        $dbAnnonces = $this->db->fetchAll($query);
+        $annonces = [];
     
+        foreach ($dbAnnonces as $dbAnnonce) {
+            $annonces[] = $this->buildEntity($dbAnnonce);
+        }
+        return $annonces;
+    }
     
 }
 

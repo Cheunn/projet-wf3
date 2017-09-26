@@ -144,6 +144,11 @@ $app
         ->get('/index/news', 'chronique.controller:IndexNews')
         ->bind('index_news')
 ;
+
+$app
+        ->get('/index/annonce', 'annonce.controller:findLastTwo')
+        ->bind('index_annonce')
+;
 /* Julien */
 
 /* SINGLE ANNONCE REDIRECTION */

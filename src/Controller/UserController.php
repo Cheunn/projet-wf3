@@ -234,7 +234,6 @@ class UserController extends ControllerAbstract
                //dump($listeAnnoncesByUser);   
                //dump($listeChroniquesByUser);
                //dump($listeAnnoncesByUser);
-                dump($listeCommentsFromUser);
                 
                 // Contient les donnees propres si user = user session
                 if ($userSession->getId_member() == $user->getId_member())

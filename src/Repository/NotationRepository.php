@@ -248,20 +248,20 @@ class NotationRepository extends RepositoryAbstract
         return $notation;
     }
     
-    public function listeCommentsChroniquesAnnoncesByUser( $idUser)       
+    public function listeCommentsChroniquesAnnoncesByUser($idUser)       
     {
-         
+         //dump($idreceiver);
                 $query = <<<SQL
 SELECT ann.id_post, ann.post_title , m.id_member,  m.name, com.comment, com.post_date, com.type
-FROM annonce ann, member m, comment_annonce com
-WHERE ann.member_id_member = $idUser
-AND ann.member_id_member = id_member
+FROM `comment_annonce` com, member m, annonce ann
+WHERE com.member_id_member = $idUser
+AND com.member_id_member = m.id_member
 AND com.id_post = ann.id_post
 UNION
-SELECT chr.id_post , chr.post_title ,  m.id_member, m.name, comchr.comment,  comchr.post_date, comchr.type
-FROM comment_chronique comchr, member m , chronique chr 
+SELECT chr.id_post , chr.post_title ,  m2.id_member, m2.name, comchr.comment,  comchr.post_date, comchr.type
+FROM comment_chronique comchr, member m2 , chronique chr 
 WHERE comchr.member_id_member = $idUser
-AND  comchr.member_id_member = id_member
+AND  comchr.member_id_member = m2.id_member
 AND  comchr.id_post = chr.id_post
 SQL;
         
